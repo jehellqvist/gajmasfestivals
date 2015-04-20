@@ -17,23 +17,30 @@ Tags: festivals, harbourfestivals
 	padding: 0;
 }
 
-body {
+body,html {
 	width: 100%;
 	height: 100%;
 }
 
 #wrapper {
 	width: 100%;
-	height: 100%;
+	/*height: 100%;*/
+}
+
+header,footer {
+	background: #B4CFEF;
 }
 
 header {
-	background: #B4CFEF;
 	width: 100%;
 	height: 100%;
 }
 
 section {
 	width: 100%;
+	padding: 10%;
+}
 
+section:nth-child(odd) {
+	background: #B4CFEF;
 }
