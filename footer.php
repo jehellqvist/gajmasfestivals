@@ -1,5 +1,5 @@
 <footer>
-    © <?php the_time('Y'); ?> <?php bloginfo('name'); ?><br />
+   	<?php the_time('Y'); ?> &copy; <?php bloginfo('name'); ?><br />
     <a href="<?php bloginfo('rss2_url'); ?>">Grab the feed</a></p>
          
 </footer>
