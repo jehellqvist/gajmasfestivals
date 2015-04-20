@@ -36,6 +36,9 @@ header {
 	height: 100%;
 }
 
+nav {
+	background-color: #111;
+}
 section {
 	width: 100%;
 	padding: 10%;
