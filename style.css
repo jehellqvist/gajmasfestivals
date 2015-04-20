@@ -10,3 +10,30 @@ License: GNU General Public License
 License URI: license.txt
 Tags: festivals, harbourfestivals
 */
+
+
+* {
+	margin:0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	background: #B4CFEF;
+	width: 100%;
+	height: 100%;
+}
+
+section {
+	width: 100%;
+
+}
