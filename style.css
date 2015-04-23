@@ -173,10 +173,6 @@ section:nth-child(odd) {
 	padding:0 0 3% 0;
 }
 
-#hitta-hit #transport{
-	text-align:
-}
-
 #hitta-hit #by_bike, #by_boat, #by_bus, #by_car{
 	text-align:center;
 	float:left;
