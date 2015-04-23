@@ -60,7 +60,7 @@ body,html {
 	height: 100%;
 }
 
-footer {
+header,footer {
 	background: rgba(51,106,171, 1);
 }
 
@@ -85,7 +85,7 @@ header {
 	width: 100%;
 }
 
-/*Styles for navigation*/
+/*Styling for navigation*/
 	
 	.navbar-brand {
 		color: rgba(250,250,250, 1) !important;
@@ -141,14 +141,14 @@ header {
 		}
 	}
 	
-/***
-***Styling for content in sections***
-***/
+/*Styling for content in section*/
 
+section {
 
-/*Styling för Om Hamnfestivalen sektionen*/
-#om-hamnfestivalen{
-	background-color: rgba(176,206,241,1);
+}
+
+section:nth-child(odd) {
+	background: #B4CFEF;
 }
 
 #om-hamnfestivalen #about h1, #hitta-hit h1{
@@ -162,62 +162,19 @@ header {
 	font-size: 1.2em;
 	line-height: 1.5em;
 	padding:0 0 1% 0;
-
-	}
+}
 
 #om-hamnfestivalen #about{
-	/*width:60%;*/
+	width:60%;
 	margin:0 auto;
 	text-align:center;
 	font-size: 1em;
 	padding:0 0 3% 0;
 }
 
-<<<<<<< HEAD
-/*Styling för footer sektion*/
-
-footer {
-	color:rgba(250,250,250,1);
-	-webkit-font-smoothing: antialiased;
-	padding:4% 0;
-	height:350px;
-	background: rgba(51,106,171, 1);
-}
-
-footer h1{
-	font-size: 1.3em;
-	line-height: 1.3em
-}
-
-footer h2{
-	padding:4% 0 0 0;
-	font-size: 1.4em;
-}
-
-footer p{
-	margin-top: -1%;
-}
-
-#logo_polimhamn{
-	width:125px;
-	background-image: url('img/polimhamn_logo_125.png');
-}
-
-footer img{
-	padding:2% 0 0 .5%;
-}
-
-footer a{
-	color:rgba(250,250,250,1);
-	-webkit-font-smoothing: antialiased;
-	font-weight: 700;
-}
-
-#hitta-hit #by_bike, #by_boat, #by_bus, #by_car{
+#hitta-hit {
 	text-align:center;
-	float:left;
-	width:300px;
-	padding:20px;
+	padding:20px 20px 40px 20px;
 }
 
 #hitta-hit img{
