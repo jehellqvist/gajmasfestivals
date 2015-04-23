@@ -33,15 +33,35 @@ LIGHTER: rgba(176,206,241,1);
 
 @font-face {
   font-family: 'Museo';
-  src: url('fonts/Museo700-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
-  font-weight: 700;
+  src: url('fonts/Museo-100.otf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 100;
 }
 
 @font-face {
   font-family: 'Museo';
-  src: url('fonts/Museo300-Regular.otf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('fonts/Museo-300.otf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 300;
 }
+
+@font-face {
+  font-family: 'Museo';
+  src: url('fonts/Museo-500.otf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Museo';
+  src: url('fonts/Museo-600.otf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Museo';
+  src: url('fonts/Museo-700.otf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 700;
+}
+
+
 
 * {
 	margin:0;
@@ -60,12 +80,12 @@ body,html {
 	height: 100%;
 }
 
-header,footer {
+footer {
 	background: rgba(51,106,171, 1);
 }
 
 header {
-	background: url(img/cover.png); /*backblur.png*/
+	background-image: url(img/slider/boat_2.png);
 	background-size: cover;
 	background-position: 0 100%;
 	background-repeat: no-repeat;
@@ -74,15 +94,19 @@ header {
 	height: 100%;
 	text-align: center;
 }
+
 .site-title {
 	max-width: 30%;
 	margin: auto;
-	display: inline-block;
-	margin-top: 21%;
+	padding-top: 21%;
+	z-index: 99999999999;
 }
-
 .site-title img {
 	width: 100%;
+}
+
+.slide_2 {
+	height: 100%;
 }
 
 /*Styles for navigation*/
