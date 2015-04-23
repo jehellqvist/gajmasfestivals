@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Meny</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -38,7 +38,7 @@
                     $caption = $pagemenu_data->post_title;
                     $pageslug = $pagemenu_data->post_name;
             //Start Page Menu
-            echo "<li class='$pageslug'><a href='#$pageslug'>$caption</a></li>\n";
+            echo "<li><a href='#$pageslug'>$caption</a></li>\n";
             }
             echo"</ul>";
         ?>

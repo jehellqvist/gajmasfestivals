@@ -11,6 +11,37 @@ License URI: license.txt
 Tags: festivals, harbourfestivals
 */
 
+/*
+Headings and links: 		
+font-family: 'Museo', 'Arvo', 'Georgia', serif;
+
+Paragraphs and others:
+font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+
+
+Color-palette:
+DARKER: rgba(27,82,155, 1), 
+DARK rgba(51,106,171, 1) 
+LIGHT: rgba(123,169,222, 1);
+LIGHTER: rgba(176,206,241,1);
+*/
+
+
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+
+
+@font-face {
+  font-family: 'Museo';
+  src: url('fonts/Museo700-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Museo';
+  src: url('fonts/Museo300-Regular.otf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 300;
+}
 
 * {
 	margin:0;
@@ -20,6 +51,8 @@ Tags: festivals, harbourfestivals
 body,html {
 	width: 100%;
 	height: 100%;
+	font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+
 }
 
 #wrapper {
@@ -52,27 +85,59 @@ header {
 	width: 100%;
 }
 
-.navbar-inverse {
-	background-color: rgba(27,82,155, 1); /*mörk: rgba(27,82,155, 1), mörk-ljusare: rgba(51,106,171, 1), ljusare: rgba(123,169,222, 1); ljusast: rgba(146,206,241,1);*/
-	border: rgba(27,82,155, 1);
-}
+/*Styles for navigation*/
+	
+	.navbar-brand {
+		color: rgba(250,250,250, 1) !important;
+	}
 
-/*nav-link colors*/
-.navbar-inverse .navbar-nav>li>a {
-	color: rgba(250,250,250, 1);
-}
-.navbar-inverse .navbar-nav>li>a:hover,
-.navbar-inverse .navbar-nav>li>a:active {
-	color: rgba(250,250,250, 0.5);
-}
-.navbar-inverse .navbar-nav>li>a:visited {
-	color: rgba(250,250,250, 1);
-}
+	.navbar-inverse {
+		font-family: 'Museo', 'Arvo', 'Georgia', serif;
+		font-weight: 700;
+		font-size: 1.15em;
+		background-color: rgba(27,82,155, 1);
+		border: rgba(27,82,155, 1);
 
-section {
+		-webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
 
-}
+	.navbar-nav {
+		float: none;
+		margin: auto;
+		text-align: center;
+	}
 
-section:nth-child(odd) {
-	background: #B4CFEF;
-}
+	.navbar-toggle {
+		border-color: #fff !important;
+		background-color: rgba(27,82,155, 1) !important;
+	}
+
+	.navbar-toggle:hover, .navbar-toggle:active {
+		background-color: rgba(27,82,155, 0.5) !important;
+	}
+	/*nav-link colors*/
+	.navbar-inverse .navbar-nav>li>a {
+		color: rgba(250,250,250, 1);
+	}
+	.navbar-inverse .navbar-nav>li>a:hover,
+	.navbar-inverse .navbar-nav>li>a:active {
+		color: rgba(250,250,250, 0.5);
+	}
+	.navbar-inverse .navbar-nav>li>a:visited {
+		color: rgba(250,250,250, 1);
+	}
+
+	@media (min-width: 768px) {
+		.navbar-brand { 
+			display: none;
+		}
+
+		.navbar-nav>li {
+		float: none;
+		display: inline-block;
+		padding-left: 1%;
+		padding-right: 1%;
+		}
+
+	}
