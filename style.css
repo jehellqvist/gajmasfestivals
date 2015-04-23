@@ -141,15 +141,7 @@ header {
 		}
 	}
 	
-/*Styling for content in section*/
-
-section {
-
-}
-
-section:nth-child(odd) {
-	background: #B4CFEF;
-}
+/*Styling for sections*/
 
 #om-hamnfestivalen #about h1, #hitta-hit h1{
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
