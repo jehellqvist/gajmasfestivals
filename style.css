@@ -69,10 +69,22 @@ header {
 	color: rgba(250,250,250, 1);
 }
 
+/*Styling for content in section*/
+
 section {
 
 }
 
 section:nth-child(odd) {
 	background: #B4CFEF;
+}
+
+#om-hamnfestivalen #about h1{
+
+}
+
+#om-hamnfestivalen #about{
+	width:65%;
+	margin:0 auto;
+	text-align:justify;
 }
