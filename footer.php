@@ -9,8 +9,6 @@
 
 				<h1>Intresserad av försäljning eller marknadsstånd? </h1>
 				<p>Klicka <a href="">här</a> för mer information</p>
-				
-
 			</div>
 			<div class="col-lg-3">
 				<h1>Följ Hamnfestivalen</h1>

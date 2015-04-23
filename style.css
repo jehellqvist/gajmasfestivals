@@ -61,6 +61,13 @@ LIGHTER: rgba(176,206,241,1);
   font-weight: 700;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+#program {
+	padding: 20%;
+}
 
 
 * {
@@ -72,12 +79,11 @@ body,html {
 	width: 100%;
 	height: 100%;
 	font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
-
 }
 
 #wrapper {
 	width: 100%;
-	height: 100%;
+	height: 100%;	
 }
 
 footer {
@@ -228,6 +234,7 @@ footer a{
 	font-weight: 700;
 }
 
+<<<<<<< HEAD
 .list-unstyled{
 	padding:2% 0 0 0;
 	font-size: 2em;
@@ -235,6 +242,10 @@ footer a{
 
 .list-unstyled a{
 	text-decoration: none;
+=======
+#hitta-hit #map img{
+	width:100%;
+>>>>>>> origin/master
 }
 
 #hitta-hit #by_bike, #by_boat, #by_bus, #by_car{
@@ -242,7 +253,7 @@ footer a{
 	padding:20px 20px 40px 20px;
 }
 
-#hitta-hit img{
+#hitta-hit #transport img{
 	max-height:100px;
 }
 
