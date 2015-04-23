@@ -170,6 +170,7 @@ header {
 /*Styling for sections*/
 
 #om-hamnfestivalen{
+
 	background-color: rgba(176,206,241,1);
 }
 
@@ -193,40 +194,36 @@ header {
 }
 
 /*Styling för footer sektion*/
-
 footer {
 	color:rgba(250,250,250,1);
 	-webkit-font-smoothing: antialiased;
-	padding:4% 0;
-	height:350px;
+	padding:2% 0 0 0;
 	background: rgba(51,106,171, 1);
 }
 
 footer h1{
 	font-size: 1.3em;
-	line-height: 1.3em
+	line-height: 1.4em
 }
 
 footer h2{
-	padding:4% 0 0 0;
-	font-size: 1.4em;
+	padding:2% 0 0 0;
+	font-size: 1.2em;
 }
 
 footer p{
-	margin-top: -2%;
+	margin-top: -1%;
 }
 
-
-footer #logo_polimhamn{
+footer #polimhamn_logo{
+	margin: 0 auto !important;
 	background: url(img/polimhamn_logo.png);
 	background-position: 0 100%;
 	background-repeat: no-repeat;
    	background-size:contain;
-   	height:20px;
-   	width:100px;
-   	margin:2% 0 10% 2%;
+   	height:50px;
+   	width:140px;
 }
-
 
 footer a{
 	color:rgba(250,250,250,1);
@@ -235,6 +232,7 @@ footer a{
 }
 
 .list-unstyled{
+	text-decoration: none;
 	padding:2% 0 0 0;
 	font-size: 2em;
 }
@@ -263,4 +261,13 @@ footer a{
 
 .center{
 	text-align: center;
+}
+
+.top{
+	margin-top: 3%;
+}
+
+#copy{
+	margin:2% 0 0 0;
+	margin-bottom: -40% !important;
 }
