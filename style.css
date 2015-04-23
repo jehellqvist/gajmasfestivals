@@ -152,11 +152,23 @@ section:nth-child(odd) {
 }
 
 #om-hamnfestivalen #about h1{
-
+	font-family: 'Museo', 'Arvo', 'Georgia', serif;
+	text-align: center;
+	padding:3% 0%;
 }
 
+#om-hamnfestivalen #about p{
+	text-align:center;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	padding:0 0 1% 0;
+
+	}
+
 #om-hamnfestivalen #about{
-	width:65%;
+	width:60%;
 	margin:0 auto;
-	text-align:justify;
+	text-align:center;
+	font-size: 1em;
+	padding:0 0 3% 0;
 }
