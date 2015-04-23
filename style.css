@@ -234,7 +234,6 @@ footer a{
 	font-weight: 700;
 }
 
-<<<<<<< HEAD
 .list-unstyled{
 	padding:2% 0 0 0;
 	font-size: 2em;
@@ -242,10 +241,10 @@ footer a{
 
 .list-unstyled a{
 	text-decoration: none;
-=======
+}
+
 #hitta-hit #map img{
 	width:100%;
->>>>>>> origin/master
 }
 
 #hitta-hit #by_bike, #by_boat, #by_bus, #by_car{
