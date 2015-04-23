@@ -1,4 +1,4 @@
-/*
+﻿/*
 Theme Name: Gajmas festivals theme
 Theme URI: 
 Author: Gajmas
@@ -21,7 +21,7 @@ font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 
 Color-palette:
 DARKER: rgba(27,82,155, 1), 
-DARK rgba(51,106,171, 1) 
+DARK: rgba(51,106,171, 1) 
 LIGHT: rgba(123,169,222, 1);
 LIGHTER: rgba(176,206,241,1);
 */
@@ -105,10 +105,6 @@ header {
 	width: 100%;
 }
 
-.slide_2 {
-	height: 100%;
-}
-
 /*Styles for navigation*/
 	
 	.navbar-brand {
@@ -165,22 +161,76 @@ header {
 		}
 	}
 	
-/*Styling for content in section*/
+/*Styling for sections*/
 
-section {
-
+#om-hamnfestivalen #about h1, #hitta-hit h1{
+	font-family: 'Museo', 'Arvo', 'Georgia', serif;
+	text-align: center;
+	padding:3% 0%;
 }
 
-section:nth-child(odd) {
-	background: #B4CFEF;
-}
-
-#om-hamnfestivalen #about h1{
-
+#om-hamnfestivalen #about p, #hitta-hit p{
+	text-align:center;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	padding:0 0 1% 0;
 }
 
 #om-hamnfestivalen #about{
-	width:65%;
+	width:60%;
 	margin:0 auto;
-	text-align:justify;
+	text-align:center;
+	font-size: 1em;
+	padding:0 0 3% 0;
 }
+
+/*Styling för footer sektion*/
+
+footer {
+	color:rgba(250,250,250,1);
+	-webkit-font-smoothing: antialiased;
+	padding:4% 0;
+	height:350px;
+	background: rgba(51,106,171, 1);
+}
+
+footer h1{
+	font-size: 1.3em;
+	line-height: 1.3em
+}
+
+footer h2{
+	padding:4% 0 0 0;
+	font-size: 1.4em;
+}
+
+footer p{
+	margin-top: -1%;
+}
+
+#logo_polimhamn{
+	width:125px;
+	background-image: url('img/polimhamn_logo_125.png');
+}
+
+footer img{
+	padding:2% 0 0 .5%;
+}
+
+footer a{
+	color:rgba(250,250,250,1);
+	-webkit-font-smoothing: antialiased;
+	font-weight: 700;
+}
+
+#hitta-hit #by_bike, #by_boat, #by_bus, #by_car{
+	text-align:center;
+	padding:20px 20px 40px 20px;
+}
+
+#hitta-hit img{
+	max-height:100px;
+}
+
+#hitta-hit #by_bus img, #by_boat img{
+	height:80px;
