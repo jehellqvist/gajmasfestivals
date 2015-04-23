@@ -9,7 +9,7 @@
 				<h1>Intresserad av försäljning eller marknadsstånd? </h1>
 				<p>Klicka <a href="">här</a> för mer information</p>
 
-				<h2>Hamnfestivalen pågår mellan XX juli och XX augusti.</h2>
+				<h2>Hamnfestivalen pågår mellan 30 juli och 2 augusti.</h2>
 
 			</div>
 			<div class="col-lg-5 col-lg-offset-1">

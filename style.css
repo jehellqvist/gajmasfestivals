@@ -65,6 +65,11 @@ LIGHTER: rgba(176,206,241,1);
     display: none; 
 }
 
+#program {
+	padding: 20%;
+}
+
+
 * {
 	margin:0;
 	padding: 0;
