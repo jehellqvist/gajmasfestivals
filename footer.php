@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-lg-5 col-lg-offset-1">
 				<h1>Kontakta oss På Limhamn </h1>
-				<p>E-post: <a href="mailto:info@polimhamn.se?Subject=Medverkande">info@polimhamn.se </a></p>
+				<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>
 				<a href="http://www.polimhamn.se"><div id="logo_polimhamn"></div></a>
 				
 				<h1>Intresserad av försäljning eller marknadsstånd? </h1>
