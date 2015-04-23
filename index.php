@@ -6,7 +6,7 @@ foreach ($pages as $page_data) {
     $content = apply_filters('the_content', $page_data->post_content);
     $title = $page_data->post_title;
 	$slug = $page_data->post_name;
-   	echo "<section id='$slug' class='$slug'>";
+   	echo "<section id='$slug' class='$slug container-fluid'>";
 	echo "<h2>$title</h2>";
 	echo $content;
 	echo "</section> <!--End $slug-->";
