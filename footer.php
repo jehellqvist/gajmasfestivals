@@ -1,27 +1,45 @@
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-5 col-lg-offset-1">
-				<h1>Kontakta oss På Limhamn </h1>
-				<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>
-				<a href="http://www.polimhamn.se"><div id="logo_polimhamn"></div></a>
-				
+			<div class="col-lg-3 col-lg-offset-1">
+				<h1>Meny</h1>
+				<p>Program</p>
+				<p>Hitta hit</p>
+				<p>Om Hamnfestivalen</p>
+
 				<h1>Intresserad av försäljning eller marknadsstånd? </h1>
 				<p>Klicka <a href="">här</a> för mer information</p>
-
-				<h2>Hamnfestivalen pågår mellan XX juli och XX augusti.</h2>
-
-			</div>
-			<div class="col-lg-5 col-lg-offset-1">
-				<p>tetstetstestts</p>
+				
 
 			</div>
+			<div class="col-lg-3">
+				<h1>Följ Hamnfestivalen</h1>
+				<p>
+					<ul class="list-unstyled list-inline">
+						<li><a class="fa fa-facebook" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
+			            <li><a class="fa fa-instagram" href="" title="Instagram" target="_blank"></a></li>
+			        </ul>
+			    </p>
 
+			</div>
+
+			<div class="col-lg-3">
+				<h1>Arrangör</h1>
+				<p>På Limhamn </p>
+				<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>
+				<p><a href="mailto:http://www.polimhamn.se">www.polimhamn.se </a></p>
+			</div>
 		</div>
-	</div>
+		
+		<div class="row">
+			<hr>
+			<div class="col-lg-2 col-lg-offset-5 center">
+				<p><?php the_time('Y'); ?> &copy; <?php bloginfo('name'); ?></p>
+			</div>
+		</div>
 
-   	<?php the_time('Y'); ?> &copy; <?php bloginfo('name'); ?><br />
-         
+	</div>  
+
 </footer>
  
 </div><!--End of #wrapper-->
