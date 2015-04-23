@@ -21,7 +21,7 @@ font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 
 Color-palette:
 DARKER: rgba(27,82,155, 1), 
-DARK rgba(51,106,171, 1) 
+DARK: rgba(51,106,171, 1) 
 LIGHT: rgba(123,169,222, 1);
 LIGHTER: rgba(176,206,241,1);
 */
@@ -151,13 +151,13 @@ header {
 	background-color: rgba(176,206,241,1);
 }
 
-#om-hamnfestivalen #about h1{
+#om-hamnfestivalen #about h1, #hitta-hit h1{
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	text-align: center;
 	padding:3% 0%;
 }
 
-#om-hamnfestivalen #about p{
+#om-hamnfestivalen #about p, #hitta-hit p{
 	text-align:center;
 	font-size: 1.2em;
 	line-height: 1.5em;
@@ -173,6 +173,7 @@ header {
 	padding:0 0 3% 0;
 }
 
+<<<<<<< HEAD
 /*Styling för footer sektion*/
 
 footer {
@@ -212,5 +213,16 @@ footer a{
 	font-weight: 700;
 }
 
+#hitta-hit #by_bike, #by_boat, #by_bus, #by_car{
+	text-align:center;
+	float:left;
+	width:300px;
+	padding:20px;
+}
 
+#hitta-hit img{
+	max-height:100px;
+}
 
+#hitta-hit #by_bus img, #by_boat img{
+	height:80px;
