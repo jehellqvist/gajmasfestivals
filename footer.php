@@ -1,7 +1,7 @@
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3 col-lg-offset-1 center">
+			<div class="col-md-3 col-lg-offset-1 center">
 				<a href="http://www.polimhamn.se" target="_blank"><div id="polimhamn_logo"></div></a><br>
 				<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>
 				
@@ -9,7 +9,7 @@
 				<p>Klicka <a href="">här</a> för mer information</p>
 			</div><!--End of .col-->
 
-			<div class="col-lg-4 center top">
+			<div class="col-md-4 center top">
 				<h1>Följ Hamnfestivalen</h1>
 				<p>
 					<ul class="list-unstyled list-inline">
@@ -19,7 +19,7 @@
 			    </p>
 			</div><!--End of .col-->
 
-			<div class="col-lg-3 center">
+			<div class="col-md-3 center">
 				<h1>Meny</h1>
 				<p>Program</p>
 				<p>Hitta hit</p>
