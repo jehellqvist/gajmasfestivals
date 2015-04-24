@@ -56,53 +56,56 @@ if(get_page_by_title("Home") == null)
     update_option("show_on_front","page");
 }
 
-function posts_callback($atts=null, $content=null)
-{
-    ?>          
-        <?php 
-            $categories = get_categories('type=post'); 
-            foreach ($categories as $category) {
-                $option = '<button class="active btn" id="'.$category->cat_name.'">'.$category->cat_name.'</button>';
-                echo $option;
-                echo ' ';
-            }
-            ?>
 
+function posts_callback($atts=null, $content=null){
+    $option .= '<div class="row filtering">';
+    $categories = get_categories('type=post'); 
+    foreach ($categories as $category) {
+        $option .= '<button class="active btn" id="'.$category->cat_name.'">'.$category->cat_name.'</button>';
+    }
+    $option .= '</div>';
 
+    $option .= '<div class="row" id="post_filter" >';
 
-    <div class="row" id="post_filter" >
+    query_posts(array('orderby' => 'date', 'order' => 'DESC' , 'showposts' => $posts));
 
-    <?php
     if(have_posts()):
-        while(have_posts()): 
+        while(have_posts()):
             the_post();
-            ?>
-                <div class="col-md-3 <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?>" style="height:200px;">
-                    <h2><?php echo get_the_title(); ?></h2>
-                    <p><?php the_content() ?></p>
-                </div>
-            <?php
+                ?>
+                <?php foreach((get_the_category()) as $category) { 
+                    $cat_string .= $category->cat_name . " ";
+                }
+                 $option .= '<div class="col-md-3 '. $cat_string .'">
+                    <h2>'. get_the_title(). '</h2>
+                    <p>'. get_the_content().'</p>
+                </div>';
+                ?><?php $cat_string = "";
         endwhile;
-        else:
-            echo "";
-            die();
+
     endif;
 
-    ?>
-        </div>
-<script>
-var $btns = $('.btn').click(function() {
-  if (this.id == 'Alla') {
-    $('#post_filter > div').fadeIn(1000);
-  } else {
-    var $el = $('.' + this.id).fadeIn(1000);
-    $('#post_filter > div').not($el).hide();
-  }
-  $btns.removeClass('active');
-  $(this).addClass('active');
-})
-</script>
-    <?php
+    $option .= '</div>';
+
+    $option .= 
+    "<script>
+        var btns = $('.btn').click(function() {
+            $('#post_filter > div').show()
+        if (this.id == 'Alla') {
+            $('#post_filter > div').fadeIn(1000);
+        } 
+        else {
+            var el = $('.' + this.id).fadeIn(1000);
+            $('#post_filter > div').hide()
+            $('#post_filter').find('.' + this.id).show()            
+        }
+        $(btns).removeClass('active');
+        $(this).addClass('active');
+        })
+    </script>";
+
+    return $option;
 }
+
 add_shortcode("posts", "posts_callback");
 
