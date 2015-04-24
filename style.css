@@ -33,15 +33,42 @@ LIGHTER: rgba(176,206,241,1);
 
 @font-face {
   font-family: 'Museo';
-  src: url('fonts/Museo700-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
-  font-weight: 700;
+  src: url('fonts/Museo-100.otf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 100;
 }
 
 @font-face {
   font-family: 'Museo';
-  src: url('fonts/Museo300-Regular.otf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('fonts/Museo-300.otf')  format('truetype'); /* Safari, Android, iOS */
   font-weight: 300;
 }
+
+@font-face {
+  font-family: 'Museo';
+  src: url('fonts/Museo-500.otf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Museo';
+  src: url('fonts/Museo-600.otf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Museo';
+  src: url('fonts/Museo-700.otf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 700;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+#program {
+	padding: 20%;
+}
+
 
 * {
 	margin:0;
@@ -52,20 +79,19 @@ body,html {
 	width: 100%;
 	height: 100%;
 	font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
-
 }
 
 #wrapper {
 	width: 100%;
-	height: 100%;
+	height: 100%;	
 }
 
-header,footer {
+footer {
 	background: rgba(51,106,171, 1);
 }
 
 header {
-	background: url(img/cover.png); /*backblur.png*/
+	background-image: url(img/slider/boat_2.png);
 	background-size: cover;
 	background-position: 0 100%;
 	background-repeat: no-repeat;
@@ -74,18 +100,18 @@ header {
 	height: 100%;
 	text-align: center;
 }
+
 .site-title {
 	max-width: 30%;
 	margin: auto;
-	display: inline-block;
-	margin-top: 21%;
+	padding-top: 21%;
+	z-index: 99999999999;
 }
-
 .site-title img {
 	width: 100%;
 }
 
-/*Styling for navigation*/
+/*Styles for navigation*/
 	
 	.navbar-brand {
 		color: rgba(250,250,250, 1) !important;
@@ -143,6 +169,11 @@ header {
 	
 /*Styling for sections*/
 
+#om-hamnfestivalen{
+
+	background-color: rgba(176,206,241,1);
+}
+
 #om-hamnfestivalen #about h1, #hitta-hit h1{
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	text-align: center;
@@ -157,44 +188,41 @@ header {
 }
 
 #om-hamnfestivalen #about{
-	width:60%;
-	margin:0 auto;
 	text-align:center;
 	font-size: 1em;
 	padding:0 0 3% 0;
 }
 
 /*Styling för footer sektion*/
-
 footer {
 	color:rgba(250,250,250,1);
 	-webkit-font-smoothing: antialiased;
-	padding:4% 0;
-	height:350px;
+	padding:2% 0 0 0;
 	background: rgba(51,106,171, 1);
 }
 
 footer h1{
 	font-size: 1.3em;
-	line-height: 1.3em
+	line-height: 1.4em
 }
 
 footer h2{
-	padding:4% 0 0 0;
-	font-size: 1.4em;
+	padding:2% 0 0 0;
+	font-size: 1.2em;
 }
 
 footer p{
 	margin-top: -1%;
 }
 
-#logo_polimhamn{
-	width:125px;
-	background-image: url('img/polimhamn_logo_125.png');
-}
-
-footer img{
-	padding:2% 0 0 .5%;
+footer #polimhamn_logo{
+	margin: 0 auto !important;
+	background: url(img/polimhamn_logo.png);
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+   	background-size:contain;
+   	height:50px;
+   	width:140px;
 }
 
 footer a{
@@ -203,14 +231,43 @@ footer a{
 	font-weight: 700;
 }
 
+.list-unstyled{
+	text-decoration: none;
+	padding:2% 0 0 0;
+	font-size: 2em;
+}
+
+.list-unstyled a{
+	text-decoration: none;
+}
+
+#hitta-hit #map img{
+	width:100%;
+}
+
 #hitta-hit #by_bike, #by_boat, #by_bus, #by_car{
 	text-align:center;
 	padding:20px 20px 40px 20px;
 }
 
-#hitta-hit img{
+#hitta-hit #transport img{
 	max-height:100px;
 }
 
 #hitta-hit #by_bus img, #by_boat img{
 	height:80px;
+
+}
+
+.center{
+	text-align: center;
+}
+
+.top{
+	margin-top: 3%;
+}
+
+#copy{
+	margin:2% 0 0 0;
+	margin-bottom: -40% !important;
+}
