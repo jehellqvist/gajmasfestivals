@@ -37,3 +37,71 @@ function html5_shiv() {
 if(!is_admin()) {
         add_action('wp_head','html5_shiv');
 }
+
+if(get_page_by_title("Home") == null)
+{
+    $post = array(
+        "post_title" => "Home",
+        "post_status" => "publish",
+        "post_type" => "page",
+        "menu_order" => "-100",
+        "page_template" => "single-page-theme.php"
+    );
+
+    wp_insert_post($post);
+
+    $home_page = get_page_by_title("Home");
+    update_option("page_on_front",$home_page->ID);
+    update_option("show_on_front","page");
+}
+
+function posts_callback($atts=null, $content=null)
+{
+    ?>          
+        <?php 
+            $categories = get_categories('type=post'); 
+            foreach ($categories as $category) {
+                $option = '<button class="active btn" id="'.$category->cat_name.'">'.$category->cat_name.'</button>';
+                echo $option;
+                echo ' ';
+            }
+            ?>
+
+
+
+    <div class="row" id="post_filter" >
+
+    <?php
+    if(have_posts()):
+        while(have_posts()): 
+            the_post();
+            ?>
+                <div class="col-md-3 <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?>" style="height:200px;">
+                    <h2><?php echo get_the_title(); ?></h2>
+                    <p><?php the_content() ?></p>
+                </div>
+            <?php
+        endwhile;
+        else:
+            echo "";
+            die();
+    endif;
+
+    ?>
+        </div>
+<script>
+var $btns = $('.btn').click(function() {
+  if (this.id == 'Alla') {
+    $('#post_filter > div').fadeIn(1000);
+  } else {
+    var $el = $('.' + this.id).fadeIn(1000);
+    $('#post_filter > div').not($el).hide();
+  }
+  $btns.removeClass('active');
+  $(this).addClass('active');
+})
+</script>
+    <?php
+}
+add_shortcode("posts", "posts_callback");
+
