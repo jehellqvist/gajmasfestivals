@@ -182,7 +182,7 @@ header {
 
 #om-hamnfestivalen #about p, #hitta-hit p{
 	text-align:center;
-	font-size: 1.2em;
+	font-size: 1.25em;
 	line-height: 1.5em;
 	padding:0 0 1% 0;
 }
@@ -269,5 +269,12 @@ footer a{
 
 #copy{
 	margin:2% 0 0 0;
-	margin-bottom: -40% !important;
+}
+
+section {
+	padding: 4% 0%;
+}
+
+#hitta-hit h1 {
+	padding: 5% 0% 5% 0%;
 }
