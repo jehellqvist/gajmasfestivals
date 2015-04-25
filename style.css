@@ -255,6 +255,18 @@ footer #polimhamn_logo{
    	background-size:contain;
    	height:50px;
    	width:140px;
+   	margin-top:2% !important;
+}
+
+footer #hamnfestivalen_logo{
+	margin: 0 auto !important;
+	background: url(img/hamnfestivalen_logo_white.png);
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+   	background-size:contain;
+   	height:80px;
+   	width:200px;
+   	margin: 6% 0 0 17%!important;
 }
 
 footer a{
@@ -266,7 +278,7 @@ footer a{
 .list-unstyled{
 	text-decoration: none;
 	padding:2% 0 0 0;
-	font-size: 1.8em;
+	font-size: 2em;
 }
 
 .list-unstyled a{

@@ -2,11 +2,19 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3 col-sm-3 col-md-offset-1 col-sm-offset-1 center">
-				<a href="http://www.polimhamn.se" target="_blank"><div id="polimhamn_logo"></div></a><br>
-				<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>
+			
+				<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
+				<h1>Meny</h1>
+				<p>Program</p>
+				<p>Hitta hit</p>
+				<p>Om Hamnfestivalen</p>
+				<br>
+				<p>För aktörer</p>
+
+				<!--<h1>Intresserad av försäljning eller marknadsstånd? </h1>
+				<p>Klicka <a href="">här</a> för mer information</p>-->
 				
-				<h1>Intresserad av försäljning eller marknadsstånd? </h1>
-				<p>Klicka <a href="">här</a> för mer information</p>
+				
 			</div><!--End of .col-->
 
 			<div class="col-md-4 col-sm-4 center top">
@@ -21,19 +29,15 @@
 			</div><!--End of .col-->
 
 			<div class="col-md-3 col-sm-3 center">
-				<h1>Meny</h1>
-				<p>Program</p>
-				<p>Hitta hit</p>
-				<p>Om Hamnfestivalen</p>
-
-				<h2>Hamnfestivalen pågår mellan 30 juli och 2 augusti 2015.</h2>
-				
+				<a href="http://www.hamnfestivalen.se" target="_blank"><div id="hamnfestivalen_logo"></div></a>
+				<a href="http://www.polimhamn.se" target="_blank"><div id="polimhamn_logo"></div></a>	
 			</div><!--End of .col-->
 		
 		</div><!--End of .row-->
 		
 		<hr>
 		<p class="center"><?php the_time('Y'); ?> &copy; <?php bloginfo('name'); ?></p>
+		<!--<p>Hamnfestivalen pågår mellan den 30 juli och 2 augusti 2015</p>-->
 
 	</div>  <!--End of .container-->
 
