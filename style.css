@@ -107,7 +107,7 @@ header {
 }
 
 /*Styles for navigation*/
-	
+
 	.navbar-brand {
 		color: rgba(250,250,250, 1) !important;
 	}
@@ -131,6 +131,7 @@ header {
 		float: none;
 		margin: auto;
 		text-align: center;
+
 	}
 
 	.navbar-toggle {
@@ -190,11 +191,10 @@ header {
 }
 
 #program .col-md-3{
-	height:400px;
+	height:300px;
 }
 
 #om-hamnfestivalen{
-
 	background-color: rgba(176,206,241,1);
 }
 
@@ -202,6 +202,13 @@ header {
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	text-align: center;
 	padding:3% 0%;
+}
+
+#om-hamnfestivalen #sponsorer h2{
+	font-family: 'Museo', 'Arvo', 'Georgia', serif;
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: 300;
 }
 
 #om-hamnfestivalen #about p, #hitta-hit p{
@@ -259,7 +266,7 @@ footer a{
 .list-unstyled{
 	text-decoration: none;
 	padding:2% 0 0 0;
-	font-size: 2em;
+	font-size: 1.8em;
 }
 
 .list-unstyled a{
