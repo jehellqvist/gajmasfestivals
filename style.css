@@ -168,9 +168,12 @@ header {
 	
 /*Styling for sections*/
 
+#program {
+	padding: 3% 5% 2% 5%;
+}
 
 #program .filtering{
-	padding: 5% 0 3% 1%;
+	padding: 2% 0 3% 1%;
 }
 
 #program .btn{
@@ -184,6 +187,10 @@ header {
 
 .inner {
 	/*background-color: rgba(176,206,241,1);*/
+}
+
+#program .col-md-3{
+	height:400px;
 }
 
 #om-hamnfestivalen{
