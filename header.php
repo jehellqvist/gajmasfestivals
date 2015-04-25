@@ -10,7 +10,7 @@
  
 </head>
   
-<body>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
      
     <div id="wrapper">
      
@@ -18,17 +18,18 @@
 
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-        <div class="navbar-header">
+        <div class="navbar-header page-scroll">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Meny</a>
+          <a class="navbar-brand page-scroll" href="#page-top">Meny</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                 <?php// if (function_exists(clean_custom_menus())) clean_custom_menus(); else echo "string"; ?>
           <?php 
             //get all pages and create navigation
             $pagemenu = get_pages( array( 'sort_column' => 'menu_order', 'sort_order' => 'asc', 'parent'=> '0') ); 
@@ -38,7 +39,7 @@
                     $caption = $pagemenu_data->post_title;
                     $pageslug = $pagemenu_data->post_name;
             //Start Page Menu
-            echo "<li><a href='#$pageslug'>$caption</a></li>\n";
+            echo "<li><a href='#$pageslug' class='page-scroll'>$caption</a></li>\n";
             }
             echo"</ul>";
         ?>

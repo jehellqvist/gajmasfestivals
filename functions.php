@@ -13,6 +13,8 @@ function my_jquery_enqueue() {
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap-responsive.min.css' );
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), true );
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/javascript.js', array('jquery'), true );
+    wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/js/jquery.easing.min.js', array('jquery'), true );
+    wp_enqueue_script( 'bootstrap-nav-script', get_template_directory_uri() . '/js/scrolling-nav.js', array('jquery'), true );
     wp_enqueue_style('gajmas-styles',  get_stylesheet_directory_uri() . '/style.css');
 
 }
@@ -61,9 +63,9 @@ function posts_callback($atts=null, $content=null){
     $option .= '<div class="row filtering">';
     $categories = get_categories('type=post'); 
     foreach ($categories as $category) {
-        $option .= '<button class="active btn" id="'.$category->cat_name.'">'.$category->cat_name.'</button>';
+        $option .= '<button class="btn btn-default" id="'.$category->cat_name.'">'.$category->cat_name.'</button>';
     }
-    $option .= '</div>';
+    $option .= '</div><!--End .row-->';
 
     $option .= '<div class="row" id="post_filter" >';
 
@@ -76,10 +78,10 @@ function posts_callback($atts=null, $content=null){
                 <?php foreach((get_the_category()) as $category) { 
                     $cat_string .= $category->cat_name . " ";
                 }
-                 $option .= '<div class="col-md-3 '. $cat_string .'">
+                 $option .= '<div class="col-xs-12 col-sm-6 col-md-3 '. $cat_string .'"><div class="inner">
                     <h2>'. get_the_title(). '</h2>
                     <p>'. get_the_content().'</p>
-                </div>';
+                </div><!--End .inner--></div><!--End . col-*-* -->';
                 ?><?php $cat_string = "";
         endwhile;
 
@@ -109,3 +111,32 @@ function posts_callback($atts=null, $content=null){
 
 add_shortcode("posts", "posts_callback");
 
+
+function one_page_menu_reg() {
+  register_nav_menu( 'primary', __( 'Primary Menu', 'festivals' ) );
+}
+add_action( 'after_setup_theme', 'one-page-menu-reg' );
+
+
+// custom menu example @ http://digwp.com/2011/11/html-formatting-custom-menus/
+function clean_custom_menus() {
+    $menu_name = 'primary'; // specify custom menu slug
+    if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
+        echo "hej";
+        $menu = wp_get_nav_menu_object($locations[$menu_name]);
+        $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+        $menu_list = '<nav>' ."\n";
+        $menu_list .= "\t\t\t\t". '<ul>' ."\n";
+        foreach ((array) $menu_items as $key => $menu_item) {
+            $title = $menu_item->title;
+            $url = $menu_item->url;
+            $menu_list .= "\t\t\t\t\t". '<li><a href="'. $url .'">'. $title .'</a></li>' ."\n";
+        }
+        $menu_list .= "\t\t\t\t". '</ul>' ."\n";
+        $menu_list .= "\t\t\t". '</nav>' ."\n";
+    } else {
+        // $menu_list = '<!-- no list defined -->';
+    }
+    echo $menu_list;
+}
