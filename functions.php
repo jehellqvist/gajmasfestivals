@@ -58,6 +58,8 @@ if(get_page_by_title("Home") == null)
 
 
 function posts_callback($atts=null, $content=null){
+    query_posts(array('orderby' => 'date', 'order' => 'DESC' , 'showposts' => $posts));
+
     $option .= '<div class="row filtering">';
     $categories = get_categories('type=post'); 
     foreach ($categories as $category) {
@@ -67,7 +69,6 @@ function posts_callback($atts=null, $content=null){
 
     $option .= '<div class="row" id="post_filter" >';
 
-    query_posts(array('orderby' => 'date', 'order' => 'DESC' , 'showposts' => $posts));
 
     if(have_posts()):
         while(have_posts()):
@@ -75,6 +76,7 @@ function posts_callback($atts=null, $content=null){
                 ?>
                 <?php foreach((get_the_category()) as $category) { 
                     $cat_string .= $category->cat_name . " ";
+
                 }
                  $option .= '<div class="col-md-3 '. $cat_string .'">
                     <h2>'. get_the_title(). '</h2>
@@ -99,7 +101,7 @@ function posts_callback($atts=null, $content=null){
             $('#post_filter > div').hide()
             $('#post_filter').find('.' + this.id).show()            
         }
-        $(btns).removeClass('active');
+        $('.btn').removeClass('active');
         $(this).addClass('active');
         })
     </script>";
