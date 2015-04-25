@@ -1,4 +1,4 @@
-<footer>
+<footer role="footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3 col-lg-offset-1 center">
@@ -14,7 +14,7 @@
 				<p>
 					<ul class="list-unstyled list-inline">
 						<li><a class="fa fa-facebook" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
-			            <li><a class="fa fa-instagram" href="" title="Instagram" target="_blank"></a></li>
+			            <li><a class="fa fa-instagram" href="https://instagram.com/pohamnfestivalen/" title="Instagram" target="_blank"></a></li>
 			        </ul>
 			    </p>
 			</div><!--End of .col-->
