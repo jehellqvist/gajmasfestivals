@@ -5,7 +5,7 @@
 			
 				<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
 				<h1>Meny</h1>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<div>
 	                 <?php// if (function_exists(clean_custom_menus())) clean_custom_menus(); else echo "string"; ?>
 	          		<?php 
 		            //get all pages and create navigation
@@ -21,7 +21,7 @@
 
 		            echo"</ul>";
 	        		?>
-        		</div><!--/#footer-nav-collapse -->
+        		</div><!--/#footer div-->
 				<ul>
 					<br>
 					<li><a href="">För aktörer</a></li>

@@ -195,6 +195,8 @@ header {
 }
 
 #om-hamnfestivalen{
+	color:#222;
+	-webkit-font-smoothing: antialiased;
 	background-color: rgba(176,206,241,1);
 }
 
@@ -230,6 +232,7 @@ footer {
 	-webkit-font-smoothing: antialiased;
 	padding:5% 0 0% 0;
 	background: rgba(51,106,171, 1);
+	/*background: rgba(34,51,95, 1);*/
 }
 
 footer .row{
@@ -258,7 +261,7 @@ footer #polimhamn_logo{
 	background-repeat: no-repeat;
    	background-size:contain;
    	height:50px;
-   	width:140px;
+   	width:150px;
    	margin-top:2% !important;
 }
 
@@ -268,9 +271,9 @@ footer #hamnfestivalen_logo{
 	background-position: 0 100%;
 	background-repeat: no-repeat;
    	background-size:contain;
-   	height:80px;
+   	height:90px;
    	width:200px;
-   	margin: 6% 0 0 17%!important;
+   	margin-top: 6%!important;
 }
 
 #footer-nav, footer li{
