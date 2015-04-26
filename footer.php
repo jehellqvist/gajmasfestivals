@@ -5,12 +5,27 @@
 			
 				<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
 				<h1>Meny</h1>
-				<p>Program</p>
-				<p>Hitta hit</p>
-				<p>Om Hamnfestivalen</p>
-				<br>
-				<p>För aktörer</p>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                 <?php// if (function_exists(clean_custom_menus())) clean_custom_menus(); else echo "string"; ?>
+	          		<?php 
+		            //get all pages and create navigation
+		            $pagemenu = get_pages( array( 'sort_column' => 'menu_order', 'sort_order' => 'asc', 'parent'=> '0') ); 
 
+		            echo"<ul id='footer-nav'>";
+		                foreach ($pagemenu as $pagemenu_data) {
+		                    $caption = $pagemenu_data->post_title;
+		                    $pageslug = $pagemenu_data->post_name;
+		            //Start Page Menu
+		            echo "<li><a href='#$pageslug' class='page-scroll'>$caption</a></li>\n";
+		            }
+
+		            echo"</ul>";
+	        		?>
+        		</div><!--/#footer-nav-collapse -->
+				<ul>
+					<br>
+					<li><a href="">För aktörer</a></li>
+				</ul>
 				<!--<h1>Intresserad av försäljning eller marknadsstånd? </h1>
 				<p>Klicka <a href="">här</a> för mer information</p>-->
 				

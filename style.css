@@ -228,8 +228,12 @@ header {
 footer {
 	color:rgba(250,250,250,1);
 	-webkit-font-smoothing: antialiased;
-	padding:2% 0 0 0;
+	padding:5% 0 0% 0;
 	background: rgba(51,106,171, 1);
+}
+
+footer .row{
+	padding:0 0 5% 0;
 }
 
 footer h1{
@@ -269,10 +273,21 @@ footer #hamnfestivalen_logo{
    	margin: 6% 0 0 17%!important;
 }
 
+#footer-nav, footer li{
+	list-style-type: none;
+}
+
 footer a{
+	text-decoration: none !important;
 	color:rgba(250,250,250,1);
 	-webkit-font-smoothing: antialiased;
 	font-weight: 700;
+}
+
+footer a:visited, footer a:hover, footer a:active {
+	color: rgba(250,250,250,1);
+	font-size: 1.1em;
+	text-decoration: none !important;
 }
 
 .list-unstyled{
@@ -308,7 +323,7 @@ footer a{
 }
 
 .top{
-	margin-top: 3%;
+	margin-top: 2%;
 }
 
 #copy{
