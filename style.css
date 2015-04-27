@@ -86,7 +86,7 @@ footer {
 }
 
 header {
-	background-image: url(img/slider/boat_2.png);
+	background-image: url(img/slider/water.png);
 	background-size: cover;
 	background-position: 0 100%;
 	background-repeat: no-repeat;
@@ -97,9 +97,9 @@ header {
 }
 
 .site-title {
-	max-width: 420px;
+	max-width: 400px;
 	margin: auto;
-	padding-top: 21%;
+	padding-top: 15%;
 	z-index: 99999999999;
 }
 .site-title img {
