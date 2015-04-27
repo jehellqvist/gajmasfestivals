@@ -251,10 +251,11 @@ footer {
 }
 
 footer .row{
-	padding:0 0 5% 0;
+	padding:0 0 2% 0;
 }
 
 footer h1{
+	padding-top: 2%;
 	font-size: 1.3em;
 	line-height: 1.4em
 }
@@ -266,28 +267,28 @@ footer h2{
 }
 
 footer p{
-	margin-top: -1%;
+	line-height: 1.5em;
+	margin-top: 3%;
 }
 
 footer #polimhamn_logo{
-	margin: 0 auto !important;
 	background: url(img/polimhamn_logo.png);
 	background-position: 0 100%;
 	background-repeat: no-repeat;
    	background-size:contain;
    	height:50px;
    	width:150px;
-   	margin-top:2% !important;
+
 }
 
 footer #hamnfestivalen_logo{
-	margin: 0 auto !important;
+	margin:0 auto;
 	background: url(img/hamnfestivalen_logo_white.png);
 	background-position: 0 100%;
 	background-repeat: no-repeat;
    	background-size:contain;
    	height:90px;
-   	width:200px;
+   	width:170px;
    	margin-top: 6%!important;
 }
 
@@ -308,13 +309,18 @@ footer a:visited, footer a:hover, footer a:active {
 	text-decoration: none !important;
 }
 
+footer i{
+	font-size: 2em !important;
+}
+
 .list-unstyled{
 	text-decoration: none;
-	padding:2% 0 0 0;
-	font-size: 2em;
+	padding:0% 0 0 0;
+	font-size: 3em;
 }
 
 .list-unstyled a{
+	margin-right: 5%;
 	text-decoration: none;
 }
 
@@ -341,11 +347,24 @@ footer a:visited, footer a:hover, footer a:active {
 }
 
 .top{
-	margin-top: 2%;
+	margin-top: 4%;
 }
+
 
 #copy{
 	margin:2% 0 0 0;
+}
+
+.justify{
+	text-align: justify;
+}
+
+.border-top{
+	border-top:1px dotted #fff;
+}
+
+.media-top{
+	margin-top: 1%;
 }
 
 section {

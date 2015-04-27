@@ -1,44 +1,65 @@
 <footer role="contentinfo">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 col-sm-3 col-md-offset-1 col-sm-offset-1 center">
+			<div class="col-md-6">
+
+				<a href="http://www.polimhamn.se" target="_blank"><div id="polimhamn_logo"></div></a>	
+				<p class="justify">På Limhamn är ett samarbete mellan Malmö stad, fastighetsägare, handel, näringsliv och ideella föreningar med fokus på att 
+					vidareutveckla Limhamn som besök- och turistdestination. Samverkan är grunden i hela vår verksamhet och även den övergripande 
+					metoden för vårt arbete. Läs mer om arrangören bakom Hamnfestivalen på <a href="http://polimhamn.se/">www.polimhamn.se</a></p>
 			
-				<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
-				<h1>Arrangör</h1>
-				<p>På Limhamn </p>
-				<p>Järnvägsgatan 25 </p>
-				<p>216 14 Limhamn</p>
-
-				<p>Telefonnummer: 0760-10 44 05</p>
-				<p>E-post: info@polimhamn.se</p>
-				<!--<div>
-	                <?php// if (function_exists(clean_custom_menus())) clean_custom_menus(); else echo "string"; ?>
-	          		<?php 
-		            //get all pages and create navigation
-		            $pagemenu = get_pages( array( 'sort_column' => 'menu_order', 'sort_order' => 'asc', 'parent'=> '0') ); 
-
-		            echo"<ul id='footer-nav'>";
-		                foreach ($pagemenu as $pagemenu_data) {
-		                    $caption = $pagemenu_data->post_title;
-		                    $pageslug = $pagemenu_data->post_name;
-		            //Start Page Menu
-		            echo "<li><a href='#$pageslug' class='page-scroll'>$caption</a></li>\n";
-		            }
-
-		            echo"</ul>";
-	        		?>
-        		</div>--><!--/#footer div-->
-				<ul>
-					<br>
-					<li><a href="<?php echo get_page_link( get_page_by_title( Aktörer )->ID ); ?>">För aktörer</a></li>
-				</ul>
-				<!--<h1>Intresserad av försäljning eller marknadsstånd? </h1>
-				<p>Klicka <a href="">här</a> för mer information</p>-->
 				
-				
+				<div class="row top">
+					<div class="col-md-12 center border-top">
+
+						<div class="col-md-4 center top">
+						<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
+							<i class="fa fa-envelope-o"></i>
+							<p>info@polimhamn.se</p>
+						</div>
+
+						<div class="col-md-4 center top">
+						<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
+							<i class="fa fa-map-marker"></i>
+							<p>Järnvägsgatan 25 <br> 216 14 Limhamn</p>
+						</div>	
+
+						<div class="col-md-4 center top">
+						<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
+							<i class="fa fa-phone"></i>
+							<p>0760-10 44 05</p>
+						</div>		
+					</div>
+				</div>
 			</div><!--End of .col-->
 
-			<div class="col-md-4 col-sm-4 center top">
+			<div class="col-md-6 center">
+				<h1>Följ Hamnfestivalen</h1>
+					<ul class="list-unstyled list-inline">
+						<li><a class="fa fa-facebook-square" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
+						<li><a class="fa fa-instagram" href="https://instagram.com/pohamnfestivalen/" title="Instagram" target="_blank"></a></li>
+						<!--<li><a class="fa fa-google-plus-square" href="https://plus.google.com/share?url=http://www.hamnfestivalen.se/" title="Google +" target="_blank"></a></li>-->
+			        </ul>
+
+				<div class="row top">
+					<div class="col-md-12 center ">
+						<!--<a href="http://www.hamnfestivalen.se" target="_blank"><div id="hamnfestivalen_logo"></div></a>	-->
+						<h1>Intresserad av att bli en medverkande aktör? </h1>
+               		 	<p>Klicka <a href="">här</a> för mer information</p>
+					</div>
+				</div><!--End of nested .row-->
+			</div><!--End of .col-->
+
+
+
+
+					
+					
+				
+				
+		
+
+			<!--<div class="col-md-4 col-sm-4 center top">
 				<h1>Följ Hamnfestivalen</h1>
 				<p>
 					<ul class="list-unstyled list-inline">
@@ -47,17 +68,15 @@
 						<li><a class="fa fa-google-plus-square" href="https://plus.google.com/share?url=http://www.hamnfestivalen.se/" title="Google +" target="_blank"></a></li>
 			        </ul>
 			    </p>
-			</div><!--End of .col-->
+			</div>--><!--End of .col-->
 
-			<div class="col-md-3 col-sm-3 center">
+			<!--<div class="col-md-3 col-sm-3 center">
 				<a href="http://www.hamnfestivalen.se" target="_blank"><div id="hamnfestivalen_logo"></div></a>
 				<a href="http://www.polimhamn.se" target="_blank"><div id="polimhamn_logo"></div></a>	
-			</div><!--End of .col-->
+			</div>--><!--End of .col-->
 		
 		</div><!--End of .row-->
 		
-		<hr>
-		<p class="center"><?php the_time('Y'); ?> &copy; <?php bloginfo('name'); ?></p>
 		<!--<p>Hamnfestivalen pågår mellan den 30 juli och 2 augusti 2015</p>-->
 
 	</div>  <!--End of .container-->
