@@ -118,6 +118,10 @@ header {
 	}
 
 /*Styles for navigation*/
+	.navbar{
+		border-bottom: 1px solid rgba(250,250,250, 1);
+		box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+	}
 
 	.navbar-brand {
 		color: rgba(250,250,250, 1) !important;
@@ -127,7 +131,7 @@ header {
 		font-family: 'Museo', 'Arvo', 'Georgia', serif;
 		font-weight: 700;
 		font-size: 1.15em;
-		background-color: rgba(27,82,155, 1);
+		background-color: rgba(34,60,126, 1);
 		border: rgba(27,82,155, 1);
 
 		-webkit-font-smoothing: antialiased;
@@ -220,7 +224,7 @@ header {
 #om-hamnfestivalen #sponsorer h2{
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	text-align: center;
-	font-size: 1.1em;
+	font-size: 1em;
 	font-weight: 300;
 }
 
@@ -242,8 +246,8 @@ footer {
 	color:rgba(250,250,250,1);
 	-webkit-font-smoothing: antialiased;
 	padding:5% 0 0% 0;
-	background: rgba(51,106,171, 1);
-	/*background: rgba(34,51,95, 1);*/
+	/*background: rgba(51,106,171, 1);*/
+	background: rgba(34,60,126, 1);
 }
 
 footer .row{

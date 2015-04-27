@@ -4,9 +4,15 @@
 			<div class="col-md-3 col-sm-3 col-md-offset-1 col-sm-offset-1 center">
 			
 				<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
-				<h1>Meny</h1>
-				<div>
-	                 <?php// if (function_exists(clean_custom_menus())) clean_custom_menus(); else echo "string"; ?>
+				<h1>Arrangör</h1>
+				<p>På Limhamn </p>
+				<p>Järnvägsgatan 25 </p>
+				<p>216 14 Limhamn</p>
+
+				<p>Telefonnummer: 0760-10 44 05</p>
+				<p>E-post: info@polimhamn.se</p>
+				<!--<div>
+	                <?php// if (function_exists(clean_custom_menus())) clean_custom_menus(); else echo "string"; ?>
 	          		<?php 
 		            //get all pages and create navigation
 		            $pagemenu = get_pages( array( 'sort_column' => 'menu_order', 'sort_order' => 'asc', 'parent'=> '0') ); 
@@ -21,7 +27,7 @@
 
 		            echo"</ul>";
 	        		?>
-        		</div><!--/#footer div-->
+        		</div>--><!--/#footer div-->
 				<ul>
 					<br>
 					<li><a href="<?php echo get_page_link( get_page_by_title( Aktörer )->ID ); ?>">För aktörer</a></li>
