@@ -114,31 +114,68 @@ function posts_callback($atts=null, $content=null){
 add_shortcode("posts", "posts_callback");
 
 
-add_action( 'after_setup_theme', 'register_my_menu' );
-function register_my_menu() {
-  register_nav_menu( 'primary', __( 'Primary Menu', 'festivals' ) );
+// Add Your Menu Locations
+function register_my_menus() {
+  register_nav_menus(
+    array(  
+        'primary' => __( 'Main one page navigation' )
+    )
+  );
+} 
+add_action( 'init', 'register_my_menus' );
+
+function get_primary_menu($the_menu) {
+    $menu_name = $the_menu;
+
+    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+    $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+
+    $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+    $menu_list = '<ul id="one-page-nav" class="nav navbar-nav">';
+
+    foreach ( (array) $menu_items as $key => $menu_item ) {
+        $title = $menu_item->title;
+        $id = $menu_item->object_id;
+        $url = $menu_item->url;
+        $slug = strtolower($title);
+        $slug = str_replace(' ', '-', $slug);
+        $menu_list .= '<li><a href="#' . $slug . '" class="page-scroll">' . $title . '</a></li>';
+    }
+    $menu_list .= '</ul>';
+    } else {
+    $menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
+    }
+    return $menu_list;
 }
 
 
-// custom menu example @ http://digwp.com/2011/11/html-formatting-custom-menus/
-function clean_custom_menus() {
-    $menu_name = 'primary'; // specify custom menu slug
-    if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
-        echo "hej";
-        $menu = wp_get_nav_menu_object($locations[$menu_name]);
+function get_pages_by_menu($the_menu) {
+    //returns content from all pages in a menu
+    $menu_name = $the_menu;
+
+    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+        $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+
         $menu_items = wp_get_nav_menu_items($menu->term_id);
 
-        $menu_list = '<nav>' ."\n";
-        $menu_list .= "\t\t\t\t". '<ul>' ."\n";
-        foreach ((array) $menu_items as $key => $menu_item) {
+        foreach ( (array) $menu_items as $key => $menu_item ) {
+            
+            $page_id = $menu_item->object_id;
             $title = $menu_item->title;
             $url = $menu_item->url;
-            $menu_list .= "\t\t\t\t\t". '<li><a href="'. $url .'">'. $title .'</a></li>' ."\n";
+            $slug = strtolower($title);
+            $slug = str_replace(' ', '-', $slug);
+
+            $content = get_post_field( 'post_content', $page_id);
+            $content = apply_filters('the_content', $content);
+            $content_list .= "<section id='".$slug."' class='container-fluid'>";
+            $content_list .= $content;
+            $content_list .= "</section> <!--End $slug-->";
         }
-        $menu_list .= "\t\t\t\t". '</ul>' ."\n";
-        $menu_list .= "\t\t\t". '</nav>' ."\n";
-    } else {
-        // $menu_list = '<!-- no list defined -->';
+        return $content_list;
     }
-    echo $menu_list;
 }
+
+
+
