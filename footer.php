@@ -24,7 +24,7 @@
         		</div><!--/#footer div-->
 				<ul>
 					<br>
-					<li><a href="">För aktörer</a></li>
+					<li><a href="<?php echo get_page_link( get_page_by_title( Aktörer )->ID ); ?>">För aktörer</a></li>
 				</ul>
 				<!--<h1>Intresserad av försäljning eller marknadsstånd? </h1>
 				<p>Klicka <a href="">här</a> för mer information</p>-->

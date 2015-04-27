@@ -40,6 +40,7 @@
                     $pageslug = $pagemenu_data->post_name;
             //Start Page Menu
             echo "<li><a href='#$pageslug' class='page-scroll'>$caption</a></li>\n";
+
             }
             echo"</ul>";
         ?>
