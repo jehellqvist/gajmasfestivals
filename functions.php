@@ -140,6 +140,9 @@ function get_primary_menu($the_menu) {
         $url = $menu_item->url;
         $slug = strtolower($title);
         $slug = str_replace(' ', '-', $slug);
+        $slug = str_replace('å', 'a', $slug);
+        $slug = str_replace('ä', 'a', $slug);
+        $slug = str_replace('ö', 'o', $slug);
         $menu_list .= '<li><a href="#' . $slug . '" class="page-scroll">' . $title . '</a></li>';
     }
     $menu_list .= '</ul>';
@@ -166,6 +169,9 @@ function get_pages_by_menu($the_menu) {
             $url = $menu_item->url;
             $slug = strtolower($title);
             $slug = str_replace(' ', '-', $slug);
+            $slug = str_replace('å', 'a', $slug);
+            $slug = str_replace('ä', 'a', $slug);
+            $slug = str_replace('ö', 'o', $slug);
 
             $content = get_post_field( 'post_content', $page_id);
             $content = apply_filters('the_content', $content);
