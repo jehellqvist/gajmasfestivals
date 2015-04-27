@@ -97,7 +97,7 @@ header {
 }
 
 .site-title {
-	max-width: 30%;
+	max-width: 420px;
 	margin: auto;
 	padding-top: 21%;
 	z-index: 99999999999;
@@ -105,6 +105,17 @@ header {
 .site-title img {
 	width: 100%;
 }
+
+
+	@media (max-width: 768px) {
+		.site-title {
+			max-width: 300px;
+			padding-top: 70%;
+		}
+
+		header {
+		}
+	}
 
 /*Styles for navigation*/
 
@@ -335,6 +346,10 @@ footer a:visited, footer a:hover, footer a:active {
 
 section {
 	padding: 4% 0%;
+}
+
+#program {
+	padding: 15%;
 }
 
 #hitta-hit h1 {

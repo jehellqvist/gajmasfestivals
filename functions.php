@@ -114,10 +114,10 @@ function posts_callback($atts=null, $content=null){
 add_shortcode("posts", "posts_callback");
 
 
-function one_page_menu_reg() {
+add_action( 'after_setup_theme', 'register_my_menu' );
+function register_my_menu() {
   register_nav_menu( 'primary', __( 'Primary Menu', 'festivals' ) );
 }
-add_action( 'after_setup_theme', 'one-page-menu-reg' );
 
 
 // custom menu example @ http://digwp.com/2011/11/html-formatting-custom-menus/
