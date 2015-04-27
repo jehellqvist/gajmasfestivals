@@ -209,13 +209,17 @@ header {
 	height:300px;
 }
 
+#om-hamnfestivalen {
+	padding: 3% 0%;
+}
+
 #om-hamnfestivalen{
 	color:#222;
 	-webkit-font-smoothing: antialiased;
 	background-color: rgba(176,206,241,1);
 }
 
-#om-hamnfestivalen #about h1, #hitta-hit h1{
+#om-hamnfestivalen #about h1, #hitta-hit h1, #omradet h1{
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	text-align: center;
 	padding:3% 0%;
@@ -326,6 +330,7 @@ footer i{
 
 #omradet #map img{
 	width:100%;
+	height: auto;
 }
 
 #hitta-hit #by_bike, #by_boat, #by_bus, #by_car{
@@ -369,8 +374,4 @@ footer i{
 
 section {
 	padding: 4% 0%;
-}
-
-#hitta-hit h1 {
-	padding: 5% 0% 5% 0%;
 }
