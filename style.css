@@ -61,9 +61,9 @@ LIGHTER: rgba(176,206,241,1);
   font-weight: 700;
 }
 
-::-webkit-scrollbar { 
+/*::-webkit-scrollbar { 
     display: none; 
-}
+}*/
 
 * {
 	margin:0;
@@ -208,15 +208,28 @@ header {
 #program .col-md-3{
 	height:300px;
 }
+#om-hamnfestivalen .social_share{
+	padding: 2% 0%;
+}
+
+#om-hamnfestivalen .tag{
+	font-size: 1.2em;
+	font-family: 'Museo';
+}
+
+#om-hamnfestivalen .sponsorer{
+	font-size: 1em;
+	font-style: italic;
+}
 
 #om-hamnfestivalen {
-	padding: 3% 0%;
+	/*padding: 3% 0%;*/
 }
 
 #om-hamnfestivalen{
 	color:#222;
 	-webkit-font-smoothing: antialiased;
-	background-color: rgba(176,206,241,1);
+	background-color: rgba(176,206,241,1);/* org grön: 00B02E, mindre grön:24C04D*/
 }
 
 #om-hamnfestivalen #about h1, #hitta-hit h1, #omradet h1{
@@ -232,7 +245,7 @@ header {
 	font-weight: 300;
 }
 
-#om-hamnfestivalen #about p, #hitta-hit p{
+#om-hamnfestivalen #about p, #hitta-hit p, #omradet p{
 	text-align:center;
 	font-size: 1.25em;
 	line-height: 1.5em;
