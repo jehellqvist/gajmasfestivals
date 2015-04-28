@@ -174,10 +174,12 @@ function get_pages_by_menu($the_menu) {
             $slug = str_replace('ö', 'o', $slug);
 
             $content = get_post_field( 'post_content', $page_id);
-            $content = apply_filters('the_content', $content);
+            if ($content) {
+                $content = apply_filters('the_content', $content);
             $content_list .= "<section id='".$slug."' class='container-fluid'>";
             $content_list .= $content;
             $content_list .= "</section> <!--End $slug-->";
+            }
         }
         return $content_list;
     }

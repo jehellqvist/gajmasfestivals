@@ -1,4 +1,4 @@
-<footer role="contentinfo">
+<footer id="kontakt" role="contentinfo">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
@@ -33,7 +33,7 @@
 				</div>
 			</div><!--End of .col-->
 
-			<div class="col-md-6 center">
+			<div class="col-md-5 col-md-offset-1 center">
 				<h1>Följ Hamnfestivalen</h1>
 					<ul class="list-unstyled list-inline">
 						<li><a class="fa fa-facebook-square" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
