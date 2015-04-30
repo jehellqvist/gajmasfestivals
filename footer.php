@@ -33,7 +33,7 @@
 				</div>
 			</div><!--End of .col-->
 
-			<div class="col-md-5 col-md-offset-1 center">
+			<div class="col-md-6 center">
 				<h1>Följ Hamnfestivalen</h1>
 					<ul class="list-unstyled list-inline">
 						<li><a class="fa fa-facebook-square" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
@@ -44,7 +44,7 @@
 				<div class="row top">
 					<div class="col-md-12 center ">
 						<!--<a href="http://www.hamnfestivalen.se" target="_blank"><div id="hamnfestivalen_logo"></div></a>	-->
-						<h1>Intresserad av att bli en medverkande aktör? </h1>
+						<h1>Är du en medverkande aktör eller intresserad av att bli en? </h1>
                		 	<p>Klicka <a href="">här</a> för mer information</p>
 					</div>
 				</div><!--End of nested .row-->
@@ -87,6 +87,11 @@
  
 <?php wp_footer(); ?> <!--is what WordPress uses to add things to the bottom of the
 site, more often that not used by plugins to add things like site tracking code.-->
- 
+ <script type="text/javascript">
+        $('.carousel').carousel({
+            interval: 2000,
+           
+        });
+</script>
 </body>
 </html>

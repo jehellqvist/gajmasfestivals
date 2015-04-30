@@ -1,5 +1,8 @@
 <?php
 
+include ('one-page-slider.php');
+
+
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 function my_jquery_enqueue() {
    wp_deregister_script('jquery');
@@ -12,6 +15,7 @@ function my_jquery_enqueue() {
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css' );
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap-responsive.min.css' );
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), true );
+    wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/full-slider.css' );
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/javascript.js', array('jquery'), true );
     wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/js/jquery.easing.min.js', array('jquery'), true );
     wp_enqueue_script( 'bootstrap-nav-script', get_template_directory_uri() . '/js/scrolling-nav.js', array('jquery'), true );
@@ -196,4 +200,18 @@ function get_pages_by_menu($the_menu) {
 
 add_theme_support( 'post-thumbnails' );
 
+add_filter('manage_posts_columns', 'posts_columns', 5);
+add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
+
+function posts_columns($defaults){
+    $defaults['riv_post_thumbs'] = __('Thumbs');
+    return $defaults;
+}
+
+function posts_custom_columns($column_name, $id){
+        if($column_name === 'riv_post_thumbs'){
+         
+        echo the_post_thumbnail( 'thumbnail' );
+    }
+}
 
