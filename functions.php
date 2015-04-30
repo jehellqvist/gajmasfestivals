@@ -194,5 +194,6 @@ function get_pages_by_menu($the_menu) {
     }
 }
 
+add_theme_support( 'post-thumbnails' );
 
 
