@@ -84,15 +84,50 @@ function posts_callback($atts=null, $content=null){
 
                 }
                 
-                 $option .= '<div class="col-xs-12 col-sm-6 col-md-3 post_content '. $cat_string .'"><div class="inner">
-                    <h2>'. get_the_title(). '</h2>
-                    <p>'.get_the_post_thumbnail().'</p>
-                    <p>'. get_the_content().'</p>
-                    <span>Plats: '.get_field('plats').'</span><br>
-                    <span>Datum: '.get_field('datum').'</span>
-                    <span>Tid: '.get_field('tid').'</span>
-                </div><!--End .inner--></div><!--End . col-*-* -->';
+                //format of day field
+                $days = get_field('dag');
+                if(count($days)>=4){
+                    $day_list='Alla dagar';
+                }
+                else {
+                    foreach ($days as $day) {
+                        $day_list .= $day.', ';
+                    }
+                    $day_list = substr($day_list, 0, -2);
+                }
+
+                //format of time field
+                if(get_field('tid') == ''){
+                    $time = '';
+                }
+                else {
+                    $time = ' | '.get_field('tid');
+                }
+
+
+
+                 $option .= '
+                     <div class="col-xs-6 col-sm-3 col-md-4 post-content '. $cat_string .'">
+                        <div class="inner" style="background-image:url('.get_field('bild').')">
+                            <div class="wave">
+
+                                <div class="inner-content">
+                                    <h2>'. get_the_title(). '</h2>
+                                    <p class="content-meta">'.$day_list.$time.'<p>
+
+                                    <p class="description">'.get_field('beskrivning').'</p>
+                                    <span class="place"><p>'.get_field('plats_pa_kartan').'</p><i class="fa fa-map-marker"></i><p>'.get_field('plats').'</p></span>
+
+                                </div><!--.inner-content-->
+
+                            </div><!--.wave-->
+                        </div><!--End .inner-->
+                    </div><!--End . col-*-* -->';
                 ?><?php $cat_string = "";
+
+                //variable reset
+                $time = '';
+                $day_list = '';
         endwhile;
 
     endif;
@@ -190,9 +225,9 @@ function get_pages_by_menu($the_menu) {
             $content = get_post_field( 'post_content', $page_id);
             if ($content) {
                 $content = apply_filters('the_content', $content);
-            $content_list .= "<section id='".$slug."' class='container-fluid'>";
-            $content_list .= $content;
-            $content_list .= "</section> <!--End $slug-->";
+                $content_list .= "<section id='".$slug."' class='container-fluid'>";
+                $content_list .= $content;
+                $content_list .= "</section> <!--End $slug-->";
             }
         }
         return $content_list;
@@ -251,4 +286,3 @@ add_filter('/acf/settings/show_admin', '__return_false');
 
 // 4. Include ACF
 include_once( get_stylesheet_directory() . '/acf/acf.php' );
-

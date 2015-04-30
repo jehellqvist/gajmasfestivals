@@ -154,7 +154,6 @@ header {
 		border-bottom: 1px solid rgba(250,250,250, 1);
 		box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 		z-index:1;
-		border-radius: 0px !important;
 	
 }
 	.navbar-brand {
@@ -230,6 +229,10 @@ header {
 	margin: 0 .5% 0 0 ;
 }
 
+#program .row:first-child {
+	padding: 0% 1%;
+}
+
 #om-hamnfestivalen .social_share{
 	padding: 2% 0%;
 }
@@ -247,7 +250,7 @@ header {
 #om-hamnfestivalen{
 	color:#222;
 	-webkit-font-smoothing: antialiased;
-	/*background-color: rgba(176,206,241,1);/* org grön: 00B02E, mindre grön:24C04D*/
+	background-color: rgba(176,206,241,1);/* org grön: 00B02E, mindre grön:24C04D*/
 }
 
 #om-hamnfestivalen #about h1, #hitta-hit h1, #omradet h1{
@@ -369,9 +372,9 @@ footer i{
 	padding:20px 20px 40px 20px;
 }
 
-#hitta-hit {
-	background: #48CA6A; /* #24C04D;*/
-}
+/*#hitta-hit {
+	background: #48CA6A; /* #24C04D;
+}*/
 
 #hitta-hit #transport img{
 	max-height:100px;
@@ -472,105 +475,48 @@ html, body {
   top: 0;
 }
 
-
-.post-content {
-	width: 327px;
-	height: 400px;
-	padding: 0 7.5px;
-}
-
 .post-content .inner, .wave {
 	position: relative;
-	width: 100%;
-	height: 100%;
+	width: 300px;
+	min-height: 340px;
 }
 
 .inner, .wave {
 	height: 100%;
-	width: 100%;
 }
 
-
-/*Bakgrund blå*/
-.wave:after {
-	content: '';
-	position: absolute;
-	bottom: -100px;
-	width: 700px;
-	margin: 0 0 0 -30px;
-	height: 270px;
-	background-color: rgba(51,106,171, 1);
-	transform: rotate(7deg);
+.post-content {
+	min-height: 50%;
 }
 
 .wave:before {
 	content: '';
 	position: absolute;
-	bottom: -50px;
+	bottom: -100px;
 	width: 700px;
 	margin: 0 0 0 -30px;
-	height: 270px;
-	background-color: rgba(34,60,126, 0.99);
-	transform: rotate(-7deg);
+	height: 230px;
+	background-color: rgba(34,60,126, 0.9);
+	transform: rotate(7deg);
 }
 
-/*Containing div*/
 .post-content .inner {
-	width: 100%;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: contain;
+    background-size: cover;
     -o-background-size: cover;
-    background-repeat: no-repeat;
     overflow: hidden;
 }
 
-/*Text content*/
 .post-content .inner-content {
-	z-index: 2;
-	height: 170px;
 	color: #fff;
-	padding: 0% 7%;
 	position: absolute;
 	bottom: 0;
 	overflow: hidden;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 .post-content .inner-content h2 {
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
-	font-weight: 500;
-	font-size: 1.4em;
-	padding: 0;
-	margin: 0;
-}
-
-.post-content .inner-content .content-meta {
-	text-transform: uppercase;
-	font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
-	font-weight: 700;
-}
-
-.post-content .inner-content .description {
-
-}
-
-.post-content .inner-content .place {
-	text-transform: uppercase;
-	font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
-	font-weight: 700;
-	position: absolute;
-	bottom: 0;
-	float: left;
-}
-
-.post-content .inner-content .place p:first-child {
-	display: inline-block;
-	margin-right: 10px;
-}
-
-.post-content .inner-content .place p:last-child {
-	display: inline-block;
-	margin-left: 10px;
+	font-weight: 300;
+	font-size: 0.5em;
 }
