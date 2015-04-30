@@ -79,7 +79,7 @@
     <a class="page-scroll" href="#program"><i class="fa fa-chevron-down fa_arrow"></i></a>
     <!-- Full Page slider-->
     </header>
- <nav class="navbar navbar-inverse stuck" role="navigation">
+ <nav id="affix-nav" class="navbar navbar-inverse affix" role="navigation" data-spy="affix">
       <div class="container">
         <div class="navbar-header page-scroll">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -91,10 +91,10 @@
           <a class="navbar-brand page-scroll" href="#page-top">Meny</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <?php
-                echo get_primary_menu('primary');
-                ?>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <?php
+            echo get_primary_menu('primary');
+            ?>
 
 
         </div><!--/.nav-collapse -->

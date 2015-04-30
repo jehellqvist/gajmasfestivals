@@ -89,9 +89,19 @@
 site, more often that not used by plugins to add things like site tracking code.-->
  <script type="text/javascript">
         $('.carousel').carousel({
-            interval: 3500,
-           
+            interval: 3500,  
         });
+
+        $(document).ready(function(){
+        	
+    $('#affix-nav').affix({
+    offset: {
+    	
+        top: 725
+    }
+	});
+
+});
 </script>
 </body>
 </html>
