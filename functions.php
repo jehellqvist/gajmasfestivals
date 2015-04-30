@@ -61,17 +61,16 @@ if(get_page_by_title("Home") == null)
 
 function posts_callback($atts=null, $content=null){
     query_posts(array('orderby' => 'date', 'order' => 'DESC' , 'showposts' => $posts));
-
+    $categories = get_categories('parent=0', 'type=post');    
     $option .= '<div class="row filtering">';
-    $categories = get_categories('type=post'); 
     foreach ($categories as $category) {
         $option .= '<button class="btn btn-default" id="'.$category->cat_name.'">'.$category->cat_name.'</button>';
     }
+
+
     $option .= '</div><!--End .row-->';
 
     $option .= '<div class="row" id="post_filter" >';
-
-
     if(have_posts()):
         while(have_posts()):
             the_post();
@@ -80,9 +79,13 @@ function posts_callback($atts=null, $content=null){
                     $cat_string .= $category->cat_name . " ";
 
                 }
-                 $option .= '<div class="col-xs-12 col-sm-6 col-md-3 '. $cat_string .'"><div class="inner">
+                
+                 $option .= '<div class="col-xs-12 col-sm-6 col-md-3 post_content '. $cat_string .'"><div class="inner">
                     <h2>'. get_the_title(). '</h2>
+                    <p>'.get_the_post_thumbnail().'</p>
                     <p>'. get_the_content().'</p>
+                    <span>Plats: '.get_field('plats').'</span><br>
+                    <span>Tid: '.get_field('tid').'</span>
                 </div><!--End .inner--></div><!--End . col-*-* -->';
                 ?><?php $cat_string = "";
         endwhile;
@@ -95,16 +98,22 @@ function posts_callback($atts=null, $content=null){
     "<script>
         var btns = $('.btn').click(function() {
             $('#post_filter > div').show()
+
         if (this.id == 'Alla') {
             $('#post_filter > div').fadeIn(1000);
         } 
         else {
-            var el = $('.' + this.id).fadeIn(1000);
+            $('.' + this.id).fadeIn(1000);
             $('#post_filter > div').hide()
             $('#post_filter').find('.' + this.id).show()            
         }
         $('.btn').removeClass('active');
         $(this).addClass('active');
+        if ($().hasClass('active')) {
+            $(this).parent().addClass('active');
+        }
+        
+
         })
     </script>";
 
