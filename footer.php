@@ -44,7 +44,7 @@
 				<div class="row top">
 					<div class="col-md-12 center ">
 						<!--<a href="http://www.hamnfestivalen.se" target="_blank"><div id="hamnfestivalen_logo"></div></a>	-->
-						<h1>Är du en medverkande aktör eller intresserad av att bli en? </h1>
+						<h1>Är du en medverkande aktör eller intresserad av att bli? </h1>
                		 	<p>Klicka <a href="">här</a> för mer information</p>
 					</div>
 				</div><!--End of nested .row-->
@@ -96,8 +96,7 @@ site, more often that not used by plugins to add things like site tracking code.
         	
     $('#affix-nav').affix({
     offset: {
-    	
-        top: 725
+        top: 731
     }
 	});
 

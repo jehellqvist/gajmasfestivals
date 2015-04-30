@@ -219,6 +219,7 @@ header {
 
 #program {
 	padding: 3% 5% 2% 5%;
+	margin: 2% 0 0 0;
 }
 
 #program .filtering{
@@ -517,6 +518,10 @@ html, body {
 }
 
 /*Containing div*/
+.post-content{
+	margin:0 0 1.5% 0;
+	}
+
 .post-content .inner {
 	width: 100%;
 	-webkit-background-size: cover;
@@ -525,6 +530,8 @@ html, body {
     -o-background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    	border-radius: 2px;
+
 }
 
 /*Text content*/
@@ -575,5 +582,12 @@ html, body {
 .post-content .inner-content .place p:last-child {
 	display: inline-block;
 	margin-left: 10px;
+}
+
+/*FIX FÖR ATY #BY_CAR INTE SKA TRILLA NER VID VIDD .COL-SM-* */
+@media(max-width: 991px){
+	#by_bus{
+		clear:left;
+	}
 }
 
