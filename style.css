@@ -1,4 +1,4 @@
-﻿/*
+/*
 Theme Name: Gajmas festivals theme
 Theme URI: 
 Author: Gajmas
@@ -235,7 +235,8 @@ header {
 .inner {
 	/*background-color: rgba(176,206,241,1);*/
 }
-
+.inner img{
+}
 #program .col-md-3{
 	height:300px;
 }
