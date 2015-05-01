@@ -92,15 +92,28 @@ site, more often that not used by plugins to add things like site tracking code.
             interval: 3500,  
         });
 
-        $(document).ready(function(){
-        	
-    $('#affix-nav').affix({
-    offset: {
-        top: 731
-    }
-	});
+$(function() {
 
+  // Do our DOM lookups beforehand
+  var nav_container = $(".container");
+  var nav = $("nav");
+
+  nav_container.waypoint({
+    handler: function() {
+      	nav.toggleClass('stuck');
+    }
+  });
 });
+
+
+        	
+    /*$('#affix-nav').affix({
+    offset: {
+    	
+        top: $("#affix-nav").offset().top
+    }
+	});*/
+
 </script>
 </body>
 </html>

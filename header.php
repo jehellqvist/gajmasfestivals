@@ -10,7 +10,7 @@
  
 </head>
   
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar">
      
     <div id="wrapper">
      
@@ -79,7 +79,7 @@
     <a class="page-scroll" href="#program"><i class="fa fa-chevron-down fa_arrow"></i></a>
     <!-- Full Page slider-->
     </header>
- <nav id="affix-nav" class="navbar navbar-inverse affix" role="navigation" data-spy="affix">
+ <nav id="affix-nav" class="navbar navbar-inverse" role="navigation" >
       <div class="container">
         <div class="navbar-header page-scroll">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
