@@ -88,9 +88,12 @@
 <?php wp_footer(); ?> <!--is what WordPress uses to add things to the bottom of the
 site, more often that not used by plugins to add things like site tracking code.-->
  <script type="text/javascript">
-        $('.carousel').carousel({
-            interval: 3500,  
-        });
+      $(document).ready(function() { 
+      $('#myCarousel').carousel({ 
+      	interval: 3000, 
+      	cycle: true, 
+      	pause: "false"});
+  }); 
 
 $(function() {
 

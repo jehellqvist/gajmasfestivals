@@ -35,6 +35,9 @@
                             <div class="fill img-responsive" style="background-image:url(<?php echo $url; ?>);"></div>
                             <!--<img src="<?php echo $url; ?>" alt="Image Title" class="img-responsive">-->
                             <div class="carousel-caption">
+                                <!--Place caption/title/calls-to-action for your slide-->
+
+                    <span class="captionDetail"><?php the_content(); ?></span>
                                 <!--End slide content-->
                             </div>
                         </div>
@@ -58,6 +61,9 @@
                     <div class="fill" style="background-image:url(<?php echo $url; ?>);"></div>
                     <!--<img src="<?php echo $url; ?>" alt="Image Title" class="img-responsive">-->
                     <div class="carousel-caption">
+                        <!--Place caption/title/calls-to-action for your slide-->
+
+                    <span class="captionDetail"><p><?php the_content(); ?></p></span>
                     <!--End slide content-->
                     </div>
                     </div>
@@ -76,7 +82,7 @@
             <h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/logo_bla2.png" alt="Hamnfestivalen på Limhamns logotyp"></a></h1>
         </div>
     </div>
-    <a class="page-scroll" href="#program"><i class="fa fa-chevron-down fa_arrow"></i></a>
+    <a class="page-scroll" href=".filtering"><i class="fa fa-chevron-circle-down fa_arrow"></i></a>
     <!-- Full Page slider-->
     </header>
  <nav id="affix-nav" class="navbar navbar-inverse" role="navigation" >
