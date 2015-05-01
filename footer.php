@@ -108,15 +108,6 @@ $(function() {
   });
 });
 
-
-        	
-    /*$('#affix-nav').affix({
-    offset: {
-    	
-        top: $("#affix-nav").offset().top
-    }
-	});*/
-
 </script>
 </body>
 </html>
