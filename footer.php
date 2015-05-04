@@ -44,12 +44,15 @@
 				<div class="row top">
 					<div class="col-md-12 center ">
 						<!--<a href="http://www.hamnfestivalen.se" target="_blank"><div id="hamnfestivalen_logo"></div></a>	-->
-						<h1>Är du en medverkande aktör eller intresserad av att bli? </h1>
-               		 	<p>Klicka <a href="">här</a> för mer information</p>
+						<h1>Är du en medverkande aktör eller intresserad av att bli en? </h1>
+               		 	<p>Besök vår sida <a href="http://localhost:8888/?page_id=138 ">för medverkande aktörer</a></p>
 					</div>
 				</div><!--End of nested .row-->
 			</div><!--End of .col-->
 
+			<div class="col-md-12 text-center">
+				<p class="design-by">Web design av <a href="http://www.gajmas.se">GAJMA</a></p>
+			</div>
 
 
 

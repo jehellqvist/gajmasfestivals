@@ -1,6 +1,7 @@
 <?php
 
 include ('one-page-slider.php');
+//include ('add_custom_meta_boxes.php');
 
 
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
@@ -118,7 +119,7 @@ function posts_callback($atts=null, $content=null){
                                     <p class="content-meta">'.$day_list.$time.'<p>
 
                                     <p class="description">'.get_field('beskrivning').'</p>
-                                    <span class="place"><p>'.get_field('plats_pa_kartan').'</p><i class="fa fa-map-marker"></i><p>'.get_field('plats').'</p></span>
+                                    <span class="place"><p><a href="#omradet" class="page-scroll place-map">'.get_field('plats_pa_kartan').'</a></p><i class="fa fa-map-marker"></i><p>'.get_field('plats').'</p></span>
 
                                 </div><!--.inner-content-->
 
@@ -169,7 +170,8 @@ add_shortcode("posts", "posts_callback");
 function register_my_menus() {
   register_nav_menus(
     array(  
-        'primary' => __( 'Main one page navigation' )
+        'primary' => __( 'Main one page navigation' ),
+        'secondary' => __( 'Page navigation' )
     )
   );
 } 
@@ -288,3 +290,10 @@ add_filter('/acf/settings/show_admin', '__return_false');
 
 // 4. Include ACF
 include_once( get_stylesheet_directory() . '/acf/acf.php' );
+
+
+
+
+
+
+

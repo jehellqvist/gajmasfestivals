@@ -69,7 +69,6 @@ LIGHTER: rgba(176,206,241,1);
 	margin:0;
 	padding: 0;
 	-webkit-box-sizing: border-box;
-
 }
 
 body,html {
@@ -87,6 +86,10 @@ footer {
 	background: rgba(51,106,171, 1);
 }
 
+.design-by {
+	opacity: 0.3;
+}
+
 header {
 	/*background-image: url(img/slider/water.png);*/
 	width: 100%;
@@ -102,10 +105,11 @@ header {
 }
 
 #title-box{
-	background-color: rgba(250,250,250, .3);
-	border:5px solid rgba(255,255,255, 1);
+	background-color: rgba(3,49,131, 0.8);
+	border-radius: 2px;
+	/*border:5px solid rgba(255,255,255, 1);*/
 	position: absolute;
-	top:5%;
+	top:15%;
 	width:35%;
 	left:32.5%;
 	padding:2% 0;
@@ -359,9 +363,24 @@ footer i{
 	text-decoration: none;
 }
 
+#omradet [class^="col-"] {
+	text-align: center;
+	padding:20px 20px 40px 20px;
+}
+
 #omradet #map img{
 	width:100%;
 	height: auto;
+}
+
+#omradet img {
+	height: 80px;
+	width: auto;
+}
+
+#omradet .omradet-place img {
+	height: 80px;
+	width: auto;
 }
 
 #hitta-hit #by_bike, #by_boat, #by_bus, #by_car{
@@ -370,7 +389,10 @@ footer i{
 }
 
 #hitta-hit {
-	background: #48CA6A; /* #24C04D;*/
+	color: #fff;
+	background: rgba(0,180,56,1);/*#00B02E; /* #24C04D;*/
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 #hitta-hit #transport img{
@@ -379,7 +401,6 @@ footer i{
 
 #hitta-hit #by_bus img, #by_boat img{
 	height:80px;
-
 }
 
 .center{
@@ -412,7 +433,19 @@ section {
 }
 
 
-.carousel{
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel,
+.item,
+.active{
 	height:100%;
 }
 
@@ -426,7 +459,10 @@ section {
 	height:100% !important;
    	background-position: bottom center; 
    	background-repeat: no-repeat;
-   	background-size: cover;
+   	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
    	width:100%;
 }
 
@@ -456,16 +492,21 @@ html, body {
 }
 
 .fa_arrow{
-	font-size: 4em;
+	font-size: 2em;
+	padding: 1.2%;
 	position:absolute;
 	left:47%;
 	top:80%;
 	z-index:3;
-	color:rgba(51,106,171, 1);;
+	background-color: rgba(3,49,131, 0.9); /*GRÖN rgba(0, 180, 56, 1) BLÅ: rgba(3,49,131, 1) 249,0,0*/
+	border-radius: 50%;
+	color:rgba(250,250,250, 1);
+	transition: all 1s ease;
 }
 
 .fa_arrow:hover{
-	font-size: 4.5em;
+	font-size: 2.5em;
+	transition: all 1s ease;
 }
 
 
@@ -537,6 +578,7 @@ html, body {
 .post-content .inner-content {
 	z-index: 2;
 	height: 170px;
+	width: 100%;
 	color: #fff;
 	padding: 0% 7%;
 	position: absolute;
