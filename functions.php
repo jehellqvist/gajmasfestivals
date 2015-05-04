@@ -193,7 +193,7 @@ function posts_callback($atts=null, $content=null){
 
 
                  $option .= '
-                     <div class="col-xs-6 col-sm-3 col-md-4 post-content '. $cat_string .'" data-category="'.$cat_string.'">
+                     <article class="col-xs-6 col-sm-3 col-md-4 post-content '. $cat_string .'" data-category="'.$cat_string.'">
                         <div class="inner" style="background-image:url('.get_field('bild').')">
                             <div class="wave">
 
@@ -208,7 +208,7 @@ function posts_callback($atts=null, $content=null){
 
                             </div><!--.wave-->
                         </div><!--End .inner-->
-                    </div><!--End . col-*-* -->';
+                    </article><!--End . col-*-* -->';
                 ?><?php $cat_string = "";
 
                 //variable reset
@@ -232,38 +232,75 @@ add_shortcode("posts", "posts_callback");
 function register_my_menus() {
   register_nav_menus(
     array(  
-        'primary' => __( 'Main one page navigation' )
+        'primary' => __( 'Main one page navigation' ),
+        'secondary' => __( 'post-page navigation' ),
     )
   );
 } 
 add_action( 'init', 'register_my_menus' );
 
+
+/*
+* Returns a boostrap classified menu
+* primary: #-linked to slug
+* secondary: url-linked
+*/
 function get_primary_menu($the_menu) {
-    $menu_name = $the_menu;
+    if ($the_menu == 'secondary') {
+        $menu_name = $the_menu;
 
-    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
-    $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+        if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+            $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 
-    $menu_items = wp_get_nav_menu_items($menu->term_id);
+            $menu_items = wp_get_nav_menu_items($menu->term_id);
+            $menu_list = '<ul id="one-page-nav" class="nav navbar-nav" >';
 
-    $menu_list = '<ul id="one-page-nav" class="nav navbar-nav" >';
-
-    foreach ( (array) $menu_items as $key => $menu_item ) {
-        $title = $menu_item->title;
-        $id = $menu_item->object_id;
-        $url = $menu_item->url;
-        $slug = strtolower($title);
-        $slug = str_replace(' ', '-', $slug);
-        $slug = str_replace('å', 'a', $slug);
-        $slug = str_replace('ä', 'a', $slug);
-        $slug = str_replace('ö', 'o', $slug);
-        $menu_list .= '<li><a href="#' . $slug . '" class="page-scroll">' . $title . '</a></li>';
+            foreach ( (array) $menu_items as $key => $menu_item ) {
+                $title = $menu_item->title;
+                $id = $menu_item->object_id;
+                $url = $menu_item->url;
+                $slug = strtolower($title);
+                $slug = str_replace(' ', '-', $slug);
+                $slug = str_replace('å', 'a', $slug);
+                $slug = str_replace('ä', 'a', $slug);
+                $slug = str_replace('ö', 'o', $slug);
+                $menu_list .= '<li><a href="'. $url . '" class="page-scroll">' . $title . '</a></li>';
+            }
+            $menu_list .= '</ul>';
+        } 
+        else {
+            $menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
+        }
+        return $menu_list;
     }
-    $menu_list .= '</ul>';
-    } else {
-    $menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
+    else {
+        $menu_name = $the_menu;
+
+        if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+            $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+
+            $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+            $menu_list = '<ul id="one-page-nav" class="nav navbar-nav" >';
+
+            foreach ( (array) $menu_items as $key => $menu_item ) {
+                $title = $menu_item->title;
+                $id = $menu_item->object_id;
+                $url = $menu_item->url;
+                $slug = strtolower($title);
+                $slug = str_replace(' ', '-', $slug);
+                $slug = str_replace('å', 'a', $slug);
+                $slug = str_replace('ä', 'a', $slug);
+                $slug = str_replace('ö', 'o', $slug);
+                $menu_list .= '<li><a href="#' . $slug . '" class="page-scroll">' . $title . '</a></li>';
+            }
+            $menu_list .= '</ul>';
+        } 
+        else {
+            $menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
+        }
+        return $menu_list;
     }
-    return $menu_list;
 }
 
 
