@@ -190,10 +190,19 @@ function posts_callback($atts=null, $content=null){
                     $time = ' | '.get_field('tid');
                 }
 
+                $url = get_permalink();
+                $description = get_field('beskrivning');
+
+                if(strlen($description) >= 115) {
+                    $description = substr($description, 0, 115);
+                    $description .= '... <span class="link">Läs mer</span>';
+                }
+
 
 
                  $option .= '
                      <article class="col-xs-6 col-sm-3 col-md-4 post-content '. $cat_string .'" data-category="'.$cat_string.'">
+                        <a href="'.$url.'">
                         <div class="inner" style="background-image:url('.get_field('bild').')">
                             <div class="wave">
 
@@ -201,13 +210,13 @@ function posts_callback($atts=null, $content=null){
                                     <h2>'. get_the_title(). '</h2>
                                     <p class="content-meta">'.$day_list.$time.'<p>
 
-                                    <p class="description">'.get_field('beskrivning').'</p>
+                                    <p class="description">'.$description.'</p>
                                     <span class="place"><p>'.get_field('plats_pa_kartan').'</p><i class="fa fa-map-marker"></i><p>'.get_field('plats').'</p></span>
 
                                 </div><!--.inner-content-->
 
                             </div><!--.wave-->
-                        </div><!--End .inner-->
+                        </div></a><!--End .inner-->
                     </article><!--End . col-*-* -->';
                 ?><?php $cat_string = "";
 
