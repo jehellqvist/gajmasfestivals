@@ -748,7 +748,7 @@ nav.stuck{
 	top:0;
 }
 
-main h2{
+main .medverkande h2{
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	text-align: center;
 	font-size: 1.5em;
@@ -756,14 +756,14 @@ main h2{
 	margin:-1% 0 3% 0;
 }
 
-main h3{
+main .medverkande h3{
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	font-size: 1.35em;
 	line-height: 1.5em;
 	padding:0 0 0% 0;
 }
 
-main p, main li, main td{
+main .medverkande p, main .medverkande li, main .medverkande td{
 	font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 	font-size: 1.1em;
 	line-height: 1.5em;
@@ -771,7 +771,7 @@ main p, main li, main td{
 	list-style-type: none;
 }
 
-main p{
+main .medverkande p{
 	text-align:justify;
 }
 

@@ -9,7 +9,7 @@ Template Name: medverkande-aktorer
  
 get_header(); ?>
 
- <nav id="affix-nav" class="navbar navbar-inverse" role="navigation" >
+ <nav class="navbar navbar-inverse" role="navigation" >
       <div class="container">
         <div class="navbar-header page-scroll">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -31,11 +31,12 @@ get_header(); ?>
       </div><!--End .container-->
 </nav>
 
-	<main role="main">
+	<main class="medverkande" role="main">
 
 		<?php
 			// Start the Loop.
 			while ( have_posts() ) : the_post();
+
 
 				// Include the page content template.
 				get_template_part( 'content', 'page' );
