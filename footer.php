@@ -49,7 +49,7 @@
 					<div class="col-md-12 col-sm-12 center ">
 						<!--<a href="http://www.hamnfestivalen.se" target="_blank"><div id="hamnfestivalen_logo"></div></a>	-->
 						<h1>Är du en medverkande aktör eller intresserad av att bli en? </h1>
-               		 	<p>Besök vår sida <a href="http://localhost:8888/?page_id=138 ">för medverkande aktörer</a></p>
+               		 	<p>Besök vår sida <a href="http://localhost/?page_id=15">för medverkande aktörer</a></p>
 					</div>
 				</div><!--End of nested .row-->
 			</div><!--End of .col-->
@@ -57,30 +57,6 @@
 			<div class="col-md-12 text-center">
 				<p class="design-by">Web design av <a href="http://www.gajmas.se">GAJMA</a></p>
 			</div>
-
-
-
-					
-					
-				
-				
-		
-
-			<!--<div class="col-md-4 col-sm-4 center top">
-				<h1>Följ Hamnfestivalen</h1>
-				<p>
-					<ul class="list-unstyled list-inline">
-						<li><a class="fa fa-facebook-square" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
-						<li><a class="fa fa-instagram" href="https://instagram.com/pohamnfestivalen/" title="Instagram" target="_blank"></a></li>
-						<li><a class="fa fa-google-plus-square" href="https://plus.google.com/share?url=http://www.hamnfestivalen.se/" title="Google +" target="_blank"></a></li>
-			        </ul>
-			    </p>
-			</div>--><!--End of .col-->
-
-			<!--<div class="col-md-3 col-sm-3 center">
-				<a href="http://www.hamnfestivalen.se" target="_blank"><div id="hamnfestivalen_logo"></div></a>
-				<a href="http://www.polimhamn.se" target="_blank"><div id="polimhamn_logo"></div></a>	
-			</div>--><!--End of .col-->
 		
 		</div><!--End of .row-->
 		
@@ -97,7 +73,7 @@ site, more often that not used by plugins to add things like site tracking code.
  <script type="text/javascript">
       $(document).ready(function() { 
 	      $('#myCarousel').carousel({ 
-	      	interval: 5000, 
+	      	interval: 6000, 
 	      	cycle: true, 
 	      	pause: "false"
 	      });

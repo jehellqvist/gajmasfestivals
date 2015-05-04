@@ -261,7 +261,7 @@ header {
 	/*background-color: rgba(176,206,241,1);/* org grön: 00B02E, mindre grön:24C04D*/
 }
 
-#om-hamnfestivalen #about h1, #hitta-hit h1, #omradet h1{
+#om-hamnfestivalen #about h1, #hitta-hit h1, #omradet h1, main h1{
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	text-align: center;
 	padding:3% 0%;
@@ -778,7 +778,65 @@ nav.stuck{
 	position:fixed;
 	top:0;
 }
+<<<<<<< Updated upstream
 }
 .carousel-fade .carousel-control {
   z-index: 2;
 }
+=======
+
+
+main h2{
+	font-family: 'Museo', 'Arvo', 'Georgia', serif;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 300;
+	margin:-1% 0 3% 0;
+}
+
+main h3{
+	font-family: 'Museo', 'Arvo', 'Georgia', serif;
+	font-size: 1.35em;
+	line-height: 1.5em;
+	padding:0 0 0% 0;
+}
+
+main p, main li, main td{
+	font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	padding:0 0 0% 0;
+	list-style-type: none;
+}
+
+main p{
+	text-align:justify;
+}
+
+table td{
+	width:20%;
+}
+
+table{
+	margin:3% 0 3% 0;
+}
+
+.sidebar{
+	margin:0% 0% 0 2%;
+	padding:0% 1%;
+	border-left: 1px dotted #000;
+}
+
+.sidebar h3{
+	text-align: center;
+	padding:0;
+	margin:0;
+	-webkit-font-smoothing: antialiased;
+}
+
+.sidebar p{
+		text-align: center;
+
+}
+
+>>>>>>> Stashed changes
