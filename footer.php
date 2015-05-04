@@ -1,3 +1,7 @@
+<figure id="bridge_img">
+<img src="http://localhost/gajmas/wp-content/uploads/2015/05/bro_bla.png" alt="öresundsbron" width="100%"/>
+</figure>
+
 <footer id="kontakt" role="contentinfo">
 	<div class="container">
 		<div class="row">
