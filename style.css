@@ -777,12 +777,6 @@ nav.stuck{
 	position:fixed;
 	top:0;
 }
-<<<<<<< Updated upstream
-}
-.carousel-fade .carousel-control {
-  z-index: 2;
-}
-=======
 
 
 main h2{
@@ -821,21 +815,21 @@ table{
 }
 
 .sidebar{
-	margin:0% 0% 0 2%;
+	text-align: center;
+	margin:-5% 0% 0 2%;
 	padding:0% 1%;
 	border-left: 1px dotted #000;
 }
 
 .sidebar h3{
 	text-align: center;
-	padding:0;
-	margin:0;
+	padding:0% 0 0 0;
+	margin:20% 0 0 0;
 	-webkit-font-smoothing: antialiased;
 }
 
 .sidebar p{
-		text-align: center;
+	text-align: center;
 
 }
 
->>>>>>> Stashed changes
