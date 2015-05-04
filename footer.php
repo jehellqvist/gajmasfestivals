@@ -92,11 +92,14 @@
 site, more often that not used by plugins to add things like site tracking code.-->
  <script type="text/javascript">
       $(document).ready(function() { 
-      $('#myCarousel').carousel({ 
-      	interval: 3000, 
-      	cycle: true, 
-      	pause: "false"});
-  }); 
+	      $('#myCarousel').carousel({ 
+	      	interval: 5000, 
+	      	cycle: true, 
+	      	pause: "false"
+	      });
+      }); 
+
+
 
 $(function() {
 
