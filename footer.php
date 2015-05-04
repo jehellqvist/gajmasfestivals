@@ -10,21 +10,21 @@
 			
 				
 				<div class="row top">
-					<div class="col-md-12 center border-top">
+					<div class="col-md-12 col-sm-12 col-xs-12 center border-top">
 
-						<div class="col-md-4 center top">
+						<div class="col-md-4 col-sm-4 center top">
 						<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
 							<i class="fa fa-envelope-o"></i>
 							<p>info@polimhamn.se</p>
 						</div>
 
-						<div class="col-md-4 center top">
+						<div class="col-md-4 col-sm-4 center top">
 						<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
 							<i class="fa fa-map-marker"></i>
 							<p>Järnvägsgatan 25 <br> 216 14 Limhamn</p>
 						</div>	
 
-						<div class="col-md-4 center top">
+						<div class="col-md-4 col-sm-4 center top">
 						<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
 							<i class="fa fa-phone"></i>
 							<p>0760-10 44 05</p>
@@ -33,7 +33,7 @@
 				</div>
 			</div><!--End of .col-->
 
-			<div class="col-md-5 col-md-offset-1 center">
+			<div class="col-md-5 col-sm-12 col-md-offset-1 center">
 				<h1>Följ Hamnfestivalen</h1>
 					<ul class="list-unstyled list-inline">
 						<li><a class="fa fa-facebook-square" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
@@ -42,7 +42,7 @@
 			        </ul>
 
 				<div class="row top">
-					<div class="col-md-12 center ">
+					<div class="col-md-12 col-sm-12 center ">
 						<!--<a href="http://www.hamnfestivalen.se" target="_blank"><div id="hamnfestivalen_logo"></div></a>	-->
 						<h1>Är du en medverkande aktör eller intresserad av att bli en? </h1>
                		 	<p>Besök vår sida <a href="http://localhost:8888/?page_id=138 ">för medverkande aktörer</a></p>
@@ -110,6 +110,7 @@ $(function() {
     }
   });
 });
+
 
 </script>
 </body>
