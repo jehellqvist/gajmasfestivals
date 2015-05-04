@@ -70,31 +70,6 @@
  
 <?php wp_footer(); ?> <!--is what WordPress uses to add things to the bottom of the
 site, more often that not used by plugins to add things like site tracking code.-->
- <script type="text/javascript">
-      $(document).ready(function() { 
-	      $('#myCarousel').carousel({ 
-	      	interval: 6000, 
-	      	cycle: true, 
-	      	pause: "false"
-	      });
-      }); 
 
-
-
-$(function() {
-
-  // Do our DOM lookups beforehand
-  var nav_container = $(".container");
-  var nav = $("#one-page");
-
-  nav_container.waypoint({
-    handler: function() {
-      	nav.toggleClass('stuck');
-    }
-  });
-});
-
-
-</script>
 </body>
 </html>
