@@ -1,7 +1,6 @@
 <?php
 
 include ('one-page-slider.php');
-//include ('add_custom_meta_boxes.php');
 
 
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
@@ -68,16 +67,100 @@ if(get_page_by_title("Home") == null)
 
 function posts_callback($atts=null, $content=null){
     query_posts(array('orderby' => 'date', 'order' => 'DESC' , 'showposts' => $posts));
-    $categories = get_categories('parent=0', 'type=post');    
-    $option .= '<div class="row filtering">';
-    foreach ($categories as $category) {
-        $option .= '<button class="btn btn-default" id="'.$category->cat_name.'">'.$category->cat_name.'</button>';
+    $option .= '<div class="row">';
+    
+    $catID = get_categories('parent=0', 'type=post');
+    foreach ($catID as $id) {
+        $name = $id->cat_name;
+        $new_id = $id->cat_ID;
+        $option .= '<div class="filter_wrapper">';
+        $categories = get_categories('parent='.$new_id.'', 'type=post');
+        foreach ($categories as $category) {
+            $new_name = $category->cat_name;
+          ;
+            $option .= '<input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="btn btn-default check" ><label for="'.$new_name.'">'.$new_name.'</label>';
+            }
+        $option .= '</div><!--End .filter_wrapper-->';    
+        $script_var .= 
+            '
+            var '.$name.' = [];
+            ';
+            $script_inputs .=
+            '
+            $("input[name=filter-'.$name.']").on( "change", function() {
+                if (this.checked) '.$name.'.push("[data-category~=\'" + $(this).attr("value") + "\']");
+                else removeA('.$name.', "[data-category~=\'" + $(this).attr("value") + "\']");
+            });';
+		
+        $script_change .='    
+				if ('.$name.'.length) {		
+					if (str == "Include items \n") {
+						str += "    " + "with (" +  '.$name.'.join(\',\') + ")\n";				
+						$($(\'input[name=filter-'.$name.']:checked\')).each(function(index, '.$name.'){
+							if(selector === \'\') {
+								selector += "[data-category~=\'" + '.$name.'.id + "\']";  					
+							} else {
+								selector += ",[data-category~=\'" + '.$name.'.id + "\']";	
+							}				 
+						});					
+					} else {
+						str += "    AND " + "with (" +  '.$name.'.join(\' OR \') + ")\n";				
+						$($(\'input[name=filter-'.$name.']:checked\')).each(function(index, '.$name.'){
+							selector += "[data-category~=\'" + '.$name.'.id + "\']";
+						});
+					}							
+				}
+                ';
     }
-
-
     $option .= '</div><!--End .row-->';
+    $option .= '<script>
+                
+                '.$script_var.'
+                
+                '.$script_inputs.'
+                $("input").on( "change", function() {
+                    var str = "Include items \n";
+                    var selector = \'\', cselector = \'\', nselector = \'\';
+                    
+                    var $lis = $(\'.program > div\'),
+                    $checked = $(\'input:checked\');	
+                    if ($checked.length) {	
+                        '.$script_change.'
+                
+                $lis.hide(); 
+				console.log(selector);
+				console.log(cselector);
+				console.log(nselector);
+				
+				if (cselector === \'\' && nselector === \'\') {			
+					$(\'.program > div\').filter(selector).show();
+				} else if (cselector === \'\') {
+					$(\'.program > div\').filter(selector).filter(nselector).show();
+				} else if (nselector === \'\') {
+					$(\'.program > div\').filter(selector).filter(cselector).show();
+				} else {
+					$(\'.program > div\').filter(selector).filter(cselector).filter(nselector).show();
+				}
+				
+			} else {
+				$lis.show();
+			}		
+		});
+		
+		function removeA(arr) {
+			var what, a = arguments, L = a.length, ax;
+			while (L > 1 && arr.length) {
+				what = a[--L];
+				while ((ax= arr.indexOf(what)) !== -1) {
+					arr.splice(ax, 1);
+				}
+			}
+			return arr;
+		}
 
-    $option .= '<div class="row" id="post_filter" >';
+    </script>';
+    $option .= '<div class="row program">';
+    
     if(have_posts()):
         while(have_posts()):
             the_post();
@@ -110,7 +193,7 @@ function posts_callback($atts=null, $content=null){
 
 
                  $option .= '
-                     <div class="col-xs-6 col-sm-3 col-md-4 post-content '. $cat_string .'">
+                     <div class="col-xs-6 col-sm-3 col-md-4 post-content '. $cat_string .'" data-category="'.$cat_string.'">
                         <div class="inner" style="background-image:url('.get_field('bild').')">
                             <div class="wave">
 
@@ -119,7 +202,7 @@ function posts_callback($atts=null, $content=null){
                                     <p class="content-meta">'.$day_list.$time.'<p>
 
                                     <p class="description">'.get_field('beskrivning').'</p>
-                                    <span class="place"><p><a href="#omradet" class="page-scroll place-map">'.get_field('plats_pa_kartan').'</a></p><i class="fa fa-map-marker"></i><p>'.get_field('plats').'</p></span>
+                                    <span class="place"><p>'.get_field('plats_pa_kartan').'</p><i class="fa fa-map-marker"></i><p>'.get_field('plats').'</p></span>
 
                                 </div><!--.inner-content-->
 
@@ -136,29 +219,8 @@ function posts_callback($atts=null, $content=null){
     endif;
 
     $option .= '</div>';
-
-    $option .= 
-    "<script>
-        var btns = $('.btn').click(function() {
-            $('#post_filter > div').show()
-
-        if (this.id == 'Alla') {
-            $('#post_filter > div').fadeIn(1000);
-        } 
-        else {
-            $('.' + this.id).fadeIn(1000);
-            $('#post_filter > div').hide()
-            $('#post_filter').find('.' + this.id).show()            
-        }
-        $('.btn').removeClass('active');
-        $(this).addClass('active');
-        if ($().hasClass('active')) {
-            $(this).parent().addClass('active');
-        }
-        
-
-        })
-    </script>";
+    
+    
 
     return $option;
 }
@@ -170,8 +232,7 @@ add_shortcode("posts", "posts_callback");
 function register_my_menus() {
   register_nav_menus(
     array(  
-        'primary' => __( 'Main one page navigation' ),
-        'secondary' => __( 'Page navigation' )
+        'primary' => __( 'Main one page navigation' )
     )
   );
 } 
@@ -290,10 +351,3 @@ add_filter('/acf/settings/show_admin', '__return_false');
 
 // 4. Include ACF
 include_once( get_stylesheet_directory() . '/acf/acf.php' );
-
-
-
-
-
-
-
