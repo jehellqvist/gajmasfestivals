@@ -8,6 +8,28 @@
  */
 get_header(); ?>
 
+ <nav id="affix-nav" class="navbar navbar-inverse" role="navigation" >
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand page-scroll" href="#page-top">Meny</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <?php
+            echo get_primary_menu('secondary');
+            ?>
+
+
+        </div><!--/.nav-collapse -->
+      </div><!--End .container-->
+</nav>
+
 <?php while (have_posts()) : the_post(); ?>
 
 <section class="<?php echo get_post_type( $post ) ?>">
@@ -33,11 +55,11 @@ get_header(); ?>
                 $time = ' | '.get_field('tid');
             }
         ?>
-        <div class="col-sm-12 col-md-7 no-margin">
+        <div class="col-sm-12 col-md-6 col-md-offset-3">
             <img src="<?php echo get_field('bild')?>" class="img-responsive">
         </div><!--End . col-*-* -->
 
-        <div class="col-sm-12 col-md-5 no-margin">
+        <div class="col-sm-12 col-md-12 no-margin">
             <div class="inner-single col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 text-center">
                 <header role="banner">
                     <h2><?php echo get_the_title() ?></h2>

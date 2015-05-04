@@ -1,5 +1,5 @@
 <figure id="bridge_img">
-<img src="http://localhost/gajmas/wp-content/uploads/2015/05/bro_bla.png" alt="öresundsbron" width="100%"/>
+	<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/bro_bla_2.png" alt="öresundsbron" width="100%">
 </figure>
 
 <footer id="kontakt" role="contentinfo">

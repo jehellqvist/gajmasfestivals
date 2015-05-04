@@ -673,9 +673,8 @@ html, body {
 
 /*Post-content single*/
 	.post {
-		background-color: rgba(51,106,171, 1);
 		padding: 0;
-		margin: 0;
+		margin: 0px;
 	}
 
 	#nav-bottom {
@@ -719,7 +718,7 @@ html, body {
 	.inner-single {
 		overflow: hidden;
 		height: auto;
-		color: #fff;
+		color: #222;
 		padding: 40px 0px;
 		overflow: hidden;
 		-webkit-font-smoothing: antialiased;
