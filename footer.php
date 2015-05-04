@@ -85,7 +85,7 @@ $(function() {
 
   // Do our DOM lookups beforehand
   var nav_container = $(".container");
-  var nav = $("nav");
+  var nav = $("#one-page");
 
   nav_container.waypoint({
     handler: function() {

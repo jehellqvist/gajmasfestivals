@@ -1,4 +1,4 @@
- <nav id="affix-nav" class="navbar navbar-inverse" role="navigation" >
+ <nav id="one-page" class="navbar navbar-inverse" role="navigation" >
       <div class="container">
         <div class="navbar-header page-scroll">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">

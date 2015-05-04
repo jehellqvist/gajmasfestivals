@@ -242,7 +242,7 @@ function register_my_menus() {
   register_nav_menus(
     array(  
         'primary' => __( 'Main one page navigation' ),
-        'secondary' => __( 'post-page navigation' ),
+        'secondary' => __( 'Post and Page navigation' ),
     )
   );
 } 

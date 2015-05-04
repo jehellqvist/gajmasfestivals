@@ -1,14 +1,12 @@
 <?php
 /**
  * Default Post Template
- * Description: Post template with a content container and right sidebar.
+ * Description: Post template
  *
- * @package WordPress
- * @subpackage BootstrapWP
  */
 get_header(); ?>
 
- <nav id="affix-nav" class="navbar navbar-inverse" role="navigation" >
+ <nav class="navbar navbar-inverse" role="navigation" >
       <div class="container">
         <div class="navbar-header page-scroll">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -24,8 +22,6 @@ get_header(); ?>
             <?php
             echo get_primary_menu('secondary');
             ?>
-
-
         </div><!--/.nav-collapse -->
       </div><!--End .container-->
 </nav>
@@ -59,8 +55,8 @@ get_header(); ?>
             <img src="<?php echo get_field('bild')?>" class="img-responsive">
         </div><!--End . col-*-* -->
 
-        <div class="col-sm-12 col-md-12 no-margin">
-            <div class="inner-single col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 text-center">
+        <div class="col-sm-12 col-md-12">
+            <div class="inner-single col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
                 <header role="banner">
                     <h2><?php echo get_the_title() ?></h2>
                     <p class="content-meta"><?php echo $day_list?><?php echo $time?><p>
@@ -68,14 +64,6 @@ get_header(); ?>
                 <p class="description"><?php echo get_field('beskrivning')?></p>
                 <span class="place"><p>Plats på kartan: <?php echo get_field('plats_pa_kartan')?></p><i class="fa fa-map-marker"></i><p><?php echo get_field('plats')?></p></span>
             </div><!--.inner-single-->
-             <div id="nav-bottom" class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-            <?php wp_nav_menu(
-                array(
-                'theme_location' => 'secondary',
-                'fallback_cb' => false
-              )
-            );?>
-            </div><!--End . col-*-* -->
         </div><!--End . col-*-* -->
         
     </article><!--/.row -->
