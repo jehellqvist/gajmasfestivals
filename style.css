@@ -57,9 +57,9 @@ LIGHTER: rgba(176,206,241,1);
   font-weight: 700;
 }
 
-/*::-webkit-scrollbar { 
+::-webkit-scrollbar { 
     display: none; 
-}*/
+}
 
 * {
 	margin:0;
