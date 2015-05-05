@@ -396,8 +396,8 @@ footer i{
 }
 
 #hitta-hit {
-	color: #fff;
-	background: rgba(0,180,56,1);/*#00B02E; /* #24C04D;*/
+	color: #222;
+	background: #24C04D;/*#00B02E; /* #24C04D;*/
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -408,6 +408,20 @@ footer i{
 
 #hitta-hit #by_bus img, #by_boat img{
 	height:80px;
+}
+
+#hitta-hit a {
+	color: #222;
+	text-decoration: underline;
+}
+
+#hitta-hit a:hover,
+#hitta-hit a:active {
+	text-decoration: none;
+}
+
+#hitta-hit a:visited {
+	color: #222;
 }
 
 .center{
@@ -674,7 +688,70 @@ html, body {
 /*Post-content single*/
 	.post {
 		padding: 0;
-		margin: 60px 0px;
+		margin: 0px 0px;
+	}
+
+	.post-img-container  {
+		padding: 0;
+	}
+
+	.navbar {
+		margin-bottom: 0;
+	}
+
+	#single-post-page-nav ul{
+		float: left;
+		max-width: 90%;
+		text-align: left;
+	}
+
+	#single-post-page-nav .nav>li>a{
+		 padding-top: 15px;
+  		padding-bottom: 15px;
+  		line-height: 20px;
+  		color: #fff;
+  		-webkit-font-smoothing: antialiased;	
+	}
+
+	#single-post-page-nav .nav>li>a:hover, 
+	#single-post-page-nav .nav>li>a:active,
+	#single-post-page-nav i:hover,
+	#single-post-page-nav i:active{
+		background: transparent;
+  		color: rgba(250,250,250, 0.5);	
+	}
+
+	#single-post-page-nav i{
+		float: left;
+		color: #fff;
+		padding-top: 17px;
+	}
+
+	#single-post-page-nav .fa{
+		display: inline-block;
+	}
+
+	/* Extra small devices (phones, less than 768px) */
+	/* No media query since this is the default in Bootstrap */
+
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: 768px) { 
+	}
+
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: 992px) { 
+		.post {
+			padding: 0;
+			margin: 60px 0px;
+		}
+	}
+
+	/* Large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {  
+		.post {
+			padding: 0;
+			margin: 60px 0px;
+		}
 	}
 
 	.link {

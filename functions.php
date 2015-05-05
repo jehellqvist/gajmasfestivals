@@ -263,7 +263,7 @@ function get_primary_menu($the_menu) {
             $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 
             $menu_items = wp_get_nav_menu_items($menu->term_id);
-            $menu_list = '<ul id="one-page-nav" class="nav navbar-nav" >';
+            $menu_list = '<ul id="one-page-nav" class="nav" >';
 
             foreach ( (array) $menu_items as $key => $menu_item ) {
                 $title = $menu_item->title;
