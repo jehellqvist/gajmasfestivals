@@ -497,6 +497,45 @@ html, body {
     height: 100%;
 }
 
+/*Fading in slideshow instead of slide-effect*/
+.carousel-inner > .item {
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: 0;
+  -webkit-transition: opacity 0.9s ease-in-out;
+       -o-transition: opacity 0.9s ease-in-out;
+          transition: opacity 0.9s ease-in-out;
+
+  -webkit-transition-duration: 5s;
+       -o-transition-duration: 5s;
+          transition-duration: 5s;
+
+  -webkit-transform: translate3d(0, 0, 0) !important;
+          transform: translate3d(0, 0, 0) !important;
+}
+.carousel-inner > .item:first-of-type {
+  position: relative;
+}
+.carousel-inner > .active {
+  opacity: 1;
+  z-index: 3;
+    -webkit-transition: opacity 0.9s ease-in-out;
+       -o-transition: opacity 0.9s ease-in-out;
+          transition: opacity 0.9s ease-in-out;
+
+  -webkit-transition-duration: 5s;
+       -o-transition-duration: 5s;
+          transition-duration: 5s;
+}
+
+
+/*End of fade*/
+
+
 .fa_arrow{
 	font-size: 2em;
 	padding: 1.2%;
