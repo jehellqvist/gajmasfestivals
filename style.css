@@ -195,7 +195,7 @@ header {
 
 	.navbar-toggle {
 		border-color: #fff !important;
-		background-color: rgba(34,60,126, 1); !important;
+		background-color: rgba(34,60,126, 1) !important;
 	}
 
 	.navbar-toggle:hover, .navbar-toggle:active {
