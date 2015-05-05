@@ -783,6 +783,8 @@ nav.stuck{
 }
 
 .medverkande h1{
+	padding:3% 0 3% 0;
+	text-align: center;
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	margin-top:-5%;
 }
@@ -825,7 +827,7 @@ table td{
 }
 
 table{
-	margin:3% 0 3% 0;
+	margin:3% 0 15% 0;
 }
 	
 
@@ -834,6 +836,8 @@ table{
 	margin-left:7.5%;
 	margin-bottom: 5%;
 }
+
+
 
 .sidebar h3{
 	padding:0% 1% 0 0%;
@@ -864,6 +868,8 @@ table{
 .medverkande{
 	padding:2%;
 }
+
+
 
 @media (min-width: 768px){
 			.sidebar{
