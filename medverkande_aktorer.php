@@ -9,26 +9,14 @@ Template Name: medverkande-aktorer
  
 get_header(); ?>
 
- <nav class="navbar navbar-inverse" role="navigation" >
-      <div class="container">
-        <div class="navbar-header page-scroll">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand page-scroll" href="#page-top">Meny</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+ <nav id="single-post-page-nav" class="navbar navbar-inverse" role="navigation" >
+      <div class="container-fluid">
+      	<a href="<?php echo esc_url(home_url( '/' )); ?>"><i class="fa fa-chevron-left"></i></a>
             <?php
             echo get_primary_menu('secondary');
             ?>
 
-
-        </div><!--/.nav-collapse -->
-      </div><!--End .container-->
+      </div><!--End .container-fluid-->
 </nav>
 
 	<main class="medverkande" role="main">
