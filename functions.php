@@ -398,3 +398,44 @@ add_filter('/acf/settings/show_admin', '__return_false');
 
 // 4. Include ACF
 include_once( get_stylesheet_directory() . '/acf/acf.php' );
+
+
+/*
+* Add custom placed social sharing buttons
+*
+*/
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+ 
+add_action( 'loop_start', 'jptweak_remove_share' );
+
+
+function jeherve_custom_sharing_title() {
+        $post = get_post();
+        if ( empty( $post ) ) {
+                return;
+        } else {
+                // Create sharing title
+                $sharing_title = get_the_title( $post->ID );
+ 
+                // Get the tags
+                $post_tags = get_the_tags( $post->ID );
+                if ( ! empty( $post_tags ) ) {
+                        // Create list of tags with hashtags in front of them
+                        $hash_tags = '';
+                        foreach( $post_tags as $tag ) {
+                                $hash_tags .= ' #' . $tag->name;
+                        }
+                        // Add tags to the title
+                        $sharing_title .= $hash_tags;
+                }
+                $sharing_title .= ' #pohamnfestivalen';
+                return $sharing_title;
+        }
+}
+add_filter( 'sharing_title', 'jeherve_custom_sharing_title', 10, 3 );

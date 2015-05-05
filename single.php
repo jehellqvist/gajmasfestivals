@@ -6,14 +6,13 @@
  */
 get_header(); ?>
 
- <nav id="single-post-page-nav" class="navbar navbar-inverse" role="navigation" >
-      <div class="container-fluid">
-        <!-- Collect the nav links, forms, and other content for toggling -->
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fa fa-chevron-left"></i></a>
-            <?php
-            echo get_primary_menu('secondary');
-            ?>
-      </div><!--End .container-->
+ <nav id="single-post-page-nav" class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fa fa-chevron-left"></i></a>
+        <?php
+        echo get_primary_menu('secondary');
+        ?>
+    </div><!--End .container-fluid-->
 </nav>
 
 <?php while (have_posts()) : the_post(); ?>
@@ -54,6 +53,18 @@ get_header(); ?>
                 <p class="description"><?php echo get_field('beskrivning')?></p>
                 <span class="place"><p>Plats på kartan: <?php echo get_field('plats_pa_kartan')?></p><i class="fa fa-map-marker"></i><p><?php echo get_field('plats')?></p></span>
             </div><!--.inner-single-->
+            <div class="social-sharing-buttons col-md-12 text-center">
+
+               <?php if ( function_exists( 'sharing_display' ) ) {
+                    sharing_display( '', true );
+                }
+                 
+                if ( class_exists( 'Jetpack_Likes' ) ) {
+                    $custom_likes = new Jetpack_Likes;
+                    echo $custom_likes->post_likes( '' );
+                }
+                ?>
+            </div><!--.social-sharing-buttons-->
         </div><!--End . col-*-* -->
         
     </article><!--/.row -->

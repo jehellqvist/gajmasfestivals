@@ -734,6 +734,23 @@ html, body {
 		display: inline-block;
 	}
 
+	div.sharedaddy h3.sd-title:before {
+		border-top: none !important;
+	}
+
+	div.sharedaddy h3.sd-title {
+		font-family: 'Museo', 'Arvo', 'Georgia', serif !important;
+		font-size: 1.4em !important;
+		font-weight: 300 !important;
+	}
+
+	div.sharedaddy h3.sd-title:after {
+		content: ' #pohamnfestivalen';
+		font-weight: 500;
+	}
+
+	 
+
 	/* Extra small devices (phones, less than 768px) */
 	/* No media query since this is the default in Bootstrap */
 
