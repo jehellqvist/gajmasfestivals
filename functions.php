@@ -74,17 +74,13 @@ function posts_callback($atts=null, $content=null){
     foreach ($catID as $id) {
         $name = $id->cat_name;
         $new_id = $id->cat_ID;
-        $option .= '<div class="filter_wrapper">
-                        <div class="btn-group">
-                            <button data-toggle="dropdown" class="btn dropdown-toggle dropdown-button"  data-placeholder="Please select">Checked option<span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">';
+        $option .= '<div class="filter_wrapper">';
         $categories = get_categories('parent='.$new_id.'', 'type=post');
         foreach ($categories as $category) {
             $new_name = $category->cat_name;
-            $option .= '<li><input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="btn btn-default check" ><label for="'.$new_name.'">'.$new_name.'</label></li>';
+            $option .= '<input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="btn btn-default check" ><label for="'.$new_name.'">'.$new_name.'</label>';
             }
-        $option .= '</ul></div></div><!--End .filter_wrapper-->';    
+        $option .= '</div><!--End .filter_wrapper-->';    
     }
     $option .= '</div><!--End .row-->';
      $option .= '<script>
