@@ -241,10 +241,6 @@ header {
 	margin: 0 .5% 0 0 ;
 }
 
-#om-hamnfestivalen .social_share{
-	padding: 2% 0%;
-}
-
 #om-hamnfestivalen .tag{
 	font-size: 1.2em;
 	font-family: 'Museo';
@@ -281,10 +277,9 @@ header {
 	padding:0 0 1% 0;
 }
 
-#om-hamnfestivalen #about{
+#about{
 	text-align:center;
 	font-size: 1em;
-	padding:0 0 3% 0;
 }
 
 /*Styling för footer sektion*/
@@ -397,7 +392,7 @@ footer i{
 
 #hitta-hit {
 	color: #222;
-	background: #24C04D;/*#00B02E; /* #24C04D;*/
+	background: rgba(176,206,241,1);/*#00B02E; /* #24C04D;*/
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -877,3 +872,64 @@ table{
 .sidebar p{
 	text-align: center;
 }
+
+.ample {
+	border: none;
+	background: url(img/vimplat_bred_short.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 45px;
+	margin: auto;
+	display: block;
+	width: 100%;
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+
+	/* Extra small devices (phones, less than 768px) */
+	/* No media query since this is the default in Bootstrap */
+
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: 768px) { 
+		.ample {
+			background: url(img/vimplat_bred_2.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 45px;
+			margin: auto;
+			display: block;
+			width: 100%;
+			margin-top: 25px;
+			margin-bottom: 40px;
+		}
+	}
+
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: 992px) { 
+		.ample {
+			background: url(img/vimplat_bred_2.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 45px;
+			margin: auto;
+			display: block;
+			width: 100%;
+			margin-top: 25px;
+			margin-bottom: 40px;
+		}
+	}
+
+	/* Large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {  
+		.ample {
+			background: url(img/vimplat_bred_2.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 45px;
+			margin: auto;
+			display: block;
+			width: 100%;
+			margin-top: 25px;
+			margin-bottom: 40px;
+		}
+	}
