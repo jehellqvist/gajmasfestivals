@@ -1,5 +1,3 @@
-
-
 /*
 Theme Name: Gajmas festivals theme
 Theme URI: 
@@ -7,6 +5,7 @@ Author: Gajmas
 Author URI: 
 Description: A wp theme for festivals
 Version: 1.0
+
 License: GNU General Public License
 License URI: license.txt
 Tags: festivals, harbourfestivals
@@ -15,8 +14,11 @@ Tags: festivals, harbourfestivals
 /*
 Headings and links: 		
 font-family: 'Museo', 'Arvo', 'Georgia', serif;
+
 Paragraphs and others:
 font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+
+
 Color-palette:
 DARKER: rgba(27,82,155, 1), 
 DARK: rgba(51,106,171, 1) 
@@ -96,11 +98,6 @@ header {
 	z-index:2;
 }
 
-.no-margin {
-	margin: 0;
-	padding: 0;
-}
-
 .myCarousel{
 
 	height:100%;
@@ -162,8 +159,8 @@ header {
 		box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 		z-index:3;
 		border-radius: 0px !important;
-}
 
+}
 	.navbar-brand {
 		color: rgba(250,250,250, 1) !important;
 	}
@@ -185,13 +182,13 @@ header {
 
 	.navbar-nav {
 		float: none;
+		margin: auto;
 		text-align: center;
-		width: 100%;
 	}
 
 	.navbar-toggle {
 		border-color: #fff !important;
-		background-color: rgba(34,60,126, 1) !important;
+		background-color: rgba(27,82,155, 1) !important;
 	}
 
 	.navbar-toggle:hover, .navbar-toggle:active {
@@ -220,10 +217,6 @@ header {
 		padding-left: 1%;
 		padding-right: 1%;
 		}
-
-		.navbar-nav li:active{
-			width: 100%;
-		}
 	}
 	
 /*Styling for sections*/
@@ -239,6 +232,10 @@ header {
 #program .btn{
 	width:10%;
 	margin: 0 .5% 0 0 ;
+}
+
+#om-hamnfestivalen .social_share{
+	padding: 2% 0%;
 }
 
 #om-hamnfestivalen .tag{
@@ -257,7 +254,7 @@ header {
 	/*background-color: rgba(176,206,241,1);/* org grön: 00B02E, mindre grön:24C04D*/
 }
 
-#om-hamnfestivalen #about h1, #hitta-hit h1, #omradet h1, main h1{
+#om-hamnfestivalen #about h1, #hitta-hit h1, #omradet h1{
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	text-align: center;
 	padding:3% 0%;
@@ -277,9 +274,10 @@ header {
 	padding:0 0 1% 0;
 }
 
-#about{
+#om-hamnfestivalen #about{
 	text-align:center;
 	font-size: 1em;
+	padding:0 0 3% 0;
 }
 
 /*Styling för footer sektion*/
@@ -391,8 +389,8 @@ footer i{
 }
 
 #hitta-hit {
-	color: #222;
-	background: rgba(176,206,241,1);/*#00B02E; /* #24C04D;*/
+	color: #fff;
+	background: rgba(0,180,56,1);/*#00B02E; /* #24C04D;*/
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -403,20 +401,6 @@ footer i{
 
 #hitta-hit #by_bus img, #by_boat img{
 	height:80px;
-}
-
-#hitta-hit a {
-	color: #222;
-	text-decoration: underline;
-}
-
-#hitta-hit a:hover,
-#hitta-hit a:active {
-	text-decoration: none;
-}
-
-#hitta-hit a:visited {
-	color: #222;
 }
 
 .center{
@@ -434,10 +418,6 @@ footer i{
 
 .justify{
 	text-align: justify;
-}
-
-.left{
-	text-align: left;
 }
 
 .border-top{
@@ -510,45 +490,6 @@ html, body {
 .active {
     height: 100%;
 }
-
-/*Fading in slideshow instead of slide-effect*/
-.carousel-inner > .item {
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: block;
-  position: absolute;
-  z-index: 0;
-  -webkit-transition: opacity 0.9s ease-in-out;
-       -o-transition: opacity 0.9s ease-in-out;
-          transition: opacity 0.9s ease-in-out;
-
-  -webkit-transition-duration: 5s;
-       -o-transition-duration: 5s;
-          transition-duration: 5s;
-
-  -webkit-transform: translate3d(0, 0, 0) !important;
-          transform: translate3d(0, 0, 0) !important;
-}
-.carousel-inner > .item:first-of-type {
-  position: relative;
-}
-.carousel-inner > .active {
-  opacity: 1;
-  z-index: 3;
-    -webkit-transition: opacity 0.9s ease-in-out;
-       -o-transition: opacity 0.9s ease-in-out;
-          transition: opacity 0.9s ease-in-out;
-
-  -webkit-transition-duration: 5s;
-       -o-transition-duration: 5s;
-          transition-duration: 5s;
-}
-
-
-/*End of fade*/
-
 
 .fa_arrow{
 	font-size: 2em;
@@ -745,6 +686,8 @@ html, body {
 		font-weight: 500;
 	}
 
+	 
+
 	/* Extra small devices (phones, less than 768px) */
 	/* No media query since this is the default in Bootstrap */
 
@@ -838,160 +781,3 @@ nav.stuck{
 	position:fixed;
 	top:0;
 }
-
-.medverkande h1{
-	font-family: 'Museo', 'Arvo', 'Georgia', serif;
-	margin-top:-5%;
-}
-
-.medverkande h2{
-	font-family: 'Museo', 'Arvo', 'Georgia', serif;
-	text-align: center;
-	font-size: 1.5em;
-	font-weight: 300;
-	margin:-1% 0 5% 0;
-}
-
-.medverkande h3{
-	font-family: 'Museo', 'Arvo', 'Georgia', serif;
-	font-size: 1.25em;
-	line-height: 1.5em;
-	padding:0 0 0% 0;
-}
-
-.medverkande p, .medverkande li, .medverkande td{
-	font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
-	font-size: 1.1em;
-	line-height: 1.5em;
-	padding:0 0 0% 0;
-	list-style-type: none;
-}
-
-.medverkande p{
-	text-align:justify;
-}
-
-.medverkande .fa{
-	margin:2% 2% 2% 2%;
-	font-size: 1.5em;
-	color: rgba(51,106,171, 1);
-}
-
-table td{
-	width:300px;
-}
-
-table{
-	margin:3% 0 3% 0;
-}
-
-.sidebar{
-	margin:0% 5% 0 2%;
-	padding:0% 1% 0 2%;
-	border-left: 1px dotted #000;
-}
-
-.medverkande img {
-	width: 85%;
-	margin-left: 7.5%;
-	margin-bottom: 5%;
-}
-
-.sidebar h3{
-	display: inline-block;
-	text-align: center;
-	padding:0% 1% 0 0%;
-	margin:0% 0 5% 0;
-	-webkit-font-smoothing: antialiased;
-	border-bottom:2px solid rgba(51,106,171, 1);
-	color: rgba(51,106,171, 1);
-}
-
-.sidebar .fa{
-	font-size: 1.1em;
-	margin: 0 5% 0% 0;
-	line-height: 1.7em;
-}
-
-.sidebar p, .sidebar ul{
-	margin-bottom: 10%;
-}
-
-.sidebar li{
-	line-height: 1.7em;
-}
-
-.sidebar li:last-child{
-	margin-top:-1%;
-}
-
-.col-xs-12 .sidebar{
-	text-align: center;
-}
-
-.ample {
-	border: none;
-	background: url(img/vimplat_bred_short.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 45px;
-	margin: auto;
-	display: block;
-	width: 100%;
-	margin-top: 25px;
-	margin-bottom: 40px;
-}
-
-	/* Extra small devices (phones, less than 768px) */
-	/* No media query since this is the default in Bootstrap */
-
-	/* Small devices (tablets, 768px and up) */
-	@media (min-width: 768px) { 
-		.ample {
-			background: url(img/vimplat_bred_2.png);
-			background-position: center;
-			background-repeat: no-repeat;
-			height: 45px;
-			margin: auto;
-			display: block;
-			width: 100%;
-			margin-top: 25px;
-			margin-bottom: 40px;
-		}
-	}
-
-	/* Medium devices (desktops, 992px and up) */
-	@media (min-width: 992px) { 
-		.ample {
-			background: url(img/vimplat_bred_2.png);
-			background-position: center;
-			background-repeat: no-repeat;
-			height: 45px;
-			margin: auto;
-			display: block;
-			width: 100%;
-			margin-top: 25px;
-			margin-bottom: 40px;
-		}
-	}
-
-	/* Large devices (large desktops, 1200px and up) */
-	@media (min-width: 1200px) {  
-		.ample {
-			background: url(img/vimplat_bred_2.png);
-			background-position: center;
-			background-repeat: no-repeat;
-			height: 45px;
-			margin: auto;
-			display: block;
-			width: 100%;
-			margin-top: 25px;
-			margin-bottom: 40px;
-		}
-	}
-
-
-	.arrangor-kontakt .fa {
-		padding-top: 2%;
-		font-size: 1.2em;
-	}

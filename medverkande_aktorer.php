@@ -10,13 +10,12 @@ Template Name: medverkande-aktorer
 get_header(); ?>
 
  <nav id="single-post-page-nav" class="navbar navbar-inverse" role="navigation" >
-      <div class="container-fluid">
-      	<a href="<?php echo esc_url(home_url( '/' )); ?>"><i class="fa fa-chevron-left"></i></a>
-            <?php
-            echo get_primary_menu('secondary');
-            ?>
-
-      </div><!--End .container-fluid-->
+  <div class="container-fluid">
+    <a href="<?php echo esc_url(home_url( '/' )); ?>"><i class="fa fa-chevron-left"></i></a>
+          <?php
+          echo get_primary_menu('secondary');
+          ?>
+    </div><!--End .container-fluid-->
 </nav>
 
 	<main class="medverkande" role="main">
