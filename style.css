@@ -884,22 +884,15 @@ table td{
 table{
 	margin:3% 0 3% 0;
 }
-
-.sidebar{
-	margin:0% 5% 0 2%;
-	padding:0% 1% 0 2%;
-	border-left: 1px dotted #000;
-}
+	
 
 .medverkande img {
 	width: 85%;
-	margin-left: 7.5%;
+	margin-left:7.5%;
 	margin-bottom: 5%;
 }
 
 .sidebar h3{
-	display: inline-block;
-	text-align: center;
 	padding:0% 1% 0 0%;
 	margin:0% 0 5% 0;
 	-webkit-font-smoothing: antialiased;
@@ -925,9 +918,45 @@ table{
 	margin-top:-1%;
 }
 
-.col-xs-12 .sidebar{
-	text-align: center;
+.medverkande{
+	padding:2%;
 }
+
+@media (min-width: 768px){
+			.sidebar{
+			margin:0% 5% 0 2%;
+			padding:0% 1% 0 2%;
+			border-left: 1px dotted #000;
+		}
+
+		.sidebar h3{
+			display: block;
+			text-align: center;
+			padding:0% 1% 0 0%;
+			margin:0% 0 5% 0;
+			-webkit-font-smoothing: antialiased;
+			border-bottom:2px solid rgba(51,106,171, 1);
+			color: rgba(51,106,171, 1);
+		}
+
+		.sidebar .fa{
+			font-size: 1.1em;
+			margin: 0 5% 0% 0;
+			line-height: 1.7em;
+		}
+
+		.sidebar p, .sidebar ul{
+			margin-bottom: 10%;
+		}
+
+		.sidebar li{
+			line-height: 1.7em;
+		}
+
+		.sidebar li:last-child{
+			margin-top:-1%;
+		}
+	}
 
 .ample {
 	border: none;
