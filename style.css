@@ -5,7 +5,6 @@ Author: Gajmas
 Author URI: 
 Description: A wp theme for festivals
 Version: 1.0
-
 License: GNU General Public License
 License URI: license.txt
 Tags: festivals, harbourfestivals
@@ -14,11 +13,8 @@ Tags: festivals, harbourfestivals
 /*
 Headings and links: 		
 font-family: 'Museo', 'Arvo', 'Georgia', serif;
-
 Paragraphs and others:
 font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
-
-
 Color-palette:
 DARKER: rgba(27,82,155, 1), 
 DARK: rgba(51,106,171, 1) 
@@ -277,7 +273,6 @@ header {
 #om-hamnfestivalen #about{
 	text-align:center;
 	font-size: 1em;
-	padding:0 0 3% 0;
 }
 
 /*Styling för footer sektion*/
@@ -389,8 +384,8 @@ footer i{
 }
 
 #hitta-hit {
-	color: #fff;
-	background: rgba(0,180,56,1);/*#00B02E; /* #24C04D;*/
+	color: #222;
+	background: rgba(176,206,241,1);/*#00B02E; /* #24C04D;*/
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -401,6 +396,17 @@ footer i{
 
 #hitta-hit #by_bus img, #by_boat img{
 	height:80px;
+}
+
+#hitta-hit a {
+	color: #222;
+	text-decoration: underline;
+	font-weight: 600;
+}
+
+#hitta-hit a:hover,
+#hitta-hit a:visited {
+	text-decoration: none;
 }
 
 .center{
@@ -562,6 +568,11 @@ html, body {
 	margin:0 0 1.5% 0;
 	}
 
+.post-content .inner:hover {
+	opacity: 0.8;
+	transition: opacity .8s ease;
+}
+
 .post-content .inner {
 	width: 100%;
 	-webkit-background-size: cover;
@@ -570,7 +581,8 @@ html, body {
     -o-background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    	border-radius: 2px;
+    border-radius: 2px;
+    transition: opacity .8s ease;
 
 }
 
@@ -671,6 +683,10 @@ html, body {
 		display: inline-block;
 	}
 
+	div.sharedaddy {
+		padding: 0;
+		margin: 0px 0px 70px 0px;
+	}
 	div.sharedaddy h3.sd-title:before {
 		border-top: none !important;
 	}
@@ -685,8 +701,6 @@ html, body {
 		content: ' #pohamnfestivalen';
 		font-weight: 500;
 	}
-
-	 
 
 	/* Extra small devices (phones, less than 768px) */
 	/* No media query since this is the default in Bootstrap */
@@ -712,18 +726,21 @@ html, body {
 	}
 
 	.link {
-		text-decoration: underline;
+		padding-left: 5px;
+		font-weight: 600;
+		-webkit-font-smoothing: antialiased;
+
 	}
 
 	.link:hover {
-		text-decoration: none;
+		text-decoration: underline;
 	}
 
 	.inner-single {
 		overflow: hidden;
 		height: auto;
 		color: #222;
-		padding: 40px 0px;
+		padding: 40px 0px 20px 0px;
 		overflow: hidden;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -743,7 +760,7 @@ html, body {
 	}
 
 	.inner-single .description {
-		margin: 15px 0% 30px 0%;
+		margin: 15px 0% 50px 0%;
 	}
 
 	.inner-single .content-meta {
@@ -916,7 +933,7 @@ table{
 	margin: auto;
 	display: block;
 	width: 100%;
-	margin-top: 25px;
+	margin-top: 0px;
 	margin-bottom: 40px;
 }
 
@@ -933,7 +950,7 @@ table{
 			margin: auto;
 			display: block;
 			width: 100%;
-			margin-top: 25px;
+			margin-top: 0px;
 			margin-bottom: 40px;
 		}
 	}
@@ -948,7 +965,7 @@ table{
 			margin: auto;
 			display: block;
 			width: 100%;
-			margin-top: 25px;
+			margin-top: 0px;
 			margin-bottom: 40px;
 		}
 	}
@@ -963,7 +980,7 @@ table{
 			margin: auto;
 			display: block;
 			width: 100%;
-			margin-top: 25px;
+			margin-top: 0px;
 			margin-bottom: 40px;
 		}
 	}
@@ -973,4 +990,3 @@ table{
 		padding-top: 2%;
 		font-size: 1.2em;
 	}
-
