@@ -16,13 +16,12 @@ function my_jquery_enqueue() {
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap-responsive.min.css' );
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), true );
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/full-slider.css' );
+    wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/javascript.js', array('jquery'), true );
     wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/js/jquery.easing.min.js', array('jquery'), true );
     wp_enqueue_script( 'bootstrap-nav-script', get_template_directory_uri() . '/js/scrolling-nav.js', array('jquery'), true );
     wp_enqueue_style('gajmas-styles',  get_stylesheet_directory_uri() . '/style.css');
     wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/waypoints.min.js', array('jquery'), true );
     wp_enqueue_script( 'waypoints-sticky', get_template_directory_uri() . '/js/sticky.min.js', array('jquery'), true );
-    wp_enqueue_script( 'javascript-script', get_template_directory_uri() . '/js/javascript.js', array('jquery'), true );
-
 
 }
     add_action( 'wp_enqueue_scripts', 'query_styles' );
@@ -284,19 +283,10 @@ function posts_callback($atts=null, $content=null){
                     $time = ' | '.get_field('tid');
                 }
 
-                $url = get_permalink();
-                $description = get_field('beskrivning');
-
-                if(strlen($description) >= 115) {
-                    $description = substr($description, 0, 115);
-                    $description .= '... <span class="link">Läs mer</span>';
-                }
-
 
 
                  $option .= '
-                     <article class="col-xs-6 col-sm-3 col-md-4 post-content '. $cat_string .'" data-category="'.$cat_string.'">
-                        <a href="'.$url.'">
+                     <div class="col-xs-6 col-sm-3 col-md-4 post-content '. $cat_string .'" data-category="'.$cat_string.'">
                         <div class="inner" style="background-image:url('.get_field('bild').')">
                             <div class="wave">
 
@@ -304,14 +294,14 @@ function posts_callback($atts=null, $content=null){
                                     <h2>'. get_the_title(). '</h2>
                                     <p class="content-meta">'.$day_list.$time.'<p>
 
-                                    <p class="description">'.$description.'</p>
+                                    <p class="description">'.get_field('beskrivning').'</p>
                                     <span class="place"><p>'.get_field('plats_pa_kartan').'</p><i class="fa fa-map-marker"></i><p>'.get_field('plats').'</p></span>
 
                                 </div><!--.inner-content-->
 
                             </div><!--.wave-->
-                        </div></a><!--End .inner-->
-                    </article><!--End . col-*-* -->';
+                        </div><!--End .inner-->
+                    </div><!--End . col-*-* -->';
                 ?><?php $cat_string = "";
 
                 //variable reset
@@ -335,75 +325,38 @@ add_shortcode("posts", "posts_callback");
 function register_my_menus() {
   register_nav_menus(
     array(  
-        'primary' => __( 'Main one page navigation' ),
-        'secondary' => __( 'Post and Page navigation' ),
+        'primary' => __( 'Main one page navigation' )
     )
   );
 } 
 add_action( 'init', 'register_my_menus' );
 
-
-/*
-* Returns a boostrap classified menu
-* primary: #-linked to slug
-* secondary: url-linked
-*/
 function get_primary_menu($the_menu) {
-    if ($the_menu == 'secondary') {
-        $menu_name = $the_menu;
+    $menu_name = $the_menu;
 
-        if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
-            $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+    $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 
-            $menu_items = wp_get_nav_menu_items($menu->term_id);
-            $menu_list = '<ul id="one-page-nav" class="nav" >';
+    $menu_items = wp_get_nav_menu_items($menu->term_id);
 
-            foreach ( (array) $menu_items as $key => $menu_item ) {
-                $title = $menu_item->title;
-                $id = $menu_item->object_id;
-                $url = $menu_item->url;
-                $slug = strtolower($title);
-                $slug = str_replace(' ', '-', $slug);
-                $slug = str_replace('å', 'a', $slug);
-                $slug = str_replace('ä', 'a', $slug);
-                $slug = str_replace('ö', 'o', $slug);
-                $menu_list .= '<li><a href="'. $url . '" class="page-scroll">' . $title . '</a></li>';
-            }
-            $menu_list .= '</ul>';
-        } 
-        else {
-            $menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
-        }
-        return $menu_list;
+    $menu_list = '<ul id="one-page-nav" class="nav navbar-nav" >';
+
+    foreach ( (array) $menu_items as $key => $menu_item ) {
+        $title = $menu_item->title;
+        $id = $menu_item->object_id;
+        $url = $menu_item->url;
+        $slug = strtolower($title);
+        $slug = str_replace(' ', '-', $slug);
+        $slug = str_replace('å', 'a', $slug);
+        $slug = str_replace('ä', 'a', $slug);
+        $slug = str_replace('ö', 'o', $slug);
+        $menu_list .= '<li><a href="#' . $slug . '" class="page-scroll">' . $title . '</a></li>';
     }
-    else {
-        $menu_name = $the_menu;
-
-        if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
-            $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
-
-            $menu_items = wp_get_nav_menu_items($menu->term_id);
-
-            $menu_list = '<ul id="one-page-nav" class="nav navbar-nav" >';
-
-            foreach ( (array) $menu_items as $key => $menu_item ) {
-                $title = $menu_item->title;
-                $id = $menu_item->object_id;
-                $url = $menu_item->url;
-                $slug = strtolower($title);
-                $slug = str_replace(' ', '-', $slug);
-                $slug = str_replace('å', 'a', $slug);
-                $slug = str_replace('ä', 'a', $slug);
-                $slug = str_replace('ö', 'o', $slug);
-                $menu_list .= '<li><a href="#' . $slug . '" class="page-scroll">' . $title . '</a></li>';
-            }
-            $menu_list .= '</ul>';
-        } 
-        else {
-            $menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
-        }
-        return $menu_list;
+    $menu_list .= '</ul>';
+    } else {
+    $menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
     }
+    return $menu_list;
 }
 
 
@@ -491,43 +444,3 @@ add_filter('/acf/settings/show_admin', '__return_false');
 
 // 4. Include ACF
 include_once( get_stylesheet_directory() . '/acf/acf.php' );
-
-
-/*
-* Add custom placed social sharing buttons
-*
-*/
-function jptweak_remove_share() {
-    remove_filter( 'the_content', 'sharing_display',19 );
-    remove_filter( 'the_excerpt', 'sharing_display',19 );
-    if ( class_exists( 'Jetpack_Likes' ) ) {
-        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
-    }
-}
-add_action( 'loop_start', 'jptweak_remove_share' );
-
-
-function jeherve_custom_sharing_title() {
-        $post = get_post();
-        if ( empty( $post ) ) {
-                return;
-        } else {
-                // Create sharing title
-                $sharing_title = get_the_title( $post->ID );
- 
-                // Get the tags
-                $post_tags = get_the_tags( $post->ID );
-                if ( ! empty( $post_tags ) ) {
-                        // Create list of tags with hashtags in front of them
-                        $hash_tags = '';
-                        foreach( $post_tags as $tag ) {
-                                $hash_tags .= ' #' . $tag->name;
-                        }
-                        // Add tags to the title
-                        $sharing_title .= $hash_tags;
-                }
-                $sharing_title .= ' #pohamnfestivalen';
-                return $sharing_title;
-        }
-}
-add_filter( 'sharing_title', 'jeherve_custom_sharing_title', 10, 3 );
