@@ -14,6 +14,8 @@ function my_jquery_enqueue() {
     wp_enqueue_style('bootstrap-icons', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css' );
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap-responsive.min.css' );
+    wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap-dropdowns-enhancement.css' );
+    wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap-dropdowns-enhancement.js', array('jquery'), true );
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), true );
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/full-slider.css' );
     wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/javascript.js', array('jquery'), true );
@@ -68,83 +70,169 @@ if(get_page_by_title("Home") == null)
 function posts_callback($atts=null, $content=null){
     query_posts(array('orderby' => 'date', 'order' => 'DESC' , 'showposts' => $posts));
     $option .= '<div class="row">';
-    
+    $option .='<button id="clear">Rensa</button>';
     $catID = get_categories('parent=0', 'type=post');
     foreach ($catID as $id) {
         $name = $id->cat_name;
         $new_id = $id->cat_ID;
-        $option .= '<div class="filter_wrapper">';
+        $option .= '<div class="filter_wrapper">
+                        <div class="btn-group">
+                            <button data-toggle="dropdown" class="btn dropdown-toggle dropdown-button"  data-placeholder="Please select">Checked option<span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">';
         $categories = get_categories('parent='.$new_id.'', 'type=post');
         foreach ($categories as $category) {
             $new_name = $category->cat_name;
-          ;
-            $option .= '<input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="btn btn-default check" ><label for="'.$new_name.'">'.$new_name.'</label>';
+            $option .= '<li><input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="btn btn-default check" ><label for="'.$new_name.'">'.$new_name.'</label></li>';
             }
-        $option .= '</div><!--End .filter_wrapper-->';    
-        $script_var .= 
-            '
-            var '.$name.' = [];
-            ';
-            $script_inputs .=
-            '
-            $("input[name=filter-'.$name.']").on( "change", function() {
-                if (this.checked) '.$name.'.push("[data-category~=\'" + $(this).attr("value") + "\']");
-                else removeA('.$name.', "[data-category~=\'" + $(this).attr("value") + "\']");
-            });';
+        $option .= '</ul></div></div><!--End .filter_wrapper-->';    
+    }
+    $option .= '</div><!--End .row-->';
+     $option .= '<script>
+        var Kategori = [], Grupp = [], Platser = [], Dagar = [];
 		
-        $script_change .='    
-				if ('.$name.'.length) {		
+		$("input[name=filter-Kategori]").on( "change", function() {
+			if (this.checked) Kategori.push("[data-category~=\'" + $(this).attr("value") + "\']");
+			else removeA(Kategori, "[data-category~=\'" + $(this).attr("value") + "\']");
+		});
+            
+		$("input[name=filter-Grupp]").on( "change", function() {
+			if (this.checked) Grupp.push("[data-category~=\'" + $(this).attr("value") + "\']");
+			else removeA(Grupp, "[data-category~=\'" + $(this).attr("value") + "\']");
+		});
+		
+		$("input[name=filter-Platser]").on( "change", function() {
+			if (this.checked) Platser.push("[data-category~=\'" + $(this).attr("value") + "\']");
+			else removeA(Platser, "[data-category~=\'" + $(this).attr("value") + "\']");
+		});
+        
+        $("input[name=filter-Dagar]").on( "change", function() {
+			if (this.checked) Dagar.push("[data-category~=\'" + $(this).attr("value") + "\']");
+			else removeA(Dagar, "[data-category~=\'" + $(this).attr("value") + "\']");
+		});
+		
+		$("input").on( "change", function() {
+			var str = "Include items \n";
+			var selector = \'\', cselector = \'\', nselector = \'\', lselector = \'\';
+					
+			var $lis = $(\'.program > div\'),
+				$checked = $(\'input:checked\');	
+				
+			if ($checked.length) {	
+			
+				if (Kategori.length) {		
 					if (str == "Include items \n") {
-						str += "    " + "with (" +  '.$name.'.join(\',\') + ")\n";				
-						$($(\'input[name=filter-'.$name.']:checked\')).each(function(index, '.$name.'){
+						str += "    " + "with (" +  Kategori.join(\',\') + ")\n";				
+						$($(\'input[name=filter-Kategori]:checked\')).each(function(index, Kategori){
 							if(selector === \'\') {
-								selector += "[data-category~=\'" + '.$name.'.id + "\']";  					
+								selector += "[data-category~=\'" + Kategori.id + "\']";  					
 							} else {
-								selector += ",[data-category~=\'" + '.$name.'.id + "\']";	
+								selector += ",[data-category~=\'" + Kategori.id + "\']";	
 							}				 
 						});					
 					} else {
-						str += "    AND " + "with (" +  '.$name.'.join(\' OR \') + ")\n";				
-						$($(\'input[name=filter-'.$name.']:checked\')).each(function(index, '.$name.'){
-							selector += "[data-category~=\'" + '.$name.'.id + "\']";
+						str += "    AND " + "with (" +  Kategori.join(\' OR \') + ")\n";				
+						$($(\'input[name=filter-Kategori]:checked\')).each(function(index, Kategori){
+							selector += "[data-category~=\'" + Kategori.id + "\']";
 						});
 					}							
 				}
-                ';
-    }
-    $option .= '</div><!--End .row-->';
-    $option .= '<script>
+				
+				if (Grupp.length) {						
+					if (str == "Include items \n") {
+						str += "    " + "with (" +  Grupp.join(\' OR \') + ")\n";					
+						$($(\'input[name=filter-Grupp]:checked\')).each(function(index, Grupp){
+							if(selector === \'\') {
+								selector += "[data-category~=\'" + Grupp.id + "\']";  					
+							} else {
+								selector += ",[data-category~=\'" + Grupp.id + "\']";	
+							}				 
+						});					
+					} else {
+						str += "    AND " + "with (" +  Grupp.join(\' OR \') + ")\n";				
+						$($(\'input[name=filter-Grupp]:checked\')).each(function(index, Grupp){
+							if(cselector === \'\') {
+								cselector += "[data-category~=\'" + Grupp.id + "\']";  					
+							} else {
+								cselector += ",[data-category~=\'" + Grupp.id + "\']";	
+							}					
+						});
+					}			
+				}
+				
+				if (Platser.length) {			
+					if (str == "Include items \n") {
+						str += "    " + "with (" +  Platser.join(\' OR \') + ")\n";				
+						$($(\'input[name=filter-Platser]:checked\')).each(function(index, Platser){
+							if(selector === \'\') {
+								selector += "[data-category~=\'" + Platser.id + "\']";  					
+							} else {
+								selector += ",[data-category~=\'" + Platser.id + "\']";	
+							}				 
+						});				
+					} else {
+						str += "    AND " + "with (" +  Platser.join(\' OR \') + ")\n";				
+						$($(\'input[name=filter-Platser]:checked\')).each(function(index, Platser){
+							if(nselector === \'\') {
+								nselector += "[data-category~=\'" + Platser.id + "\']";  					
+							} else {
+								nselector += ",[data-category~=\'" + Platser.id + "\']";	
+							}	
+						});
+					}			 
+				}
+                if (Dagar.length) {			
+					if (str == "Include items \n") {
+						str += "    " + "with (" +  Dagar.join(\' OR \') + ")\n";				
+						$($(\'input[name=filter-Dagar]:checked\')).each(function(index, Dagar){
+							if(selector === \'\') {
+								selector += "[data-category~=\'" + Dagar.id + "\']";  					
+							} else {
+								selector += ",[data-category~=\'" + Dagar.id + "\']";	
+							}				 
+						});				
+					} else {
+						str += "    AND " + "with (" +  Dagar.join(\' OR \') + ")\n";				
+						$($(\'input[name=filter-Dagar]:checked\')).each(function(index, Dagar){
+							if(lselector === \'\') {
+								lselector += "[data-category~=\'" + Dagar.id + "\']";  					
+							} else {
+								lselector += ",[data-category~=\'" + Dagar.id + "\']";	
+							}	
+						});
+					}			 
+				}
                 
-                '.$script_var.'
-                
-                '.$script_inputs.'
-                $("input").on( "change", function() {
-                    var str = "Include items \n";
-                    var selector = \'\', cselector = \'\', nselector = \'\';
-                    
-                    var $lis = $(\'.program > div\'),
-                    $checked = $(\'input:checked\');	
-                    if ($checked.length) {	
-                        '.$script_change.'
-                
-                $lis.hide(); 
+				$lis.hide(); 
 				console.log(selector);
 				console.log(cselector);
 				console.log(nselector);
-				
-				if (cselector === \'\' && nselector === \'\') {			
-					$(\'.program > div\').filter(selector).show();
-				} else if (cselector === \'\') {
-					$(\'.program > div\').filter(selector).filter(nselector).show();
-				} else if (nselector === \'\') {
-					$(\'.program > div\').filter(selector).filter(cselector).show();
+                console.log(lselector);
+                
+				if(cselector === \'\' && nselector === \'\' && lselector === \'\') {			
+					$(\'.program > div\').filter(selector).show("slow");
+				} else if (cselector === \'\' && nselector === \'\') {
+					$(\'.program > div\').filter(selector).filter(lselector).show("slow");
+				} else if (nselector === \'\' && lselector === \'\') {
+					$(\'.program > div\').filter(selector).filter(cselector).show("slow");
+                } else if (cselector === \'\' && lselector === \'\') {
+					$(\'.program > div\').filter(selector).filter(nselector).show("slow"); 
+                } else if (cselector === \'\') {
+					$(\'.program > div\').filter(selector).filter(nselector).filter(lselector).show("slow");
+                } else if (nselector === \'\') {
+					$(\'.program > div\').filter(selector).filter(cselector).filter(lselector).show("slow");
+                } else if (lselector === \'\') {
+					$(\'.program > div\').filter(selector).filter(nselector).filter(cselector).show("slow");
 				} else {
-					$(\'.program > div\').filter(selector).filter(cselector).filter(nselector).show();
+					$(\'.program > div\').filter(selector).filter(cselector).filter(nselector).filter(lselector).show();
 				}
 				
 			} else {
-				$lis.show();
-			}		
+				$lis.show("slow");
+			}	
+								  
+			$("#result").html(str);	
+	
 		});
 		
 		function removeA(arr) {
@@ -157,8 +245,19 @@ function posts_callback($atts=null, $content=null){
 			}
 			return arr;
 		}
-
-    </script>';
+        $(\'#clear\').click(function() {
+            $(\'.program > div\').show("slow");
+            Kategori = []; 
+            Grupp = []; 
+            Platser = [];
+            Dagar = [];
+            selector = \'\';
+            cselector = \'\'; 
+            nselector = \'\'; 
+            lselector = \'\';
+            $(\'input:checkbox\').removeAttr(\'checked\');
+        });
+        </script>';;
     $option .= '<div class="row program">';
     
     if(have_posts()):
