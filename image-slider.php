@@ -66,9 +66,12 @@
    
     <div id="title-box" class="row">
         <div class="col-md-12">
-            <h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/logo_white_datum_2.png" alt="Hamnfestivalen på Limhamns logotyp"></a></h1>
+            <h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/logo_datum.png" alt="Hamnfestivalen på Limhamns logotyp"></a></h1>
+            <a class="page-scroll" href=".filter_wrapper"><i class="fa fa-chevron-down fa_arrow"></i></a>
         </div>
     </div>
     <a class="page-scroll" href=".filter_wrapper"><i class="fa fa-chevron-down fa_arrow"></i></a>
     <!-- Full Page slider-->
+        <!-- Full Page slider-->
+
 </header>
