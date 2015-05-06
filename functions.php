@@ -276,7 +276,7 @@ function posts_callback($atts=null, $content=null){
                 }
 
                  $option .= '
-                     <article class="col-xs-6 col-sm-3 col-md-4 post-content '. $cat_string .'" data-category="'.$cat_string.'">
+                     <article class="col-xs-6 col-sm-3 col-md-3 post-content '. $cat_string .'" data-category="'.$cat_string.'">
                         <a href="'.$url.'">
                         <div class="inner" style="background-image:url('.get_field('bild').')">
                             <div class="wave">
@@ -407,6 +407,8 @@ function get_pages_by_menu($the_menu) {
         return $content_list;
     }
 }
+
+/*CODE FOR CUSTOM SLIDESHOW IN WORDPRESS*/
 add_theme_support( 'post-thumbnails' );
 add_filter('manage_posts_columns', 'posts_columns', 5);
 add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
