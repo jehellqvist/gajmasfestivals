@@ -1,4 +1,5 @@
- <nav id="one-page" class="navbar navbar-inverse" role="navigation" >
+ <div class="nav-container">
+  <nav id="one-page" class="navbar navbar-inverse" role="navigation" >
    <a href="#page-top" class="nav-logo">Hamnfestivalen 30 juli - 2 aug</a>
 
       <div class="container">
@@ -21,3 +22,4 @@
         </div><!--/.nav-collapse -->
       </div><!--End .container-->
 </nav>
+</div>

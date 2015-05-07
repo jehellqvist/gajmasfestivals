@@ -10,7 +10,7 @@ $(document).ready(function() {
 $(function() {
 
   // Do our DOM lookups beforehand
-  var nav_container = $(".container");
+  var nav_container = $(".nav-container");
   var nav = $("#one-page");
   var nav_ul = $("#one-page-nav");
   var logo = $(".site-title");
