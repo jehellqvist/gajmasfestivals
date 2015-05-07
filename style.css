@@ -146,6 +146,7 @@ header {
 		  position: relative;
 		  background: #fff;
 		  margin-top: -7%;
+		  display: block;
 		 }
 
 		#program{
@@ -422,14 +423,16 @@ header {
 
 }
 
-.filter-function {
-}
-
 .filter-function ul {
 	padding: 5px 0px;
 	margin: 0;
-	display: inline-block;
+	display: inline;
 	float: left;
+}
+
+.filter-function li {
+	float: left;
+	display: inline;
 }
 
 .filter-function h2 {
@@ -437,8 +440,13 @@ header {
 	display: inline-block;
 }
 
+.filter-handers {
+	padding-right: 10%;
+}
+
 .clear-all {
-	padding: 20px 30px 10px 50px;
+	padding-left: 10%;
+	padding-top: 20px;
 }
 
 .clear-all .btn {
@@ -1486,6 +1494,8 @@ html, body {
 		float: left;
 		max-width: 90%;
 		text-align: left;
+		float: left;
+		display: inline;
 	}
 
 	#single-post-page-nav .nav>li>a{

@@ -60,8 +60,8 @@ function posts_callback($atts=null, $content=null){
                 <button type="button" id="clear" class="btn" data-color="primary">Visa alla</button>
             </div><!--End col-sm-2-->
             
-            <div class="col-sm-10">
-                <div class="filter-handlers">';
+            <div class="col-sm-10 filter-handlers">
+                <div class="">';
                 $catID = get_categories(array('parent' => '0','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                 foreach ($catID as $id) {
                     $display_name = $id->cat_name;
