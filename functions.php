@@ -52,43 +52,61 @@ if(get_page_by_title("Home") == null)
     update_option("show_on_front","page");
 }
 function posts_callback($atts=null, $content=null){
-    query_posts(array('orderby' => 'date', 'order' => 'DESC' , 'showposts' => $posts));
-    $option .= '<div class="row">';
-    $option .='<button id="clear">Rensa</button>';
-    $catID = get_categories('parent=0', 'type=post');
-    foreach ($catID as $id) {
-        $name = $id->cat_name;
-        $new_id = $id->cat_ID;
-        $option .= '<div class="filter_wrapper">';
-        $categories = get_categories('parent='.$new_id.'', 'type=post');
-        foreach ($categories as $category) {
-            $new_name = $category->cat_name;
-            $option .= '<input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="btn btn-default check" ><label for="'.$new_name.'">'.$new_name.'</label>';
+    query_posts(array('orderby' => 'date','order' => 'DESC' , 'showposts' => $posts));
+    $option .= '
+        <div class="row filter-function">';
+            $option .='
+            <div class="col-lg-1">
+                <button id="clear">Visa alla</button>
+            </div><!--End col-lg-1-->
+            <div class="col-lg-11">
+            <div class="row">';
+            $catID = get_categories(array('parent' => '0','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
+            foreach ($catID as $id) {
+                $display_name = $id->cat_name;
+                $new_id = $id->cat_ID;
+                $name = str_replace('Å', 'A', $display_name);
+                $option .= '
+                <div class="col-lg-3">
+                <ul class="list-unstyled filter-wrapper filter-'.$name.'">
+                    <h2>'.$display_name.'</h2>';
+                    $categories = get_categories('parent='.$new_id.'', 'type=post');
+                    foreach ($categories as $category) {
+                        $new_name = $category->cat_name;
+                        $option .= '
+                        <li>
+                            <input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="btn btn-default check" >
+                            <label for="'.$new_name.'">'.$new_name.'</label>
+                        </li>';
+                        }
+                    $option .= '
+                </ul><!--End .filter-wrapper-->
+                </div><!--End .col-* -->';
             }
-        $option .= '</div><!--End .filter_wrapper-->';    
-    }
-    $option .= '</div><!--End .row-->';
+            $option .= '
+            </div><!--End .row-->
+            </div><!--End col-lg-10-->';
      $option .= '<script>
-        var Kategori = [], Grupp = [], Platser = [], Dagar = [];
+        var Kategori = [], Aldersgrupp = [], Plats = [], Veckodag = [];
         
         $("input[name=filter-Kategori]").on( "change", function() {
             if (this.checked) Kategori.push("[data-category~=\'" + $(this).attr("value") + "\']");
             else removeA(Kategori, "[data-category~=\'" + $(this).attr("value") + "\']");
         });
             
-        $("input[name=filter-Grupp]").on( "change", function() {
-            if (this.checked) Grupp.push("[data-category~=\'" + $(this).attr("value") + "\']");
-            else removeA(Grupp, "[data-category~=\'" + $(this).attr("value") + "\']");
+        $("input[name=filter-Aldersgrupp]").on( "change", function() {
+            if (this.checked) Aldersgrupp.push("[data-category~=\'" + $(this).attr("value") + "\']");
+            else removeA(Aldersgrupp, "[data-category~=\'" + $(this).attr("value") + "\']");
         });
         
-        $("input[name=filter-Platser]").on( "change", function() {
-            if (this.checked) Platser.push("[data-category~=\'" + $(this).attr("value") + "\']");
-            else removeA(Platser, "[data-category~=\'" + $(this).attr("value") + "\']");
+        $("input[name=filter-Plats]").on( "change", function() {
+            if (this.checked) Plats.push("[data-category~=\'" + $(this).attr("value") + "\']");
+            else removeA(Plats, "[data-category~=\'" + $(this).attr("value") + "\']");
         });
         
-        $("input[name=filter-Dagar]").on( "change", function() {
-            if (this.checked) Dagar.push("[data-category~=\'" + $(this).attr("value") + "\']");
-            else removeA(Dagar, "[data-category~=\'" + $(this).attr("value") + "\']");
+        $("input[name=filter-Veckodag]").on( "change", function() {
+            if (this.checked) Veckodag.push("[data-category~=\'" + $(this).attr("value") + "\']");
+            else removeA(Veckodag, "[data-category~=\'" + $(this).attr("value") + "\']");
         });
         
         $("input").on( "change", function() {
@@ -118,66 +136,66 @@ function posts_callback($atts=null, $content=null){
                     }                           
                 }
                 
-                if (Grupp.length) {                     
+                if (Aldersgrupp.length) {                     
                     if (str == "Include items \n") {
-                        str += "    " + "with (" +  Grupp.join(\' OR \') + ")\n";                   
-                        $($(\'input[name=filter-Grupp]:checked\')).each(function(index, Grupp){
+                        str += "    " + "with (" +  Aldersgrupp.join(\' OR \') + ")\n";                   
+                        $($(\'input[name=filter-Aldersgrupp]:checked\')).each(function(index, Aldersgrupp){
                             if(selector === \'\') {
-                                selector += "[data-category~=\'" + Grupp.id + "\']";                    
+                                selector += "[data-category~=\'" + Aldersgrupp.id + "\']";                    
                             } else {
-                                selector += ",[data-category~=\'" + Grupp.id + "\']";   
+                                selector += ",[data-category~=\'" + Aldersgrupp.id + "\']";   
                             }                
                         });                 
                     } else {
-                        str += "    AND " + "with (" +  Grupp.join(\' OR \') + ")\n";               
-                        $($(\'input[name=filter-Grupp]:checked\')).each(function(index, Grupp){
+                        str += "    AND " + "with (" +  Aldersgrupp.join(\' OR \') + ")\n";               
+                        $($(\'input[name=filter-Aldersgrupp]:checked\')).each(function(index, Aldersgrupp){
                             if(cselector === \'\') {
-                                cselector += "[data-category~=\'" + Grupp.id + "\']";                   
+                                cselector += "[data-category~=\'" + Aldersgrupp.id + "\']";                   
                             } else {
-                                cselector += ",[data-category~=\'" + Grupp.id + "\']";  
+                                cselector += ",[data-category~=\'" + Aldersgrupp.id + "\']";  
                             }                   
                         });
                     }           
                 }
                 
-                if (Platser.length) {           
+                if (Plats.length) {           
                     if (str == "Include items \n") {
-                        str += "    " + "with (" +  Platser.join(\' OR \') + ")\n";             
-                        $($(\'input[name=filter-Platser]:checked\')).each(function(index, Platser){
+                        str += "    " + "with (" +  Plats.join(\' OR \') + ")\n";             
+                        $($(\'input[name=filter-Plats]:checked\')).each(function(index, Plats){
                             if(selector === \'\') {
-                                selector += "[data-category~=\'" + Platser.id + "\']";                      
+                                selector += "[data-category~=\'" + Plats.id + "\']";                      
                             } else {
-                                selector += ",[data-category~=\'" + Platser.id + "\']"; 
+                                selector += ",[data-category~=\'" + Plats.id + "\']"; 
                             }                
                         });             
                     } else {
-                        str += "    AND " + "with (" +  Platser.join(\' OR \') + ")\n";             
-                        $($(\'input[name=filter-Platser]:checked\')).each(function(index, Platser){
+                        str += "    AND " + "with (" +  Plats.join(\' OR \') + ")\n";             
+                        $($(\'input[name=filter-Plats]:checked\')).each(function(index, Plats){
                             if(nselector === \'\') {
-                                nselector += "[data-category~=\'" + Platser.id + "\']";                     
+                                nselector += "[data-category~=\'" + Plats.id + "\']";                     
                             } else {
-                                nselector += ",[data-category~=\'" + Platser.id + "\']";    
+                                nselector += ",[data-category~=\'" + Plats.id + "\']";    
                             }   
                         });
                     }            
                 }
-                if (Dagar.length) {         
+                if (Veckodag.length) {         
                     if (str == "Include items \n") {
-                        str += "    " + "with (" +  Dagar.join(\' OR \') + ")\n";               
-                        $($(\'input[name=filter-Dagar]:checked\')).each(function(index, Dagar){
+                        str += "    " + "with (" +  Veckodag.join(\' OR \') + ")\n";               
+                        $($(\'input[name=filter-Veckodag]:checked\')).each(function(index, Veckodag){
                             if(selector === \'\') {
-                                selector += "[data-category~=\'" + Dagar.id + "\']";                    
+                                selector += "[data-category~=\'" + Veckodag.id + "\']";                    
                             } else {
-                                selector += ",[data-category~=\'" + Dagar.id + "\']";   
+                                selector += ",[data-category~=\'" + Veckodag.id + "\']";   
                             }                
                         });             
                     } else {
-                        str += "    AND " + "with (" +  Dagar.join(\' OR \') + ")\n";               
-                        $($(\'input[name=filter-Dagar]:checked\')).each(function(index, Dagar){
+                        str += "    AND " + "with (" +  Veckodag.join(\' OR \') + ")\n";               
+                        $($(\'input[name=filter-Veckodag]:checked\')).each(function(index, Veckodag){
                             if(lselector === \'\') {
-                                lselector += "[data-category~=\'" + Dagar.id + "\']";                   
+                                lselector += "[data-category~=\'" + Veckodag.id + "\']";                   
                             } else {
-                                lselector += ",[data-category~=\'" + Dagar.id + "\']";  
+                                lselector += ",[data-category~=\'" + Veckodag.id + "\']";  
                             }   
                         });
                     }            
@@ -228,9 +246,9 @@ function posts_callback($atts=null, $content=null){
         $(\'#clear\').click(function() {
             $(\'.program > article\').show("slow");
             Kategori = []; 
-            Grupp = []; 
-            Platser = [];
-            Dagar = [];
+            Aldersgrupp = []; 
+            Plats = [];
+            Veckodag = [];
             selector = \'\';
             cselector = \'\'; 
             nselector = \'\'; 
@@ -251,7 +269,7 @@ function posts_callback($atts=null, $content=null){
                 //format of day field
                 $days = get_field('dag');
                 if(count($days)>=4){
-                    $day_list='Alla dagar';
+                    $day_list='Alla Veckodag';
                 }
                 else {
                     foreach ($days as $day) {
@@ -299,7 +317,7 @@ function posts_callback($atts=null, $content=null){
                 $day_list = '';
         endwhile;
     endif;
-    $option .= '</div>';
+    $option .= '</div><!--End .row-->';
     
     
     return $option;
@@ -489,3 +507,5 @@ function jeherve_custom_sharing_title() {
         }
 }
 add_filter( 'sharing_title', 'jeherve_custom_sharing_title', 10, 3 );
+
+remove_filter('the_content', 'wpautop');

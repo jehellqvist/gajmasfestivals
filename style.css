@@ -57,9 +57,9 @@ LIGHTER: rgba(176,206,241,1);
   font-weight: 700;
 }
 
-::-webkit-scrollbar { 
+/*::-webkit-scrollbar { 
     display: none; 
-}
+}*/
 
 * {
 	margin:0;
@@ -217,13 +217,34 @@ header {
 	padding: 3% 5% 2% 5%;
 }
 
-#program .filtering{
-	padding: 2% 0 3% 1%;
+.filter-function h2 {
+	font-size: 1em;
+	display: inline-block;
 }
 
-#program .btn{
-	width:10%;
-	margin: 0 .5% 0 0 ;
+.filter-Kategori{
+}
+
+.filter-Aldersgrupp {
+}
+
+.filter-Veckodag {
+}
+
+.filter-Plats {
+}
+
+.filter-wrapper input[type=checkbox] {
+}
+.filter-wrapper input[type=checkbox]:checked {
+
+}
+.filter-wrapper label {
+	cursor: pointer;
+}
+
+.filter-wrapper li {
+
 }
 
 #om-hamnfestivalen .social_share{
@@ -260,7 +281,7 @@ header {
 	font-weight: 300;
 }
 
-#om-hamnfestivalen #about p, #hitta-hit p, #omradet p{
+#om-hamnfestivalen #about p, #hitta-hit p{
 	text-align:center;
 	font-size: 1.25em;
 	line-height: 1.5em;
@@ -350,36 +371,100 @@ footer i{
 	font-size: 2em !important;
 }
 
-.list-unstyled{
+footer .list-unstyled{
 	text-decoration: none;
 	padding:0% 0 0 0;
 	font-size: 3em;
 }
 
-.list-unstyled a{
+footer .list-unstyled a{
 	margin-right: 5%;
 	text-decoration: none;
 }
 
-#omradet [class^="col-"] {
-	text-align: center;
-	padding:20px 20px 40px 20px;
+#omradet {
+	background-color: grey;
+	/*border-top: 7px solid rgba(176,206,241);*/
+}
+.parent {
+	position: relative;
+	height: 100%;
 }
 
-#omradet #map img{
-	width:100%;
-	height: auto;
+.child {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50);
+}
+#omradet p {
+	text-align:center;
+	font-size: 1em;
+	line-height: 1.5em;
+	padding:20px 0 1% 0;
+}
+
+#omradet [class^="col-"] {
+	text-align: center;
+	padding:10px 5px 10px 5px;
 }
 
 #omradet img {
-	height: 80px;
+	height: 50px;
 	width: auto;
 }
 
+#omradet .map-full {
+	 height: auto;
+	 width: 30%;
+}
+
 #omradet .omradet-place img {
-	height: 80px;
+	height: 50px;
 	width: auto;
 }
+
+#omradet [class$="12"] {
+	text-align: center;
+	padding:10px 0px 30px 0px;
+}
+
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: 768px) { 
+
+		#omradet img {
+			height: 80px;
+			width: auto;
+		}
+		#omradet .omradet-place img {
+			height: 80px;
+			width: auto;
+		}
+
+		#omradet [class^="col-"] {
+			text-align: center;
+			padding:10px 35px 10px 35px;
+		}
+
+		#omradet [class$="12"] {
+			text-align: center;
+			padding:10px 0px 60px 0px;
+		}
+	}
+
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: 992px) { 
+		#omradet [class^="col-"] {
+			text-align: center;
+			padding:10px 5px 10px 5px;
+		}		
+
+	}
+
+	/* Large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {  
+
+	}
+
 
 #hitta-hit #by_bike, #by_boat, #by_bus, #by_car{
 	text-align:center;
@@ -1023,7 +1108,6 @@ table{
 			margin-bottom: 40px;
 		}
 	}
-
 
 	.arrangor-kontakt .fa {
 		padding-top: 2%;
