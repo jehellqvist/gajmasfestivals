@@ -56,37 +56,39 @@ function posts_callback($atts=null, $content=null){
     $option .= '
         <div class="row filter-function">';
             $option .='
-            <div class="col-lg-1">
-                <button id="clear">Visa alla</button>
-            </div><!--End col-lg-1-->
-            <div class="col-lg-11">
-            <div class="row">';
-            $catID = get_categories(array('parent' => '0','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
-            foreach ($catID as $id) {
-                $display_name = $id->cat_name;
-                $new_id = $id->cat_ID;
-                $name = str_replace('Å', 'A', $display_name);
-                $option .= '
-                <div class="col-lg-12">
-                <ul class="list-unstyled list-inline filter-wrapper filter-'.$name.'">
-                    <h2>'.$display_name.'</h2>';
-                    $categories = get_categories('parent='.$new_id.'', 'type=post');
-                    foreach ($categories as $category) {
-                        $new_name = $category->cat_name;
-                        $option .= '
-                        <li class="button-checkbox">
-                        <button type="button" class="btn" data-color="primary">'.$new_name.'</button>
-                            <input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="hidden" >
-                            <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
-                        </li>';
-                        }
+            <div class="clear-all col-lg-2">
+                <button type="button" id="clear" class="btn" data-color="primary">Visa alla</button>
+            </div><!--End col-lg-2-->
+            
+            <div class="col-lg-10">
+                <div class="filter-handlers">';
+                $catID = get_categories(array('parent' => '0','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
+                foreach ($catID as $id) {
+                    $display_name = $id->cat_name;
+                    $new_id = $id->cat_ID;
+                    $name = str_replace('Å', 'A', $display_name);
                     $option .= '
-                </ul><!--End .filter-wrapper-->
-                </div><!--End .col-* -->';
-            }
-            $option .= '
-            </div><!--End .row-->
-            </div><!--End col-lg-10-->';
+                    <div class="handlers">
+                        <ul class="list-unstyled list-inline filter-wrapper filter-'.$name.'">
+                            <h2 class="screen-reader-text">'.$display_name.'</h2>';
+                            $categories = get_categories('parent='.$new_id.'', 'type=post');
+                            foreach ($categories as $category) {
+                                $new_name = $category->cat_name;
+                                $option .= '
+                                <li class="button-checkbox">
+                                <button type="button" class="btn" data-color="primary">'.$new_name.'</button>
+                                    <input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="hidden" >
+                                    <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
+                                </li>';
+                                }
+                            $option .= '
+                        </ul><!--End .filter-wrapper-->
+                    </div><!--End .handlers -->';
+                }
+                $option .= '
+                </div><!--.filter-handlers-->
+            </div><!--End col-lg-10-->
+         </div><!--End .row .filter-function-->';
      $option .= '<script>
         var Kategori = [], Aldersgrupp = [], Plats = [], Veckodag = [];
         

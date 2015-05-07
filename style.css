@@ -406,12 +406,15 @@ header {
 /*Styling for sections*/
 
 #program {
-	padding: 3% 0% 0% 0%;
+
 }
 
 .program {
+	margin-right: 0;
+	margin-left: 0;
 	padding: 3% 5% 2% 5%;
 }
+
 
 #program .ample {
 	background-repeat: repeat-x;
@@ -420,8 +423,10 @@ header {
 }
 
 .filter-function ul {
-	padding: 0;
+	padding: 5px 0px;
 	margin: 0;
+	display: inline-block;
+	float: left;
 }
 
 .filter-function h2 {
@@ -429,21 +434,49 @@ header {
 	display: inline-block;
 }
 
+.filter-handlers {
+	padding: 3% 0%;
+}
+
+.clear-all {
+	padding: 4% 3%;
+	text-align: right;
+}
+
+.clear-all .btn {
+	padding: 10px;
+}
+
 .btn {
+	background: transparent;
 	text-transform: uppercase;
 	font-weight: 600;
 	-webkit-font-smoothing: antialiased;
 	letter-spacing: 0.1em;
-	padding: 7px;
+	padding: 6px;
+	font-size: 0.9em;
 	border-radius: 2px;
 	font-family: 'PT Sans';
+	border: 2px solid;
+}
+
+.screen-reader-text {
+	display: none !important;
+}
+
+.btn-primary.active, 
+.btn-primary.focus, 
+.btn-primary:active, 
+.btn-primary:focus, 
+.btn-primary:hover, 
+.open>.dropdown-toggle.btn-primary {
+	border: 1px solid;
 }
 
 .glyphicon {
 	font-size: 0.9em;
 	-webkit-font-smoothing: antialiased;
 }
-
 
 .filter-Kategori .btn {
 	color: rgba(34, 60, 126, 1);
@@ -460,15 +493,19 @@ header {
 	background-color: rgba(34, 60, 126, 0.9);
 	border-color: rgba(34, 60, 126, 0.9);
 	-webkit-font-smoothing: antialiased;
+	margin: 0px 1px;
 
 }
 
 
 .filter-Aldersgrupp .btn {
-	color: #fff;
-	background-color: rgba(255, 216, 0, 0.9);
-	border-color: rgba(255, 216, 0, 1);
+	color: rgba(255, 190, 0, 1);
+	border-color: rgba(255, 190, 0, 1);
 	-webkit-font-smoothing: antialiased;
+}
+
+.filter-Veckodag {
+	clear: left !important;
 }
 
 .filter-Aldersgrupp  .btn-primary.active, 
