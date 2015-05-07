@@ -415,14 +415,37 @@ header {
 
 }
 
-.filter-function {
+
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: 768px) { 
+
+	}
+
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: 992px) { 		
+		.filter-function {
+			padding: 0px 8%;
+		}
+	}
+
+	/* Large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {  
+
+	}
+
+.filter-handlers ul {
+	padding: 0px 2px;
+	margin: 0;
 }
 
-.filter-function ul {
-	padding: 5px 0px;
-	margin: 0;
-	display: inline-block;
+.handlers {
+	display: inline;
+}
+
+.filter-handlers li {
 	float: left;
+	display: inline-block;
+	padding: 5px 5px;
 }
 
 .filter-function h2 {
@@ -462,6 +485,7 @@ header {
 .btn-primary:hover, 
 .open>.dropdown-toggle.btn-primary {
 	border: 1px solid;
+	margin: 1px;
 }
 
 .glyphicon {
@@ -546,6 +570,10 @@ header {
 	-webkit-font-smoothing: antialiased;
 }
 
+#om-hamnfestivalen .ample {
+	padding-top: 60px;
+	background-repeat: repeat-x;
+}
 
 #om-hamnfestivalen .social_share{
 	padding: 2% 0%;
@@ -557,9 +585,25 @@ header {
 }
 
 #om-hamnfestivalen .sponsorer{
+	padding: 5px 0px;
 	font-size: 1em;
 	font-style: italic;
 }
+
+#om-hamnfestivalen .sponsorer a {
+	color: rgba(34,34,34,1);
+	font-size: 1.3em;
+	padding: 0px 10px;
+	line-height: 1.7em;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+}
+
+#om-hamnfestivalen .sponsorer a:hover,
+#om-hamnfestivalen .sponsorer a:active {
+	color: rgba(34,34,34,0.6);
+} 
 
 #om-hamnfestivalen{
 	padding-bottom: 5%;
@@ -840,15 +884,15 @@ footer .list-unstyled a{
 	height:80px;
 }
 
-#hitta-hit a {
+#hitta-hit a, #om-hamnfestivalen a {
 	color: #303030;
 	text-decoration: underline;
 	font-weight: 600;
 	-webkit-font-smoothing: antialiased;
 }
 
-#hitta-hit a:hover,
-#hitta-hit a:visited {
+#hitta-hit a:hover, #om-hamnfestivalen a:hover,
+#hitta-hit a:visited, #om-hamnfestivalen a:visited {
 	text-decoration: none;
 }
 

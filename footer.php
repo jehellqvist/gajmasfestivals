@@ -8,7 +8,7 @@
 			<div class="col-md-6">
 
 				<a href="http://www.polimhamn.se" target="_blank"><div id="polimhamn_logo"></div></a>	
-				<p class="justify">På Limhamn är ett samarbete mellan Malmö stad, fastighetsägare, handel, näringsliv och ideella föreningar med fokus på att 
+				<p class="justify"><strong>På Limhamn</strong> är ett samarbete mellan <strong>Malmö stad</strong>, <strong>fastighetsägare</strong>, <strong>handel</strong>, <strong>näringsliv och ideella föreningar</strong> med fokus på att 
 					vidareutveckla Limhamn som besök- och turistdestination. Samverkan är grunden i hela vår verksamhet och även den övergripande 
 					metoden för vårt arbete. Läs mer om arrangören bakom Hamnfestivalen på <a href="http://polimhamn.se/">www.polimhamn.se</a></p>
 			

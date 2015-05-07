@@ -60,15 +60,13 @@ function posts_callback($atts=null, $content=null){
                 <button type="button" id="clear" class="btn" data-color="primary">Visa alla</button>
             </div><!--End col-sm-2-->
             
-            <div class="col-sm-10 filter-handlers">
-                <div class="">';
+            <div class="col-sm-10 filter-handlers">';
                 $catID = get_categories(array('parent' => '0','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                 foreach ($catID as $id) {
                     $display_name = $id->cat_name;
                     $new_id = $id->cat_ID;
                     $name = str_replace('Å', 'A', $display_name);
                     $option .= '
-                    <div class="handlers">
                         <ul class="list-unstyled list-inline filter-wrapper filter-'.$name.'">
                             <h2 class="screen-reader-text">'.$display_name.'</h2>';
                             $categories = get_categories('parent='.$new_id.'', 'type=post');
@@ -82,8 +80,7 @@ function posts_callback($atts=null, $content=null){
                                 </li>';
                                 }
                             $option .= '
-                        </ul><!--End .filter-wrapper-->
-                    </div><!--End .handlers -->';
+                        </ul><!--End .filter-wrapper-->';
                 }
                 $option .= '
                 </div><!--.filter-handlers-->

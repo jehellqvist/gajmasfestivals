@@ -1,6 +1,6 @@
  <div class="nav-container">
   <nav id="one-page" class="navbar navbar-inverse" role="navigation" >
-   <a href="#page-top" class="nav-logo">Hamnfestivalen 30 juli - 2 aug</a>
+   <a href="#page-top" class="nav-logo page-scroll">Hamnfestivalen 30 juli - 2 aug</a>
 
       <div class="container">
         <div class="navbar-header page-scroll">
