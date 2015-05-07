@@ -4,6 +4,7 @@ $(document).ready(function() {
   	cycle: true, 
   	pause: "false"
   });
+
 }); 
 
 $(function() {
@@ -11,10 +12,13 @@ $(function() {
   // Do our DOM lookups beforehand
   var nav_container = $(".container");
   var nav = $("#one-page");
+  var nav_ul = $("#one-page-nav");
 
   nav_container.waypoint({
     handler: function() {
         nav.toggleClass('stuck');
+        nav_ul.toggleClass('margin')
+        
     }
   });
 });
