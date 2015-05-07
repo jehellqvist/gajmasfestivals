@@ -68,7 +68,6 @@
     <div id="title-box" class="row">
         <div class="col-md-12">
         </div>
-            <a class="page-scroll" href=".filter_wrapper"><i class="fa fa-chevron-down fa_arrow"></i></a>
 
     </div>
     <!-- Full Page slider-->
