@@ -396,9 +396,32 @@ footer .list-unstyled a{
 }
 
 #omradet {
-	background-color: #22BC56;
-	padding: 20px 0px;
+	background: #46C772;
+	border-bottom: 30px solid #22BC56;
+	/*background-color: #22BC56;*/
+	
+	padding-top: 20px;
+	padding-bottom: 20px;
 	/*border-top: 7px solid rgba(176,206,241);*/
+}
+
+#omradet a {
+	color: #303030;
+	cursor: pointer;
+}
+
+#omradet .map-a {
+	text-decoration: underline;
+	font-weight: 600;
+}
+
+#omradet .map-a:hover {
+	text-decoration: none;
+}
+
+
+#omradet .map:hover{
+	background-color: rgba(250,250,250,0.2);
 }
 
 #omradet h2 {
@@ -497,15 +520,18 @@ footer .list-unstyled a{
 
 #hitta-hit {
 	color: #303030;
-	background: #46C772;/*#00B02E; /* #24C04D;*/
+	background-color: #22BC56;
+}
 
+#hitta-hit h1 {
+	color: #303030;
 }
 
 #hitta-hit #transport img{
 	max-height:100px;
 }
 
-#hitta-hit #by_bus img, #by_boat img{
+#hitta-hit img{
 	height:80px;
 }
 
@@ -1021,8 +1047,7 @@ html, body {
 	@media (max-width: 600px){
 
 	.program{
-		margin-top:10%;
-		margin-bottom: 10%;
+		margin: 0 !important;
 	}
 	.post-content {
 		border:1px solid #dedede;
@@ -1193,9 +1218,12 @@ html, body {
 		font-weight: 300 !important;
 	}
 
-	div.sharedaddy h3.sd-title:after {
+	div.sharedaddy .sd-sharing:after {
 		content: ' #pohamnfestivalen';
 		font-weight: 500;
+		font-family: 'Museo', 'Arvo', 'Georgia', serif !important;
+		font-size: 1.4em !important;
+		font-weight: 300 !important;
 	}
 
 	/* Extra small devices (phones, less than 768px) */
