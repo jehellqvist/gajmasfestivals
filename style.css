@@ -1627,6 +1627,12 @@ html, body {
 
 }
 
+.opacity{
+	opacity:0;
+	-webkit-transition:opacity 500ms ;
+	transition:opacity 500ms;
+}
+
 /**/
 
 .medverkande h1{

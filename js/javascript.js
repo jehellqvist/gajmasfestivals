@@ -13,11 +13,13 @@ $(function() {
   var nav_container = $(".container");
   var nav = $("#one-page");
   var nav_ul = $("#one-page-nav");
+  var logo = $(".site-title");
 
   nav_container.waypoint({
     handler: function() {
         nav.toggleClass('stuck');
-        nav_ul.toggleClass('margin')
+        nav_ul.toggleClass('margin');
+        logo.toggleClass('opacity');
         
     }
   });
