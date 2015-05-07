@@ -396,18 +396,13 @@ footer .list-unstyled a{
 }
 
 #omradet {
-	background-color: grey;
+	background-color: #22BC56;
+	padding: 20px 0px;
 	/*border-top: 7px solid rgba(176,206,241);*/
 }
-.parent {
-	position: relative;
-	height: 100%;
-}
 
-.child {
-	position: relative;
-	top: 50%;
-	-webkit-transform: translateY(-50);
+#omradet h2 {
+	padding: 10px 0px 10px 0px;
 }
 #omradet p {
 	text-align:center;
@@ -426,14 +421,14 @@ footer .list-unstyled a{
 	width: auto;
 }
 
-#omradet .map-full {
-	 height: auto;
-	 width: 30%;
-}
-
 #omradet .omradet-place img {
 	height: 50px;
 	width: auto;
+}
+
+#omradet .map img {
+	 height: auto;
+	 width: 30%;
 }
 
 #omradet [class$="12"] {
@@ -448,6 +443,12 @@ footer .list-unstyled a{
 			height: 80px;
 			width: auto;
 		}
+
+		#omradet .map img {
+			height: auto;
+			width: 20%;
+		}
+
 		#omradet .omradet-place img {
 			height: 80px;
 			width: auto;
@@ -466,6 +467,12 @@ footer .list-unstyled a{
 
 	/* Medium devices (desktops, 992px and up) */
 	@media (min-width: 992px) { 
+
+		#omradet .map img {
+			height: 80px;
+			width: auto;
+		}
+
 		#omradet [class^="col-"] {
 			text-align: center;
 			padding:10px 5px 10px 5px;
@@ -481,12 +488,16 @@ footer .list-unstyled a{
 
 #hitta-hit #by_bike, #by_boat, #by_bus, #by_car{
 	text-align:center;
-	padding:20px 20px 40px 20px;
+	padding:0px 20px 40px 20px;
+}
+
+#hitta-hit p {
+	padding-top: 10px;
 }
 
 #hitta-hit {
 	color: #303030;
-	background: rgba(176,206,241,1);/*#00B02E; /* #24C04D;*/
+	background: #46C772;/*#00B02E; /* #24C04D;*/
 
 }
 
@@ -1271,13 +1282,6 @@ html, body {
 		margin-left: 10px;
 	}
 
-
-/*FIX FÖR ATY #BY_CAR INTE SKA TRILLA NER VID VIDD .COL-SM-* */
-@media(max-width: 991px){
-	#by_bus{
-		clear:left;
-	}
-}
 
 /* CLASS FOR WAYPOINTS NAV */
 nav.stuck{
