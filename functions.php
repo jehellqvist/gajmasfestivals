@@ -513,3 +513,120 @@ function jeherve_custom_sharing_title() {
 add_filter( 'sharing_title', 'jeherve_custom_sharing_title', 10, 3 );
 
 remove_filter('the_content', 'wpautop');
+
+
+if(function_exists("register_field_group"))
+{
+    register_field_group(array (
+        'id' => 'acf_programpunkts-info',
+        'title' => 'Programpunkts info',
+        'fields' => array (
+            array (
+                'key' => 'field_5541fbdec9c88',
+                'label' => 'Beskrivning',
+                'name' => 'beskrivning',
+                'type' => 'textarea',
+                'instructions' => 'En kort beskrivning av programpunkten.',
+                'required' => 1,
+                'default_value' => '',
+                'placeholder' => '',
+                'maxlength' => 220,
+                'rows' => 3,
+                'formatting' => 'br',
+            ),
+            array (
+                'key' => 'field_5541fda7cd1f5',
+                'label' => 'Bild',
+                'name' => 'bild',
+                'type' => 'image',
+                'instructions' => 'Ladda upp bild för programpunkten',
+                'save_format' => 'url',
+                'preview_size' => 'medium',
+                'library' => 'all',
+            ),
+            array (
+                'key' => 'field_5541fc03a6416',
+                'label' => 'Plats',
+                'name' => 'plats',
+                'type' => 'radio',
+                'instructions' => 'Ange plats för programpunkten',
+                'required' => 1,
+                'choices' => array (
+                    'Småbåtshamnen' => 'Småbåtshamnen',
+                    'Fiskehamnen' => 'Fiskehamnen',
+                ),
+                'other_choice' => 1,
+                'save_other_choice' => 1,
+                'default_value' => '',
+                'layout' => 'vertical',
+            ),
+            array (
+                'key' => 'field_5541fc28e198d',
+                'label' => 'Dag',
+                'name' => 'dag',
+                'type' => 'checkbox',
+                'instructions' => 'Ange dag/dagar då programpunkten äger rum',
+                'required' => 1,
+                'choices' => array (
+                    'Tors' => 'Tors',
+                    'Fre' => 'Fre',
+                    'Lör' => 'Lör',
+                    'Sön' => 'Sön',
+                    'Alla dagar' => 'Alla dagar',
+                ),
+                'default_value' => 'Alla dagar',
+                'layout' => 'vertical',
+            ),
+            array (
+                'key' => 'field_5541fc8ac957d',
+                'label' => 'Tid',
+                'name' => 'tid',
+                'type' => 'text',
+                'instructions' => 'Ange eventuell tid då programpunkten äger rum efter formen 00.00-00.00',
+                'default_value' => '',
+                'placeholder' => '00.00-00.00',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'html',
+                'maxlength' => '',
+            ),
+            array (
+                'key' => 'field_5541fcfae69bf',
+                'label' => 'Plats på kartan',
+                'name' => 'plats_pa_kartan',
+                'type' => 'number',
+                'instructions' => 'Ange plats på kartan',
+                'required' => 1,
+                'default_value' => '',
+                'placeholder' => 0,
+                'prepend' => '',
+                'append' => '',
+                'min' => '',
+                'max' => '',
+                'step' => '',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'post',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array (
+                0 => 'the_content',
+                1 => 'custom_fields',
+                2 => 'discussion',
+                3 => 'comments',
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+}
