@@ -731,9 +731,10 @@ html, body {
 	/*Containing div*/
 	.post-content{
 		margin:0 0 1.5% 0;
+		transition: opacity .8s ease;
 		}
 
-	.post-content .inner:hover {
+	.post-content:hover {
 		opacity: 0.8;
 		transition: opacity .8s ease;
 	}
@@ -749,8 +750,6 @@ html, body {
 	    overflow: hidden;
 	    background-position: center bottom;
 	    border-radius: 2px;
-	    transition: opacity .8s ease;
-
 	}
 
 	/*Text content*/
@@ -1168,7 +1167,7 @@ html, body {
 		padding: 0;
 	}
 
-	
+
 	.post-img-container img {
 		margin-left: auto;
 		margin-right: auto;
