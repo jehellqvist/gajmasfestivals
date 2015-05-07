@@ -1644,6 +1644,29 @@ html, body {
 	transition:opacity 500ms;
 }
 
+.nav-logo, .nav-logo:active, .nav-logo:visited{
+	width:25%;
+	position:absolute;
+	font-size: 1.2em;
+	font-family: 'Museo', 'Arvo', 'Georgia', serif;
+	top:12px;
+	left:20px;
+	opacity: 0;
+	display:inline;
+	color:#fff;
+	text-decoration: none;
+}
+
+.nav-logo:hover{
+	text-decoration: none;
+}
+
+.show{
+	opacity:1;
+	-webkit-transition:opacity 500ms ;
+	transition:opacity 500ms;
+}
+
 /**/
 
 .medverkande h1{

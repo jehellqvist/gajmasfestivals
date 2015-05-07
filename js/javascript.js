@@ -14,13 +14,14 @@ $(function() {
   var nav = $("#one-page");
   var nav_ul = $("#one-page-nav");
   var logo = $(".site-title");
+  var nav_logo = $(".nav-logo");
 
   nav_container.waypoint({
     handler: function() {
-        nav.toggleClass('stuck');
-        nav_ul.toggleClass('margin');
-        logo.toggleClass('opacity');
-        
+        nav.toggleClass('stuck'),
+        nav_ul.toggleClass('margin'),
+        logo.toggleClass('opacity'),
+        nav_logo.toggleClass('show')
     }
   });
 });
