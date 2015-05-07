@@ -422,6 +422,9 @@ header {
 
 }
 
+.filter-function {
+}
+
 .filter-function ul {
 	padding: 5px 0px;
 	margin: 0;
@@ -434,13 +437,8 @@ header {
 	display: inline-block;
 }
 
-.filter-handlers {
-	padding: 3% 0%;
-}
-
 .clear-all {
-	padding: 4% 3%;
-	text-align: right;
+	padding: 20px 30px 10px 50px;
 }
 
 .clear-all .btn {
@@ -505,7 +503,7 @@ header {
 }
 
 .filter-Veckodag {
-	clear: left !important;
+	/*clear: left !important;*/
 }
 
 .filter-Aldersgrupp  .btn-primary.active, 

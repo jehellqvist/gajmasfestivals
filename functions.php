@@ -56,11 +56,11 @@ function posts_callback($atts=null, $content=null){
     $option .= '
         <div class="row filter-function">';
             $option .='
-            <div class="clear-all col-lg-2">
+            <div class="clear-all col-sm-2 text-center">
                 <button type="button" id="clear" class="btn" data-color="primary">Visa alla</button>
-            </div><!--End col-lg-2-->
+            </div><!--End col-sm-2-->
             
-            <div class="col-lg-10">
+            <div class="col-sm-10">
                 <div class="filter-handlers">';
                 $catID = get_categories(array('parent' => '0','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                 foreach ($catID as $id) {
@@ -87,7 +87,7 @@ function posts_callback($atts=null, $content=null){
                 }
                 $option .= '
                 </div><!--.filter-handlers-->
-            </div><!--End col-lg-10-->
+            </div><!--End col-sm-10-->
          </div><!--End .row .filter-function-->';
      $option .= '<script>
         var Kategori = [], Aldersgrupp = [], Plats = [], Veckodag = [];
@@ -291,8 +291,8 @@ function posts_callback($atts=null, $content=null){
                 $url = get_permalink();
                 $description = get_field('beskrivning');
 
-                if(strlen($description) >= 115) {
-                    $description = substr($description, 0, 115);
+                if(strlen($description) >= 100) {
+                    $description = substr($description, 0, 100);
                     $description .= '... <span class="link">LÄS MER</span>';
                 }
 
