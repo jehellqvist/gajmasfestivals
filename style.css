@@ -240,35 +240,105 @@ header {
 
 }
 
+.filter-function ul {
+	padding: 0;
+	margin: 0;
+}
+
 .filter-function h2 {
 	font-size: 1em;
 	display: inline-block;
 }
 
-.filter-Kategori{
+.btn {
+	text-transform: uppercase;
+	font-weight: 600;
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: 0.1em;
+	padding: 7px;
+	border-radius: 2px;
+	font-family: 'PT Sans';
 }
 
-.filter-Aldersgrupp {
+.glyphicon {
+	font-size: 0.9em;
+	-webkit-font-smoothing: antialiased;
 }
 
-.filter-Veckodag {
+
+.filter-Kategori .btn {
+	color: rgba(34, 60, 126, 1);
+	border-color: rgba(34, 60, 126, 1);
 }
 
-.filter-Plats {
-}
-
-.filter-wrapper input[type=checkbox] {
-}
-.filter-wrapper input[type=checkbox]:checked {
-
-}
-.filter-wrapper label {
-	cursor: pointer;
-}
-
-.filter-wrapper li {
+.filter-Kategori .btn-primary.active, 
+.filter-Kategori .btn-primary.focus, 
+.filter-Kategori .btn-primary:active, 
+.filter-Kategori .btn-primary:focus, 
+.filter-Kategori .btn-primary:hover, 
+.filter-Kategori .open>.dropdown-toggle.btn-primary {
+	color: #fff;
+	background-color: rgba(34, 60, 126, 0.9);
+	border-color: rgba(34, 60, 126, 0.9);
+	-webkit-font-smoothing: antialiased;
 
 }
+
+
+.filter-Aldersgrupp .btn {
+	color: #fff;
+	background-color: rgba(255, 216, 0, 0.9);
+	border-color: rgba(255, 216, 0, 1);
+	-webkit-font-smoothing: antialiased;
+}
+
+.filter-Aldersgrupp  .btn-primary.active, 
+.filter-Aldersgrupp  .btn-primary.focus, 
+.filter-Aldersgrupp  .btn-primary:active, 
+.filter-Aldersgrupp  .btn-primary:focus, 
+.filter-Aldersgrupp  .btn-primary:hover, 
+.filter-Aldersgrupp  .open>.dropdown-toggle.btn-primary {
+	color: #fff;
+	background-color: rgba(255, 216, 0, 0.9);
+	border-color: rgba(255, 216, 0, 1);
+	-webkit-font-smoothing: antialiased;
+}
+
+.filter-Veckodag .btn {
+	color: rgba(0, 170, 80, 1);
+	border-color: rgba(0, 170, 80, 1);
+
+}
+
+.filter-Veckodag  .btn-primary.active, 
+.filter-Veckodag  .btn-primary.focus, 
+.filter-Veckodag  .btn-primary:active, 
+.filter-Veckodag  .btn-primary:focus, 
+.filter-Veckodag  .btn-primary:hover, 
+.filter-Veckodag  .open>.dropdown-toggle.btn-primary {
+	color: #fff;
+	background-color: rgba(0, 170, 80, 0.9);
+	border-color: rgba(0, 170, 80, 1);
+	-webkit-font-smoothing: antialiased;
+}
+
+.filter-Plats .btn{
+	color: rgba(200, 0, 0, 1);
+	border-color: rgba(200, 0, 0, 1);
+}
+
+.filter-Plats  .btn-primary.active, 
+.filter-Plats  .btn-primary.focus, 
+.filter-Plats  .btn-primary:active, 
+.filter-Plats  .btn-primary:focus, 
+.filter-Plats  .btn-primary:hover, 
+.filter-Plats  .open>.dropdown-toggle.btn-primary {
+	color: #fff;
+	background-color: rgba(200, 0, 0, 0.9);
+	border-color: rgba(200, 0, 0, 1);
+	-webkit-font-smoothing: antialiased;
+}
+
 
 #om-hamnfestivalen .social_share{
 	padding: 2% 0%;
