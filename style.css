@@ -1168,6 +1168,12 @@ html, body {
 		padding: 0;
 	}
 
+	
+	.post-img-container img {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	.navbar {
 		margin-bottom: 0;
 	}

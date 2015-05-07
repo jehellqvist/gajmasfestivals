@@ -41,7 +41,7 @@ get_header(); ?>
                     }
                 ?>
                 <div class="col-sm-12 col-md-6 col-md-offset-3 post-img-container">
-                    <img src="<?php echo get_field('bild')?>" class="img-responsive">
+                    <img src="<?php echo get_field('bild')?>" class="img-responsive img-center">
                 </div><!--End . col-*-* -->
 
                 <div class="col-sm-12 col-md-12">
