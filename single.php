@@ -6,7 +6,7 @@
  */
 get_header(); ?>
 
- <nav id="single-post-page-nav" class="navbar navbar-inverse" role="navigation">
+ <nav id="single-post-page-nav" class="" role="navigation">
     <div class="container-fluid">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fa fa-chevron-left"></i></a>
         <?php

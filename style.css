@@ -1470,13 +1470,26 @@ html, body {
 		margin-bottom: 0;
 	}
 
+	#single-post-page-nav {
+		font-family: 'Museo', 'Arvo', 'Georgia', serif;
+		font-weight: 700;
+		font-size: 1em !important;
+		background-color: rgba(34,60,126, 1);
+		border: rgba(27,82,155, 1);
+
+		-webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+
 	#single-post-page-nav ul{
+		background: transparent;
 		float: left;
 		max-width: 90%;
 		text-align: left;
 	}
 
 	#single-post-page-nav .nav>li>a{
+		background: transparent;
 		 padding-top: 15px;
   		padding-bottom: 15px;
   		line-height: 20px;
@@ -1488,7 +1501,7 @@ html, body {
 	#single-post-page-nav .nav>li>a:active,
 	#single-post-page-nav i:hover,
 	#single-post-page-nav i:active{
-		background: transparent;
+		background: transparent !important;
   		color: rgba(250,250,250, 0.5);	
 	}
 
