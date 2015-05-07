@@ -67,16 +67,17 @@ function posts_callback($atts=null, $content=null){
                 $new_id = $id->cat_ID;
                 $name = str_replace('Å', 'A', $display_name);
                 $option .= '
-                <div class="col-lg-3">
-                <ul class="list-unstyled filter-wrapper filter-'.$name.'">
+                <div class="col-lg-12">
+                <ul class="list-unstyled list-inline filter-wrapper filter-'.$name.'">
                     <h2>'.$display_name.'</h2>';
                     $categories = get_categories('parent='.$new_id.'', 'type=post');
                     foreach ($categories as $category) {
                         $new_name = $category->cat_name;
                         $option .= '
-                        <li>
-                            <input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="btn btn-default check" >
-                            <label for="'.$new_name.'">'.$new_name.'</label>
+                        <li class="button-checkbox">
+                        <button type="button" class="btn" data-color="primary">'.$new_name.'</button>
+                            <input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="hidden" >
+                            <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
                         </li>';
                         }
                     $option .= '

@@ -227,7 +227,17 @@ header {
 /*Styling for sections*/
 
 #program {
+	padding: 3% 0% 0% 0%;
+}
+
+.program {
 	padding: 3% 5% 2% 5%;
+}
+
+#program .ample {
+	background-repeat: repeat-x;
+	padding: 30px 0px;
+
 }
 
 .filter-function h2 {
@@ -396,10 +406,9 @@ footer .list-unstyled a{
 }
 
 #omradet {
-	background: #46C772;
-	border-bottom: 30px solid #22BC56;
+	background: rgba(176,206,241,1); /*green:#46C772;*/
+	border-bottom: 30px solid rgba(123,169,222, 1); /*#22BC56;*/
 	/*background-color: #22BC56;*/
-	
 	padding-top: 20px;
 	padding-bottom: 20px;
 	/*border-top: 7px solid rgba(176,206,241);*/
@@ -520,7 +529,7 @@ footer .list-unstyled a{
 
 #hitta-hit {
 	color: #303030;
-	background-color: #22BC56;
+	background-color: rgba(123,169,222, 1); /*green:#22BC56;*/
 }
 
 #hitta-hit h1 {
