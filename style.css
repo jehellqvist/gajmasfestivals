@@ -512,8 +512,8 @@ header {
 }
 
 .filter-Veckodag .btn {
-	color: rgba(0, 170, 80, 1);
-	border-color: rgba(0, 170, 80, 1);
+	color: rgba(0, 128, 0, 1);
+	border-color: rgba(0, 120, 0, 1);
 
 }
 
@@ -524,8 +524,8 @@ header {
 .filter-Veckodag  .btn-primary:hover, 
 .filter-Veckodag  .open>.dropdown-toggle.btn-primary {
 	color: #fff;
-	background-color: rgba(0, 170, 80, 0.9);
-	border-color: rgba(0, 170, 80, 1);
+	background-color: rgba(0, 128, 0, 0.9);
+	border-color: rgba(0, 128, 0, 1);
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -683,6 +683,24 @@ footer .list-unstyled a{
 	text-decoration: none;
 }
 
+.link-to-omradet {
+	text-align: center;
+	position: fixed;
+	right: 0;
+	padding-top: 12px;
+	top: 40%;
+	width: 50px;
+	height: 50px;
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px;
+	background: green;
+	z-index: 10;
+}
+
+.link-to-omradet .fa {
+	color: #fff;
+	font-size: 2em;
+}
 #omradet {
 	background: rgba(176,206,241,1); /*green:#46C772;*/
 	border-bottom: 30px solid rgba(123,169,222, 1); /*#22BC56;*/
@@ -964,19 +982,19 @@ html, body {
 	font-size: 2.2em;
 	padding: 1.2%;
 	position:absolute;
-	left:47%;
-	bottom:120px;
-	z-index:3;
+	left:48%;
+	bottom: 200px;
+	z-index:10;
 	background-color: transparent; /*GRÖN rgba(0, 180, 56, 1) BLÅ: rgba(3,49,131, 1) 249,0,0*/
 	border-radius: 50%;
-	border: 3px solid rgba(34,60,126, 1);
-	color: rgba(34,60,126, 1);
+	border: 3px solid #fff;
+	color: #fff;
 	transition: all 1s ease;
 }
 
 .fa_arrow:hover{
 	/*font-size: 2.5em;*/
-	background-color: rgba(250,250,250, 0.2);
+	background-color: rgba(250,250,250, 0.3);
 	transition: all 1s ease;
 }
 
