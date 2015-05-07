@@ -149,49 +149,6 @@ header {
 	color: rgba(250,250,250, 1);
 }
 
-.stuck{
-	position:fixed;
-	top:0;
-	height:50px;
-	-webkit-transition:height 500ms;
-	transition:height 500ms;
-}
-.margin{
-	margin:0px!important;
-	-webkit-transition:margin 500ms ;
-	transition:margin 500ms;
-
-}
-
-.opacity{
-	opacity:0;
-	-webkit-transition:opacity 500ms ;
-	transition:opacity 500ms;
-}
-
-.nav-logo, .nav-logo:active, .nav-logo:visited{
-	width:25%;
-	position:absolute;
-	font-size: 1.2em;
-	font-family: 'Museo', 'Arvo', 'Georgia', serif;
-	top:12px;
-	left:20px;
-	opacity: 0;
-	display:inline;
-	color:#fff;
-	text-decoration: none;
-}
-
-.nav-logo:hover{
-	text-decoration: none;
-}
-
-.show{
-	opacity:1;
-	-webkit-transition:opacity 500ms ;
-	transition:opacity 500ms;
-}
-
 /**NAVIGATION Media queries for devices with a width max 768x**/
 	@media (max-width: 768px) { 
 		#wrapper {
@@ -219,12 +176,12 @@ header {
 		}
 
 		.site-title {
-			width: 50%;
+			width: 65%;
 			margin:0 auto;
 			position: absolute;
 			z-index: 20;
 			bottom:15px;
-			left:30px;
+			left:20px;
 			z-index: 99999999999;
 		}
 
@@ -233,18 +190,10 @@ header {
 		}
 
 		main{
-<<<<<<< HEAD
 		  	z-index: 3;
 		  	position: relative;
 		  	background: #fff;
 		  	margin-top: -70px;
-=======
-		  z-index: 3;
-		  position: relative;
-		  background: #fff;
-		  margin-top: -7%;
-		  display: block;
->>>>>>> origin/master
 		 }
 
 		#program{
@@ -466,16 +415,14 @@ header {
 
 }
 
+.filter-function {
+}
+
 .filter-function ul {
 	padding: 5px 0px;
 	margin: 0;
-	display: inline;
+	display: inline-block;
 	float: left;
-}
-
-.filter-function li {
-	float: left;
-	display: inline;
 }
 
 .filter-function h2 {
@@ -483,13 +430,8 @@ header {
 	display: inline-block;
 }
 
-.filter-handers {
-	padding-right: 10%;
-}
-
 .clear-all {
-	padding-left: 10%;
-	padding-top: 20px;
+	padding: 20px 30px 10px 50px;
 }
 
 .clear-all .btn {
@@ -969,7 +911,13 @@ footer .list-unstyled a{
    	background-attachment: fixed;
 }
 
-.carousel, .item, .active {
+html, body {
+    height: 100%;
+}
+
+.carousel,
+.item,
+.active {
     height: 100%;
 }
 
@@ -1525,8 +1473,6 @@ footer .list-unstyled a{
 		float: left;
 		max-width: 90%;
 		text-align: left;
-		float: left;
-		display: inline;
 	}
 
 	#single-post-page-nav .nav>li>a{
@@ -1663,6 +1609,53 @@ footer .list-unstyled a{
 	}
 
 
+/* CLASS FOR WAYPOINTS NAV */
+.stuck{
+	position:fixed;
+	top:0;
+	height:50px;
+	-webkit-transition:height .5s;
+	transition:height .5s;
+
+}
+.margin{
+	margin:0px!important;
+	-webkit-transition:margin .5s;
+	transition:margin .5s;
+
+}
+
+.opacity{
+	opacity:0;
+	-webkit-transition:opacity .5s;
+	transition:opacity .5s;
+}
+
+.nav-logo, .nav-logo:active, .nav-logo:visited{
+	width:25%;
+	position:absolute;
+	font-size: 1.2em;
+	font-family: 'Museo', 'Arvo', 'Georgia', serif;
+	top:12px;
+	left:20px;
+	opacity: 0;
+	display:inline;
+	color:#fff;
+	text-decoration: none;
+}
+
+.nav-logo:hover{
+	text-decoration: none;
+}
+
+.show{
+	opacity:1;
+	-webkit-transition:opacity 500ms ;
+	transition:opacity 500ms;
+}
+
+/**/
+
 .medverkande h1{
 	padding:3% 0 3% 0;
 	text-align: center;
@@ -1752,8 +1745,8 @@ table{
 
 
 
-	@media (min-width: 768px){
-		.sidebar{
+@media (min-width: 768px){
+			.sidebar{
 			margin:0% 5% 0 2%;
 			padding:0% 1% 0 2%;
 			border-left: 1px dotted #000;
@@ -1850,7 +1843,7 @@ table{
 	}
 
 
-.arrangor-kontakt .fa {
-	padding-top: 2%;
-	font-size: 1.2em;
-}
+	.arrangor-kontakt .fa {
+		padding-top: 2%;
+		font-size: 1.2em;
+	}
