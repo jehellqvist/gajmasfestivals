@@ -946,14 +946,16 @@ footer .list-unstyled a{
 	-webkit-font-smoothing: antialiased;
 }
 
-#hitta-hit .icon-link, #om-hamnfestivalen a {
+#hitta-hit .icon-link, 
+#om-hamnfestivalen a, #om-hamnfestivalen a:visited
+#hitta-hit a, #hitta-hit a:visited {
 	color: #303030;
 	text-decoration: underline;
 	-webkit-font-smoothing: antialiased;
 }
 
 #hitta-hit .icon-link:hover, #om-hamnfestivalen a:hover,
-#hitta-hit .icon-link:visited, #om-hamnfestivalen a:visited {
+#hitta-hit a:hover {
 	text-decoration: none;
 }
 
