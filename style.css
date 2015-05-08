@@ -166,7 +166,10 @@ header {
 		  	left: -60px;
 		  	bottom:-80px;
 		  	background: rgba(42,57,101, 1);
-		  	transform: rotate(12deg);
+		  	-webkit-transform: rotate(12deg);
+			-o-transform: rotate(12deg);
+			-moz-transform: rotate(12deg);
+			transform: rotate(12deg);
 		}
 
 		#title-box{
@@ -270,7 +273,7 @@ header {
 		}
 
 		.navbar-nav {
-			position: absolute;
+			position: relative;
 			z-index: 10;
 			right:10px;
 			width:630px;
@@ -287,6 +290,9 @@ header {
 			  left: -400px;
 			  bottom:-60px;
 			  background: rgba(42,57,101, 1);
+			  -webkit-transform: rotate(12deg);
+			  -o-transform: rotate(12deg);
+			  -moz-transform: rotate(12deg);
 			  transform: rotate(12deg);
 		}
 
@@ -372,6 +378,9 @@ header {
 			left: -400px;
 			bottom:-60px;
 			background: rgba(42,57,101, 1);
+			-webkit-transform: rotate(12deg);
+			-o-transform: rotate(12deg);
+			-moz-transform: rotate(12deg);
 			transform: rotate(12deg);
 		}
 
@@ -1133,6 +1142,9 @@ html, body {
 		margin: 0 0 0 -30px;
 		height: 270px;
 		background-color: rgba(51,106,171, 1);
+		-webkit-transform: rotate(7deg);
+		-o-transform: rotate(7deg);
+		-moz-transform: rotate(7deg);
 		transform: rotate(7deg);
 	}
 
@@ -1144,6 +1156,9 @@ html, body {
 		margin: 0 0 0 -30px;
 		height: 270px;
 		background-color: rgba(34,60,126, 0.99);
+		-webkit-transform: rotate(-7deg);
+		-o-transform: rotate(-7deg);
+		-moz-transform: rotate(-7deg);
 		transform: rotate(-7deg);
 	}
 
@@ -1247,10 +1262,13 @@ html, body {
 			margin: 0 0 0 -30px;
 			height: 270px;
 			background-color: rgba(51,106,171, 1);
+			-webkit-transform: rotate(7deg);
+			-o-transform: rotate(7deg);
+			-moz-transform: rotate(7deg);
 			transform: rotate(7deg);
 		}
 
-		.wave:before {
+		.- {
 			content: '';
 			position: absolute;
 			bottom: -50px;
@@ -1258,6 +1276,9 @@ html, body {
 			margin: 0 0 0 -30px;
 			height: 270px;
 			background-color: rgba(34,60,126, 0.99);
+			-webkit-transform: rotate(-7deg);
+			-o-transform: rotate(-7deg);
+			-moz-transform: rotate(-7deg);
 			transform: rotate(-7deg);
 		}
 
@@ -1361,6 +1382,9 @@ html, body {
 			margin: 0 0 0 -30px;
 			height: 270px;
 			background-color: rgba(51,106,171, 1);
+			-webkit-transform: rotate(7deg);
+			-o-transform: rotate(7deg);
+			-moz-transform: rotate(7deg);
 			transform: rotate(7deg);
 		}
 
@@ -1372,6 +1396,9 @@ html, body {
 			margin: 0 0 0 -30px;
 			height: 270px;
 			background-color: rgba(34,60,126, 0.99);
+			-webkit-transform: rotate(-7deg);
+			-o-transform: rotate(-7deg);
+			-moz-transform: rotate(-7deg);
 			transform: rotate(-7deg);
 		}
 
@@ -1973,4 +2000,7 @@ table{
 		padding-top: 2%;
 		font-size: 1.2em;
 	}
+
+
+
 
