@@ -25,6 +25,7 @@ LIGHTER: rgba(176,206,241,1);
 
 @import url(http://fonts.googleapis.com/css?family=Arvo);
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 
 
 @font-face {
@@ -401,18 +402,31 @@ header {
 ***************************SECTIONS*****************************
 */
 
-
 .program {
 	margin-right: 0;
 	margin-left: 0;
-	padding: 3% 5% 2% 5%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 45px;
+	padding-right: 45px;
 }
 
 
 #program .ample {
 	background-repeat: repeat-x;
 	padding: 30px 0px;
+	padding-left: -15px;
+	padding-right: -15px;
+}
 
+#program {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.filter-function {
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 
@@ -424,7 +438,8 @@ header {
 	/* Medium devices (desktops, 992px and up) */
 	@media (min-width: 992px) { 		
 		.filter-function {
-			padding: 0px 8%;
+			padding-left: 8%;
+			padding-right: 8%;
 		}
 	}
 
@@ -579,6 +594,16 @@ header {
 	padding: 2% 0%;
 }
 
+.AlpinePhotoTiles-image-div-container {
+	background: transparent !important;
+	transition: opacity 1s ease;
+}
+
+.AlpinePhotoTiles-image-div-container:hover {
+	opacity: 0.6;
+	transition: opacity 1s ease;
+}
+
 #om-hamnfestivalen .tag{
 	font-size: 1.2em;
 	font-family: 'Museo';
@@ -619,13 +644,13 @@ header {
 }
 
 #om-hamnfestivalen #sponsorer h2{
-	font-family: 'Museo', 'Arvo', 'Georgia', serif;
+	font-family: '', 'Arvo', 'Georgia', serif;
 	text-align: center;
 	font-size: 1em;
 	font-weight: 300;
 }
 
-#om-hamnfestivalen #about p, #hitta-hit p{
+#om-hamnfestivalen #about p {
 	text-align:center;
 	font-size: 1.25em;
 	line-height: 1.5em;
@@ -747,15 +772,14 @@ footer .list-unstyled a{
 }
 #omradet {
 	background: rgba(176,206,241,1); /*green:#46C772;*/
-	border-bottom: 30px solid rgba(123,169,222, 1); /*#22BC56;*/
 	/*background-color: #22BC56;*/
 	padding-top: 20px;
-	padding-bottom: 20px;
-	/*border-top: 7px solid rgba(176,206,241);*/
+	padding-bottom: 50px;
+	border-top: 15px solid #fff;
 }
 
 #omradet a {
-	color: #303030;
+	color: #222;
 	cursor: pointer;
 }
 
@@ -769,39 +793,71 @@ footer .list-unstyled a{
 }
 
 
-#omradet .map:hover{
+/*#omradet .map:hover{
 	background-color: rgba(250,250,250,0.2);
-}
+}*/
 
 #omradet h2 {
-	padding: 10px 0px 10px 0px;
+	font-family: 'Museo';
+	font-weight: 200;
+	padding: 0px 0px 20px 0px;
 }
 #omradet p {
 	text-align:center;
-	font-size: 1em;
+	font-size: 1.05em;
 	line-height: 1.5em;
 	padding:20px 0 1% 0;
 }
 
+.omradet-row {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 #omradet [class^="col-"] {
 	text-align: center;
-	padding:10px 5px 10px 5px;
+	padding-top:10px;
+	padding-bottom: 10px;
+	padding-left: 5px !important;
+	padding-right: 5px !important;
 }
 
 #omradet img {
-	height: 50px;
+	height: 80px;
 	width: auto;
 }
 
 #omradet .omradet-place img {
-	height: 50px;
+	height: 80px;
 	width: auto;
 }
 
-#omradet .map img {
-	 height: auto;
-	 width: 30%;
+.map {
+	margin-top: -150px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 270px;
+	width: 270px;
+	border: 10px solid #fff;
+	border-radius: 50%;
+	overflow: hidden;
 }
+
+#omradet .map img {
+	border-radius: 0% !important;
+	height: 100% !important;
+	width: auto !important;
+	transition: all 1s ease;
+}
+
+#omradet .map img:hover {
+	border-radius: 0% !important;
+	height: 115% !important;
+	margin-left: -25px;
+	width: auto !important;
+	transition: all 1s ease;
+}
+
 
 #omradet [class$="12"] {
 	text-align: center;
@@ -810,17 +866,6 @@ footer .list-unstyled a{
 
 	/* Small devices (tablets, 768px and up) */
 	@media (min-width: 768px) { 
-
-		#omradet img {
-			height: 80px;
-			width: auto;
-		}
-
-		#omradet .map img {
-			height: auto;
-			width: 20%;
-		}
-
 		#omradet .omradet-place img {
 			height: 80px;
 			width: auto;
@@ -828,28 +873,23 @@ footer .list-unstyled a{
 
 		#omradet [class^="col-"] {
 			text-align: center;
-			padding:10px 35px 10px 35px;
-		}
-
-		#omradet [class$="12"] {
-			text-align: center;
-			padding:10px 0px 60px 0px;
+			padding-top:10px;
+			padding-bottom: 10px;
+			padding-left: 25px !important;
+			padding-right: 25px !important;
 		}
 	}
 
 	/* Medium devices (desktops, 992px and up) */
 	@media (min-width: 992px) { 
 
-		#omradet .map img {
-			height: 80px;
-			width: auto;
-		}
-
 		#omradet [class^="col-"] {
 			text-align: center;
-			padding:10px 5px 10px 5px;
-		}		
-
+			padding-top:10px;
+			padding-bottom: 10px;
+			padding-left: 25px !important;
+			padding-right: 25px !important;
+		}
 	}
 
 	/* Large devices (large desktops, 1200px and up) */
@@ -863,6 +903,7 @@ footer .list-unstyled a{
 	padding:0px 20px 40px 20px;
 }
 
+
 #hitta-hit p {
 	padding-top: 10px;
 }
@@ -870,6 +911,7 @@ footer .list-unstyled a{
 #hitta-hit {
 	color: #303030;
 	background-color: rgba(123,169,222, 1); /*green:#22BC56;*/
+	padding-bottom: 90px;
 }
 
 #hitta-hit h1 {
@@ -881,18 +923,37 @@ footer .list-unstyled a{
 }
 
 #hitta-hit img{
-	height:80px;
+	height: 100px;
+	padding-bottom: 20px;
 }
 
-#hitta-hit a, #om-hamnfestivalen a {
+#hitta-hit p{
+	text-align: justify;
+	font-size: 1.15em;
+	line-height: 1.5em;
+	padding:0 0 1% 0;
+}
+
+#hitta-hit .row {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#hitta-hit a,
+#hitta-hit a:visited {
 	color: #303030;
 	text-decoration: underline;
-	font-weight: 600;
 	-webkit-font-smoothing: antialiased;
 }
 
-#hitta-hit a:hover, #om-hamnfestivalen a:hover,
-#hitta-hit a:visited, #om-hamnfestivalen a:visited {
+#hitta-hit .icon-link, #om-hamnfestivalen a {
+	color: #303030;
+	text-decoration: underline;
+	-webkit-font-smoothing: antialiased;
+}
+
+#hitta-hit .icon-link:hover, #om-hamnfestivalen a:hover,
+#hitta-hit .icon-link:visited, #om-hamnfestivalen a:visited {
 	text-decoration: none;
 }
 

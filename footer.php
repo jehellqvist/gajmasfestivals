@@ -8,7 +8,7 @@
 			<div class="col-md-6">
 
 				<a href="http://www.polimhamn.se" target="_blank"><div id="polimhamn_logo"></div></a>	
-				<p class="justify"><strong>På Limhamn</strong> är ett samarbete mellan <strong>Malmö stad</strong>, <strong>fastighetsägare</strong>, <strong>handel</strong>, <strong>näringsliv och ideella föreningar</strong> med fokus på att 
+				<p class="justify">På Limhamn är ett samarbete mellan <em>Malmö stad</em>, <em>fastighetsägare</em>, <em>handel</em>, <em>näringsliv och ideella föreningar</em> med fokus på att 
 					vidareutveckla Limhamn som besök- och turistdestination. Samverkan är grunden i hela vår verksamhet och även den övergripande 
 					metoden för vårt arbete. Läs mer om arrangören bakom Hamnfestivalen på <a href="http://polimhamn.se/">www.polimhamn.se</a></p>
 			
@@ -57,7 +57,7 @@
 			</div><!--End of .col-->
 
 			<div class="col-md-12 text-center">
-				<p class="design-by">Web design av <a href="http://www.gajmas.se">GAJMA</a></p>
+				<!--<p class="design-by">Web design av <a href="http://www.gajmas.se">GAJMA</a></p>-->
 			</div>
 		
 		</div><!--End of .row-->
