@@ -201,8 +201,9 @@ header {
 		 }
 
 		#program{
-			margin-top:7.1%;
+			margin-top: 7.1%;
 			position: relative;
+			padding:0 5px!important;
 		}
 
 		.nav-logo{
@@ -975,6 +976,10 @@ footer .list-unstyled a{
 
 .top{
 	margin-top: 4%;
+}
+
+.top-neg{
+	margin-top:-7%;
 }
 
 
@@ -1893,7 +1898,7 @@ table{
 }
 
 .medverkande{
-	padding:2%;
+	padding:1%;
 }
 
 
