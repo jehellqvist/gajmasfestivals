@@ -679,6 +679,7 @@ header {
 #om-hamnfestivalen .sponsorer h2{
 	font-family: 'PT Sans', 'Arvo', 'Georgia', serif;
 	text-align: center;
+	margin-top: 0;
 	font-size: 1em;
 	font-style: italic;
 	font-weight: 300;
@@ -1967,7 +1968,7 @@ table{
 
 .ample {
 	border: none;
-	background: url(img/vimplat_bred_short.png);
+	background: url(img/vimplat_bred_2.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 45px;
@@ -1975,58 +1976,8 @@ table{
 	display: block;
 	width: 100%;
 	margin-top: 0px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
-
-	/* Extra small devices (phones, less than 768px) */
-	/* No media query since this is the default in Bootstrap */
-
-	/* Small devices (tablets, 768px and up) */
-	@media (min-width: 768px) { 
-		.ample {
-			background: url(img/vimplat_bred_2.png);
-			background-position: center;
-			background-repeat: no-repeat;
-			height: 45px;
-			margin: auto;
-			display: block;
-			width: 100%;
-			margin-top: 0px;
-			margin-bottom: 40px;
-		}
-	}
-
-	/* Medium devices (desktops, 992px and up) */
-	@media (min-width: 992px) { 
-		.ample {
-			background: url(img/vimplat_bred_2.png);
-			background-position: center;
-			background-repeat: no-repeat;
-			height: 45px;
-			margin: auto;
-			display: block;
-			width: 100%;
-			margin-top: 0px;
-			margin-bottom: 40px;
-		}
-	}
-
-	/* Large devices (large desktops, 1200px and up) */
-	@media (min-width: 1200px) {  
-		.ample {
-			background: url(img/vimplat_bred_2.png);
-			background-position: center;
-			background-repeat: no-repeat;
-			height: 45px;
-			margin: auto;
-			display: block;
-			width: 100%;
-			margin-top: 0px;
-			margin-bottom: 40px;
-		}
-	}
-
-
 	.arrangor-kontakt .fa {
 		padding-top: 2%;
 		font-size: 1.2em;
