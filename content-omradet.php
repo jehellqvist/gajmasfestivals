@@ -16,7 +16,6 @@ Template Name: omradet
 				<img src="<?php echo get_field('festivalkarta')?>" class="img-responsive img-center">
 			</div></a>
 		</div><!--col-*-->
-
 		<h2>Festivalområdet</h2>
 		<div class="col-md-3 col-xs-6">
 			<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/card.png" alt="Kort ikon">
