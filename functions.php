@@ -2,6 +2,8 @@
 include ('one-page-slider.php');
 include ('register_fields/field_om.php');
 include ('register_fields/field_hitta.php');
+include ('register_fields/omradet.php');
+
 
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 function my_jquery_enqueue() {
