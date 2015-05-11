@@ -20,9 +20,12 @@ DARKER: rgba(27,82,155, 1),
 DARK: rgba(51,106,171, 1) 
 LIGHT: rgba(123,169,222, 1);
 LIGHTER: rgba(176,206,241,1);
+<<<<<<< Updated upstream
 
 POLIMHAMN BLÅ: rgba(26,32,58, 1);
 17,23,57
+=======
+>>>>>>> Stashed changes
 */
 
 
@@ -168,7 +171,7 @@ header {
 		  	z-index: 3;
 		  	left: -60px;
 		  	bottom:-80px;
-		  	background: #122A67;
+		  	background: rgba(42,57,101, 1);
 		  	-webkit-transform: rotate(12deg);
 			-o-transform: rotate(12deg);
 			-moz-transform: rotate(12deg);
@@ -293,7 +296,7 @@ header {
 			  z-index: 3;
 			  left: -400px;
 			  bottom:-60px;
-			  background: #122A67;
+			  background: rgba(42,57,101, 1);
 			  -webkit-transform: rotate(12deg);
 			  -o-transform: rotate(12deg);
 			  -moz-transform: rotate(12deg);
@@ -313,7 +316,7 @@ header {
 			position: absolute;
 			z-index: 20;
 			bottom:20px;
-			left:25px;
+			left:30px;
 			z-index: 99999999999;
 		}
 
@@ -381,7 +384,7 @@ header {
 			z-index: 3;
 			left: -400px;
 			bottom:-60px;
-			background: #122A67; /*rgba(42,57,101, 1)*/
+			background: rgba(42,57,101, 1);
 			-webkit-transform: rotate(12deg);
 			-o-transform: rotate(12deg);
 			-moz-transform: rotate(12deg);
@@ -400,7 +403,7 @@ header {
 			margin:0 auto;
 			position: absolute;
 			z-index: 20;
-			bottom:28px;
+			bottom:20px;
 			left:30px;
 			z-index: 99999999999;
 		}
@@ -540,14 +543,6 @@ header {
 
 }
 
-/*Skilja på kategorier och andra filter*/
-.filter-Aldersgrupp {
-	clear: left;
-}
-
-.filter-Kategori {
-	padding-bottom: 50px !important;
-}
 
 .filter-Aldersgrupp .btn,
 .filter-Veckodag .btn,
@@ -560,6 +555,7 @@ header {
 .filter-clear i {
 	padding-right: 7px;
 }
+<<<<<<< Updated upstream
 .filter-clear .btn {
 	color: rgba(18, 42, 103, 1);
 	border-color: rgba(18, 42, 103, 1);
@@ -583,6 +579,8 @@ header {
 	border-color: rgba(50,50,50, 1);
 	-webkit-font-smoothing: antialiased;
 }
+=======
+>>>>>>> Stashed changes
 
 .filter-Aldersgrupp  .btn-primary.active, 
 .filter-Aldersgrupp  .btn-primary.focus, 
@@ -888,8 +886,12 @@ footer .list-unstyled a{
 	border-radius: 0% !important;
 	height: 100% !important;
 	width: auto !important;
+<<<<<<< Updated upstream
 	-webkit-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
+=======
+	transition: all 1s ease;
+>>>>>>> Stashed changes
 }
 
 #omradet .map img:hover {
@@ -897,8 +899,12 @@ footer .list-unstyled a{
 	height: 115% !important;
 	margin-left: -25px;
 	width: auto !important;
+<<<<<<< Updated upstream
 	-webkit-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
+=======
+	transition: all 1s ease;
+>>>>>>> Stashed changes
 }
 
 
@@ -1788,39 +1794,14 @@ html, body {
 		font-weight: 700;
 	}
 
-	.single-place {
-		padding-top: 20px;
-	}
-
-	.single-place i {
+	.inner-single .place p:first-child {
 		display: inline-block;
 		margin-right: 10px;
-		margin-left: 10px;
 	}
 
-	.single-map {	
-		width: 150px;
-		height: 150px;
-		margin: auto;
+	.inner-single .place p:last-child {
 		display: inline-block;
-		border: 5px solid #fff;
-		box-shadow: 0 0 0 2px #ececec;
-		border-radius: 50%;
-		overflow: hidden;
-	}
-
-	.single-map img{
-		width: auto;
-		height: 100%;
-		border-radius: 50%;
-		opacity: 1;
-		-webkit-transition: all 1s ease-in-out;
-	}
-
-	.single-map img:hover {
-		opacity: 0.7;
-		-webkit-transition: opacity 1s ease-in-out;
-
+		margin-left: 10px;
 	}
 
 
