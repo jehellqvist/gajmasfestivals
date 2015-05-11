@@ -20,12 +20,11 @@ DARKER: rgba(27,82,155, 1),
 DARK: rgba(51,106,171, 1) 
 LIGHT: rgba(123,169,222, 1);
 LIGHTER: rgba(176,206,241,1);
-<<<<<<< Updated upstream
+
 
 POLIMHAMN BLÅ: rgba(26,32,58, 1);
 17,23,57
-=======
->>>>>>> Stashed changes
+
 */
 
 
@@ -555,7 +554,6 @@ header {
 .filter-clear i {
 	padding-right: 7px;
 }
-<<<<<<< Updated upstream
 .filter-clear .btn {
 	color: rgba(18, 42, 103, 1);
 	border-color: rgba(18, 42, 103, 1);
@@ -579,8 +577,6 @@ header {
 	border-color: rgba(50,50,50, 1);
 	-webkit-font-smoothing: antialiased;
 }
-=======
->>>>>>> Stashed changes
 
 .filter-Aldersgrupp  .btn-primary.active, 
 .filter-Aldersgrupp  .btn-primary.focus, 
@@ -886,12 +882,8 @@ footer .list-unstyled a{
 	border-radius: 0% !important;
 	height: 100% !important;
 	width: auto !important;
-<<<<<<< Updated upstream
 	-webkit-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
-=======
-	transition: all 1s ease;
->>>>>>> Stashed changes
 }
 
 #omradet .map img:hover {
@@ -899,12 +891,8 @@ footer .list-unstyled a{
 	height: 115% !important;
 	margin-left: -25px;
 	width: auto !important;
-<<<<<<< Updated upstream
 	-webkit-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
-=======
-	transition: all 1s ease;
->>>>>>> Stashed changes
 }
 
 

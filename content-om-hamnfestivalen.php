@@ -3,8 +3,6 @@
 Template Name: om-hamnfestivalen
 *
 * //used instead of page.php is choosen as template for the page
-* @package flyingtoffee
-* @since flyingtoffee 1.0
 */
 
 ?>
