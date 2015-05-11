@@ -165,7 +165,7 @@ header {
 		  	z-index: 3;
 		  	left: -60px;
 		  	bottom:-80px;
-		  	background: #122A67;
+		  	background: rgba(42,57,101, 1);
 		  	-webkit-transform: rotate(12deg);
 			-o-transform: rotate(12deg);
 			-moz-transform: rotate(12deg);
@@ -201,9 +201,8 @@ header {
 		 }
 
 		#program{
-			margin-top: 7.1%;
+			margin-top:7.1%;
 			position: relative;
-			padding:0 5px!important;
 		}
 
 		.nav-logo{
@@ -290,7 +289,7 @@ header {
 			  z-index: 3;
 			  left: -400px;
 			  bottom:-60px;
-			  background: #122A67;
+			  background: rgba(42,57,101, 1);
 			  -webkit-transform: rotate(12deg);
 			  -o-transform: rotate(12deg);
 			  -moz-transform: rotate(12deg);
@@ -884,7 +883,7 @@ footer .list-unstyled a{
 	border-radius: 0% !important;
 	height: 100% !important;
 	width: auto !important;
-	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 
 #omradet .map img:hover {
@@ -892,7 +891,7 @@ footer .list-unstyled a{
 	height: 115% !important;
 	margin-left: -25px;
 	width: auto !important;
-	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 
 
@@ -1002,10 +1001,6 @@ footer .list-unstyled a{
 
 .top{
 	margin-top: 4%;
-}
-
-.top-neg{
-	margin-top:-7%;
 }
 
 
@@ -1793,28 +1788,27 @@ html, body {
 	}
 
 	.single-map {	
-		width: 150px;
-		height: 150px;
+		width: 180px;
+		height: 180px;
 		margin: auto;
 		display: inline-block;
 		border: 5px solid #fff;
-		box-shadow: 0 0 0 2px #ececec;
+		box-shadow: 0 0 0 2px #cecece;
 		border-radius: 50%;
-		overflow: hidden;
 	}
 
 	.single-map img{
-		width: auto;
-		height: 100%;
+		width: 100%;
+		height: auto;
 		border-radius: 50%;
-		opacity: 1;
-		-webkit-transition: all 1s ease-in-out;
 	}
 
 	.single-map img:hover {
-		opacity: 0.7;
-		-webkit-transition: opacity 1s ease-in-out;
-
+		width: 180px;
+		height: 180px;
+		border: 5px solid #fff;
+		box-shadow: 0 0 0 2px #cecece;
+		border-radius: 50%;
 	}
 
 
@@ -1949,7 +1943,7 @@ table{
 }
 
 .medverkande{
-	padding:1%;
+	padding:2%;
 }
 
 

@@ -57,7 +57,13 @@ function posts_callback($atts=null, $content=null){
         <div class="row filter-function">';
             $option .='
             <div class="clear-all col-sm-2 text-center">
-                <button type="button" id="clear" class="btn" data-color="primary">Visa alla</button>
+            <ul class="list-unstyled list-inline filter-wrapper filter-clear">
+                <li class="button-checkbox">
+                    <button type="button" id="clear" class="btn btn-primary active" data-color="primary">Visa alla</button>
+                    <input type="checkbox" name="clear" id="clear" class="hidden" checked>
+                    <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
+                </i>
+            </ul>
             </div><!--End col-sm-2-->
             
             <div class="col-sm-10 filter-handlers">';

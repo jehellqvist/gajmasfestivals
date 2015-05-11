@@ -51,7 +51,14 @@ get_header(); ?>
                             <p class="content-meta"><?php echo $day_list?><?php echo $time?><p>
                         </header>
                         <p class="description"><?php echo get_field('beskrivning')?></p>
-                        <span class="place"><p>Plats på kartan: <?php echo get_field('plats_pa_kartan')?></p><i class="fa fa-map-marker"></i><p><?php echo get_field('plats')?></p></span>
+                        <div class="content-meta">
+                            <div class="single-map">
+                                <a href="http://localhost:8888/wp-content/uploads/2015/04/karta_full1.png">
+                                    <img src="http://localhost:8888/wp-content/uploads/2015/04/map_icon.png" alt="karta_icon" width="400" height="399" class="alignnone size-full wp-image-456" />
+                                </a>
+                            </div>
+                            <p class="single-place"><?php echo get_field('plats_pa_kartan')?><i class="fa fa-map-marker"></i><?php echo get_field('plats')?></p>
+                        </div>
                     </div><!--.inner-single-->
                     <hr class="ample">
                     <div class="social-sharing-buttons col-md-12 text-center">

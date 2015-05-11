@@ -50,7 +50,7 @@
 					<div class="col-md-12 col-sm-12 center ">
 						<!--<a href="http://www.hamnfestivalen.se" target="_blank"><div id="hamnfestivalen_logo"></div></a>	-->
 						<h1>Är du en medverkande aktör eller intresserad av att bli en? </h1>
-               		 	<p>Besök vår sida <a href="http://localhost/?page_id=15">för medverkande aktörer</a></p>
+               		 	<p>Besök vår sida <a href="http://localhost:8888/for-medverkande-aktorer/">för medverkande aktörer</a></p>
                		 	<!--http://localhost:8888/for-medverkande-aktorer-->
 					</div>
 				</div><!--End of nested .row-->

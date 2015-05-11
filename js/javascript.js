@@ -1,6 +1,6 @@
 $(document).ready(function() { 
   $('#myCarousel').carousel({ 
-  	interval: 6000, 
+  	interval: 6000, /*6000*/
   	cycle: true, 
   	pause: "false"
   });
