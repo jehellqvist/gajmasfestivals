@@ -1,5 +1,7 @@
 <?php
 include ('one-page-slider.php');
+include ('register_fields/fields_om.php');
+
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 function my_jquery_enqueue() {
    wp_deregister_script('jquery');
@@ -58,11 +60,12 @@ function posts_callback($atts=null, $content=null){
             $option .='
             <div class="clear-all col-sm-2 text-center">
             <ul class="list-unstyled list-inline filter-wrapper filter-clear">
-                <li class="button-checkbox">
-                    <button type="button" id="clear" class="btn btn-primary active" data-color="primary">Visa alla</button>
-                    <input type="checkbox" name="clear" id="clear" class="hidden" checked>
+                <li>
+                    <button type="button" id="clear-btn" class="btn btn-primary active" data-color="primary">
+                    <i class="state-icon glyphicon glyphicon-check"></i>Visa alla</button>
+                    <input type="checkbox" name="clear" id="clear" class="hidden" checked="checked">
                     <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
-                </i>
+                </li>
             </ul>
             </div><!--End col-sm-2-->
             
@@ -75,13 +78,13 @@ function posts_callback($atts=null, $content=null){
                     $option .= '
                         <ul class="list-unstyled list-inline filter-wrapper filter-'.$name.'">
                             <h2 class="screen-reader-text">'.$display_name.'</h2>';
-                            $categories = get_categories('parent='.$new_id.'', 'type=post');
+                            $categories = get_categories(array('parent' => ''.$new_id.'','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                             foreach ($categories as $category) {
                                 $new_name = $category->cat_name;
                                 $option .= '
                                 <li class="button-checkbox">
                                 <button type="button" class="btn" data-color="primary">'.$new_name.'</button>
-                                    <input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="hidden" >
+                                    <input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="filter-checkbox hidden" >
                                     <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
                                 </li>';
                                 }
@@ -120,9 +123,12 @@ function posts_callback($atts=null, $content=null){
             var selector = \'\', cselector = \'\', nselector = \'\', lselector = \'\';
                     
             var $lis = $(\'.program > article\'),
-                $checked = $(\'input:checked\');    
+                $checked = $(\'.filter-checkbox:checked\');    
                 
             if ($checked.length) {  
+                $(\'#clear\').attr(\'checked\', false);
+                $(\'#clear-btn i\').removeClass(\'glyphicon-check\').addClass(\'glyphicon-unchecked\');
+                $(\'#clear-btn\').removeClass(\'active\');
             
                 if (Kategori.length) {      
                     if (str == "Include items \n") {
@@ -233,6 +239,9 @@ function posts_callback($atts=null, $content=null){
                 
             } else {
                 $lis.show("slow");
+                $(\'#clear\').attr(\'checked\', true);
+                $(\'#clear-btn i\').removeClass(\'glyphicon-unchecked\').addClass(\'glyphicon-check\');
+                $(\'#clear-btn\').addClass(\'active\');
             }   
                                   
             $("#result").html(str); 
@@ -249,17 +258,28 @@ function posts_callback($atts=null, $content=null){
             }
             return arr;
         }
-        $(\'#clear\').click(function() {
-            $(\'.program > article\').show("slow");
-            Kategori = []; 
-            Aldersgrupp = []; 
-            Plats = [];
-            Veckodag = [];
-            selector = \'\';
-            cselector = \'\'; 
-            nselector = \'\'; 
-            lselector = \'\';
-            $(\'input:checkbox\').removeAttr(\'checked\');
+        
+        $(\'#clear-btn\').click(function() {
+            if ($(\'#clear\').prop(\'checked\')) {
+            }
+            else {
+                $(\'.program > article\').show("slow");
+                Kategori = []; 
+                Aldersgrupp = []; 
+                Plats = [];
+                Veckodag = [];
+                selector = \'\';
+                cselector = \'\'; 
+                nselector = \'\'; 
+                lselector = \'\';
+                $(\'#clear-btn\').addClass(\'active\');
+                $(\'#clear\').attr(\'checked\', true);
+                $(\'#clear-btn i\').removeClass(\'glyphicon-unchecked\').addClass(\'glyphicon-check\');
+                $(\'.filter-handlers .btn\').removeClass(\'active\');
+                $(\'.filter-handlers input:checkbox\').removeAttr(\'checked\');
+                $(\'.filter-handlers i\').removeClass(\'glyphicon-check\').addClass(\'glyphicon-unchecked\');
+            }
+
         });
         </script>';;
     $option .= '<div class="row program">';
@@ -409,10 +429,11 @@ function get_primary_menu($the_menu) {
 function get_pages_by_menu($the_menu) {
     //returns content from all pages in a menu
     $menu_name = $the_menu;
+
     if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
         $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
         $menu_items = wp_get_nav_menu_items($menu->term_id);
-        foreach ( (array) $menu_items as $key => $menu_item ) {
+        foreach ($menu_items as $key => $menu_item ) {
             
             $page_id = $menu_item->object_id;
             $title = $menu_item->title;
@@ -422,13 +443,30 @@ function get_pages_by_menu($the_menu) {
             $slug = str_replace('å', 'a', $slug);
             $slug = str_replace('ä', 'a', $slug);
             $slug = str_replace('ö', 'o', $slug);
-            $content = get_post_field( 'post_content', $page_id);
+            
+            //$content_list .= get_template_part('content', 'program');
+
+            //$content = get_post_field( 'post_content', $page_id);
+
+                $args = array( 'p' => $page_id, 'post_type' => 'page' );
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                <?php $content_list .= get_template_part( 'content', $slug ); ?>
+                <?php
+                    endwhile;
+                wp_reset_postdata();
+                
+
+
+
+                /*
             if ($content) {
+
                 $content = apply_filters('the_content', $content);
                 $content_list .= "<section id='".$slug."' class='container-fluid'>";
                 $content_list .= $content;
                 $content_list .= "</section> <!--End $slug-->";
-            }
+            }*/
         }
         return $content_list;
     }
@@ -518,7 +556,6 @@ function jeherve_custom_sharing_title() {
 }
 add_filter( 'sharing_title', 'jeherve_custom_sharing_title', 10, 3 );
 
-remove_filter('the_content', 'wpautop');
 
 
 if(function_exists("register_field_group"))
