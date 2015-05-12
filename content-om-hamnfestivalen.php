@@ -16,12 +16,13 @@ Template Name: om-hamnfestivalen
 
 		<div class="social_share col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
 			<p>Dela dina festivalminnen <span class="tag">
-				<?php echo get_field('hash-tag')?>
+				#<?php echo get_field('hash-tag')?>
 			</span></p>
 		</div><!--.social_share col-lg-8 col-lg-offset-2 center-text-->
 
 		<div class="col-md-12">
-			[alpine-phototile-for-instagram id=136 user="jenniehellqvist" src="global_tag" tag="pohamnfestivalen" imgl="instagram" style="wall" row="6" size="M" num="6" highlight="1" align="center" max="100"]
+			<?php $shortcode = '[alpine-phototile-for-instagram id=136 user="jenniehellqvist" src="global_tag" tag="'.get_field('hash-tag').'" imgl="instagram" style="wall" row="6" size="M" num="6" highlight="1" align="center" max="100"]'?>
+			<?php echo do_shortcode($shortcode);?>
 		</div>
 	</div><!--#about-->
 	<hr class="ample">

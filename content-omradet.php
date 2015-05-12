@@ -13,7 +13,9 @@ Template Name: omradet
 		<div class="col-md-12-12">
 		<a href="http://localhost:8888/wp-content/uploads/2015/04/karta_full1.png">
 			<div class="map">
-				<img src="<?php echo get_field('festivalkarta')?>" class="img-responsive img-center">
+				<div class="hover-map">
+					<img src="<?php echo get_field('festivalkarta')?>" class="img-center">
+				</div>
 			</div></a>
 		</div><!--col-*-->
 		<h2>Festivalområdet</h2>

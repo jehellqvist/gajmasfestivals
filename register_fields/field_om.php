@@ -12,7 +12,7 @@ if(function_exists("register_field_group"))
 				'type' => 'text',
 				'default_value' => '#pohamnfestivalen',
 				'placeholder' => '',
-				'prepend' => 'Dela dina festivalminnen',
+				'prepend' => 'Dela dina festivalminnen #',
 				'append' => '',
 				'formatting' => 'html',
 				'maxlength' => '',

@@ -647,7 +647,7 @@ header {
 }
 
 #om-hamnfestivalen .social_share{
-	padding: 2% 0%;
+	padding: 20px 0% 10px 0%;
 }
 
 .AlpinePhotoTiles-image-div-container {
@@ -835,9 +835,11 @@ footer .list-unstyled a{
 	cursor: pointer;
 }
 
+
 #omradet .map-a {
 	text-decoration: underline;
 	font-weight: 600;
+	background-color: #fff:;
 }
 
 #omradet .map-a:hover {
@@ -884,7 +886,7 @@ footer .list-unstyled a{
 	width: auto;
 }
 
-.map {
+#omradet .map {
 	display: inline-block;
 	margin-top: -150px;
 	margin-left: auto;
@@ -894,23 +896,28 @@ footer .list-unstyled a{
 	border: 10px solid #fff;
 	border-radius: 50%;
 	overflow: hidden;
+	background-color: #fff;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+}
+
+#omradet .hover-map {
+	transition: all 1s ease-in-out;
+}
+
+#omradet .hover-map:hover {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	transition: all 1s ease-in-out;
 }
 
 #omradet .map img {
-	border-radius: 0% !important;
-	height: 100% !important;
-	width: auto !important;
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
-}
-
-#omradet .map img:hover {
-	border-radius: 0% !important;
-	height: 115% !important;
-	margin-left: -25px;
-	width: auto !important;
-	-webkit-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+	overflow: hidden;
+	height: 270px;
+	width: auto;
 }
 
 
@@ -1827,12 +1834,14 @@ html, body {
 		opacity: 1;
 		-webkit-transition: opacity 1s ease-in-out;
 		transition: opacity 1s ease-in-out;
+		-webkit-transform: translateZ(0);
 	}
 
 	.single-map img:hover {
 		opacity: 0.7;
 		-webkit-transition: opacity 1s ease-in-out;
 		transition: opacity 1s ease-in-out;
+		-webkit-transform: translateZ(0);
 	}
 
 
