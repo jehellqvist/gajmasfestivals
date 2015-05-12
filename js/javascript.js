@@ -21,7 +21,8 @@ $(function() {
         nav_ul.toggleClass('margin'),
         logo.toggleClass('opacity'),
         nav_logo.toggleClass('show')
-    }
+    },
+    offset: 60
   });
 });
 
