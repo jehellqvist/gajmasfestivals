@@ -22,6 +22,8 @@ function my_jquery_enqueue() {
 }
     add_action( 'wp_enqueue_scripts', 'query_styles' );
 
+
+//Adds logo field in Wordpress Anpassa
 function themeslug_theme_customizer( $wp_customize ) {
     $wp_customize->add_section( 'themeslug_logo_section' , array(
         'title'       => __( 'Logo', 'themeslug' ),
@@ -36,8 +38,7 @@ function themeslug_theme_customizer( $wp_customize ) {
         'label'    => __( 'Logo', 'themeslug' ),
         'section'  => 'themeslug_logo_section',
         'settings' => 'themeslug_logo',
-        ) 
-        ) 
+        )) 
     );
 
 }
