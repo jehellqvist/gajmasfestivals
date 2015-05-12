@@ -675,3 +675,4 @@ if(function_exists("register_field_group"))
 include ('register_fields/field_om.php');
 include ('register_fields/field_hitta.php');
 include ('register_fields/field_omradet.php');
+include ('register_fields/field_medverkande.php');

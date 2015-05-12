@@ -21,7 +21,11 @@
 					comments_template();
 				}*/
 			endwhile;
+
+
 		?>
+
+		
 
 	</main><!-- main -->
 
