@@ -1867,7 +1867,7 @@ html, body {
 	opacity: 0;
 	display:inline;
 	color:#fff;
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
 .nav-logo:hover{
