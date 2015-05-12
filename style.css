@@ -79,7 +79,7 @@ body,html {
 	font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 }
 
-#wrapper, article {
+#wrapper {
 	width: 100%;
 	height: 100%;
 
@@ -204,13 +204,6 @@ header {
 			width: 50%;
 		}
 
-		main{
-		  	z-index: 3;
-		  	position: relative;
-		  	background: #fff;
-		  	margin-top: -70px;
-		 }
-
 		#program{
 			margin-top: 7.1%;
 			position: relative;
@@ -264,14 +257,8 @@ header {
 			height: 100%;	
 		}
 
-		main{
-		   	z-index: 3;
-		  	position: absolute;
-		  	background: #fff;
-		 }
-
 		#program{
-		
+			position: relative;
 		}
 
 		.navbar{
@@ -359,6 +346,10 @@ header {
 			height: 100%;	
 		}
 
+		#program{
+			position: relative;
+		}
+
 		.navbar{
 			width:100%;
 			height:107px;
@@ -437,12 +428,15 @@ header {
 }
 
 #program {
+	position: relative;
+	background: #fff;
+	z-index: 3 !important;
 	padding-left: 0px;
 	padding-right: 0px;
 }
 
 .filter-function {
-	margin-top: 60px;
+	padding-top: 80px;
 	margin-left: 0px;
 	margin-right: 0px;
 }
@@ -2029,6 +2023,7 @@ table{
 		padding-top: 2%;
 		font-size: 1.2em;
 	}
+
 
 
 
