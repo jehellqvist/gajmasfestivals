@@ -92,6 +92,9 @@ function posts_callback($atts=null, $content=null){
                 foreach ($catID as $id) {
                     $display_name = $id->cat_name;
                     $new_id = $id->cat_ID;
+                    if($display_name == 'Veckodag'){
+                         $d_id = $id->cat_ID;
+                    }
                     $name = str_replace('Å', 'A', $display_name);
                     if($name == "Aldersgrupp") {
                         $filter_info ="<p class='filter-info'>Filtera programpunkterna enligt:</p>";
@@ -322,19 +325,14 @@ function posts_callback($atts=null, $content=null){
                             $content_cat = $category->cat_name;
                         }
                     }
+                    if($category->category_parent == $d_id) {
+                            $day_string .= substr($category->cat_name,0,-3). ' ';
+                        if(substr_count($day_string, " ") > 3){
+                                $day_string = "Alla dagar";
+                            }
+                    }
                 }
                 
-                //format of day field
-                $days = get_field('dag');
-                if(count($days)>=4){
-                    $day_list='Alla Veckodag';
-                }
-                else {
-                    foreach ($days as $day) {
-                        $day_list .= $day.', ';
-                    }
-                    $day_list = substr($day_list, 0, -2);
-                }
                //format of time field
                 if(get_field('tid') == ''){
                     $time = '';
@@ -360,7 +358,7 @@ function posts_callback($atts=null, $content=null){
                             <div class="wave">
                                 <div class="inner-content">
                                     <h2>'. get_the_title(). '</h2>
-                                    <p class="content-meta">'.$day_list.$time.'<p>
+                                    <p class="content-meta">'.$day_string.$time.'<p>
 
                                     <p class="description">'.$description.'</p>
                                     <div class="content-category">
@@ -377,6 +375,7 @@ function posts_callback($atts=null, $content=null){
                         </a><!--End .inner-->
                     </article><!--End . col-*-* -->';
                 ?><?php $cat_string = "";
+                $day_string="";
 
                 //variable reset
                 $time = '';
@@ -637,23 +636,6 @@ if(function_exists("register_field_group"))
                 'other_choice' => 1,
                 'save_other_choice' => 1,
                 'default_value' => '',
-                'layout' => 'vertical',
-            ),
-            array (
-                'key' => 'field_5541fc28e198d',
-                'label' => 'Dag',
-                'name' => 'dag',
-                'type' => 'checkbox',
-                'instructions' => 'Ange dag/dagar då programpunkten äger rum',
-                'required' => 1,
-                'choices' => array (
-                    'Tors' => 'Tors',
-                    'Fre' => 'Fre',
-                    'Lör' => 'Lör',
-                    'Sön' => 'Sön',
-                    'Alla dagar' => 'Alla dagar',
-                ),
-                'default_value' => 'Alla dagar',
                 'layout' => 'vertical',
             ),
             array (
