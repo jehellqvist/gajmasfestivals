@@ -313,6 +313,17 @@ function posts_callback($atts=null, $content=null){
                 ?>
                 <?php foreach((get_the_category()) as $category) { 
                     $cat_string .= $category->cat_name . " ";
+                    if($category->category_parent == '5') {
+                        if($category->cat_name == 'Musik och sång vid havet') {
+                            $content_cat = 'Musik & Sång';
+                        }
+                        else if($category->cat_name == 'Konsthantverk och Försäljning') {
+                            $content_cat = 'Konsthantverk & försäljning';
+                        }
+                        else {
+                            $content_cat = $category->cat_name;
+                        }
+                    }
                 }
                 
                 //format of day field
@@ -337,8 +348,8 @@ function posts_callback($atts=null, $content=null){
                 $url = get_permalink();
                 $description = get_field('beskrivning');
 
-                if(strlen($description) >= 100) {
-                    $description = substr($description, 0, 100);
+                if(strlen($description) >= 90) {
+                    $description = substr($description, 0, 90);
                     $description .= '... <span class="link">LÄS MER</span>';
                 }
 
@@ -354,7 +365,13 @@ function posts_callback($atts=null, $content=null){
                                     <p class="content-meta">'.$day_list.$time.'<p>
 
                                     <p class="description">'.$description.'</p>
-                                    <span class="place"><p>'.get_field('plats_pa_kartan').'</p><i class="fa fa-map-marker"></i><p>'.get_field('plats').'</p></span>
+                                    <div class="content-category">
+                                        <p>'. $content_cat .'</p>
+                                    </div>
+                                    <div class="place">
+                                        <p>'.get_field('plats_pa_kartan').'</p>
+                                        <i class="fa fa-map-marker"></i><p class="p-name">'.get_field('plats').'</p>
+                                    </div>
                                 </div><!--.inner-content-->
 
                             </div><!--.wave-->

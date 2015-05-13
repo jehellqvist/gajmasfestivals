@@ -23,7 +23,7 @@ LIGHTER: rgba(176,206,241,1);
 
 
 POLIMHAMN BLÅ: rgba(26,32,58, 1);
-17,23,57
+rgba(17,23,57,1);
 
 */
 
@@ -70,7 +70,6 @@ POLIMHAMN BLÅ: rgba(26,32,58, 1);
 * {
 	margin:0;
 	padding: 0;
-	-webkit-box-sizing: border-box;
 }
 
 body,html {
@@ -119,7 +118,7 @@ header {
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	font-weight: 700;
 	font-size: 1.15em;
-	background-color: rgba(34,60,126, 1);
+	background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
 	border: rgba(27,82,155, 1);
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -176,7 +175,7 @@ header {
 		  	z-index: 3;
 		  	left: -60px;
 		  	bottom:-80px;
-		  	background: rgba(42,57,101, 1);
+		  	background: rgba(43,89,144, 1);
 		  	-webkit-transform: rotate(10deg);
 			-o-transform: rotate(10deg);
 			-moz-transform: rotate(10deg);
@@ -246,7 +245,7 @@ header {
 			font-family: 'Museo', 'Arvo', 'Georgia', serif;
 			font-weight: 700;
 			font-size: 1em !important;
-			background-color: rgba(34,60,126, 1);
+			background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
 			border: rgba(27,82,155, 1);
 			-webkit-font-smoothing: antialiased;
 		    -moz-osx-font-smoothing: grayscale;
@@ -287,7 +286,7 @@ header {
 			  z-index: 3;
 			  left: -300px;
 			  bottom:-130px;
-			  background: rgba(42,57,101, 1);
+			  background: rgba(43,89,144, 1);
 			  -webkit-transform: rotate(10deg);
 			  -o-transform: rotate(10deg);
 			  -moz-transform: rotate(10deg);
@@ -327,7 +326,7 @@ header {
 			font-family: 'Museo', 'Arvo', 'Georgia', serif;
 			font-weight: 700;
 			font-size: 1.15em !important;
-			background-color: rgba(34,60,126, 1);
+			background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
 			border: rgba(27,82,155, 1);
 
 			-webkit-font-smoothing: antialiased;
@@ -376,7 +375,7 @@ header {
 			z-index: 3;
 			left: -350px;
 			bottom:-140px;
-			background: rgba(42,57,101, 1);
+			background: #214390; /*rgba(123,169,222, 1);*/
 			-webkit-transform: rotate(10deg);
 			-o-transform: rotate(10deg);
 			-moz-transform: rotate(10deg);
@@ -395,13 +394,13 @@ header {
 			margin:0 auto;
 			position: absolute;
 			z-index: 20;
-			bottom:15px;
+			bottom:10px;
 			left:3%;
 			z-index: 99999999999;
 		}
 
 		.site-title img {
-			width: 45%;
+			width: 50%;
 		}
 	}
 
@@ -631,14 +630,24 @@ header {
 }
 
 #om-hamnfestivalen .ample {
-	padding-top: 60px;
+	padding-top: 100px;
 	background-repeat: repeat-x;
 }
 
 #om-hamnfestivalen .social_share{
-	padding: 20px 0% 10px 0%;
+	padding: 50px 0% 10px 0%;
 }
 
+.AlpinePhotoTiles_inpost_container,
+.AlpinePhotoTiles_container_class,
+.AlpinePhotoTiles-image-div-container,
+.AlpinePhotoTiles_parent_class,
+.AlpinePhotoTiles_image_list_class,
+.AlpinePhotoTiles-link,
+.AlpinePhotoTiles-image {
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box !important;
+}
 .AlpinePhotoTiles-image-div-container {
 	background: transparent !important;
 	transition: opacity 1s ease;
@@ -670,6 +679,10 @@ header {
 } 
 
 #om-hamnfestivalen{
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
+	padding-top: 40px;
 	padding-bottom: 5%;
 	color:#222;
 	-webkit-font-smoothing: antialiased;
@@ -703,6 +716,11 @@ header {
 	font-size: 1em;
 }
 
+#om-hamnfestivalen .row {
+	margin-right: 0;
+	margin-left: 0;
+}
+
 /*
 ***************************FOOTER*****************************
 */
@@ -711,7 +729,7 @@ footer {
 	-webkit-font-smoothing: antialiased;
 	padding:5% 0 0% 0;
 	/*background: rgba(51,106,171, 1);*/
-	background: rgba(34,60,126, 1);
+	background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
 }
 
 footer .tag {
@@ -1270,18 +1288,42 @@ html, body {
 		font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 		font-weight: 700;
 		position: absolute;
-		bottom: 0;
-		float: left;
+		bottom: 13px;
+		width: 60%;
+		right: 0px;
+		padding-right: 15px;
+		text-align: right;
+		right: 0px;
+		font-size: 0.9em;
+		-webkit-font-smoothing: antialiased;
+		/*color: rgba(34,60,126, 1);*/
+
 	}
 
-	.post-content .inner-content .place p:first-child {
-		display: inline-block;
-		margin-right: 10px;
+	.content-category {
+		text-transform: uppercase;
+		font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+		font-weight: 700;
+		font-style: normal;
+		position: absolute;
+		bottom: 13px;
+		width: 40%;
+		padding-left: 15px;
+		left: 0px;
+		font-size: 0.9em;
+		font-style: normal;
+		-webkit-font-smoothing: antialiased;
+		color: rgba(34,60,126, 1); /*color: /*rgba(17,23,57,1);*/
 	}
 
-	.post-content .inner-content .place p:last-child {
-		display: inline-block;
-		margin-left: 10px;
+	.content-category p,
+	.place p {
+		display: inline;
+	}
+
+	.place i {
+		display: inline;
+		padding: 0 5px;
 	}
 
 	@media (max-width: 1100px) {
@@ -1386,18 +1428,7 @@ html, body {
 			font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 			font-weight: 700;
 			position: absolute;
-			bottom: 0;
-			float: left;
-		}
-
-		.post-content .inner-content .place p:first-child {
-			display: inline-block;
-			margin-right: 10px;
-		}
-
-		.post-content .inner-content .place p:last-child {
-			display: inline-block;
-			margin-left: 10px;
+			bottom: 13px;
 		}
 	
 	}
@@ -1505,18 +1536,7 @@ html, body {
 			font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 			font-weight: 700;
 			position: absolute;
-			bottom: 0;
-			float: left;
-		}
-
-		.post-content .inner-content .place p:first-child {
-			display: inline-block;
-			margin-right: 10px;
-		}
-
-		.post-content .inner-content .place p:last-child {
-			display: inline-block;
-			margin-left: 10px;
+			bottom: 13px;
 		}
 }
 
@@ -1618,20 +1638,9 @@ html, body {
 			font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 			font-weight: 700;
 			position: absolute;
-			bottom: 0;
-			float: left;
-			font-size: 0.95em;
+			bottom: 13px;
+			font-size: 0.9em;
 			color: rgba(34,60,126, 1);
-		}
-
-		.post-content .inner-content .place p:first-child {
-			display: inline-block;
-			margin-right: 10px;
-		}
-
-		.post-content .inner-content .place p:last-child {
-			display: inline-block;
-			margin-left: 10px;
 		}
 }
 
@@ -1659,7 +1668,7 @@ html, body {
 		font-family: 'Museo', 'Arvo', 'Georgia', serif;
 		font-weight: 700;
 		font-size: 1em !important;
-		background-color: rgba(34,60,126, 1);
+		background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
 		border: rgba(27,82,155, 1);
 
 		-webkit-font-smoothing: antialiased;
@@ -1747,6 +1756,7 @@ html, body {
 
 	.link {
 		padding-left: 5px;
+		font-size: 0.9em;
 		font-weight: 600;
 		-webkit-font-smoothing: antialiased;
 
@@ -1868,6 +1878,13 @@ html, body {
 	display:inline;
 	color:#fff;
 	text-decoration: none !important;
+}
+
+#one-page a,
+#one-page a:hover,
+#one-page a:active
+{
+	text-decoration: none;
 }
 
 .nav-logo:hover{
