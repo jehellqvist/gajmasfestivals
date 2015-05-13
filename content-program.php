@@ -12,7 +12,7 @@ Template Name: program
     	<h1><?php echo get_field('rubrik')?></h1>
     	<!--<p class="datum"><?php echo get_field('datum')?></p>-->
 		<div class="col-sm-12">
-			<p class="filter-text">Välj kategori eller visa alla</p>
+			<p class="filter-text">Visa alla eller välj kategori</p>
 	<?php
 		echo do_shortcode("[posts]");
 	?>

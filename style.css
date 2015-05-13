@@ -533,23 +533,28 @@ header {
 
 .filter-Aldersgrupp li,
 .filter-Veckodag li {
-	margin-bottom: 5px;
+	margin-bottom: 9px;
 }
 
 .filter-Aldersgrupp .screen-reader-text,
 .filter-Veckodag .screen-reader-text,
 .filter-Plats .screen-reader-text {
 	display: inline !important;
-	font-weight: 700;
+	text-transform: uppercase;
+	font-weight: 400;
 	padding-left: 20px;
+	letter-spacing: 0.1em;
 }
 
 .filter-text {
 	padding-top: 20px;
+	padding-bottom: 5px;
 	text-transform: uppercase;
 	font-size: 1em;
+	letter-spacing: 0.1em;
 	font-weight: 400;
 	font-smoothing: antialiased;
+	color: rgba(34, 60, 126, 1);
 }
 
 
@@ -798,7 +803,7 @@ header {
 #om-hamnfestivalen #about p {
 	text-align:center;
 	font-size: 1.25em;
-	line-height: 1.5em;
+	line-height: 1.8em;
 	padding:0 0 1% 0;
 }
 
