@@ -118,7 +118,7 @@ header {
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	font-weight: 700;
 	font-size: 1.15em;
-	background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
+	background: rgba(20,49,116, 1) !important; /*rgba(34,60,126, 1);*/
 	border: rgba(27,82,155, 1);
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -166,6 +166,11 @@ header {
 		.navbar{
 			position: absolute;
 			bottom: 0;
+		}
+
+		.navbar-inverse, .navbar-collapse{
+			background: rgba(20,49,116, 1)!important;
+			padding:0 !important;
 		}
 
 		#title-box:before{
@@ -245,7 +250,7 @@ header {
 			font-family: 'Museo', 'Arvo', 'Georgia', serif;
 			font-weight: 700;
 			font-size: 1em !important;
-			background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
+			background: rgba(20,49,116, 1) !important; /*rgba(34,60,126, 1);*/
 			border: rgba(27,82,155, 1);
 			-webkit-font-smoothing: antialiased;
 		    -moz-osx-font-smoothing: grayscale;
@@ -327,7 +332,7 @@ header {
 			font-family: 'Museo', 'Arvo', 'Georgia', serif;
 			font-weight: 700;
 			font-size: 1.15em !important;
-			background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
+			background: rgba(20,49,116, 1) !important; /*rgba(34,60,126, 1);*/
 			border: rgba(27,82,155, 1);
 
 			-webkit-font-smoothing: antialiased;
