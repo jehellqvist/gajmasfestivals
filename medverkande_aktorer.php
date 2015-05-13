@@ -27,7 +27,7 @@ get_header(); ?>
 				<div class="col-md-5 col-md-offset-2">
 					<h1><?php echo get_field('rubrik')?></h1>
 					<h2><?php echo get_field('datum')?></h2>
-					<img src="http://localhost/wp-content/uploads/2015/05/vimplat_bred.png" alt="vimpel sidebar" />
+					<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/vimplat_bred.png" alt="vimpel sidebar" />
 
 				</div>
 			</div>
