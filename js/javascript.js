@@ -93,3 +93,45 @@ $(function () {
     });
 });
 
+
+$(function() {
+    var all_active_posts = $(".active-post");
+
+        all_active_posts.each(function(index, value) { 
+            if(index <= 11) { 
+                $(this).addClass("show-post");
+                $(this).removeClass("active-post");
+            }
+         });
+
+            $(".load-more").on('click', load_more);
+            $(".filter-wrapper .btn").on('click', reload_posts);
+
+            function load_more() {
+                var all_active_posts = $(".active-post");
+                
+                all_active_posts.each(function(index, value) { 
+                    if(index <= 3) { 
+                        $(this).addClass("show-post");
+                        $(this).removeClass("active-post");
+                    }
+                });
+            };
+
+            function reload_posts() {
+
+                $(".post-content").removeClass("show-post");
+
+                var all_active_posts = $(".active-post");
+                
+                all_active_posts.each(function(index, value) { 
+                    if(index <= 11) { 
+                        $(this).addClass("show-post");
+                        $(this).removeClass("active-post");
+                    }
+                });
+            };
+
+
+});
+

@@ -78,10 +78,7 @@ if(get_page_by_title("Home") == null)
 }
 function posts_callback($atts=null, $content=null){
     query_posts(array('orderby' => 'date','order' => 'DESC' , 'showposts' => $posts));
-    $option .= '
-        <div class="row filter-function">';
             $option .='
-            <div class="clear-all col-sm-2 text-center">
             <ul class="list-unstyled list-inline filter-wrapper filter-clear">
                 <li>
                     <button type="button" id="clear-btn" class="btn btn-primary active" data-color="primary">
@@ -90,16 +87,20 @@ function posts_callback($atts=null, $content=null){
                     <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
                 </li>
             </ul>
-            </div><!--End col-sm-2-->
-            
-            <div class="col-sm-10 filter-handlers">';
+            ';
                 $catID = get_categories(array('parent' => '0','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                 foreach ($catID as $id) {
                     $display_name = $id->cat_name;
                     $new_id = $id->cat_ID;
                     $name = str_replace('Å', 'A', $display_name);
-                    $option .= '
-                        <ul class="list-unstyled list-inline filter-wrapper filter-'.$name.'">
+                    if($name == "Aldersgrupp") {
+                        $filter_info ="<p class='filter-info'>Filtera programpunkterna enligt:</p>";
+                    }
+                    else {
+                        $filter_info ="";
+                    }
+                    $option .= $filter_info.'
+                        <ul class="filter-handlers list-unstyled list-inline filter-wrapper filter-'.$name.'">
                             <h2 class="screen-reader-text">'.$display_name.'</h2>';
                             $categories = get_categories(array('parent' => ''.$new_id.'','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                             foreach ($categories as $category) {
@@ -115,8 +116,7 @@ function posts_callback($atts=null, $content=null){
                         </ul><!--End .filter-wrapper-->';
                 }
                 $option .= '
-                </div><!--.filter-handlers-->
-            </div><!--End col-sm-10-->
+            </div><!--End col-sm-12-->
          </div><!--End .row .filter-function-->';
      $option .= '<script>
         var Kategori = [], Aldersgrupp = [], Plats = [], Veckodag = [];
@@ -236,32 +236,30 @@ function posts_callback($atts=null, $content=null){
                     }            
                 }
                 
-                $lis.hide(); 
-                console.log(selector);
-                console.log(cselector);
-                console.log(nselector);
-                console.log(lselector);
+                $lis.removeClass("active-post").addClass("unactive-post"); //alla göms //ta bort klasser
                 
+                //valda kategorier visas
                 if(cselector === \'\' && nselector === \'\' && lselector === \'\') {            
-                    $(\'.program > article\').filter(selector).show("slow");
+                    $(\'.program > article\').filter(selector).addClass("active-post"); //lägga till klasser
                 } else if (cselector === \'\' && nselector === \'\') {
-                    $(\'.program > article\').filter(selector).filter(lselector).show("slow");
+                    $(\'.program > article\').filter(selector).filter(lselector).removeClass("unactive-post").addClass("active-post"); //lägga till klasser
                 } else if (nselector === \'\' && lselector === \'\') {
-                    $(\'.program > article\').filter(selector).filter(cselector).show("slow");
+                    $(\'.program > article\').filter(selector).filter(cselector).removeClass("unactive-post").addClass("active-post");  //lägga till klasser
                 } else if (cselector === \'\' && lselector === \'\') {
-                    $(\'.program > article\').filter(selector).filter(nselector).show("slow"); 
+                    $(\'.program > article\').filter(selector).filter(nselector).removeClass("unactive-post").addClass("active-post");  //lägga till klasser
                 } else if (cselector === \'\') {
-                    $(\'.program > article\').filter(selector).filter(nselector).filter(lselector).show("slow");
+                    $(\'.program > article\').filter(selector).filter(nselector).filter(lselector).removeClass("unactive-post").addClass("active-post"); //lägga till klasser
                 } else if (nselector === \'\') {
-                    $(\'.program > article\').filter(selector).filter(cselector).filter(lselector).show("slow");
+                    $(\'.program > article\').filter(selector).filter(cselector).filter(lselector).removeClass("unactive-post").addClass("active-post"); //lägga till klasser
                 } else if (lselector === \'\') {
-                    $(\'.program > article\').filter(selector).filter(nselector).filter(cselector).show("slow");
+                    $(\'.program > article\').filter(selector).filter(nselector).filter(cselector).removeClass("unactive-post").addClass("active-post"); //lägga till klasser
                 } else {
-                    $(\'.program > article\').filter(selector).filter(cselector).filter(nselector).filter(lselector).show();
+                    $(\'.program > article\').filter(selector).filter(cselector).filter(nselector).filter(lselector).removeClass("unactive-post").addClass("active-post"); //lägga till klasser
                 }
                 
+                //alla visas
             } else {
-                $lis.show("slow");
+                $lis.removeClass("unactive-post").addClass("active-post");
                 $(\'#clear\').attr(\'checked\', true);
                 $(\'#clear-btn i\').removeClass(\'glyphicon-unchecked\').addClass(\'glyphicon-check\');
                 $(\'#clear-btn\').addClass(\'active\');
@@ -286,7 +284,7 @@ function posts_callback($atts=null, $content=null){
             if ($(\'#clear\').prop(\'checked\')) {
             }
             else {
-                $(\'.program > article\').show("slow");
+                $(\'.program > article\').removeClass("unactive-post").addClass("active-post");// om posten inte har klassen - lägg till class - annars ****silence****
                 Kategori = []; 
                 Aldersgrupp = []; 
                 Plats = [];
@@ -354,7 +352,7 @@ function posts_callback($atts=null, $content=null){
                 }
 
                  $option .= '
-                     <article class="col-xs-12 col-sm-3 col-md-3 post-content '. $cat_string .'" data-category="'.$cat_string.'">
+                     <article class="active-post col-xs-12 col-sm-3 col-md-3 post-content '. $cat_string .'" data-category="'.$cat_string.'">
                         <a href="'.$url.'">
                         <div class="inner" style="background-image:url('.get_field('bild').')">
                         </div>

@@ -132,6 +132,7 @@ header {
 	float: none;
 	margin: auto;
 	text-align: center;
+	background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
 }
 
 .navbar-toggle {
@@ -275,6 +276,7 @@ header {
 			width:630px;
 			margin-top: 25px!important;
 			text-align: right!important;
+			background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
 		}
 
 		#title-box:before{
@@ -362,6 +364,7 @@ header {
 			z-index: 10;
 			right:10px;
 			width:630px;
+			background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
 			margin-top: 25px!important;
 			text-align: right!important;
 		}
@@ -439,6 +442,16 @@ header {
 	margin-right: 0px;
 }
 
+.load-more {
+	margin: auto;
+	padding: 7px 20px !important;
+	margin-bottom: 20px;
+}
+
+.load-more i {
+	padding-right: 10px;
+}
+
 
 	/* Small devices (tablets, 768px and up) */
 	@media (min-width: 768px) { 
@@ -458,6 +471,34 @@ header {
 
 	}
 
+
+.screen-reader-text {
+	display: none !important;
+}
+
+
+.filter-clear {
+	padding-right: 40px;
+}
+
+.filter-clear,
+.filter-Kategori {
+	display: inline;
+}
+
+.filter-clear li,
+.filter-Kategori li{
+	margin-bottom: 20px;
+}
+
+
+.filter-text,
+.filter-info {
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+
+
 .filter-handlers ul {
 	padding: 0px 2px;
 	margin: 0;
@@ -467,6 +508,7 @@ header {
 	display: inline;
 }
 
+.
 .filter-handlers li {
 	float: left;
 	display: inline-block;
@@ -476,14 +518,6 @@ header {
 .filter-function h2 {
 	font-size: 1em;
 	display: inline-block;
-}
-
-.clear-all {
-	padding: 20px 30px 10px 50px;
-}
-
-.clear-all .btn {
-	padding: 10px;
 }
 
 .btn {
@@ -499,9 +533,6 @@ header {
 	border: 2px solid;
 }
 
-.screen-reader-text {
-	display: none !important;
-}
 
 .btn-primary.active, 
 .btn-primary.focus, 
@@ -852,6 +883,31 @@ footer .list-unstyled a{
 	text-decoration: none;
 }
 
+.modal-content {
+}
+
+.portfolio-modal {
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px solid transparent;
+	border-radius: 0px;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.portfolio-modal h3 {
+	padding: 0 0 40px 0;
+	margin: 0;
+}
+
+.portfolio-modal img {
+	width: 100%;
+}
+.close-modal button {
+	font-size: 1.4em;
+	float: right;
+	border: 0px solid transparent;
+}
 
 /*#omradet .map:hover{
 	background-color: rgba(250,250,250,0.2);
@@ -882,7 +938,7 @@ footer .list-unstyled a{
 	padding-right: 5px !important;
 }
 
-#omradet img {
+.omradet-icon {
 	height: 80px;
 	width: auto;
 }
@@ -1181,6 +1237,38 @@ html, body {
 /*
 **************PROGRAM DELEN MOBILE, TABLET AND DESKTOP VIEW**************
 */
+
+
+/*CSS to show and hide posts*/
+
+/*Hide all posts*/
+.unactive-post {
+	display: none;
+	/*transition*/
+}
+
+/*Show active post (filter)*/
+.active-post {
+	display: none;
+	-webkit-animation: fadeout 1s;
+}
+
+.show-post {
+	display: block !important;
+	-webkit-animation: fadein 2s;
+}
+
+@-webkit-keyframes fadein {
+	0% {opacity: 0}
+	100% {opacity: 1} 
+}
+
+@-webkit-keyframes fadeout {
+	0% {opacity: 1} 
+	100% {opacity: 0}
+}
+
+
 .post-content {
 		width: 24%;
 		height: 400px;
