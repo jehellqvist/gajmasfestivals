@@ -32,12 +32,27 @@ function themeslug_theme_customizer( $wp_customize ) {
         ) 
     );
 
+    $wp_customize->add_section( 'themeslug_map_section' , array(
+        'title'       => __( 'Karta', 'themeslug' ),
+        'priority'    => 20,
+        'description' => 'Lägg till karta över festivalområdet, visas på startsidan och programpunkts-sidor',
+        ) 
+    );
+
     $wp_customize->add_setting( 'themeslug_logo' );
+    $wp_customize->add_setting( 'themeslug_map' );
 
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo', array(
         'label'    => __( 'Logo', 'themeslug' ),
         'section'  => 'themeslug_logo_section',
         'settings' => 'themeslug_logo',
+        )) 
+    );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_map', array(
+        'label'    => __( 'Karta', 'themeslug' ),
+        'section'  => 'themeslug_map_section',
+        'settings' => 'themeslug_map',
         )) 
     );
 
@@ -92,9 +107,12 @@ function posts_callback($atts=null, $content=null){
                 foreach ($catID as $id) {
                     $display_name = $id->cat_name;
                     $new_id = $id->cat_ID;
+
                     if($display_name == 'Veckodag'){
                          $d_id = $id->cat_ID;
                     }
+
+
                     $name = str_replace('Å', 'A', $display_name);
                     if($name == "Aldersgrupp") {
                         $filter_info ="<br>";
@@ -108,6 +126,12 @@ function posts_callback($atts=null, $content=null){
                             $categories = get_categories(array('parent' => ''.$new_id.'','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                             foreach ($categories as $category) {
                                 $new_name = $category->cat_name;
+                                
+                                $display_name = $category->cat_name;
+                                if($display_name == 'Veckodag'){
+                                     $d_id = $category->cat_ID;
+                                }
+
                                 $option .= '
                                 <li class="button-checkbox">
                                 <button type="button" class="btn" data-color="primary">'.$new_name.'</button>
@@ -326,7 +350,8 @@ function posts_callback($atts=null, $content=null){
                         }
                     }
                     if($category->category_parent == $d_id) {
-                            $day_string .= substr($category->cat_name,0,-3). ' ';
+                        $day_string .= substr($category->cat_name,0,-3). ' ';
+
                         if(substr_count($day_string, " ") > 3){
                                 $day_string = "Alla dagar";
                             }
@@ -698,3 +723,4 @@ include ('register_fields/field_om.php');
 include ('register_fields/field_hitta.php');
 include ('register_fields/field_omradet.php');
 include ('register_fields/field_medverkande.php');
+include ('register_fields/field_program.php');

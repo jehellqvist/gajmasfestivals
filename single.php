@@ -19,7 +19,7 @@ get_header(); ?>
 
     <section class="<?php echo get_post_type( $post ) ?>">
         <div class="container-fluid">
-            <article class="row">
+            <article class="single-post row">
                 <?php
                     $days = get_field('dag');
                     if(count($days)>=4){
@@ -52,11 +52,58 @@ get_header(); ?>
                         </header>
                         <p class="description"><?php echo get_field('beskrivning')?></p>
                         <div class="content-meta">
-                            <div class="single-map">
-                                <a href="http://localhost:8888/wp-content/uploads/2015/04/karta_full1.png">
-                                    <img src="http://localhost:8888/wp-content/uploads/2015/04/map_icon.png" alt="karta_icon" />
-                                </a>
+
+                        <a href="#popup1" class="portfolio-link" data-toggle="modal">
+                            <div class="map">
+                                <figure class="hover-map">
+                                    <img src='<?php echo esc_url( get_theme_mod( 'themeslug_map' ) ); ?>' alt="Karta över festivalområdet" class="img-center">                  
+                                </figure>
                             </div>
+                        </a>
+
+                        <!--Map popup-->
+                        <div class="portfolio-modal modal fade" id="popup1" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-content">
+                                    <div class="close-modal" data-dismiss="modal">
+                                        <div class="lr">
+                                            <div class="rl">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                    <h3><?php echo get_the_title() ?></h3>
+                                                    <p class="single-place"><?php echo get_field('plats_pa_kartan')?><i class="fa fa-map-marker"></i><?php echo get_field('plats')?></p>                                                    <figure>
+                                                    <img src='<?php echo esc_url( get_theme_mod( 'themeslug_map' ) ); ?>' alt="Karta över festivalområdet" class="img-center">                  
+                                                </figure>
+                                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Stäng</button>
+                                            </div><!-- End col-md-*-->
+                                        </div><!--End . row-->
+                                    </div><!--End .container-->
+                                </div><!--End .modal-content-->
+                            </div><!--End .portfolio-modal modal fade-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             <p class="single-place"><?php echo get_field('plats_pa_kartan')?><i class="fa fa-map-marker"></i><?php echo get_field('plats')?></p>
                         </div>
                     </div><!--.inner-single-->

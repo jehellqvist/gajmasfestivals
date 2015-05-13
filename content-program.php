@@ -9,7 +9,8 @@ Template Name: program
 
 <section id='<?php echo $post->post_name; ?>' class='container-fluid'>
     <div class="row filter-function">
-    	<h1>Program 2015</h1>
+    	<h1><?php echo get_field('rubrik')?></h1>
+    	<!--<p class="datum"><?php echo get_field('datum')?></p>-->
 		<div class="col-sm-12">
 			<p class="filter-text">Välj kategori eller visa alla</p>
 	<?php
