@@ -97,14 +97,14 @@ function posts_callback($atts=null, $content=null){
                     }
                     $name = str_replace('Å', 'A', $display_name);
                     if($name == "Aldersgrupp") {
-                        $filter_info ="<p class='filter-info'>Filtera programpunkterna enligt:</p>";
+                        $filter_info ="<br>";
                     }
                     else {
                         $filter_info ="";
                     }
                     $option .= $filter_info.'
                         <ul class="filter-handlers list-unstyled list-inline filter-wrapper filter-'.$name.'">
-                            <h2 class="screen-reader-text">'.$display_name.'</h2>';
+                            <h2 class="screen-reader-text">'.$display_name.':</h2>';
                             $categories = get_categories(array('parent' => ''.$new_id.'','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                             foreach ($categories as $category) {
                                 $new_name = $category->cat_name;

@@ -439,6 +439,19 @@ header {
 	z-index: 3 !important;
 	padding-left: 0px;
 	padding-right: 0px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#program .row {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+#program h1 {
+	font-family: 'Museo', 'Arvo', 'Georgia', serif;
+	text-align: center;
+	padding: 0 0 25px 0;
+	margin: 0;
 }
 
 .filter-function {
@@ -477,6 +490,10 @@ header {
 	}
 
 
+
+.filter-function {
+	text-align: center;
+}
 .screen-reader-text {
 	display: none !important;
 }
@@ -487,20 +504,49 @@ header {
 }
 
 .filter-clear,
-.filter-Kategori {
+.filter-Kategori,
+.filter-Aldersgrupp,
+.filter-Veckodag,
+.filter-Plats {
 	display: inline;
 }
 
-.filter-clear li,
-.filter-Kategori li{
-	margin-bottom: 20px;
+.filter-Veckodag li{
+	margin-top: 20px;
 }
 
+.filter-Plats,
+.filter-Veckodag {
+	display: inline-block;
+}
+
+.filter-clear li,
+.filter-Kategori li,
+.filter-Aldersgrupp li,
+.filter-Veckodag li,
+.filter-Plats li{
+	margin-bottom: 15px;
+}
+
+
+.filter-Aldersgrupp .screen-reader-text,
+.filter-Veckodag .screen-reader-text,
+.filter-Plats .screen-reader-text {
+	display: inline !important;
+	font-weight: 700;
+	padding-left: 10px;
+}
 
 .filter-text,
 .filter-info {
 	text-transform: uppercase;
-	font-size: 0.9em;
+	font-size: 1em;
+	font-weight: 400;
+	font-smoothing: antialiased;
+}
+
+.filter-info {
+	padding-top: 20px;
 }
 
 
@@ -570,13 +616,8 @@ header {
 	border-color: rgba(34, 60, 126, 0.9);
 	-webkit-font-smoothing: antialiased;
 	margin: 0px 1px;
-
 }
 
-/*Skilja på kategorier och andra filter*/
-.filter-Aldersgrupp {
-	clear: left;
-}
 
 .filter-Kategori {
 	padding-bottom: 50px !important;
@@ -628,6 +669,18 @@ header {
 	border-color: rgba(50,50,50, 1);
 	-webkit-font-smoothing: antialiased;
 }
+
+/*.filter-Aldersgrupp h2 {
+	color: rgba(50,50,50, 1);
+}
+
+.filter-Veckodag h2 {
+	color: rgba(0, 128, 0, 1);
+}
+
+.filter-Plats h2 {
+	color: rgba(200, 0, 0, 1);
+}*/
 
 .filter-Veckodag .btn {
 	color: rgba(0, 128, 0, 1);
