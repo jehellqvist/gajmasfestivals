@@ -794,3 +794,4 @@ include ('register_fields/field_hitta.php');
 include ('register_fields/field_omradet.php');
 include ('register_fields/field_medverkande.php');
 include ('register_fields/field_program.php');
+include ('register_fields/field_festivalen.php');
