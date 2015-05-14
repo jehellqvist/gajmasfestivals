@@ -4,7 +4,8 @@ $(document).ready(function() {
   	cycle: true, 
   	pause: "false"
   });
-}); 
+
+});
 
 $(function() {
 
@@ -134,4 +135,6 @@ $(function() {
 
 
 });
+
+
 
