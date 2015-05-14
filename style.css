@@ -164,6 +164,28 @@ header {
 
 /**NAVIGATION Media queries for devices with a width max 768x**/
 
+@media (max-width: 550px){
+	.site-title img{
+		width:87%!important;
+		margin-bottom: 5px!important;
+	}
+
+	#title-box:before{
+			content:"";
+		  	height: 205px !important;
+		  	width: 100%;
+		  	position: absolute;
+		  	z-index: 3;
+		  	left: -60px;
+		  	bottom:-100px !important;
+		  	background: #214390;
+		  	-webkit-transform: rotate(10deg);
+			-o-transform: rotate(10deg);
+			-moz-transform: rotate(10deg);
+			transform: rotate(10deg);
+			opacity: 0.85;
+		}
+}
 @media (max-width: 768px) { 
 		#wrapper {
 			width:100%;
@@ -171,6 +193,7 @@ header {
 		}
 
 		.navbar{
+			height:80px;
 			position: absolute;
 			bottom: 0;
 		}
@@ -180,14 +203,19 @@ header {
 			padding:0 !important;
 		}
 
+		.navbar-toggle{
+			height:45px;
+			margin:17px 10px; 
+		}
+
 		#title-box:before{
 			content:"";
-		  	height: 150px;
+		  	height: 220px;
 		  	width: 100%;
 		  	position: absolute;
 		  	z-index: 3;
 		  	left: -60px;
-		  	bottom:-80px;
+		  	bottom:-90px;
 		  	background: #214390;
 		  	-webkit-transform: rotate(10deg);
 			-o-transform: rotate(10deg);
@@ -214,7 +242,7 @@ header {
 		}
 
 		.site-title img {
-			width: 50%;
+			width: 70%;
 		}
 
 		#program, #festivalen{
@@ -298,7 +326,7 @@ header {
 			  width: 100%;
 			  position: absolute;
 			  z-index: 3;
-			  left: -300px;
+			  left: -200px;
 			  bottom:-130px;
 			  background: #214390;
 			  -webkit-transform: rotate(10deg);
@@ -326,7 +354,7 @@ header {
 		}
 
 		.site-title img {
-			width: 55%;
+			width: 60%;
 		}
 	}
 
