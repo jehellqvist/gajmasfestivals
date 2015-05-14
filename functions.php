@@ -201,7 +201,7 @@ function posts_callback($atts=null, $content=null){
                     }
                     $option .= $filter_info.'
                         <ul class="filter-handlers list-unstyled list-inline filter-wrapper filter-'.$name.'">
-                            <h2 class="screen-reader-text">'.$display_name.':</h2>';
+                            <p class="screen-reader-text">'.$display_name.':</p>';
                             $categories = get_categories(array('parent' => ''.$new_id.'','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                             foreach ($categories as $category) {
                                 $new_name = $category->cat_name;

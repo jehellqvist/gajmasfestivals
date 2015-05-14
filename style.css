@@ -89,7 +89,6 @@ body,html {
 }
 
 header {
-	/*background-image: url(img/slider/water.png);*/
 	width: 100%;
 	height: 100%;
 
@@ -451,7 +450,7 @@ header {
 
 	
 /*
-***************************SECTIONS*****************************
+***************************PROGRAM / FESTIVALEN*****************************
 */
 
 .festivalen #title {
@@ -531,18 +530,13 @@ header {
 	padding-right: 10px;
 }
 
-
+/*----------------------FILTER FUNCTION -------------------*/
 .filter-function {
 	text-align: left;
 }
 
 .filter-Kategori .screen-reader-text {
 	display: none !important;
-}
-
-
-.filter-clear {
-	padding-bottom: 0px;
 }
 
 .filter-clear,
@@ -553,26 +547,15 @@ header {
 	display: block;
 }
 
-.filter-Kategori {
-	clear: right !important;
-}
-
 .filter-function br {
 	display: none;
 }
 
 .filter-Aldersgrupp li,
 .filter-Veckodag li,
-.filter-Plats li {
-	padding-bottom: 8px;
-}
-
-.filter-Kategori {
-	padding-bottom: 0px;
-}
-
+.filter-Plats li,
 .filter-Kategori li,
-.filter-clear li{
+.filter-clear li {
 	padding-bottom: 8px;
 }
 
@@ -596,7 +579,8 @@ header {
 	font-size: 0.9em;
 	letter-spacing: 0.1em;
 	font-weight: 400;
-	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	color: rgba(34, 60, 126, 1);
 }
 
@@ -642,6 +626,7 @@ header {
 	text-transform: uppercase;
 	font-weight: 600;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	letter-spacing: 0.1em;
 	padding: 5.5px 4px;
 	font-size: 0.8em;
@@ -663,6 +648,7 @@ header {
 .glyphicon {
 	font-size: 0.9em;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .filter-Kategori .btn {
@@ -680,6 +666,7 @@ header {
 	background-color: rgba(34, 60, 126, 0.9);
 	border-color: rgba(34, 60, 126, 0.9);
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	margin: 0px 1px;
 }
 
@@ -698,12 +685,14 @@ header {
 	background-color: rgba(18, 42, 103, 0.9);
 	border-color: rgba(18, 42, 103, 1);
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .filter-Aldersgrupp .btn {
 	color: rgba(50,50,50, 1);
 	border-color: rgba(50,50,50, 1);
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .filter-Aldersgrupp  .btn-primary.active, 
@@ -716,17 +705,18 @@ header {
 	background-color: rgba(50,50,50, 0.9);
 	border-color: rgba(50,50,50, 1);
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.filter-Aldersgrupp h2 {
+.filter-Aldersgrupp p {
 	color: rgba(50,50,50, 1);
 }
 
-.filter-Veckodag h2 {
+.filter-Veckodag p {
 	color: rgba(0, 128, 0, 1);
 }
 
-.filter-Plats h2 {
+.filter-Plats p {
 	color: rgba(200, 0, 0, 1);
 }
 
@@ -746,6 +736,7 @@ header {
 	background-color: rgba(0, 128, 0, 0.9);
 	border-color: rgba(0, 128, 0, 1);
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .filter-Plats .btn{
@@ -763,6 +754,7 @@ header {
 	background-color: rgba(200, 0, 0, 0.9);
 	border-color: rgba(200, 0, 0, 1);
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .filter-function .navbar-collapse {
@@ -799,6 +791,7 @@ header {
 	background-color: rgba(18, 42, 103, 1) !important;
 	border-color: rgba(18, 42, 103, 1) !important;
 	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
 }
 
 .filter-function .filter-toggling   .btn.active, 
@@ -810,6 +803,7 @@ header {
 	background-color: rgba(18, 42, 103, 0.9) !important;
 	border-color: rgba(18, 42, 103, 1) !important;
 	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
 }
 
 
@@ -828,7 +822,7 @@ header {
 			display: inline-block !important;
 		}
 
-		.filter-function h2 {
+		.filter-wrapper p {
 			font-size: 1em;
 			display: inline !important;
 		}
@@ -861,7 +855,7 @@ header {
 	/* Medium devices (desktops, 992px and up) */
 
 	@media (min-width: 992px) { 
-		.filter-function h2 {
+		.filter-wrapper p {
 			font-size: 1em;
 			display: inline !important;
 		}
@@ -875,7 +869,7 @@ header {
 
 	@media (min-width: 1024px) { 
 
-		.filter-function h2 {
+		.filter-wrapper p {
 			font-size: 1em;
 			display: inline !important;
 		}
@@ -950,12 +944,18 @@ header {
 }
 .AlpinePhotoTiles-image-div-container {
 	background: transparent !important;
-	transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
 }
 
 .AlpinePhotoTiles-image-div-container:hover {
 	opacity: 0.6;
-	transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
 }
 
 #om-hamnfestivalen .tag{
@@ -986,6 +986,7 @@ header {
 	padding-bottom: 5%;
 	color:#222;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	/*background-color: rgba(176,206,241,1);/* org grön: 00B02E, mindre grön:24C04D*/
 }
 
@@ -1021,6 +1022,35 @@ header {
 	margin-left: 0;
 }
 
+
+#om-hamnfestivalen .row:last-child {
+	padding-bottom: 50px;
+}
+
+/* Small devices (tablets, 768px and up) */
+	@media (min-width: 768px) { 
+		#om-hamnfestivalen .row:last-child {
+		padding-bottom: 0px;
+	}
+
+	}
+
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: 992px) { 
+		#om-hamnfestivalen .row:last-child {
+		padding-top: 20px;
+	}
+
+	}
+
+	/* Large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {  
+
+	}
+
+
+
+
 /*
 ***************************FOOTER*****************************
 */
@@ -1033,6 +1063,7 @@ header {
 footer {
 	color:rgba(250,250,250,1);
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	padding:5% 0 0% 0;
 	/*background: rgba(51,106,171, 1);*/
 	background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
@@ -1093,6 +1124,7 @@ footer a{
 	text-decoration: none !important;
 	color:rgba(250,250,250,1);
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	font-weight: 700;
 }
 
@@ -1117,6 +1149,11 @@ footer .list-unstyled a{
 	text-decoration: none;
 }
 
+
+/*
+*************************** OMRÅDET *****************************
+*
+*/
 .link-to-omradet {
 	text-align: center;
 	position: fixed;
@@ -1354,11 +1391,15 @@ footer .list-unstyled a{
 	}
 
 
+
+/*
+*************************** HITTA HIT *****************************
+*
+*/
 #hitta-hit #by_bike, #by_boat, #by_bus, #by_car{
 	text-align:center;
 	padding:0px 20px 40px 20px;
 }
-
 
 #hitta-hit p {
 	padding-top: 10px;
@@ -1400,6 +1441,7 @@ footer .list-unstyled a{
 	color: #303030;
 	text-decoration: underline;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 #hitta-hit .icon-link, 
@@ -1408,12 +1450,16 @@ footer .list-unstyled a{
 	color: #303030;
 	text-decoration: underline;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 #hitta-hit .icon-link:hover, #om-hamnfestivalen a:hover,
 #hitta-hit a:hover {
 	text-decoration: none;
 }
+
+
+
 
 .center{
 	text-align: center;
@@ -1516,14 +1562,18 @@ html, body {
   position: absolute;
   z-index: 0;
   -webkit-transition: opacity 0.9s ease-in-out;
+  	 -moz-transition: opacity 0.9s ease-in-out;
        -o-transition: opacity 0.9s ease-in-out;
           transition: opacity 0.9s ease-in-out;
 
   -webkit-transition-duration: 5s;
+     -moz-transition-duration: 5s;
        -o-transition-duration: 5s;
           transition-duration: 5s;
 
   -webkit-transform: translate3d(0, 0, 0) !important;
+  	 -moz-transform: translate3d(0, 0, 0) !important;
+	   -o-transform: translate3d(0, 0, 0) !important;
           transform: translate3d(0, 0, 0) !important;
 }
 .carousel-inner > .item:first-of-type {
@@ -1532,15 +1582,16 @@ html, body {
 .carousel-inner > .active {
   opacity: 1;
   z-index: 3;
-    -webkit-transition: opacity 0.9s ease-in-out;
+  -webkit-transition: opacity 0.9s ease-in-out;
+     -moz-transition: opacity 0.9s ease-in-out;
        -o-transition: opacity 0.9s ease-in-out;
           transition: opacity 0.9s ease-in-out;
 
   -webkit-transition-duration: 5s;
+	 -moz-transition-duration: 5s;
        -o-transition-duration: 5s;
           transition-duration: 5s;
 }
-
 
 /*End of fade*/
 
@@ -1556,13 +1607,19 @@ html, body {
 	border-radius: 50%;
 	border: 3px solid #fff;
 	color: #fff;
-	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .fa_arrow:hover{
 	/*font-size: 2.5em;*/
 	background-color: rgba(250,250,250, 0.3);
-	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 
@@ -1647,12 +1704,18 @@ html, body {
 	/*Containing div*/
 	.post-content{
 		margin:0 0 1.5% 0;
-		transition: opacity .8s ease;
+		-webkit-transition: opacity 0.8s ease;
+	    -moz-transition: opacity 0.8s ease;
+	    -o-transition: opacity 0.8s ease;
+	    transition: opacity 0.8s ease;
 	}
 
 	.post-content:hover {
 		opacity: 0.8;
-		transition: opacity .8s ease;
+		-webkit-transition: opacity 0.8s ease;
+	    -moz-transition: opacity 0.8s ease;
+	    -o-transition: opacity 0.8s ease;
+	    transition: opacity 0.8s ease;
 	}
 
 	.post-content .inner {
@@ -1715,6 +1778,7 @@ html, body {
 		right: 0px;
 		font-size: 0.9em;
 		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 		/*color: rgba(34,60,126, 1);*/
 
 	}
@@ -1732,6 +1796,7 @@ html, body {
 		font-size: 0.9em;
 		font-style: normal;
 		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 		color: rgba(34,60,126, 1); /*color: /*rgba(17,23,57,1);*/
 	}
 
@@ -1795,7 +1860,10 @@ html, body {
 
 		.post-content .inner:hover {
 			opacity: 0.8;
-			transition: opacity .8s ease;
+			-webkit-transition: opacity 0.8s ease;
+		    -moz-transition: opacity 0.8s ease;
+		    -o-transition: opacity 0.8s ease;
+		    transition: opacity 0.8s ease;
 		}
 
 		.post-content .inner {
@@ -1809,7 +1877,10 @@ html, body {
 		    overflow: hidden;
 		    background-position: center bottom;
 		    border-radius: 2px;
-		    transition: opacity .8s ease;
+		    -webkit-transition: opacity 0.8s ease;
+		    -moz-transition: opacity 0.8s ease;
+		    -o-transition: opacity 0.8s ease;
+		    transition: opacity 0.8s ease;
 		}
 
 		/*Text content*/
@@ -1908,6 +1979,9 @@ html, body {
 
 		.post-content .inner:hover {
 			opacity: 0.8;
+			-webkit-transition: opacity .8s ease;
+			-moz-transition: opacity .8s ease;
+			-o-transition: opacity .8s ease;
 			transition: opacity .8s ease;
 		}
 
@@ -1922,7 +1996,10 @@ html, body {
 		    overflow: hidden;
 		    background-position: center bottom;
 		    border-radius: 2px;
-		    transition: opacity .8s ease;
+			-webkit-transition: opacity .8s ease;
+			-moz-transition: opacity .8s ease;
+			-o-transition: opacity .8s ease;
+			transition: opacity .8s ease;
 		}
 
 		/*Text content*/
@@ -2004,6 +2081,9 @@ html, body {
 
 		.post-content .inner:hover {
 			opacity: 0.8;
+			-webkit-transition: opacity .8s ease;
+			-moz-transition: opacity .8s ease;
+			-o-transition: opacity .8s ease;
 			transition: opacity .8s ease;
 		}
 
@@ -2019,8 +2099,10 @@ html, body {
 		    background-repeat: no-repeat;
 		    overflow: hidden;
 		    background-position: center bottom;
-		    transition: opacity .8s ease;
-
+			-webkit-transition: opacity .8s ease;
+			-moz-transition: opacity .8s ease;
+			-o-transition: opacity .8s ease;
+			transition: opacity .8s ease;
 		}
 
 		/*Text content*/
@@ -2125,7 +2207,8 @@ html, body {
   		padding-bottom: 15px;
   		line-height: 20px;
   		color: #fff;
-  		-webkit-font-smoothing: antialiased;	
+  		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;	
 	}
 
 	#single-post-page-nav .nav>li>a:hover, 
@@ -2196,6 +2279,7 @@ html, body {
 		font-size: 0.9em;
 		font-weight: 600;
 		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 
 	}
 
@@ -2279,21 +2363,27 @@ html, body {
 	position:fixed;
 	top:0;
 	height:50px;
-	-webkit-transition:height .5s;
-	transition:height .5s;
-
+	-webkit-transition: height .5s ease;
+	-moz-transition: height .5s ease;
+	-o-transition: height .5s ease;
+	transition: height .5s ease;
 }
+
 .margin{
 	margin:0px!important;
-	-webkit-transition:margin .5s;
-	transition:margin .5s;
+	-webkit-transition: margin .5s ease;
+	-moz-transition: margin .5s ease;
+	-o-transition: margin .5s ease;
+	transition: margin .5s ease;
 
 }
 
 .opacity{
 	opacity:0;
-	-webkit-transition:opacity .5s;
-	transition:opacity .5s;
+	-webkit-transition: opacity .5s ease;
+	-moz-transition: opacity .5s ease;
+	-o-transition: opacity .5s ease;
+	transition: opacity .5s ease;
 }
 
 .nav-logo, .nav-logo:active, .nav-logo:visited{
@@ -2322,8 +2412,10 @@ html, body {
 
 .show{
 	opacity:1;
-	-webkit-transition:opacity 500ms ;
-	transition:opacity 500ms;
+	-webkit-transition: opacity 500ms ease;
+	-moz-transition: opacity 500ms ease;
+	-o-transition: opacity 500ms ease;
+	transition: opacity 500ms ease;
 }
 
 /**/
@@ -2389,6 +2481,7 @@ table{
 	padding:0% 1% 0 0%;
 	margin:0% 0 5% 0;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	border-bottom:2px solid rgba(51,106,171, 1);
 	color: rgba(51,106,171, 1);
 }
@@ -2430,6 +2523,7 @@ table{
 			padding:0% 1% 0 0%;
 			margin:0% 0 5% 0;
 			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
 			border-bottom:2px solid rgba(51,106,171, 1);
 			color: rgba(51,106,171, 1);
 		}
@@ -2463,7 +2557,7 @@ table{
 	display: block;
 	width: 100%;
 	margin-top: 0px;
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 }
 	.arrangor-kontakt .fa {
 		padding-top: 2%;
