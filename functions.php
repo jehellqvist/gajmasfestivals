@@ -163,14 +163,24 @@ if(get_page_by_title("Home") == null)
 function posts_callback($atts=null, $content=null){
     query_posts(array('orderby' => 'date','order' => 'DESC' , 'showposts' => $posts));
             $option .='
-            <ul class="list-unstyled list-inline filter-wrapper filter-clear">
-                <li>
-                    <button type="button" id="clear-btn" class="btn btn-primary active" data-color="primary">
-                    <i class="state-icon glyphicon glyphicon-check"></i>Visa alla</button>
-                    <input type="checkbox" name="clear" id="clear" class="hidden" checked="checked">
-                    <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
-                </li>
-            </ul>
+            <div class="container-fluid">
+                <div class="row filter-toggling">
+                    <button type="button" class="navbar-toggle btn collapsed in" data-toggle="collapse" data-target="#filter-toggle" aria-expanded="false">
+                        VISA ALLA ELLER filtrera programmet <i class="fa fa-angle-down"></i>
+                    </button>
+                </div><!--.fiter-toggling . row-->
+            </div><!--container-fluid-->
+            
+            <div class="navbar-collapse collapse" id="filter-toggle" aria-expanded="true">
+                <p class="filter-text">Visa alla eller välj kategori</p>
+                <ul class="list-unstyled list-inline filter-wrapper filter-clear">
+                    <li>
+                        <button type="button" id="clear-btn" class="btn btn-primary active" data-color="primary">
+                        <i class="state-icon glyphicon glyphicon-check"></i>Visa alla</button>
+                        <input type="checkbox" name="clear" id="clear" class="hidden" checked="checked">
+                        <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
+                    </li>
+                </ul>
             ';
                 $catID = get_categories(array('parent' => '0','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                 foreach ($catID as $id) {
@@ -212,6 +222,7 @@ function posts_callback($atts=null, $content=null){
                         </ul><!--End .filter-wrapper-->';
                 }
                 $option .= '
+                </div><!--End .filter-toggle-->
             </div><!--End col-sm-12-->
          </div><!--End .row .filter-function-->';
      $option .= '<script>

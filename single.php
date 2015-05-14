@@ -85,29 +85,12 @@ get_header(); ?>
                                 </div><!--End .modal-content-->
                             </div><!--End .portfolio-modal modal fade-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <p class="single-place"><?php echo get_field('plats_pa_kartan')?><i class="fa fa-map-marker"></i><?php echo get_field('plats')?></p>
+                        <p class="single-place"><?php echo get_field('plats_pa_kartan')?><i class="fa fa-map-marker"></i><?php echo get_field('plats')?></p>
                         </div>
                     </div><!--.inner-single-->
-                    <hr class="ample">
+                    <div class="col-md-12">
+                        <hr class="ample">
+                    </div>
                     <div class="social-sharing-buttons col-md-12 text-center">
                         <?php 
                             if ( function_exists( 'sharing_display' ) ) {
