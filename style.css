@@ -155,6 +155,14 @@ header {
 	color: rgba(250,250,250, 1);
 }
 
+#program .container-fluid{
+	padding:0 !important;
+}
+
+#program .filter-toggling{
+	padding:0 !important;
+}
+
 /**NAVIGATION Media queries for devices with a width max 768x**/
 
 @media (max-width: 768px) { 
