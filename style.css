@@ -2423,3 +2423,18 @@ table{
 		padding-top: 2%;
 		font-size: 1.2em;
 	}
+
+
+.not-found {
+	padding: 160px 0px;
+	min-height: 50%;
+}
+
+.not-found h1 {
+	font-family: "Museo";
+}
+
+.not-found p {
+	font-family: "PT Sans";
+	font-size: 1.2em;
+}
