@@ -53,16 +53,6 @@ if(function_exists("register_field_group"))
 				'rows' => 3,
 				'formatting' => 'html',
 			),
-			array (
-				'key' => 'field_5550ceba59cb9',
-				'label' => 'Festivalkarta',
-				'name' => 'festivalkarta',
-				'type' => 'image',
-				'required' => 1,
-				'save_format' => 'url',
-				'preview_size' => 'medium',
-				'library' => 'all',
-			),
 		),
 		'location' => array (
 			array (

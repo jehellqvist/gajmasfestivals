@@ -181,7 +181,7 @@ header {
 		  	z-index: 3;
 		  	left: -60px;
 		  	bottom:-80px;
-		  	background: rgba(43,89,144, 1);
+		  	background: #214390;
 		  	-webkit-transform: rotate(10deg);
 			-o-transform: rotate(10deg);
 			-moz-transform: rotate(10deg);
@@ -292,7 +292,7 @@ header {
 			  z-index: 3;
 			  left: -300px;
 			  bottom:-130px;
-			  background: rgba(43,89,144, 1);
+			  background: #214390;
 			  -webkit-transform: rotate(10deg);
 			  -o-transform: rotate(10deg);
 			  -moz-transform: rotate(10deg);
@@ -450,8 +450,12 @@ header {
 #program h1 {
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	text-align: center;
-	padding: 0 0 25px 0;
+	padding: 0 0 10px 0;
 	margin: 0;
+}
+
+#program .datum {
+	font-size: 2em;
 }
 
 .filter-function {
@@ -512,41 +516,45 @@ header {
 }
 
 .filter-Veckodag li{
-	margin-top: 20px;
+	margin-top: 18px;
 }
 
 .filter-Plats,
-.filter-Veckodag {
+.filter-Veckodag,
+.filter-Aldersgrupp {
 	display: inline-block;
 }
 
 .filter-clear li,
 .filter-Kategori li,
-.filter-Aldersgrupp li,
-.filter-Veckodag li,
 .filter-Plats li{
 	margin-bottom: 15px;
 }
 
+.filter-Aldersgrupp li,
+.filter-Veckodag li {
+	margin-bottom: 9px;
+}
 
 .filter-Aldersgrupp .screen-reader-text,
 .filter-Veckodag .screen-reader-text,
 .filter-Plats .screen-reader-text {
 	display: inline !important;
-	font-weight: 700;
-	padding-left: 10px;
+	text-transform: uppercase;
+	font-weight: 400;
+	padding-left: 20px;
+	letter-spacing: 0.1em;
 }
 
-.filter-text,
-.filter-info {
+.filter-text {
+	padding-top: 20px;
+	padding-bottom: 5px;
 	text-transform: uppercase;
 	font-size: 1em;
+	letter-spacing: 0.1em;
 	font-weight: 400;
 	font-smoothing: antialiased;
-}
-
-.filter-info {
-	padding-top: 20px;
+	color: rgba(34, 60, 126, 1);
 }
 
 
@@ -670,7 +678,7 @@ header {
 	-webkit-font-smoothing: antialiased;
 }
 
-/*.filter-Aldersgrupp h2 {
+.filter-Aldersgrupp h2 {
 	color: rgba(50,50,50, 1);
 }
 
@@ -680,7 +688,7 @@ header {
 
 .filter-Plats h2 {
 	color: rgba(200, 0, 0, 1);
-}*/
+}
 
 .filter-Veckodag .btn {
 	color: rgba(0, 128, 0, 1);
@@ -795,7 +803,7 @@ header {
 #om-hamnfestivalen #about p {
 	text-align:center;
 	font-size: 1.25em;
-	line-height: 1.5em;
+	line-height: 1.8em;
 	padding:0 0 1% 0;
 }
 
@@ -942,29 +950,89 @@ footer .list-unstyled a{
 }
 
 .modal-content {
+	min-height: 100%;
+	border-radius: 0px;
+	border: 0px;
+	padding-bottom: 50px;
 }
 
 .portfolio-modal {
 	margin-left: auto;
 	margin-right: auto;
-	border: 0px solid transparent;
-	border-radius: 0px;
 	padding-left: 0 !important;
-	padding-right: 0 !important;
-}
+	padding-right: 0 !important;}
 
 .portfolio-modal h3 {
-	padding: 0 0 40px 0;
+	padding: 70px 0 0px 0;
 	margin: 0;
+	font-family: 'Museo';
+	font-size: 2.5em;
 }
 
 .portfolio-modal img {
+	padding: 80px 0px;
 	width: 100%;
 }
-.close-modal button {
-	font-size: 1.4em;
-	float: right;
-	border: 0px solid transparent;
+
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: 768px) { 
+
+	}
+
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: 992px) { 
+
+		.portfolio-modal img {
+			width: 90%;
+			height: auto;
+}
+
+	}
+
+	/* Large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {  
+
+	}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1050;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 40px;
+    margin-left: 35px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 40px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
 }
 
 /*#omradet .map:hover{
@@ -1006,7 +1074,7 @@ footer .list-unstyled a{
 	width: auto;
 }
 
-#omradet .map {
+.map {
 	display: inline-block;
 	margin-top: -150px;
 	margin-left: auto;
@@ -1022,11 +1090,11 @@ footer .list-unstyled a{
     -moz-transform: translate3d(0, 0, 0);
 }
 
-#omradet .hover-map {
+.hover-map {
 	transition: all 1s ease-in-out;
 }
 
-#omradet .hover-map:hover {
+.hover-map:hover {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
@@ -1034,7 +1102,7 @@ footer .list-unstyled a{
 	transition: all 1s ease-in-out;
 }
 
-#omradet .map img {
+.map img {
 	overflow: hidden;
 	height: 270px;
 	width: auto;
@@ -1961,31 +2029,23 @@ html, body {
 		margin-left: 10px;
 	}
 
-	.single-map {	
+	.single-post .map {	
 		width: 180px;
 		height: 180px;
 		margin: auto;
 		display: inline-block;
 		border: 5px solid #fff;
 		box-shadow: 0 0 0 2px #cecece;
-		border-radius: 50%;
+		margin-top: 0;
 	}
 
-	.single-map img{
-		width: 100%;
-		height: auto;
-		border-radius: 50%;
-		opacity: 1;
-		-webkit-transition: opacity 1s ease-in-out;
-		transition: opacity 1s ease-in-out;
-		-webkit-transform: translateZ(0);
+	.single-post .map img{
+		height: 180px;
+
 	}
 
-	.single-map img:hover {
-		opacity: 0.7;
-		-webkit-transition: opacity 1s ease-in-out;
-		transition: opacity 1s ease-in-out;
-		-webkit-transform: translateZ(0);
+	.single-post .modal-content img {
+		padding-top: 50px;
 	}
 
 
@@ -2185,7 +2245,3 @@ table{
 		padding-top: 2%;
 		font-size: 1.2em;
 	}
-
-
-
-

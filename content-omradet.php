@@ -22,8 +22,8 @@ Template Name: omradet
 			<a href="#popup1" class="portfolio-link" data-toggle="modal">
                 <div class="map">
                 	<figure class="hover-map">
-                    	<img src="<?php echo get_field('festivalkarta')?>" alt="Karta över festivalområdet" class="img-center">
-                	</figure>
+						<img src='<?php echo esc_url( get_theme_mod( 'themeslug_map' ) ); ?>' alt="Karta över festivalområdet" class="img-center">                	
+					</figure>
                 </div>
             </a>
 
@@ -32,7 +32,8 @@ Template Name: omradet
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                    <div class="rl">
+                    </div>
                 </div>
             </div>
             
@@ -41,7 +42,7 @@ Template Name: omradet
                     <div class="col-md-12">
                     	<h3>Karta över festivalområdet</h3>
                     	<figure>
-                    		<img src="<?php echo get_field('festivalkarta')?>" alt="Karta över festivalområdet" class="img-center">
+                    		<img src='<?php echo esc_url( get_theme_mod( 'themeslug_map' ) ); ?>' alt="Karta över festivalområdet" class="img-center">
                 		</figure>
                 		<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Stäng</button>
                     </div><!-- End col-md-*-->
