@@ -1,5 +1,5 @@
 <figure id="bridge_img">
-	<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/bro_bla_light.png" alt="öresundsbron" width="100%">
+	<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/bro_bla_light.png" alt="öresundsbron">
 </figure>
 
 <footer id="kontakt" role="contentinfo">
@@ -42,9 +42,9 @@
 					<ul class="list-unstyled list-inline">
 						<li><a class="fa fa-facebook-square" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
 						<li><a class="fa fa-instagram" href="https://instagram.com/pohamnfestivalen/" title="Instagram" target="_blank"></a></li>
-						<p class="tag">#pohamnfestivalen</p>
 						<!--<li><a class="fa fa-google-plus-square" href="https://plus.google.com/share?url=http://www.hamnfestivalen.se/" title="Google +" target="_blank"></a></li>-->
 			        </ul>
+			        <p class="tag">#pohamnfestivalen</p>
 
 				<div class="row top">
 					<div class="col-md-12 col-sm-12 center ">
@@ -68,14 +68,7 @@
 
 </footer>
  
-</div><!--End of #wrapper-->
- 
 <?php wp_footer(); ?> 
-
-<!--run after all scripts are done-->
-<script type="text/javascript">
-
-</script>
 
 </body>
 </html>
