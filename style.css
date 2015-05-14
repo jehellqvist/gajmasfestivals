@@ -416,7 +416,11 @@ header {
 ***************************SECTIONS*****************************
 */
 
-.program {
+.festivalen #title {
+	display:none;
+}
+
+.program, .festivalen {
 	margin-right: 0;
 	margin-left: 0;
 	padding-top: 50px;
@@ -424,7 +428,6 @@ header {
 	padding-left: 45px;
 	padding-right: 45px;
 }
-
 
 #program .ample {
 	background-repeat: repeat-x;
@@ -447,7 +450,7 @@ header {
 	margin-right: 0px;
 	margin-left: 0px;
 }
-#program h1 {
+#program h1, #festivalen h1{
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
 	text-align: center;
 	padding: 0 0 10px 0;
@@ -456,6 +459,21 @@ header {
 
 #program .datum {
 	font-size: 2em;
+}
+
+#festivalen {
+	text-align:center;
+}
+
+#festivalen .actor {
+	width:430px;
+}
+#festivalen .btn {
+	float:right;
+}
+
+.author {
+	text-align:right;
 }
 
 .filter-function {
@@ -725,6 +743,11 @@ header {
 	-webkit-font-smoothing: antialiased;
 }
 
+#info {
+	padding:80px 0 80px 0;
+	text-align:center;
+}
+
 #om-hamnfestivalen .ample {
 	padding-top: 100px;
 	background-repeat: repeat-x;
@@ -926,7 +949,8 @@ footer .list-unstyled a{
 	font-size: 2em;
 }
 #omradet {
-	background: rgba(176,206,241,1); /*green:#46C772;*/
+	background: rgba(176,206,241,1); 
+	/*green:#46C772;*/
 	/*background-color: #22BC56;*/
 	padding-top: 20px;
 	padding-bottom: 50px;
