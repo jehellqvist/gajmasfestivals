@@ -15,7 +15,7 @@ Template Name: om-hamnfestivalen
 		</div><!--col-lg-*-->
 
 		<div class="social_share col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
-			<p>Dela dina festivalminnen <span class="tag">
+			<p>Dela festivalminnen på instagram<span class="tag">
 				#<?php echo get_field('hash-tag')?>
 			</span></p>
 		</div><!--.social_share col-lg-8 col-lg-offset-2 center-text-->
