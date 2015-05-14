@@ -118,6 +118,12 @@ $(function () {
 $(function() {
     var all_active_posts = $(".active-post");
 
+    alert(all_active_posts);
+
+    if(all_active_posts === undefined) {
+        alert("nu");
+    }
+
         all_active_posts.each(function(index, value) { 
             if(index <= 11) { 
                 $(this).addClass("show-post");
@@ -130,6 +136,9 @@ $(function() {
 
             function load_more() {
                 var all_active_posts = $(".active-post");
+                if(all_active_posts === undefined) {
+                    alert("nu");
+                }
                 
                 all_active_posts.each(function(index, value) { 
                     if(index <= 3) { 
@@ -144,6 +153,11 @@ $(function() {
                 $(".post-content").removeClass("show-post");
 
                 var all_active_posts = $(".active-post");
+
+
+                if(all_active_posts === undefined) {
+                    alert("nu");
+                }
                 
                 all_active_posts.each(function(index, value) { 
                     if(index <= 11) { 

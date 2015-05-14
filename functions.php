@@ -166,7 +166,7 @@ function posts_callback($atts=null, $content=null){
             <div class="container-fluid">
                 <div class="row filter-toggling">
                     <button type="button" class="navbar-toggle btn collapsed in" data-toggle="collapse" data-target="#filter-toggle" aria-expanded="false">
-                        VISA ALLA ELLER filtrera programmet <i class="fa fa-angle-down"></i>
+                        Visa alla eller filtrera <i class="fa fa-angle-down"></i>
                     </button>
                 </div><!--.fiter-toggling . row-->
             </div><!--container-fluid-->
