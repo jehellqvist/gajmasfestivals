@@ -10,7 +10,7 @@
 				<a href="http://www.polimhamn.se" target="_blank"><div id="polimhamn_logo"></div></a>	
 				<p class="justify">På Limhamn är ett samarbete mellan <em>Malmö stad</em>, <em>fastighetsägare</em>, <em>handel</em>, <em>näringsliv och ideella föreningar</em> med fokus på att 
 					vidareutveckla Limhamn som besök- och turistdestination. Samverkan är grunden i hela vår verksamhet och även den övergripande 
-					metoden för vårt arbete. Läs mer om arrangören bakom Hamnfestivalen på <a href="http://polimhamn.se/">www.polimhamn.se</a></p>
+					metoden för vårt arbete. Läs mer om arrangören bakom Hamnfestivalen på <a target="_blank" href='<?php echo esc_url (get_theme_mod( 'themeslug_footer_webpage' )); ?>'><?php echo get_theme_mod( 'themeslug_footer_webpage' ); ?></a></p>
 			
 				
 				<div class="row top">
@@ -19,19 +19,19 @@
 						<div class="col-md-4 col-sm-4 center top">
 						<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
 							<i class="fa fa-envelope-o"></i>
-							<p>info@polimhamn.se</p>
+							<p><?php echo get_theme_mod( 'themeslug_footer_mail' ); ?></p>
 						</div>
 
 						<div class="col-md-4 col-sm-4 center top">
 						<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
 							<i class="fa fa-map-marker"></i>
-							<p>Järnvägsgatan 25 <br> 216 14 Limhamn</p>
+							<p><?php echo get_theme_mod( 'themeslug_footer_street' ); ?><br><?php echo get_theme_mod( 'themeslug_footer_address' ); ?></p>
 						</div>	
 
 						<div class="col-md-4 col-sm-4 center top">
 						<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
 							<i class="fa fa-phone"></i>
-							<p>0760-10 44 05</p>
+							<p><?php echo get_theme_mod ( 'themeslug_footer_phone' ); ?></p>
 						</div>		
 					</div>
 				</div>

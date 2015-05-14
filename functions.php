@@ -23,8 +23,9 @@ function my_jquery_enqueue() {
     add_action( 'wp_enqueue_scripts', 'query_styles' );
 
 
-//Adds logo field in Wordpress Anpassa
+//Adds custom fields in Wordpress Anpassa
 function themeslug_theme_customizer( $wp_customize ) {
+    //Adds logo field
     $wp_customize->add_section( 'themeslug_logo_section' , array(
         'title'       => __( 'Logo', 'themeslug' ),
         'priority'    => 30,
@@ -33,11 +34,76 @@ function themeslug_theme_customizer( $wp_customize ) {
     );
 
     $wp_customize->add_setting( 'themeslug_logo' );
-
+    
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo', array(
         'label'    => __( 'Logo', 'themeslug' ),
         'section'  => 'themeslug_logo_section',
         'settings' => 'themeslug_logo',
+        )) 
+    );
+
+    //Adds footer fields
+    $wp_customize->add_section( 'themeslug_footer_section' , array(
+        'title'       => __( 'Sidfot', 'theme' ),
+        'priority'    => 40,
+        'description' => 'Lägg till/ändra information i sidfoten'
+        ) 
+    );
+
+    $wp_customize->add_setting( 'themeslug_footer_mail' );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'themeslug_footer_mail', array(
+        'label'    => __( 'E-post', 'themeslug' ),
+        'section'  => 'themeslug_footer_section',
+        'settings' => 'themeslug_footer_mail',
+        'type'     => 'text',
+        )) 
+    );
+
+    $wp_customize->add_setting( 'themeslug_footer_street' );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'themeslug_footer_street', array(
+        'label'    => __( 'Gatuadress', 'themeslug' ),
+        'section'  => 'themeslug_footer_section',
+        'settings' => 'themeslug_footer_street',
+        )) 
+    );
+
+    $wp_customize->add_setting( 'themeslug_footer_address' );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'themeslug_footer_address', array(
+        'label'    => __( 'Postnummer & Postort', 'themeslug' ),
+        'section'  => 'themeslug_footer_section',
+        'settings' => 'themeslug_footer_address',
+        'type'     => 'text',
+        )) 
+    );
+
+    $wp_customize->add_setting( 'themeslug_footer_address' );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'themeslug_footer_address', array(
+        'label'    => __( 'Postnummer & Postort', 'themeslug' ),
+        'section'  => 'themeslug_footer_section',
+        'settings' => 'themeslug_footer_address',
+        'type'     => 'text',
+        )) 
+    );
+
+    $wp_customize->add_setting( 'themeslug_footer_phone' );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'themeslug_footer_phone', array(
+        'label'    => __( 'Telefonnummer', 'themeslug' ),
+        'section'  => 'themeslug_footer_section',
+        'settings' => 'themeslug_footer_phone',
+        )) 
+    );
+
+    $wp_customize->add_setting( 'themeslug_footer_webpage' );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'themeslug_footer_webpage', array(
+        'label'    => __( 'Arrangör webbsida', 'themeslug' ),
+        'section'  => 'themeslug_footer_section',
+        'settings' => 'themeslug_footer_webpage',
         )) 
     );
 
