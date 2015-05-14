@@ -7,6 +7,20 @@ if(function_exists("register_field_group"))
 		'title' => 'Festivalen 2015',
 		'fields' => array (
 			array (
+				'key' => 'field_5554614761876',
+				'label' => 'År',
+				'name' => 'år',
+				'type' => 'text',
+				'instructions' => 'Lägg till år för Hamnfestivalen',
+				'required' => 1,
+				'default_value' => '2015',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
 				'key' => 'field_5554614761877',
 				'label' => 'Rubrik',
 				'name' => 'rubrik',

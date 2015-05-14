@@ -209,7 +209,7 @@ header {
 			width: 50%;
 		}
 
-		#program{
+		#program, #festivalen{
 			position: relative;
 			padding:0 5px!important;
 		}
@@ -261,7 +261,7 @@ header {
 			height: 100%;	
 		}
 
-		#program{
+		#program, #festivalen{
 			position: relative;
 		}
 
@@ -351,7 +351,7 @@ header {
 			height: 100%;	
 		}
 
-		#program{
+		#program, #festivalen{
 			position: relative;
 		}
 
@@ -433,7 +433,7 @@ header {
 	padding-right: -15px;
 }
 
-#program {
+#program, #festivalen {
 	position: relative;
 	background: #fff;
 	z-index: 3 !important;
