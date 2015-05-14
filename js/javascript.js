@@ -5,11 +5,11 @@ $(document).ready(function() {
   	pause: "false"
   });
 
-$("#clear-btn").on("click", function() {
-    localStorage.clear();
-});
+    $("#clear-btn").on("click", function() {
+        localStorage.clear();
 
-}); 
+    }); 
+});
 
 $(function() {
     var trigger = 0;
