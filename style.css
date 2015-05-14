@@ -1306,7 +1306,7 @@ footer .list-unstyled a{
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	opacity: 0.4;
+	opacity: 0.6;
 }
 
 .map img {
@@ -2523,15 +2523,27 @@ table{
 }
 
 .not-found {
-	padding: 160px 0px;
-	min-height: 50%;
+	padding: 120px 0px;
+	min-height: 45%;
+	color: rgba(20,49,116, 1) !important; /*rgba(34,60,126, 1);*/
+}
+
+.not-found .row {
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .not-found h1 {
 	font-family: "Museo";
+	padding-top: 30px;
 }
 
 .not-found p {
 	font-family: "PT Sans";
 	font-size: 1.2em;
+}
+
+.not-found img {
+	margin: auto;
+	max-width: 240px;
 }

@@ -124,38 +124,54 @@ $(function() {
                 $(this).removeClass("active-post");
             }
          });
-
-            $(".load-more").on('click', load_more);
-            $(".filter-wrapper .btn").on('click', reload_posts);
-
-            function load_more() {
-                //onclick load more content
-                var all_active_posts = $(".active-post");
-
+        if (! $("article").hasClass("active-post")) {
+            $(".load-more").prop("disabled",true);
+        }
+        else if($("article").hasClass("active-post")) {
+            $(".load-more").removeAttr('disabled');
+        }
                 
-                all_active_posts.each(function(index, value) { 
-                    if(index <= 3) { 
-                        $(this).addClass("show-post");
-                        $(this).removeClass("active-post");
-                    }
-                });
+        $(".load-more").on('click', load_more);
+        $(".filter-wrapper .btn").on('click', reload_posts);
 
-                if (! $("article").hasClass("active-post")) {
-                    $(".load-more").prop("disabled",true);
+        function load_more() {
+            //onclick load more content
+            var all_active_posts = $(".active-post");
+
+            
+            all_active_posts.each(function(index, value) { 
+                if(index <= 3) { 
+                    $(this).addClass("show-post");
+                    $(this).removeClass("active-post");
                 }
-            };
+            });
 
-            function reload_posts() {
-                //onload load standard content
-                $(".post-content").removeClass("show-post");
+            if (! $("article").hasClass("active-post")) {
+                $(".load-more").prop("disabled",true);
+            }
+            else if($("article").hasClass("active-post")) {
+                $(".load-more").removeAttr('disabled');
+            }
+        };
 
-                var all_active_posts = $(".active-post");
-                
-                all_active_posts.each(function(index, value) { 
-                    if(index <= 11) { 
-                        $(this).addClass("show-post");
-                        $(this).removeClass("active-post");
-                    }
-                });
-            };
+        function reload_posts() {
+            //onload load standard content
+            $(".post-content").removeClass("show-post");
+
+            var all_active_posts = $(".active-post");
+            
+            all_active_posts.each(function(index, value) { 
+                if(index <= 11) { 
+                    $(this).addClass("show-post");
+                    $(this).removeClass("active-post");
+                }
+            });
+
+             if (! $("article").hasClass("active-post")) {
+                $(".load-more").prop("disabled",true);
+            }
+            else if($("article").hasClass("active-post")) {
+                $(".load-more").removeAttr('disabled');
+            }
+        };
 });
