@@ -10,9 +10,8 @@ Template Name: program
 <section id='<?php echo $post->post_name; ?>' class='container-fluid'>
     <div class="row filter-function">
     	<h1><?php echo get_field('rubrik')?></h1>
-    	<!--<p class="datum"><?php echo get_field('datum')?></p>-->
+    	<p class="datum"><?php echo get_field('datum')?></p>
 		<div class="col-sm-12">
-			<p class="filter-text">Visa alla eller välj kategori</p>
 	<?php
 		echo do_shortcode("[posts]");
 	?>

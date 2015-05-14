@@ -4,7 +4,28 @@ $(document).ready(function() {
   	cycle: true, 
   	pause: "false"
   });
-}); 
+
+    $("#clear-btn").on("click", function() {
+        localStorage.clear();
+
+    }); 
+});
+
+$(function() {
+    var trigger = 0;
+    $(".filter-handlers input:checkbox").each(function() {
+        if(localStorage.getItem($(this).attr("data-catid")) == "true") {
+            $(this).attr("checked", true);
+            $(this).change();
+            trigger = 1;
+        };
+    });
+
+    if(trigger == 0) {
+        $("#clear").attr("checked", true);
+        $("#clear-btn").addClass("active");
+    }
+ });
 
 $(function() {
 
@@ -131,7 +152,4 @@ $(function() {
                     }
                 });
             };
-
-
 });
-

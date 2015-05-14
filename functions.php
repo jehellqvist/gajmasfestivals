@@ -163,14 +163,24 @@ if(get_page_by_title("Home") == null)
 function posts_callback($atts=null, $content=null){
     query_posts(array('orderby' => 'date','order' => 'DESC' , 'showposts' => $posts));
             $option .='
-            <ul class="list-unstyled list-inline filter-wrapper filter-clear">
-                <li>
-                    <button type="button" id="clear-btn" class="btn btn-primary active" data-color="primary">
-                    <i class="state-icon glyphicon glyphicon-check"></i>Visa alla</button>
-                    <input type="checkbox" name="clear" id="clear" class="hidden" checked="checked">
-                    <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
-                </li>
-            </ul>
+            <div class="container-fluid">
+                <div class="row filter-toggling">
+                    <button type="button" class="navbar-toggle btn collapsed in" data-toggle="collapse" data-target="#filter-toggle" aria-expanded="false">
+                        VISA ALLA ELLER filtrera programmet <i class="fa fa-angle-down"></i>
+                    </button>
+                </div><!--.fiter-toggling . row-->
+            </div><!--container-fluid-->
+            
+            <div class="navbar-collapse collapse" id="filter-toggle" aria-expanded="true">
+                <p class="filter-text">Visa alla eller välj kategori</p>
+                <ul class="list-unstyled list-inline filter-wrapper filter-clear">
+                    <li>
+                        <button type="button" id="clear-btn" class="btn btn-primary" data-color="primary">
+                        <i class="state-icon glyphicon glyphicon-check"></i>Visa alla</button>
+                        <input type="checkbox" name="clear" id="clear" data-catid="clear" class="hidden">
+                        <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
+                    </li>
+                </ul>
             ';
                 $catID = get_categories(array('parent' => '0','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                 foreach ($catID as $id) {
@@ -203,8 +213,8 @@ function posts_callback($atts=null, $content=null){
 
                                 $option .= '
                                 <li class="button-checkbox">
-                                <button type="button" class="btn" data-color="primary">'.$new_name.'</button>
-                                    <input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" id="'.$new_name.'" class="filter-checkbox hidden" >
+                                <button type="button" class="btn" data-value="'.$new_name.'" data-color="primary">'.$new_name.'</button>
+                                    <input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" data-catid="'.$category->cat_ID.'" id="'.$new_name.'" class="filter-checkbox hidden" >
                                     <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
                                 </li>';
                                 }
@@ -212,6 +222,7 @@ function posts_callback($atts=null, $content=null){
                         </ul><!--End .filter-wrapper-->';
                 }
                 $option .= '
+                </div><!--End .filter-toggle-->
             </div><!--End col-sm-12-->
          </div><!--End .row .filter-function-->';
      $option .= '<script>
@@ -238,6 +249,8 @@ function posts_callback($atts=null, $content=null){
         });
         
         $("input").on( "change", function() {
+            var key = $(this).attr("data-catid");
+            localStorage.setItem(key, $(this).prop("checked"));
             var str = "Include items \n";
             var selector = \'\', cselector = \'\', nselector = \'\', lselector = \'\';
                     
@@ -380,7 +393,7 @@ function posts_callback($atts=null, $content=null){
             if ($(\'#clear\').prop(\'checked\')) {
             }
             else {
-                $(\'.program > article\').removeClass("unactive-post").addClass("active-post");// om posten inte har klassen - lägg till class - annars ****silence****
+                $(\'.program > article\').removeClass("unactive-post").addClass("active-post");
                 Kategori = []; 
                 Aldersgrupp = []; 
                 Plats = [];
@@ -396,7 +409,6 @@ function posts_callback($atts=null, $content=null){
                 $(\'.filter-handlers input:checkbox\').removeAttr(\'checked\');
                 $(\'.filter-handlers i\').removeClass(\'glyphicon-check\').addClass(\'glyphicon-unchecked\');
             }
-
         });
         </script>';;
     $option .= '<div class="row program">';
@@ -407,7 +419,7 @@ function posts_callback($atts=null, $content=null){
                 ?>
                 <?php foreach((get_the_category()) as $category) { 
                     $cat_string .= $category->cat_name . " ";
-                    if($category->category_parent == '5') {
+                    if($category->category_parent == '5') { //add kategori ID
                         if($category->cat_name == 'Musik och sång vid havet') {
                             $content_cat = 'Musik & Sång';
                         }
