@@ -1741,7 +1741,7 @@ html, body {
 			transform: rotate(7deg);
 		}
 
-		.- {
+		.wave:before {
 			content: '';
 			position: absolute;
 			bottom: -50px;
@@ -2418,3 +2418,73 @@ table{
 		padding-top: 2%;
 		font-size: 1.2em;
 	}
+
+
+#festivalen{
+	padding-top: 50px;
+}
+
+.festivalen{
+	margin-bottom: 50px !important;
+}
+
+.aktor{
+	margin: 0!important;
+	padding:0!important;
+}
+
+
+#festivalen .post-content{
+	margin:0 auto;
+	width:28%;
+	margin-left: 3.75%!important
+}
+
+#festivalen .post-content .wave:before{
+	right:-50px;
+	margin-bottom: -27px;
+}
+
+#festivalen .post-content .wave:after{
+	left:0px;
+	margin-bottom: 20px;
+}
+
+#festivalen .description{
+	padding-top: 20px;
+	font-size: 1.6em;
+	font-style: italic;
+}
+
+#festivalen .aktor-name{
+	padding-top: 10px;
+	font-size: 1.1em;
+}
+
+#festivalen .aktor-medverka{
+	width:200px;
+	height:200px;
+	border-radius: 50%;
+	background-color: rgba(20,49,116, 1);
+	position: absolute;
+	right:150px;
+	top:135px;
+	/*-webkit-transform:rotate(10deg);
+	-moz-transform:rotate(10deg);
+	-o-transform:rotate(10deg);
+	transform:rotate(10deg);*/
+}
+
+#festivalen .aktor-medverka p{
+	color:#fff;
+	font-size: 1.6em;
+	padding-top: 80px;
+}
+
+#festivalen .introtext{
+	text-align: left;
+	width:60%;
+	margin:auto;
+	padding-top:30px;
+	font-size: 1.3em;
+}

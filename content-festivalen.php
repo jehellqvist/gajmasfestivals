@@ -10,55 +10,55 @@ Template Name: festivalen
 <section id='<?php echo $post->post_name; ?>' class='container-fluid'>
 	<div class="row festivalen">	    
 		<h1><?php echo get_field('rubrik')?></h1>		
-		<h4><?php echo get_field('introtext')?></h4>
-		<a href="http://localhost/gajmas/for-medverkande-aktorer/" class="btn"><?php echo get_field('medverka_lank')?></a>
-	</div>
+		<p class="introtext"><?php echo get_field('introtext')?></p>
+
+		<a href="http://localhost/gajmas/for-medverkande-aktorer/">
+			<div class="aktor-medverka">
+				<p><?php echo get_field('medverka_lank')?></p>
+			</div><!--end aktor-medverka-->
+		</a>
+
+	</div><!--end .festivalen-->
 	
-	<div class="row">
-		<article class="actor post-content col-md-4">
-			<a href="">
-				<div class="inner" style="background-image:url('<?php echo get_field('aktor_1_bild')?>'); background-position: top;"></div>
-				<div class="inner-bottom">
-					<div class="wave">
-						<div id="citat" class="inner-content">
-							<p class="description"><?php echo get_field('aktor_1_citat')?></p>
-							<div class="author">
-								<p>- <?php echo get_field('aktor_1')?></p>
-							</div>
-						</div><!--.inner-content-->
-					</div><!--.wave-->
-				</div><!--.inner-bottom-->
-			</a><!--End .inner-->
-		</article><!--End . col-*-* -->
-		<article class="actor post-content col-md-4">
-			<a href="">
-				<div class="inner" style="background-image:url('<?php echo get_field('aktor_2_bild')?>')"></div>
-				<div class="inner-bottom">
-					<div class="wave">
-						<div class="inner-content">
-							<p class="description"><?php echo get_field('aktor_2_citat')?></p>
-							<div class="author">
-								<p>- <?php echo get_field('aktor_2')?></p>
-							</div>
-						</div><!--.inner-content-->
-					</div><!--.wave-->
-				</div><!--.inner-bottom-->
-			</a><!--End .inner-->
-		</article><!--End . col-*-* -->
-		<article class="actor post-content col-md-4">
-			<a href="">
-				<div class="inner" style="background-image:url('<?php echo get_field('aktor_3_bild')?>')"></div>
-				<div class="inner-bottom">
-					<div class="wave">
-						<div class="inner-content">
-							<p class="description"><?php echo get_field('aktor_3_citat')?></p>
-							<div class="author">
-								<p>- <?php echo get_field('aktor_3')?></p>
-							</div>
-						</div><!--.inner-content-->
-					</div><!--.wave-->
-				</div><!--.inner-bottom-->
-			</a><!--End .inner-->
-		</article><!--End . col-*-* -->
-	</div>
+	<div class="row aktor">
+		<article class="col-xs-12 col-md-3 post-content">
+            <div class="inner" style="background-image:url('<?php echo get_field('aktor_1_bild')?>')"></div>
+            <div class="inner-bottom">
+                <div class="wave">
+                    <div class="inner-content">
+                        <p class="description"><?php echo get_field('aktor_1_citat')?></p>
+						<p class="aktor-name"><?php echo get_field('aktor_1')?></p>
+					</div><!--.inner-content-->
+                </div><!--.wave-->
+            </div><!--.inner-bottom--> 
+        </article><!--End . col-*-* -->
+
+        <article class="col-xs-12 col-md-4 post-content">
+            <div class="inner" style="background-image:url('<?php echo get_field('aktor_2_bild')?>')"></div>
+            <div class="inner-bottom">
+                <div class="wave">
+                    <div class="inner-content">
+                        <p class="description"><?php echo get_field('aktor_2_citat')?></p>
+						<p class="aktor-name"><?php echo get_field('aktor_2')?></p>
+					</div><!--.inner-content-->
+                </div><!--.wave-->
+            </div><!--.inner-bottom--> 
+        </article><!--End . col-*-* -->
+
+
+        <article class="col-xs-12 col-md-4 post-content">
+            <div class="inner" style="background-image:url('<?php echo get_field('aktor_3_bild')?>')"></div>
+            <div class="inner-bottom">
+                <div class="wave">
+                    <div class="inner-content">
+                        <p class="description"><?php echo get_field('aktor_3_citat')?></p>
+						<p class="aktor-name"><?php echo get_field('aktor_3')?></p>
+					</div><!--.inner-content-->
+                </div><!--.wave-->
+            </div><!--.inner-bottom--> 
+        </article><!--End . col-*-* -->
+    </div><!--end .aktor-->
+
+
+
 </section><!-- #post-## -->
