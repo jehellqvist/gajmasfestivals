@@ -1710,7 +1710,7 @@ html, body {
 		bottom: 13px;
 		width: 60%;
 		right: 0px;
-		padding-right: 15px;
+		padding-right: 7%;
 		text-align: right;
 		right: 0px;
 		font-size: 0.9em;
@@ -1727,7 +1727,7 @@ html, body {
 		position: absolute;
 		bottom: 13px;
 		width: 40%;
-		padding-left: 15px;
+		padding-left: 7%;
 		left: 0px;
 		font-size: 0.9em;
 		font-style: normal;
@@ -1848,8 +1848,12 @@ html, body {
 			font-weight: 700;
 			position: absolute;
 			bottom: 13px;
+			padding-right: 7%;
 		}
-	
+		
+		.content-category {
+			padding-right: 7%;
+		}
 	}
 
 
@@ -1927,7 +1931,7 @@ html, body {
 			height: 170px;
 			width: 100%;
 			color: #fff;
-			padding: 0% 7%;
+			padding: 0% 5%;
 			position: absolute;
 			bottom: 0;
 			overflow: hidden;
@@ -1956,11 +1960,19 @@ html, body {
 			font-weight: 700;
 			position: absolute;
 			bottom: 13px;
+			padding-right: 5%;
+			font-size: 0.85em;
+		}
+
+		.content-category {
+			font-size: 0.85em;
+			padding-left: 5%;
 		}
 }
 
 
 	@media (max-width: 600px){
+
 		.program{
 			margin: 0 !important;
 			padding: 3% 0 !important;
@@ -2018,7 +2030,7 @@ html, body {
 			position: relative;
 			height:150px;
 			color: #222;
-			padding: 0% 2%;
+			padding: 0% 8px;
 			overflow: hidden;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
@@ -2058,8 +2070,14 @@ html, body {
 			font-weight: 700;
 			position: absolute;
 			bottom: 13px;
-			font-size: 0.9em;
+			padding-right: 8px;
+			font-size: 0.75em;
 			color: rgba(34,60,126, 1);
+		}
+
+		.content-category {
+			font-size: 0.75em;
+			padding-left: 8px;
 		}
 }
 
