@@ -726,6 +726,7 @@ if(function_exists("register_field_group"))
                 'choices' => array (
                     'Småbåtshamnen' => 'Småbåtshamnen',
                     'Fiskehamnen' => 'Fiskehamnen',
+                    'Längs Strandgatan' => 'Längs Strandgatan',
                 ),
                 'other_choice' => 1,
                 'save_other_choice' => 1,
