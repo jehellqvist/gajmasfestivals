@@ -35,7 +35,7 @@ if(function_exists("register_field_group"))
 				'name' => 'sponsorer',
 				'type' => 'textarea',
 				'required' => 1,
-				'default_value' => '<a href="http://malmo.se/" target="_blank">Malmö stad</a> <a href="http://sydsvenskan.se/" target="_blank">Sydsvenskan</a> <a href="http://skanska.se/" target="_blank">SKANSKA Öresund</a> <a href="http://www.smabatshamnen.nu/">Hamnbolaget – Limhamns Småbåtshamn</a> <a href="http://www.ica.se/butiker/kvantum/malmo/ica-kvantum-malmborgs-limhamn-2737/start/" target="_blank">Malmborgs Limhamn</a> <a href="http://limhamnsfiskrokeri.se/rokeri/" target="_blank">Limhamns Fiskrökeri AB</a> <a href="http://www.svenskfast.se/" target="_blank">Svensk fastighetsförmedling</a> <a href="http://limhamnsbegravningsbyra.se/" target="_blank">Limhamns Begravningsbyrå</a>',
+				'default_value' => '<a href="http://malmo.se/" target="_blank">Malmö stad</a> <a href="http://sydsvenskan.se/" target="_blank">Sydsvenskan</a> <a href="http://skanska.se/" target="_blank">SKANSKA Öresund</a> <a href="http://www.smabatshamnen.nu/">Hamnbolaget – Limhamns Småbåtshamn</a> <a href="http://www.ica.se/butiker/kvantum/malmo/ica-kvantum-malmborgs-limhamn-2737/start/" target="_blank">Malmborgs Limhamn</a> <a href="http://limhamnsfiskrokeri.se/rokeri/" target="_blank">Limhamns Fiskrökeri AB</a> <a href="http://www.svenskfast.se/" target="_blank">Svensk fastighetsförmedling</a> <a href="http://limhamnsbegravningsbyra.se/" target="_blank">Limhamns Begravningsbyrå</a><a href="http://www.sparbanksstiftelsenskane.se/" target="_blank">Sparbanksstiftelsen Skåne och Swedbank</a>',
 				'placeholder' => '',
 				'maxlength' => '',
 				'rows' => '',

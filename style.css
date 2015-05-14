@@ -1085,25 +1085,20 @@ footer .list-unstyled a{
 	border-radius: 50%;
 	overflow: hidden;
 	background-color: #fff;
-
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
 }
 
 .hover-map {
-	transition: all 1s ease-in-out;
+	overflow: hidden;
 }
 
 .hover-map:hover {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	opacity: 0.5;
-	transition: all 1s ease-in-out;
+	opacity: 0.4;
 }
 
 .map img {
-	overflow: hidden;
 	height: 270px;
 	width: auto;
 }
