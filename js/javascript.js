@@ -118,12 +118,6 @@ $(function () {
 $(function() {
     var all_active_posts = $(".active-post");
 
-    alert(all_active_posts);
-
-    if(all_active_posts === undefined) {
-        alert("nu");
-    }
-
         all_active_posts.each(function(index, value) { 
             if(index <= 11) { 
                 $(this).addClass("show-post");
@@ -135,10 +129,9 @@ $(function() {
             $(".filter-wrapper .btn").on('click', reload_posts);
 
             function load_more() {
+                //onclick load more content
                 var all_active_posts = $(".active-post");
-                if(all_active_posts === undefined) {
-                    alert("nu");
-                }
+
                 
                 all_active_posts.each(function(index, value) { 
                     if(index <= 3) { 
@@ -146,18 +139,17 @@ $(function() {
                         $(this).removeClass("active-post");
                     }
                 });
+
+                if (! $("article").hasClass("active-post")) {
+                    $(".load-more").prop("disabled",true);
+                }
             };
 
             function reload_posts() {
-
+                //onload load standard content
                 $(".post-content").removeClass("show-post");
 
                 var all_active_posts = $(".active-post");
-
-
-                if(all_active_posts === undefined) {
-                    alert("nu");
-                }
                 
                 all_active_posts.each(function(index, value) { 
                     if(index <= 11) { 

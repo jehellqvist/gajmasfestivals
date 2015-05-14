@@ -21,5 +21,5 @@
 
         </div><!--/.nav-collapse -->
       </div><!--End .container-->
-</nav>
+  </nav>
 </div>
