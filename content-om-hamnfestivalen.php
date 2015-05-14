@@ -21,7 +21,7 @@ Template Name: om-hamnfestivalen
 		</div><!--.social_share col-lg-8 col-lg-offset-2 center-text-->
 
 		<div class="col-md-12">
-			<?php $shortcode = '[alpine-phototile-for-instagram id=136 user="jenniehellqvist" src="global_tag" tag="'.get_field('hash-tag').'" imgl="instagram" style="wall" row="6" size="M" num="6" highlight="1" align="center" max="100"]'?>
+			<?php $shortcode = '[alpine-phototile-for-instagram id=136 user="jenniehellqvist" src="global_tag" tag="'.get_field('hash-tag').'" imgl="instagram" style="wall" row="7" size="M" num="7" highlight="1" align="center" max="100" nocredit="1"] '?>
 			<?php echo do_shortcode($shortcode);?>
 		</div>
 	</div><!--#about-->
