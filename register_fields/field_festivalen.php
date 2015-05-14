@@ -156,7 +156,7 @@ if(function_exists("register_field_group"))
 				'key' => 'field_555462e461882',
 				'label' => 'Aktör 3 Citat',
 				'name' => 'aktor_3_citat',
-				'type' => 'text',
+				'type' => 'textarea',
 				'required' => 1,
 				'default_value' => '',
 				'placeholder' => '',
