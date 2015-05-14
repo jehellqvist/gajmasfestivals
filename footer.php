@@ -70,8 +70,12 @@
  
 </div><!--End of #wrapper-->
  
-<?php wp_footer(); ?> <!--is what WordPress uses to add things to the bottom of the
-site, more often that not used by plugins to add things like site tracking code.-->
+<?php wp_footer(); ?> 
+
+<!--run after all scripts are done-->
+<script type="text/javascript">
+
+</script>
 
 </body>
 </html>
