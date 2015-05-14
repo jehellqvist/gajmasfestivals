@@ -122,6 +122,8 @@ function themeslug_theme_customizer( $wp_customize ) {
         'label'    => __( 'Arrangör webbsida', 'themeslug' ),
         'section'  => 'themeslug_footer_section',
         'settings' => 'themeslug_footer_webpage',
+        ))
+    );
 
 }
 add_action( 'customize_register', 'themeslug_theme_customizer' );
