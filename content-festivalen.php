@@ -12,11 +12,17 @@ Template Name: festivalen
 		<h1><?php echo get_field('rubrik')?></h1>		
 		<p class="introtext"><?php echo get_field('introtext')?></p>
 
-		<a href="http://localhost/gajmas/for-medverkande-aktorer/">
-			<div class="aktor-medverka">
-				<p><?php echo get_field('medverka_lank')?></p>
-			</div><!--end aktor-medverka-->
-		</a>
+        <ul class="list-unstyled list-inline festivalen-btn">
+            <li>
+                <a href="http://localhost/gajmas/for-medverkande-aktorer/">
+				<button class="btn"><?php echo get_field('medverka_lank')?></button>
+                </a>
+            </li>
+
+            <li><a class="fa fa-facebook-square festivalen-icon" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
+            <li><a class="fa fa-instagram festivalen-icon" href="https://instagram.com/pohamnfestivalen/" title="Instagram" target="_blank"></a></li>
+            <!--<li><a class="fa fa-google-plus-square" href="https://plus.google.com/share?url=http://www.hamnfestivalen.se/" title="Google +" target="_blank"></a></li>-->
+        </ul>
 
 	</div><!--end .festivalen-->
 	<div class="row aktor">
@@ -58,7 +64,7 @@ Template Name: festivalen
             </div><!--.inner-bottom--> 
         </article><!--End . col-*-* -->
     </div><!--end .aktor-->
-
-
+    
+    <hr class="ample">
 
 </section><!-- #post-## -->

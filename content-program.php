@@ -18,6 +18,11 @@ Template Name: program
 	<div class="row">
 		<div class="col-md-12 text-center">
 			<button type="button" class="load-more btn btn-default"><i class="fa fa-refresh"></i>Visa fler</button>
+			<ul class="list-unstyled list-inline">
+						<li><a class="fa fa-facebook-square" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
+						<li><a class="fa fa-instagram" href="https://instagram.com/pohamnfestivalen/" title="Instagram" target="_blank"></a></li>
+						<!--<li><a class="fa fa-google-plus-square" href="https://plus.google.com/share?url=http://www.hamnfestivalen.se/" title="Google +" target="_blank"></a></li>-->
+			        </ul>
 		</div>
 	</div>
 	<hr class="ample">

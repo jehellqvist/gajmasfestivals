@@ -501,6 +501,13 @@ header {
 	text-align: center;
 }
 
+
+#festivalen .ample {
+	margin-top: 100px;
+	background-repeat: repeat-x;
+}
+
+
 #festivalen {
 	text-align:center;
 }
@@ -508,8 +515,25 @@ header {
 #festivalen .actor {
 	width:430px;
 }
-#festivalen .btn {
-	float:right;
+
+
+.festivalen-btn {
+	margin-top: 40px;
+}
+.festivalen .btn {
+	margin-top: -12px;
+}
+
+.festivalen .btn:hover {
+	margin-top: -12px;
+}
+
+.festivalen-icon{
+	font-size: 2em !important;
+}
+
+.festivalen-icon:hover{
+	text-decoration: none;
 }
 
 .author {
@@ -1208,12 +1232,14 @@ footer .list-unstyled a{
 }
 
 .portfolio-modal {
+	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 0 !important;
 	padding-right: 0 !important;}
 
-.portfolio-modal h3 {
+.portfolio-modal h3,
+.portfolio-modal h4 {
 	padding: 70px 0 0px 0;
 	margin: 0;
 	font-family: 'Museo';
@@ -1223,6 +1249,11 @@ footer .list-unstyled a{
 .portfolio-modal img {
 	padding: 80px 0px;
 	width: 100%;
+	display: block;
+}
+
+.portfolio-modal .fa {
+	color: #222 !important;
 }
 
 	/* Small devices (tablets, 768px and up) */
@@ -2430,6 +2461,31 @@ html, body {
 
 /**/
 
+
+.medverkande .map-section {
+	text-align: center;
+}
+.medverkande .map {	
+		width: 140px;
+		height: 140px;
+		margin: auto;
+		display: inline-block;
+		border: 5px solid #fff;
+		box-shadow: 0 0 0 2px #cecece;
+		margin-top: 0;
+	}
+
+	.medverkande .map img{
+		height: 190px;
+		width: auto;
+		margin-left: -10px;
+
+	}
+
+	.medverkande .modal-content img {
+		padding-top: 50px;
+	}
+
 .medverkande h1{
 	padding:3% 0 3% 0;
 	text-align: center;
@@ -2577,6 +2633,7 @@ table{
 
 #festivalen{
 	padding-top: 50px;
+	padding-bottom: 0px;
 }
 
 .festivalen{
