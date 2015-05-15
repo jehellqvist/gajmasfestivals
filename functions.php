@@ -128,6 +128,58 @@ function themeslug_theme_customizer( $wp_customize ) {
 }
 add_action( 'customize_register', 'themeslug_theme_customizer' );
 
+function change_post_menu_label() {
+    global $menu;
+    global $submenu;
+    $menu[5][0] = 'Program';
+    $submenu['edit.php'][5][0] = 'Alla Programpunkter';
+    $submenu['edit.php'][10][0] = 'Ny Programpunkt';
+    echo '';
+}
+
+//Change name of Inlägg till Program
+function change_post_object_label() {
+        global $wp_post_types;
+        $labels = &$wp_post_types['post']->labels;
+        $labels->name = 'Programpunkter';
+        $labels->singular_name = 'Programpunkt';
+        $labels->add_new = 'Lägg till Programpunkt';
+        $labels->add_new_item = 'Lägg till Programpunkt';
+        $labels->edit_item = 'Ändra Programpunkt';
+        $labels->new_item = 'Programpunkt';
+        $labels->view_item = 'Visa Programpunkt';
+        $labels->search_items = 'Sök Programpunkt';
+        $labels->not_found = 'Inga Programpunkter funna';
+        $labels->not_found_in_trash = 'Inga Programpunkter funna i papperskorgen';
+    }
+add_action( 'init', 'change_post_object_label' );
+add_action( 'admin_menu', 'change_post_menu_label' );
+
+
+function custom_menu_order($menu_ord) {
+    if (!$menu_ord) return true;
+     
+    return array(
+        'index.php', // Dashboard
+        'separator1', // First separator
+        'edit.php?post_type=page', // Pages
+        'edit.php', // Posts
+        'edit.php?post_type=custom_slide',
+        'separator2', // Second separator
+        'upload.php', // Media
+        'link-manager.php', // Links
+        'edit-comments.php', // Comments
+        'themes.php', // Appearance
+        'plugins.php', // Plugins
+        'users.php', // Users
+        'tools.php', // Tools
+        'options-general.php', // Settings
+        'separator-last', // Last separator
+    );
+}
+add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
+add_filter('menu_order', 'custom_menu_order');
+
 
 /**
  * html5_shiv function.
@@ -635,9 +687,9 @@ function get_the_slug( $id=null ){
 
 
 
-/*CODE FOR CUSTOM SLIDESHOW IN WORDPRESS*/
+/*CODE FOR CUSTOM BILDSPEL IN WORDPRESS*/
 add_theme_support( 'post-thumbnails' );
-add_filter('manage_posts_columns', 'posts_columns', 5);
+add_filter('manage_posts_columns', 'posts_columns', 3);
 add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
 function posts_columns($defaults){
     $defaults['riv_post_thumbs'] = __('Thumbs');
@@ -645,7 +697,6 @@ function posts_columns($defaults){
 }
 function posts_custom_columns($column_name, $id){
         if($column_name === 'riv_post_thumbs'){
-         
         echo the_post_thumbnail( 'thumbnail' );
     }
 }
