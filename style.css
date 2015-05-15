@@ -2679,6 +2679,10 @@ table{
 	text-decoration: none!important;
 	
 }
-.AlpinePhotoTiles-image-div{
-	margin:0 !important;
+
+@media all and (max-width: 480px)  {
+     .omradet-water {
+     	clear:left;
+
+    }
 }
