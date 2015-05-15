@@ -19,8 +19,8 @@ Template Name: festivalen
 		</a>
 
 	</div><!--end .festivalen-->
-	
 	<div class="row aktor">
+
 		<article class="col-xs-12 col-md-3 post-content">
             <div class="inner" style="background-image:url('<?php echo get_field('aktor_1_bild')?>')"></div>
             <div class="inner-bottom">

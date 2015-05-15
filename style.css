@@ -253,6 +253,7 @@ header {
 			padding-top: .2%;
 			width:80%!important;
 			font-size: 1em!important;
+
 		}
 	}
 
@@ -263,6 +264,7 @@ header {
 			padding-top: .1%;
 			width:80%!important;
 			font-size: 1.05em!important;
+			z-index:15!important;
 		}
 
 		.navbar-brand { 
@@ -2370,6 +2372,13 @@ html, body {
 	transition: height .5s ease;
 }
 
+.smaller{
+	height:40px;
+	margin:5px 10px; 
+}
+
+
+
 .margin{
 	margin:0px!important;
 	-webkit-transition: margin .5s ease;
@@ -2577,13 +2586,13 @@ table{
 .aktor{
 	margin: 0!important;
 	padding:0!important;
-}
 
+}
 
 #festivalen .post-content{
 	margin:0 auto;
 	width:28%;
-	margin-left: 3.75%!important
+	margin-left: 3.75%!important;
 }
 
 #festivalen .post-content .wave:before{
@@ -2609,9 +2618,9 @@ table{
 
 #festivalen .aktor-medverka{
 	width:200px;
-	height:200px;
+	height:100px;
 	border-radius: 50%;
-	background-color: rgba(20,49,116, 1);
+	background:rgba(123,169,222, 1);
 	position: absolute;
 	right:150px;
 	top:135px;
@@ -2624,11 +2633,11 @@ table{
 #festivalen .aktor-medverka p{
 	color:#fff;
 	font-size: 1.6em;
-	padding-top: 80px;
+	padding-top: 35px;
 }
 
 #festivalen .introtext{
-	text-align: left;
+	text-align: center;
 	width:60%;
 	margin:auto;
 	padding-top:30px;
@@ -2659,4 +2668,22 @@ table{
 .not-found img {
 	margin: auto;
 	max-width: 240px;
+}
+
+.footer_mail p{
+	font-weight: 200;
+	color:rgba(250,250,250,1) ;
+}
+
+.footer_mail:active, .footer_mail:visited, .footer_mail:hover{
+	color:rgba(250,250,250,1) !important;
+	text-decoration: none!important;
+	
+}
+
+@media all and (max-width: 480px)  {
+     .omradet-water {
+     	clear:left;
+
+    }
 }

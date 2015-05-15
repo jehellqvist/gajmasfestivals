@@ -19,7 +19,7 @@
 						<div class="col-md-4 col-sm-4 center top">
 						<!--<p>E-post: <a href="mailto:info@polimhamn.se">info@polimhamn.se </a></p>-->
 							<i class="fa fa-envelope-o"></i>
-							<p><?php echo get_theme_mod( 'themeslug_footer_mail' ); ?></p>
+							<a class="footer_mail" href="mailto:<?php echo get_theme_mod( 'themeslug_footer_mail' );?>?Subject=Hamnfestivalen"><p><?php echo get_theme_mod( 'themeslug_footer_mail' ); ?></p></a>
 						</div>
 
 						<div class="col-md-4 col-sm-4 center top">

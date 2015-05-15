@@ -35,13 +35,15 @@ $(function() {
   var nav_ul = $("#one-page-nav");
   var logo = $(".site-title");
   var nav_logo = $(".nav-logo");
+  var nav_button = $(".navbar-toggle")
 
   nav_container.waypoint({
     handler: function() {
         nav.toggleClass('stuck'),
         nav_ul.toggleClass('margin'),
         logo.toggleClass('opacity'),
-        nav_logo.toggleClass('show')
+        nav_logo.toggleClass('show'),
+        nav_button.toggleClass('smaller')
     },
     offset: 60
   });

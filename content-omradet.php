@@ -62,7 +62,7 @@ Template Name: omradet
 			<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/toalett.png" alt="Toalett ikon" class="omradet-icon">		
 			<p><?php echo get_field('toaletter')?></p>
 		</div><!--.col-*-->
-		<div class="col-md-3 col-xs-6">
+		<div class="col-md-3 omradet-water col-xs-6">
 			<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/water.png" alt="Vatten ikon" class="omradet-icon">
 			<p><?php echo get_field('vatten')?></p>
 		</div><!--.col-*-->
