@@ -253,6 +253,7 @@ header {
 			padding-top: .2%;
 			width:80%!important;
 			font-size: 1em!important;
+
 		}
 	}
 
@@ -263,6 +264,7 @@ header {
 			padding-top: .1%;
 			width:80%!important;
 			font-size: 1.05em!important;
+			z-index:15!important;
 		}
 
 		.navbar-brand { 
@@ -2676,4 +2678,7 @@ table{
 	color:rgba(250,250,250,1) !important;
 	text-decoration: none!important;
 	
+}
+.AlpinePhotoTiles-image-div{
+	margin:0 !important;
 }
