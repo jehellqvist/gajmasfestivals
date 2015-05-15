@@ -948,6 +948,7 @@ header {
     -moz-transition: opacity 1s ease;
     -o-transition: opacity 1s ease;
     transition: opacity 1s ease;
+    padding-bottom: 50px !important;
 }
 
 .AlpinePhotoTiles-image-div-container:hover {
