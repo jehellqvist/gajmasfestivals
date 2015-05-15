@@ -417,7 +417,8 @@ function posts_callback($atts=null, $content=null){
         while(have_posts()):
             the_post();
                 ?>
-                <?php foreach((get_the_category()) as $category) { 
+                <?php 
+                foreach((get_the_category()) as $category) { 
                     $cat_string .= $category->cat_name . " ";
                     if($category->category_parent == '5') { //add kategori ID
                         if($category->cat_name == 'Musik och sång vid havet') {
@@ -436,6 +437,7 @@ function posts_callback($atts=null, $content=null){
                         }
                     }   
                 }
+
                 foreach((get_the_category()) as $category) { 
                     if($category->category_parent == $d_id) {
                         if ($category->cat_name != "Torsdag"){
@@ -448,10 +450,7 @@ function posts_callback($atts=null, $content=null){
                         }
                     }
                 }
-             
-
-                
-                
+              
                //format of time field
                 if(get_field('tid') == ''){
                     $time = '';
