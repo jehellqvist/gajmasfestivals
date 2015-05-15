@@ -40,11 +40,12 @@ if(function_exists("register_field_group"))
 				'name' => 'introtext',
 				'type' => 'textarea',
 				'required' => 1,
-				'default_value' => 'På Limhamn tackar för ert deltagande under Hamnfestivalen 2015.',
+				'default_value' => 'På Limhamn tackar för ert deltagande under Hamnfestivalen 2015! Det blev en om möjligt ännu mer fantastisk festival än i fjol. Många besökare, varmt väder och mycket fina engagemang hos årets aktörer. Nu laddar vi upp igen inför nästa år, följ Hamnfestivalen på facebook för att ta del av de senaste nyheterna! 
+				Om du är intresserad av att delta som aktör på Hamnfestivalen 2016?',
 				'placeholder' => '',
 				'maxlength' => '',
 				'rows' => '',
-				'formatting' => 'br',
+				'formatting' => 'html',
 			),
 			array (
 				'key' => 'field_555461dc61879',

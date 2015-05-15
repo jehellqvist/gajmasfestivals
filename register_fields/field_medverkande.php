@@ -55,9 +55,7 @@ if(function_exists("register_field_group"))
 				'type' => 'textarea',
 				'instructions' => 'Ange introduktionstext',
 				'required' => 1,
-				'default_value' => 'Hamnfestivalen bjuder på fyra festfyllda dagar med upplevelser, musik, mat & kultur. I juli 2014 slog portarna upp till en fantastisk Hamnfestival som arrangerades längs havet i Limhamn. Hamnfestivalen 2014 drog över 15000 besökare och succén var omedelbar. Årets Hamnfestival går av stapeln den 30 juli och pågår t.om. den 2 augusti.
-	
-	Är du intresserad av att bli en medverkande aktör på Hamnfestivalen?',
+				'default_value' => '<strong>På Limhamn</strong> tackar för ert deltagande under <strong>Hamnfestivalen</strong> 2015! Det blev en om möjligt ännu mer fantastisk festival än i fjol. Många besökare, varmt väder och mycket fina engagemang hos årets aktörer. Nu laddar vi upp igen inför nästa år, följ <strong>Hamnfestivalen</strong> på facebook för att ta del av de senaste nyheterna!<br><br>Om du är intresserad av att delta som aktör på <strong>Hamnfestivalen</strong> 2016?',
 				'placeholder' => '',
 				'maxlength' => '',
 				'rows' => '',
