@@ -2666,3 +2666,14 @@ table{
 	margin: auto;
 	max-width: 240px;
 }
+
+.footer_mail p{
+	font-weight: 200;
+	color:rgba(250,250,250,1) ;
+}
+
+.footer_mail:active, .footer_mail:visited, .footer_mail:hover{
+	color:rgba(250,250,250,1) !important;
+	text-decoration: none!important;
+	
+}
