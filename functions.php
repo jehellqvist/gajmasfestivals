@@ -553,11 +553,7 @@ function get_primary_menu($the_menu) {
                 $title = $menu_item->title;
                 $id = $menu_item->object_id;
                 $url = $menu_item->url;
-                $slug = strtolower($title);
-                $slug = str_replace(' ', '-', $slug);
-                $slug = str_replace('å', 'a', $slug);
-                $slug = str_replace('ä', 'a', $slug);
-                $slug = str_replace('ö', 'o', $slug);
+                $slug = get_the_slug( $menu_item->object_id );
                 $menu_list .= '<li><a href="#' . $slug . '" class="page-scroll">' . $title . '</a></li>';
             }
             $menu_list .= '</ul>';
@@ -581,11 +577,7 @@ function get_pages_by_menu($the_menu) {
             $page_id = $menu_item->object_id;
             $title = $menu_item->title;
             $url = $menu_item->url;
-            $slug = strtolower($title);
-            $slug = str_replace(' ', '-', $slug);
-            $slug = str_replace('å', 'a', $slug);
-            $slug = str_replace('ä', 'a', $slug);
-            $slug = str_replace('ö', 'o', $slug);
+            $slug = get_the_slug( $menu_item->object_id );
             
             //$content_list .= get_template_part('content', 'program');
 
@@ -614,6 +606,22 @@ function get_pages_by_menu($the_menu) {
         return $content_list;
     }
 }
+
+
+function get_the_slug( $id=null ){
+    if( empty($id) ):
+        global $post;
+        if( empty($post) )
+            return ''; // No global $post var available.
+        $id = $post->ID;
+    endif;
+
+    $slug = basename( get_permalink($id) );
+    return $slug;
+}
+
+
+
 
 /*CODE FOR CUSTOM SLIDESHOW IN WORDPRESS*/
 add_theme_support( 'post-thumbnails' );
