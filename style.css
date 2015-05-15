@@ -2369,6 +2369,13 @@ html, body {
 	transition: height .5s ease;
 }
 
+.smaller{
+	height:40px;
+	margin:5px 10px; 
+}
+
+
+
 .margin{
 	margin:0px!important;
 	-webkit-transition: margin .5s ease;
