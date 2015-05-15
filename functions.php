@@ -431,13 +431,26 @@ function posts_callback($atts=null, $content=null){
                         }
                     }
                     if($category->category_parent == $d_id) {
-                        $day_string .= substr($category->cat_name,0,-3). ' ';
-
-                        if(substr_count($day_string, " ") > 3){
-                                $day_string = "Alla dagar";
+                        if ($category->cat_name == "Torsdag"){
+                            $day_string .= substr($category->cat_name,0,-3). ' ';
+                        }
+                    }   
+                }
+                foreach((get_the_category()) as $category) { 
+                    if($category->category_parent == $d_id) {
+                        if ($category->cat_name != "Torsdag"){
+                            $day_string .= substr($category->cat_name,0,-3). ' ';
+               
+                            if(substr_count($day_string, " ") > 3){
+                                    $day_string = "Alla dagar";
                             }
+
+                        }
                     }
                 }
+             
+
+                
                 
                //format of time field
                 if(get_field('tid') == ''){
