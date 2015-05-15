@@ -250,9 +250,10 @@ header {
 		}
 
 		.nav-logo{
-			padding-top: .2%;
-			width:80%!important;
-			font-size: 1em!important;
+			margin-top: 1%;
+			width:100%!important;
+			font-size: .85em!important;
+			margin-left: -2%;
 
 		}
 	}
