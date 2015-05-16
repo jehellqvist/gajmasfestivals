@@ -15,24 +15,25 @@
 				<div class="row top">
 					<div class="col-md-12 col-sm-12 col-xs-12 center border-top">
 
-						<div class="col-md-4 col-sm-4 center top">							
+						<div class="col-md-4 col-sm-4 col-xs-4 center top">							
 							<a class="footer_mail" href="mailto:<?php echo get_theme_mod( 'themeslug_footer_mail' );?>?Subject=Hamnfestivalen">
 								<i class="fa fa-envelope-o"></i>
 								<p><?php echo get_theme_mod( 'themeslug_footer_mail' ); ?></p>
 							</a>
-						</div>
+						</div><!--End of .col-->
 
-						<div class="col-md-4 col-sm-4 center top">
+						<div class="col-md-4 col-sm-4 col-xs-4 center top">
 							<i class="fa fa-map-marker"></i>
 							<p><?php echo get_theme_mod( 'themeslug_footer_street' ); ?><br><?php echo get_theme_mod( 'themeslug_footer_address' ); ?></p>
-						</div>	
+						</div><!--End of .col-->
 
-						<div class="col-md-4 col-sm-4 center top">
+						<div class="col-md-4 col-sm-4 col-xs-4 center top">
 							<i class="fa fa-phone"></i>
 							<p><?php echo get_theme_mod ( 'themeslug_footer_phone' ); ?></p>
-						</div>		
-					</div>
-				</div>
+						</div><!--End of .col-->
+
+					</div><!--End of .col-->
+				</div> <!--End of .row-->
 			</div><!--End of .col-->
 
 			<div class="col-md-5 col-sm-12 col-md-offset-1 center">

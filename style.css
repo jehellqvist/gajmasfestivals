@@ -1178,6 +1178,29 @@ footer .list-unstyled a{
 }
 
 
+@media (max-width: 768px){
+	footer .top{
+  		font-size: .9em;
+  		padding:0!important;
+	}
+
+	footer p{
+  		font-size: .9em !important;
+	}
+
+	footer h1{
+		font-size: 1.2em !important;
+	}
+
+	.tag{
+		font-size: 1.2em !important;
+	}
+
+	.list-unstyled{
+		font-size: 2em!important;
+	}
+}
+
 /*
 *************************** OMRÅDET *****************************
 *
