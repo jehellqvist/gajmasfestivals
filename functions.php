@@ -165,11 +165,11 @@ function custom_menu_order($menu_ord) {
         'edit.php?post_type=page', // Pages
         'edit.php', // Posts
         'edit.php?post_type=custom_slide',
+        'themes.php', // Appearance
         'separator2', // Second separator
         'upload.php', // Media
         'link-manager.php', // Links
         'edit-comments.php', // Comments
-        'themes.php', // Appearance
         'plugins.php', // Plugins
         'users.php', // Users
         'tools.php', // Tools
