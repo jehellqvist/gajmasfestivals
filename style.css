@@ -244,7 +244,7 @@ header {
 			width: 70%;
 		}
 
-		#program, #festivalen{
+		#program{
 			position: relative;
 			padding:0 5px!important;
 		}
@@ -299,7 +299,7 @@ header {
 			height: 100%;	
 		}
 
-		#program, #festivalen{
+		#program{
 			position: relative;
 		}
 
@@ -394,7 +394,7 @@ header {
 			height: 100%;	
 		}
 
-		#program, #festivalen{
+		#program{
 			position: relative;
 		}
 
@@ -457,12 +457,8 @@ header {
 
 	
 /*
-***************************PROGRAM / FESTIVALEN*****************************
+***************************PROGRAM*****************************
 */
-
-.festivalen #title {
-	display:none;
-}
 
 .program, .festivalen {
 	margin-right: 0;
@@ -507,11 +503,95 @@ header {
 }
 
 
+/*---------FESTIVALEN (sida som byta ut efter festivalen ägt rum) -----------*/
+
+#festivalen{
+	padding-top: 100px;
+}
+
+#festivalen .row:first-child {
+	padding-bottom: 100px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.intro-text {
+	margin-bottom: 50px !important;
+}
+
+.aktor{
+	margin: 0!important;
+	padding:0!important;
+
+}
+
+#festivalen .post-content{
+	margin:0 auto;
+	width:28%;
+	margin-left: 3.75%!important;
+}
+
+#festivalen .post-content .wave:before{
+	right:-50px;
+	margin-bottom: -27px;
+}
+
+#festivalen .post-content .wave:after{
+	left:0px;
+	margin-bottom: 20px;
+}
+
+#festivalen .description{
+	padding-top: 20px;
+	font-size: 1.6em;
+	font-style: italic;
+}
+
+#festivalen .aktor-name{
+	padding-top: 10px;
+	font-size: 1.1em;
+}
+
+#festivalen .aktor-medverka{
+	width:200px;
+	height:100px;
+	border-radius: 50%;
+	background:rgba(123,169,222, 1);
+	position: absolute;
+	right:150px;
+	top:135px;
+	/*-webkit-transform:rotate(10deg);
+	-moz-transform:rotate(10deg);
+	-o-transform:rotate(10deg);
+	transform:rotate(10deg);*/
+}
+
+#festivalen .aktor-medverka p{
+	color:#fff;
+	font-size: 1.6em;
+	padding-top: 35px;
+}
+
+#festivalen p{
+	padding-top:30px;
+	line-height: 1.7em;
+	font-size: 1.25em;
+}
+
+#festivalen strong {
+	font-weight: 400;
+}
+
+.festivalen #title {
+	display:none;
+}
+
 #festivalen .ample {
 	margin-top: 100px;
 	background-repeat: repeat-x;
 }
-
 
 #festivalen {
 	text-align:center;
@@ -522,14 +602,14 @@ header {
 }
 
 
-.festivalen-btn {
+.festivalen-links {
 	margin-top: 40px;
 }
-.festivalen .btn {
+.festivalen-links .btn {
 	margin-top: -12px;
 }
 
-.festivalen .btn:hover {
+.festivalenlinks .btn:hover {
 	margin-top: -12px;
 }
 
@@ -544,6 +624,10 @@ header {
 .author {
 	text-align:right;
 }
+
+
+/*----------------------FILTER FUNCTION -------------------*/
+
 
 .filter-function {
 	padding-top: 80px;
@@ -561,7 +645,6 @@ header {
 	padding-right: 10px;
 }
 
-/*----------------------FILTER FUNCTION -------------------*/
 .filter-function {
 	text-align: left;
 }
@@ -1200,7 +1283,7 @@ footer .list-unstyled a{
 		font-size: 1.2em !important;
 	}
 
-	.list-unstyled{
+	footer .list-unstyled{ /*här*/
 		font-size: 2em!important;
 	}
 }
@@ -1271,7 +1354,7 @@ footer .list-unstyled a{
 	padding: 70px 0 0px 0;
 	margin: 0;
 	font-family: 'Museo';
-	font-size: 2.5em;
+	font-size: 1.8em;
 }
 
 .portfolio-modal img {
@@ -1284,8 +1367,21 @@ footer .list-unstyled a{
 	color: #222 !important;
 }
 
+.portfolio-modal .single-place {
+	font-size: 1.15em;
+}
+
 	/* Small devices (tablets, 768px and up) */
 	@media (min-width: 768px) { 
+
+		.portfolio-modal h3,
+		.portfolio-modal h4 {
+			font-size: 2.5em;
+		}
+
+		.portfolio-modal .single-place {
+			font-size: 1.5em;
+		}
 
 	}
 
@@ -1295,7 +1391,7 @@ footer .list-unstyled a{
 		.portfolio-modal img {
 			width: 90%;
 			height: auto;
-}
+		}
 
 	}
 
@@ -2302,7 +2398,8 @@ html, body {
 
 	div.sharedaddy h3.sd-title {
 		font-family: 'Museo', 'Arvo', 'Georgia', serif !important;
-		font-size: 1.4em !important;
+		padding-top: 25px;
+		font-size: 1.1em !important;
 		font-weight: 300 !important;
 	}
 
@@ -2310,7 +2407,7 @@ html, body {
 		content: ' #pohamnfestivalen';
 		font-weight: 500;
 		font-family: 'Museo', 'Arvo', 'Georgia', serif !important;
-		font-size: 1.4em !important;
+		font-size: 1.1em !important;
 		font-weight: 300 !important;
 	}
 
@@ -2319,6 +2416,7 @@ html, body {
 
 	/* Small devices (tablets, 768px and up) */
 	@media (min-width: 768px) { 
+
 	}
 
 	/* Medium devices (desktops, 992px and up) */
@@ -2326,6 +2424,14 @@ html, body {
 		.post {
 			padding: 0;
 			margin: 60px 0px;
+		}
+
+		div.sharedaddy h3.sd-title {
+		font-size: 1.4em !important;
+		}
+
+		div.sharedaddy .sd-sharing:after {
+		font-size: 1.4em !important;
 		}
 	}
 
@@ -2401,8 +2507,8 @@ html, body {
 	}
 
 	.single-post .map {	
-		width: 180px;
-		height: 180px;
+		width: 140px;
+		height: 140px;
 		margin: auto;
 		display: inline-block;
 		border: 5px solid #fff;
@@ -2411,7 +2517,7 @@ html, body {
 	}
 
 	.single-post .map img{
-		height: 180px;
+		height: 150px;
 
 	}
 
@@ -2664,80 +2770,6 @@ table{
 	}
 
 
-#festivalen{
-	padding-top: 50px;
-	padding-bottom: 0px;
-}
-
-.festivalen{
-	margin-bottom: 50px !important;
-}
-
-.aktor{
-	margin: 0!important;
-	padding:0!important;
-
-}
-
-#festivalen .post-content{
-	margin:0 auto;
-	width:28%;
-	margin-left: 3.75%!important;
-}
-
-#festivalen .post-content .wave:before{
-	right:-50px;
-	margin-bottom: -27px;
-}
-
-#festivalen .post-content .wave:after{
-	left:0px;
-	margin-bottom: 20px;
-}
-
-#festivalen .description{
-	padding-top: 20px;
-	font-size: 1.6em;
-	font-style: italic;
-}
-
-#festivalen .aktor-name{
-	padding-top: 10px;
-	font-size: 1.1em;
-}
-
-#festivalen .aktor-medverka{
-	width:200px;
-	height:100px;
-	border-radius: 50%;
-	background:rgba(123,169,222, 1);
-	position: absolute;
-	right:150px;
-	top:135px;
-	/*-webkit-transform:rotate(10deg);
-	-moz-transform:rotate(10deg);
-	-o-transform:rotate(10deg);
-	transform:rotate(10deg);*/
-}
-
-#festivalen .aktor-medverka p{
-	color:#fff;
-	font-size: 1.6em;
-	padding-top: 35px;
-}
-
-#festivalen .introtext{
-	text-align: center;
-	width:60%;
-	margin:auto;
-	padding-top:30px;
-	line-height: 1.7em;
-	font-size: 1.25em;
-}
-
-#festivalen strong {
-	font-weight: 400;
-}
 
 .not-found {
 	padding: 120px 0px;

@@ -8,24 +8,25 @@ Template Name: festivalen
 ?>
 
 <section id='<?php echo $post->post_name; ?>' class='container-fluid'>
-	<div class="row festivalen">	    
-		<h1><?php echo get_field('rubrik')?></h1>		
-		<p class="introtext"><?php echo get_field('introtext')?></p>
+	<div class="row">	
+        <div class="col-md-8 col-md-offset-2">   
+    		<h1><?php echo get_field('rubrik')?></h1>		
+    		<p><?php echo get_field('introtext')?></p>
 
-        <ul class="list-unstyled list-inline festivalen-btn">
-            <li>
-                <a href="http://localhost/gajmas/for-medverkande-aktorer/">
-				<button class="btn"><?php echo get_field('medverka_lank')?></button>
-                </a>
-            </li>
+            <ul class="list-unstyled list-inline festivalen-links">
+                <li>
+                    <a href="http://localhost/gajmas/for-medverkande-aktorer/">
+    				<button class="btn"><?php echo get_field('medverka_lank')?></button>
+                    </a>
+                </li>
 
-            <li><a class="fa fa-facebook-square festivalen-icon" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
-            <li><a class="fa fa-instagram festivalen-icon" href="https://instagram.com/pohamnfestivalen/" title="Instagram" target="_blank"></a></li>
-            <!--<li><a class="fa fa-google-plus-square" href="https://plus.google.com/share?url=http://www.hamnfestivalen.se/" title="Google +" target="_blank"></a></li>-->
-        </ul>
-
-	</div><!--end .festivalen-->
-	<div class="row aktor">
+                <li><a class="fa fa-facebook-square festivalen-icon" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
+                <li><a class="fa fa-instagram festivalen-icon" href="https://instagram.com/pohamnfestivalen/" title="Instagram" target="_blank"></a></li>
+                <!--<li><a class="fa fa-google-plus-square" href="https://plus.google.com/share?url=http://www.hamnfestivalen.se/" title="Google +" target="_blank"></a></li>-->
+            </ul>
+        </div><!--.end col-md*-->
+	</div><!--end .row-->
+	<div class="row aktor festivalen">
 
 		<article class="col-xs-12 col-md-3 post-content">
             <div class="inner" style="background-image:url('<?php echo get_field('aktor_1_bild')?>')"></div>
