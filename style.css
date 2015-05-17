@@ -2414,6 +2414,10 @@ html, body {
 		padding-top: 50px;
 	}
 
+	.img-center {
+		margin: auto;
+	}
+
 
 
 /* CLASS FOR WAYPOINTS NAV */

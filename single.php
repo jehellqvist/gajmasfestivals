@@ -103,13 +103,13 @@ get_header(); ?>
                                         </div><!--End . row-->
                                     </div><!--End .container-->
                                 </div><!--End .modal-content-->
-                            </div><!--End .portfolio-modal modal fade-->
+                        </div><!--End .portfolio-modal modal fade-->
 
                         <p class="single-place"><?php echo get_field('plats_pa_kartan')?><i class="fa fa-map-marker"></i><?php echo get_field('plats')?></p>
                         </div>
                     </div><!--.inner-single-->
-                    <div class="col-md-12">
-                        <hr class="ample">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/vimplat_bred.png" alt="vimplar" class="img-responsive img-center"/>
                     </div>
                     <div class="social-sharing-buttons col-md-12 text-center">
                         <?php 
