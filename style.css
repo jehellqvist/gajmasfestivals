@@ -263,7 +263,7 @@ header {
 
 		.nav-logo{
 			padding-top: .1%;
-			width:80%!important;
+			width:27%!important;
 			font-size: .95em!important;
 			z-index:15!important;
 		}
@@ -365,6 +365,10 @@ header {
 		header {
 			width: 100%;
 			height: 100% !important;
+		}
+
+		.nav-logo{
+			width:20%;
 		}
 
 		.navbar-inverse {
