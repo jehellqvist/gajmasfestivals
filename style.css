@@ -169,6 +169,12 @@ header {
 		margin-bottom: 5px!important;
 	}
 
+	.title-box-container {
+		overflow: hidden;
+		width: 100%;
+	}
+
+
 	#title-box:before{
 			content:"";
 		  	height: 205px !important;
@@ -251,7 +257,7 @@ header {
 
 		.nav-logo{
 			margin-top: 1%;
-			width:100%!important;
+			/*width:100%!important;*/
 			font-size: .85em!important;
 			margin-left: -2%;
 
@@ -263,7 +269,7 @@ header {
 
 		.nav-logo{
 			padding-top: .1%;
-			width:27%!important;
+			/*width:27%!important;*/
 			font-size: .95em!important;
 			z-index:15!important;
 		}
@@ -368,7 +374,7 @@ header {
 		}
 
 		.nav-logo{
-			width:20%;
+			/*width:20%;*/
 		}
 
 		.navbar-inverse {
@@ -2780,7 +2786,7 @@ html, body {
 }
 
 .nav-logo, .nav-logo:active, .nav-logo:visited{
-	width:25%;
+	/*width:25%;*/
 	position:absolute;
 	font-size: 1.2em;
 	font-family: 'Museo', 'Arvo', 'Georgia', serif;
