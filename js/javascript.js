@@ -11,6 +11,20 @@ $(document).ready(function() {
     }); 
 });
 
+
+//changes open and close icon in filter menu button.
+$(function() {
+    $(".open-nav").on('click', function() {
+        if ($(".open-nav i").hasClass("fa-angle-down")) {
+            $(".open-nav i").removeClass("fa-angle-down").addClass("fa-angle-up");
+        }
+        else {
+            $(".open-nav i").removeClass("fa-angle-up").addClass("fa-angle-down");
+        }
+    }); 
+});
+
+
 $(function() {
     var trigger = 0;
     $(".filter-handlers input:checkbox").each(function() {

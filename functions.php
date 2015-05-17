@@ -217,7 +217,7 @@ function posts_callback($atts=null, $content=null){
             $option .='
             <div class="container-fluid">
                 <div class="row filter-toggling">
-                    <button type="button" class="navbar-toggle btn collapsed in" data-toggle="collapse" data-target="#filter-toggle" aria-expanded="false">
+                    <button type="button" class="open-nav navbar-toggle btn collapsed in" data-toggle="collapse" data-target="#filter-toggle" aria-expanded="false">
                         Visa alla eller filtrera <i class="fa fa-angle-down"></i>
                     </button>
                 </div><!--.fiter-toggling . row-->

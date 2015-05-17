@@ -534,6 +534,7 @@ header {
 	overflow: hidden;
 	padding-right: 0px;
     padding-left: 0px;
+    margin-bottom: 15px;
 }
 
 #festivalen article:hover {
@@ -549,7 +550,7 @@ header {
 	position: absolute;
 	height: 400px;
 	width: 100%;
-	border: 10px solid #fff;'
+	border: 0px solid #fff;
 	background-color: green;
 	z-index: 40;
 	overflow: hidden;
@@ -716,6 +717,13 @@ header {
 	text-align:right;
 }
 
+.festivalen {
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 
 /* Small devices (tablets, 768px and up) */
 	@media (min-width: 500px) { 
@@ -734,6 +742,7 @@ header {
 		}
 
 		#festivalen article .extra {
+			border: 10px solid #fff;
 			height: 480px;
 		}
 		#festivalen article{
@@ -770,6 +779,7 @@ header {
 		}
 
 		#festivalen article .extra {
+			border: 10px solid #fff;
 			height: 400px;
 		}
 		#festivalen article{
