@@ -696,12 +696,12 @@ header {
 }
 
 .festivalen-links a:hover {
-	color: rgba(51,106,171,0.8);
+	color: rgba(51,106,171,0.7);
 }
 
-.festivalenlinks .btn:hover {
+.festivalen-links .btn:hover {
 	margin-top: -12px;
-	color: rgba(51,106,171,0.8) !important;
+	color: rgba(51,106,171,0.7);
 }
 
 .festivalen-icon{
