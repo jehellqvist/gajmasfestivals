@@ -460,7 +460,7 @@ header {
 ***************************PROGRAM*****************************
 */
 
-.program, .festivalen {
+.program {
 	margin-right: 0;
 	margin-left: 0;
 	padding-top: 50px;
@@ -476,7 +476,7 @@ header {
 	padding-right: -15px;
 }
 
-#program, #festivalen {
+#program {
 	position: relative;
 	background: #fff;
 	z-index: 3 !important;
@@ -505,12 +505,19 @@ header {
 
 /*---------FESTIVALEN (sida som byta ut efter festivalen ägt rum) -----------*/
 
-#festivalen{
+#festivalen {
+	position: relative;
+	background: #fff;
+	z-index: 3 !important;
 	padding-top: 100px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 #festivalen .row:first-child {
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 	margin-right: 0px;
 	margin-left: 0px;
 	padding-right: 0px;
@@ -521,37 +528,114 @@ header {
 	margin-bottom: 50px !important;
 }
 
-.aktor{
-	margin: 0!important;
-	padding:0!important;
-
-}
-
-#festivalen .post-content{
+#festivalen article{
 	margin:0 auto;
-	width:28%;
-	margin-left: 3.75%!important;
+	height: 400px;
+	overflow: hidden;
+	padding-right: 0px;
+    padding-left: 0px;
 }
 
-#festivalen .post-content .wave:before{
+#festivalen article:hover {
+	opacity: 1 !important;
+}
+
+#festivalen .festivalen-wave {
+		width: 100%;
+		height: 60%;
+}
+
+#festivalen article .extra {
+	position: absolute;
+	height: 400px;
+	width: 100%;
+	border: 10px solid #fff;'
+	background-color: green;
+	z-index: 40;
+	overflow: hidden;
+}
+
+#festivalen .festivalen-inner-bottom {
+	overflow: hidden;
+	width: 100%;
+	height: 170px;
+	border-radius: 2px;
+}
+
+#festivalen .festivalen-wave {
+	overflow: hidden;
+	border-radius: 2px;
+}
+
+#festivalen article .festivalen-wave:before{
+	content: '';
+	position: absolute;
+	bottom: -50px;
+	width: 800px;
 	right:-50px;
-	margin-bottom: -27px;
+	margin: 0 0 -27px -30px;
+	height: 270px;
+	background-color: rgba(34,60,126, 0.99);
+	-webkit-transform: rotate(-7deg);
+	-o-transform: rotate(-7deg);
+	-moz-transform: rotate(-7deg);
+	transform: rotate(-7deg);
 }
 
-#festivalen .post-content .wave:after{
+#festivalen article .festivalen-wave:after{
+	content: '';
+	position: absolute;
+	bottom: -100px;
+	width: 800px;
+	height: 270px;
 	left:0px;
-	margin-bottom: 20px;
+	margin: 0 0 20px -30px;
+	background-color: rgba(51,106,171, 1);
+	-webkit-transform: rotate(7deg);
+	-o-transform: rotate(7deg);
+	-moz-transform: rotate(7deg);
+	transform: rotate(7deg);
 }
 
-#festivalen .description{
+#festivalen article .festivalen-inner {
+	width: 100%;
+	height:220px;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: center bottom;
+    border-radius: 2px;
+}
+
+#festivalen article .festivalen-inner-content {
+	z-index: 2;
+	height: 180px;
+	width: 100%;
+	color: #fff;
+	padding: 0% 10%;
+	position: absolute;
+	bottom: 0;
+	overflow: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	left: 0;
+	border-radius: 2px;
+}
+
+#festivalen .festivalen-description{
 	padding-top: 20px;
-	font-size: 1.6em;
+	font-size: 1.4em;
 	font-style: italic;
+	line-height: 1.5em;
 }
 
 #festivalen .aktor-name{
 	padding-top: 10px;
 	font-size: 1.1em;
+	line-height: 1.3em;
 }
 
 #festivalen .aktor-medverka{
@@ -597,20 +681,27 @@ header {
 	text-align:center;
 }
 
-#festivalen .actor {
-	width:430px;
-}
 
 
 .festivalen-links {
 	margin-top: 40px;
 }
+
 .festivalen-links .btn {
 	margin-top: -12px;
 }
 
+.festivalen-links a {
+	color: rgba(51,106,171,1);
+}
+
+.festivalen-links a:hover {
+	color: rgba(51,106,171,0.8);
+}
+
 .festivalenlinks .btn:hover {
 	margin-top: -12px;
+	color: rgba(51,106,171,0.8) !important;
 }
 
 .festivalen-icon{
@@ -624,6 +715,118 @@ header {
 .author {
 	text-align:right;
 }
+
+
+/* Small devices (tablets, 768px and up) */
+	@media (min-width: 500px) { 
+		.festivalen {
+			margin-left: 40px;
+			margin-right: 40px;
+		}
+
+		#festivalen article .festivalen-inner-content {
+			padding: 0% 2%;
+		}
+
+		#festivalen .festivalen-description{
+			padding-top: 40px;
+			font-size: 1.6em;
+		}
+
+		#festivalen article .extra {
+			height: 480px;
+		}
+		#festivalen article{
+			height: 480px;
+		}
+
+		#festivalen article .festivalen-inner {
+			height:270px;
+		}
+
+		#festivalen article .festivalen-inner-content {
+			z-index: 2;
+			height: 210px;
+		}
+
+		#festivalen .festivalen-inner-bottom {
+  			height: 210px;
+  		}
+
+  		#festivalen article .festivalen-wave:after { 
+  			bottom: -80px;
+  		}  		
+
+  		#festivalen article .festivalen-wave:before { 
+  			bottom: -30px;
+  		}
+
+	}
+
+		@media (min-width: 768px) { 
+		#festivalen .festivalen-description{
+			padding-top: 20px;
+			font-size: 1.4em;
+		}
+
+		#festivalen article .extra {
+			height: 400px;
+		}
+		#festivalen article{
+			height: 400px;
+		}
+
+		#festivalen article .festivalen-inner {
+			height: 220px;
+		}
+
+		#festivalen article .festivalen-inner-content {
+			z-index: 2;
+			height: 180px;
+		}
+
+		#festivalen .festivalen-inner-bottom {
+  			height: 180px;
+  		}
+
+  		#festivalen article .festivalen-wave:after { 
+  			bottom: -120px;
+  		}  		
+
+  		#festivalen article .festivalen-wave:before { 
+  			bottom: -70px;
+  		}
+
+	}
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: 992px) { 
+		#om-hamnfestivalen .row:last-child {
+		padding-top: 20px;
+		}
+
+		#festivalen article .festivalen-inner-content {
+			padding: 0% 10%;
+		}
+
+		#festivalen .festivalen-description{
+			padding-top: 10px;
+			font-size: 1.4em;
+		}
+
+	}
+
+	/* Large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {  
+		#festivalen article .festivalen-inner-content {
+			padding: 0% 10%;
+		}
+
+		#festivalen .festivalen-description{
+			padding-top: 20px;
+			font-size: 1.4em;
+		}
+
+	}
 
 
 /*----------------------FILTER FUNCTION -------------------*/
@@ -2136,12 +2339,12 @@ html, body {
 			margin:0 0 1.5% 0;
 			}
 
-		.post-content .inner:hover {
+		.program .post-content .inner:hover {
 			opacity: 0.8;
-			-webkit-transition: opacity .8s ease;
-			-moz-transition: opacity .8s ease;
-			-o-transition: opacity .8s ease;
-			transition: opacity .8s ease;
+			-webkit-transition: opacity 0.8s ease;
+		    -moz-transition: opacity 0.8s ease;
+		    -o-transition: opacity 0.8s ease;
+		    transition: opacity 0.8s ease;
 		}
 
 		.post-content .inner {
@@ -2238,12 +2441,12 @@ html, body {
 
 		/*Containing div*/
 
-		.post-content .inner:hover {
+		.program .post-content .inner:hover {
 			opacity: 0.8;
-			-webkit-transition: opacity .8s ease;
-			-moz-transition: opacity .8s ease;
-			-o-transition: opacity .8s ease;
-			transition: opacity .8s ease;
+			-webkit-transition: opacity 0.8s ease;
+		    -moz-transition: opacity 0.8s ease;
+		    -o-transition: opacity 0.8s ease;
+		    transition: opacity 0.8s ease;
 		}
 
 		.post-content .inner {
