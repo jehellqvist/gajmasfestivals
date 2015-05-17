@@ -7,7 +7,7 @@ Template Name: medverkande-aktorer
  
 get_header(); ?>
 
- <nav id="single-post-page-nav"role="navigation" >
+ <nav id="single-post-page-nav" role="navigation" >
   <div class="container-fluid">
     <a href="<?php echo esc_url(home_url( '/' )); ?>"><i class="fa fa-chevron-left"></i></a>
           <?php
