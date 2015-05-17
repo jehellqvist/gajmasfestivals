@@ -12,7 +12,7 @@
 					vidareutveckla Limhamn som besök- och turistdestination. Samverkan är grunden i hela vår verksamhet och även den övergripande 
 					metoden för vårt arbete. Läs mer om arrangören bakom Hamnfestivalen på <a target="_blank" href='<?php echo esc_url (get_theme_mod( 'themeslug_footer_webpage' )); ?>'><?php echo get_theme_mod( 'themeslug_footer_webpage' ); ?></a></p>
 			
-				<div class="row top">
+				<div class="row top notranslate">
 					<div class="col-md-12 col-sm-12 col-xs-12 center border-top">
 
 						<div class="col-md-4 col-sm-4 col-xs-4 center top">							
@@ -37,7 +37,7 @@
 			</div><!--End of .col-->
 
 			<div class="col-md-5 col-sm-12 col-md-offset-1 center">
-				<h1>Följ Hamnfestivalen</h1>
+				<h1>Följ <span class="notranslate">Hamnfestivalen</span></h1>
 					<ul class="list-unstyled list-inline">
 						<li><a class="fa fa-facebook-square" href="https://www.facebook.com/hamnfestivalenpolimhamn" title="Facebook" target="_blank"></a></li>
 						<li><a class="fa fa-instagram" href="https://instagram.com/pohamnfestivalen/" title="Instagram" target="_blank"></a></li>
@@ -55,6 +55,7 @@
 
 			<div class="col-md-12 text-center">
 				<!--<p class="design-by">Web design av <a href="http://www.gajmas.se">GAJMA</a></p>-->
+				<?php bing_translator(); ?>
 			</div>
 		
 		</div><!--End of .row-->

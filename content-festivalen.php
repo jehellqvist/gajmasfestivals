@@ -35,7 +35,7 @@ Template Name: festivalen
                 <div class="festivalen-wave">
                     <div class="festivalen-inner-content">
                         <p class="festivalen-description"><?php echo get_field('aktor_1_citat')?></p>
-						<p class="aktor-name"><?php echo get_field('aktor_1')?></p>
+						<p class="aktor-name notranslate"><?php echo get_field('aktor_1')?></p>
 					</div><!--.inner-content-->
                 </div><!--.wave-->
             </div><!--.inner-bottom--> 
@@ -49,7 +49,7 @@ Template Name: festivalen
                 <div class="festivalen-wave">
                     <div class="festivalen-inner-content">
                         <p class="festivalen-description"><?php echo get_field('aktor_2_citat')?></p>
-						<p class="aktor-name"><?php echo get_field('aktor_2')?></p>
+						<p class="aktor-name notranslate"><?php echo get_field('aktor_2')?></p>
 					</div><!--.inner-content-->
                 </div><!--.wave-->
             </div><!--.inner-bottom--> 
@@ -64,7 +64,7 @@ Template Name: festivalen
                 <div class="festivalen-wave">
                     <div class="festivalen-inner-content">
                         <p class="festivalen-description"><?php echo get_field('aktor_3_citat')?></p>
-						<p class="aktor-name"><?php echo get_field('aktor_3')?></p>
+						<p class="aktor-name notranslate"><?php echo get_field('aktor_3')?></p>
 					</div><!--.inner-content-->
                 </div><!--.wave-->
             </div><!--.inner-bottom--> 

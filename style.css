@@ -3066,3 +3066,36 @@ table{
 	z-index: 999999999999;
 	background: url(img/preloader.gif) 50% 50% no-repeat rgb(255,255,255);
 }
+
+#LauncherTranslatePhrase {
+	background: url(img/translate_2.png) !important;
+	-webkit-background-size: 100% !important;
+    -moz-background-size: 100% !important;
+    background-size: 100% !important;
+    -o-background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    overflow: hidden;
+    height: 17px !important;
+    width: 200px !important;
+}
+#TranslateSpan {
+	display: none !important;
+}
+
+#WidgetLauncher,#MicrosoftTranslatorWidget {
+height: 17px !important;
+    width: 100px !important;
+}
+#TranslateSpan,
+#TranslateSpan:hover,
+#LauncherTranslatePhrase,
+#LauncherTranslatePhrase:hover {
+	height: 17px !important;
+    width: 100px !important;
+	background-color: transparent !important;
+	border: 0px !important;
+}
+
+#LauncherLogo.WithPhraseAfter {
+	display: none;
+}

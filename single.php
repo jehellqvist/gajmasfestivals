@@ -95,7 +95,7 @@ get_header(); ?>
                                         <div class="row">
                                             <div class="col-md-12">
                                                     <h3><?php echo get_the_title() ?></h3>
-                                                    <p class="single-place"><?php echo get_field('plats_pa_kartan')?><i class="fa fa-map-marker"></i><?php echo get_field('plats')?></p>                                                    <figure>
+                                                    <p class="single-place notranslate"><?php echo get_field('plats_pa_kartan')?><i class="fa fa-map-marker"></i><?php echo get_field('plats')?></p>                                                    <figure>
                                                     <img src='<?php echo esc_url( get_theme_mod( 'themeslug_map' ) ); ?>' alt="Karta över festivalområdet" class="img-center">                  
                                                 </figure>
                                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Stäng</button>
@@ -105,7 +105,7 @@ get_header(); ?>
                                 </div><!--End .modal-content-->
                         </div><!--End .portfolio-modal modal fade-->
 
-                        <p class="single-place"><?php echo get_field('plats_pa_kartan')?><i class="fa fa-map-marker"></i><?php echo get_field('plats')?></p>
+                        <p class="single-place notranslate"><?php echo get_field('plats_pa_kartan')?><i class="fa fa-map-marker"></i><?php echo get_field('plats')?></p>
                         </div>
                     </div><!--.inner-single-->
                     <div class="col-sm-6 col-sm-offset-3">

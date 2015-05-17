@@ -11,6 +11,7 @@ Template Name: program
     <div class="row filter-function">
     	<h1><?php echo get_field('rubrik')?></h1>
     	<p class="datum"><?php echo get_field('datum')?></p>
+    	<?php the_content() ?>
 		<div class="col-sm-12">
 	<?php
 		echo do_shortcode("[posts]");

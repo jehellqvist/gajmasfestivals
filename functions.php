@@ -534,7 +534,7 @@ function posts_callback($atts=null, $content=null){
                                     <div class="content-category">
                                         <p>'. $content_cat .'</p>
                                     </div>
-                                    <div class="place">
+                                    <div class="place notranslate">
                                         <p>'.get_field('plats_pa_kartan').'</p>
                                         <i class="fa fa-map-marker"></i><p class="p-name">'.get_field('plats').'</p>
                                     </div>
@@ -614,11 +614,21 @@ function get_primary_menu($the_menu) {
             $menu_list = '<ul id="one-page-nav" class="nav navbar-nav" >';
 
             foreach ( (array) $menu_items as $key => $menu_item ) {
-                $title = $menu_item->title;
-                $id = $menu_item->object_id;
-                $url = $menu_item->url;
-                $slug = get_the_slug( $menu_item->object_id );
-                $menu_list .= '<li><a href="#' . $slug . '" class="page-scroll">' . $title . '</a></li>';
+                if ($menu_item->title =="Om") {
+                    $title = $menu_item->title;
+                    $id = $menu_item->object_id;
+                    $url = $menu_item->url;
+                    $slug = get_the_slug( $menu_item->object_id );
+                    $menu_list .= '<li><a href="#' . $slug . '" class="page-scroll">' . $title . ' <span class="notranslate">Hamnfestivalen</span></a></li>';
+
+                }
+                else {
+                    $title = $menu_item->title;
+                    $id = $menu_item->object_id;
+                    $url = $menu_item->url;
+                    $slug = get_the_slug( $menu_item->object_id );
+                    $menu_list .= '<li><a href="#' . $slug . '" class="page-scroll">' . $title . '</a></li>';
+                }
             }
             $menu_list .= '</ul>';
         } 
