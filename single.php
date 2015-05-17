@@ -21,15 +21,35 @@ get_header(); ?>
         <div class="container-fluid">
             <article class="single-post row">
                 <?php
-                    $days = get_field('dag');
-                    if(count($days)>=4){
-                        $day_list='Alla dagar';
-                    }
-                    else {
-                        foreach ($days as $day) {
-                            $day_list .= $day.', ';
+
+                    $catID = get_categories(array('parent' => '0','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
+                        foreach ($catID as $id) {
+                            $display_name = $id->cat_name;
+                            $new_id = $id->cat_ID;
+
+                            if($display_name == 'Veckodag'){
+                             $d_id = $id->cat_ID;
+                            }
                         }
-                        $day_list = substr($day_list, 0, -2);
+
+                        foreach((get_the_category()) as $category) { 
+                            if($category->category_parent == $d_id) {
+                                if ($category->cat_name == "Torsdag"){
+                                    $day_string .= substr($category->cat_name,0,-3). ' ';
+                                }
+                            }   
+                        }
+
+                        foreach((get_the_category()) as $category) { 
+                            if($category->category_parent == $d_id) {
+                                if ($category->cat_name != "Torsdag"){
+                                    $day_string .= substr($category->cat_name,0,-3). ' ';
+               
+                                if(substr_count($day_string, " ") > 3){
+                                    $day_string = "Alla dagar";
+                                }
+                            }
+                        }
                     }
 
                     //format of time field
@@ -48,7 +68,7 @@ get_header(); ?>
                     <div class="inner-single col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
                         <header role="banner">
                             <h2><?php echo get_the_title() ?></h2>
-                            <p class="content-meta"><?php echo $day_list?><?php echo $time?><p>
+                            <p class="content-meta"><?php echo $day_string?><?php echo $time?><p>
                         </header>
                         <p class="description"><?php echo get_field('beskrivning')?></p>
                         <div class="content-meta">
