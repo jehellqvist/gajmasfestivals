@@ -1468,6 +1468,7 @@ footer .list-unstyled a{
 }
 
 #hitta-hit {
+	padding-top: 20px;
 	color: #303030;
 	background-color: rgba(123,169,222, 1); /*green:#22BC56;*/
 	padding-bottom: 90px;
