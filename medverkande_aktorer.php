@@ -60,7 +60,7 @@ get_header(); ?>
 					</div>
 					<div class="col-md-3 sidebar">
 						<div class="row">
-							<div class="col-md-12 col-sm-4 col-xs-12">
+							<div class="col-md-12 col-sm-6 col-xs-12">
 								<h3>Blanketter och Avtal</h3>
 								<p><a class="left" href="<?php echo get_field('avtal_aktiviteter')?>" download="avtal_aktiviteter.pdf"><i class="fa fa-download"></i>Blankett för aktiviteter </a></p>
 								<p class="top-neg"><a class="left" href="<?php echo get_field('avtal_mat')?>" download="avtal_mat.pdf"><i class="fa fa-download"></i>Blankett för mat</a></p>
@@ -68,14 +68,14 @@ get_header(); ?>
 								<p class="top-neg"><a class="left" href="<?php echo get_field('avtal_el')?>" download="avtal_el.pdf"><i class="fa fa-download"></i>Blankett för el</a></p>
 
 							</div>
-						<div class="col-md-12 col-sm-4 col-xs-12">
+						<div class="col-md-12 col-sm-6 col-xs-12">
 							<h3>Arrangör</h3>
 							<p><?php echo get_field('arrangor')?>
 							<p class="top-neg"><i class="fa fa-phone"></i><?php echo get_field('arrangor_telefonnummer')?></p>
 						</div>
 
-            <div class="col-md-12 col-sm-4 col-xs-12 map-section">
-                <h3>Medverkande aktörer</h3>
+            <div class="col-md-12 col-sm-6 col-xs-12 map-section">
+                <h3>Medverkande aktörer <?php echo get_field('year')?></h3>
                 <a href="#popup1" class="portfolio-link" data-toggle="modal">
                     <div class="map">
                         <figure class="hover-map">
@@ -83,7 +83,7 @@ get_header(); ?>
                         </figure>
                     </div>
                 </a>
-                <p>Klicka på kartan för att översikta medverkande aktörer <?php echo get_field('year')?></p>
+                <p>Klicka på kartan för att översikta medverkande aktörer <?php echo get_field('year')?>.</p>
             </div>
 
 
@@ -100,7 +100,7 @@ get_header(); ?>
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-12">
-                                            <h4>Karta över medverkande aktörer <?php echo get_field('year')?></h4>
+                                            <h4>Medverkande aktörer <?php echo get_field('year')?></h4>
                                             <img src='<?php echo esc_url( get_theme_mod( 'themeslug_map' ) ); ?>' alt="Karta över festivalområdet" class="img-center">                  
                                         </figure>
                                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Stäng</button>
@@ -110,7 +110,7 @@ get_header(); ?>
                         </div><!--End .modal-content-->
                 </div><!--End .portfolio-modal modal fade-->
 
-						<div class="col-md-12 col-sm-4 col-xs-12">
+						<div class="col-md-12 col-sm-6 col-xs-12">
 							<h3>Arrangemanget marknadsförs i</h3>
 							<p><?php echo get_field('marknadsfors_i')?></p>
 
