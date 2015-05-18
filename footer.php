@@ -17,19 +17,21 @@
 					<div class="col-md-12 col-sm-12 col-xs-12 center border-top">
 
 						<div class="col-md-4 col-sm-4 col-xs-4 center top">							
-							<a class="footer_mail" href="mailto:<?php echo get_theme_mod( 'themeslug_footer_mail' );?>?Subject=Hamnfestivalen">
+							<a class="footer_links" href="mailto:<?php echo get_theme_mod( 'themeslug_footer_mail' );?>?Subject=Hamnfestivalen">
 								<i class="fa fa-envelope-o"></i>
 								<p><?php echo get_theme_mod( 'themeslug_footer_mail' ); ?></p>
 							</a>
 						</div><!--End of .col-->
 
 						<div class="col-md-4 col-sm-4 col-xs-4 center top">
-							<i class="fa fa-map-marker"></i>
-							<p><?php echo get_theme_mod( 'themeslug_footer_street' ); ?><br><?php echo get_theme_mod( 'themeslug_footer_address' ); ?></p>
+							<a class="footer_links" href="http://goo.gl/QFE8k7">
+								<i class="fa fa-map-marker"></i>
+								<p><?php echo get_theme_mod( 'themeslug_footer_street' ); ?><br><?php echo get_theme_mod( 'themeslug_footer_address' ); ?></p>
+							</a>
 						</div><!--End of .col-->
 
 						<div class="col-md-4 col-sm-4 col-xs-4 center top">
-							<a class="footer_mail" href="tel:+46760104405">
+							<a class="footer_links" href="tel:+46760104405">
 								<i class="fa fa-phone"></i>
 								<p><?php echo get_theme_mod ( 'themeslug_footer_phone' ); ?></p>
 							</a>

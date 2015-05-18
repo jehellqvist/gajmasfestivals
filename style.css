@@ -1475,8 +1475,22 @@ footer a{
 
 footer a:visited, footer a:hover, footer a:active {
 	color: rgba(250,250,250,1);
-	font-size: 1.1em;
+	font-size: 1.05em;
 	text-decoration: none !important;
+}
+
+.footer_links p{
+	font-weight: 200;
+	font-size: 1em;
+	color:rgba(250,250,250,1) ;
+}
+
+.footer_links:active, .footer_links:visited, .footer_links:hover{
+	color:rgba(250,250,250,1) !important;
+	text-decoration: none!important;
+	font-size: 1.05em;
+
+	
 }
 
 footer i{
@@ -3049,16 +3063,7 @@ table{
 	max-width: 240px;
 }
 
-.footer_mail p{
-	font-weight: 200;
-	color:rgba(250,250,250,1) ;
-}
 
-.footer_mail:active, .footer_mail:visited, .footer_mail:hover{
-	color:rgba(250,250,250,1) !important;
-	text-decoration: none!important;
-	
-}
 
 @media all and (max-width: 480px)  {
      .omradet-water {

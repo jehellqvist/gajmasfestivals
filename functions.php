@@ -28,7 +28,7 @@ function themeslug_theme_customizer( $wp_customize ) {
     //Adds logo field
     $wp_customize->add_section( 'themeslug_logo_section' , array(
         'title'       => __( 'Logo', 'themeslug' ),
-        'priority'    => 30,
+        'priority'    => 40,
         'description' => 'Lägg till en bild för att byta logga i headern',
         ) 
     );
@@ -46,7 +46,7 @@ function themeslug_theme_customizer( $wp_customize ) {
     //Map
     $wp_customize->add_section( 'themeslug_map_section' , array(
         'title'       => __( 'Karta', 'themeslug' ),
-        'priority'    => 20,
+        'priority'    => 40,
         'description' => 'Lägg till karta över festivalområdet, visas på startsidan och programpunkts-sidor',
         ) 
     );
