@@ -9,7 +9,7 @@ Template Name: program
 
 <section id='<?php echo $post->post_name; ?>' class='container-fluid'>
     <div class="row filter-function">
-    	<div class="col-md-12 text-center">
+    	<div class="col-md-12 text-center program-intro">
 	    	<h1><?php echo get_field('rubrik')?></h1>
 	    	<p class="datum"><?php echo get_field('datum')?></p>
 	    	<?php the_content() ?>
