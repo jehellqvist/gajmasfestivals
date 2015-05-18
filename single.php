@@ -18,6 +18,7 @@ get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
 
     <section class="<?php echo get_post_type( $post ) ?>">
+        <h1 class="screen-reader-text">Information om vald programpunkt</h1>
         <div class="container-fluid">
             <article class="single-post row">
                 <?php
@@ -76,7 +77,7 @@ get_header(); ?>
                         <a href="#popup1" class="portfolio-link" data-toggle="modal">
                             <div class="map">
                                 <figure class="hover-map">
-                                    <img src='<?php echo esc_url( get_theme_mod( 'themeslug_map' ) ); ?>' alt="Karta över festivalområdet" class="img-center">                  
+                                    <img src='<?php echo esc_url( get_theme_mod( 'themeslug_map' ) ); ?>' alt="Karta över festivalområdet" class="img-center" alt="bild för programpunkt <?php echo get_the_title() ?>">                  
                                 </figure>
                             </div>
                         </a>
