@@ -18,7 +18,7 @@ Template Name: program
 	?>
 	<div class="row">
 		<div class="col-md-12 text-center">
-			<button type="button" class="load-more btn btn-default"><i class="fa fa-refresh"></i>Visa fler</button>
+             <button type="button" class="load-more btn btn-default"><i class="fa fa-refresh"></i>Visa fler</button>
 		</div>
 	</div>
 	<hr class="ample">
