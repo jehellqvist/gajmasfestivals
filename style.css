@@ -165,7 +165,7 @@ header {
 
 @media (max-width: 550px){
 	.site-title img{
-		width:87%!important;
+		width:100%!important;
 		margin-bottom: 5px!important;
 	}
 
@@ -237,17 +237,18 @@ header {
 		}
 
 		.site-title {
-			width: 55%;
+			display:inline;
+			width:40%;
 			margin:0 auto;
 			position: absolute;
 			z-index: 20;
 			bottom:10px;
 			left:5%;
-			z-index: 99999;
+			/*z-index: 99999;*/
 		}
 
 		.site-title img {
-			width: 70%;
+			width: 100%;
 		}
 
 		#program{
@@ -352,7 +353,7 @@ header {
 		}
 
 		.site-title {
-			width: 50%;
+			width: 30%;
 			margin:0 auto;
 			position: absolute;
 			z-index: 20;
@@ -362,7 +363,7 @@ header {
 		}
 
 		.site-title img {
-			width: 60%;
+			width: 100%;
 		}
 	}
 
@@ -447,17 +448,18 @@ header {
 		}
 
 		.site-title {
-			width: 50%;
+			display: inline;
+			width: 25%;
 			margin:0 auto;
 			position: absolute;
 			z-index: 20;
 			bottom:10px;
 			left:3%;
-			z-index: 9999;
+			/*z-index: 9999;*/
 		}
 
 		.site-title img {
-			width: 50%;
+			width: 100%;
 		}
 	}
 
