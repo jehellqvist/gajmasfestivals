@@ -217,13 +217,13 @@ function posts_callback($atts=null, $content=null){
             $option .='
             <div class="container-fluid">
                 <div class="row filter-toggling">
-                    <button type="button" class="open-nav navbar-toggle btn collapsed in" data-toggle="collapse" data-target="#filter-toggle" aria-expanded="false">
+                    <button type="button" class="open-nav navbar-toggle btn collapsed in" data-toggle="collapse" role="button" data-target="#filter-toggle" aria-expanded="false">
                         Visa alla eller filtrera <i class="fa fa-angle-down"></i>
                     </button>
                 </div><!--.fiter-toggling . row-->
             </div><!--container-fluid-->
             
-            <div class="navbar-collapse collapse" id="filter-toggle" aria-expanded="true">
+            <div class="navbar-collapse collapse" id="filter-toggle" role="region" aria-expanded="true">
                 <p class="filter-text">Visa alla eller välj kategori</p>
                 <ul class="list-unstyled list-inline filter-wrapper filter-clear">
                     <li>
