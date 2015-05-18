@@ -257,7 +257,7 @@ function posts_callback($atts=null, $content=null){
                             $categories = get_categories(array('parent' => ''.$new_id.'','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                             foreach ($categories as $category) {
                                 $new_name = $category->cat_name;
-                                
+                                $new_id = $category->cat_ID;
                                 $display_name = $category->cat_name;
                                 if($display_name == 'Veckodag'){
                                      $d_id = $category->cat_ID;
@@ -265,9 +265,9 @@ function posts_callback($atts=null, $content=null){
 
                                 $option .= '
                                 <li class="button-checkbox">
-                                <button type="button" class="btn" data-value="'.$new_name.'" data-color="primary">'.$new_name.'</button>
-                                    <input type="checkbox" name="filter-'.$name.'" value="'.$new_name.'" data-catid="'.$category->cat_ID.'" id="'.$new_name.'" class="filter-checkbox hidden" >
-                                    <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
+                                <button type="button" class="btn" data-value="'.$new_id.'" data-color="primary">'.$new_name.'</button>
+                                    <input type="checkbox" name="filter-'.$name.'" value="'.$new_id.'" data-catid="'.$new_id.'" id="'.$new_id.'" class="filter-checkbox hidden" >
+                                    <!--<label for="'.$new_id.'">'.$new_name.'</label>-->
                                 </li>';
                                 }
                             $option .= '
@@ -471,7 +471,7 @@ function posts_callback($atts=null, $content=null){
                 ?>
                 <?php 
                 foreach((get_the_category()) as $category) { 
-                    $cat_string .= $category->cat_name . " ";
+                    $cat_string .= $category->cat_ID . " ";
                     if($category->category_parent == '5') { //add kategori ID
                         if($category->cat_name == 'Musik och sång vid havet') {
                             $content_cat = 'Musik & Sång';
