@@ -556,7 +556,7 @@ function posts_callback($atts=null, $content=null){
     $option .= '</div><!--End .row-->';
     
     
-    return Normalizer::normalize( $option, Normalizer::FORM_C );
+    return $option;
 }
 add_shortcode("posts", "posts_callback");
 
