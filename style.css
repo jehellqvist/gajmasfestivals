@@ -1430,6 +1430,12 @@ footer h2{
 	line-height: 1.5em;
 }
 
+footer h3{
+	font-size: .95em;
+	margin-bottom: -12px;
+	font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+}
+
 footer p{
 	line-height: 1.5em;
 	margin-top: 3%;
