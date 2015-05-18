@@ -1023,10 +1023,8 @@ header {
 }
 
 .filter-Aldersgrupp .btn {
-	color: rgba(255, 200, 0, 1);
-	border-color: rgba(255, 200, 0, 1);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	color: rgba(50,50,50, 1);
+	border-color: rgba(50,50,50, 1);
 }
 
 .filter-Aldersgrupp  .btn-primary.active, 
@@ -1036,14 +1034,14 @@ header {
 .filter-Aldersgrupp  .btn-primary:hover, 
 .filter-Aldersgrupp  .open>.dropdown-toggle.btn-primary {
 	color: #fff;
-	background-color: rgba(255, 200, 0, 0.9); /*background-color: rgba(50,50,50, 0.9);*/
-	border-color: rgba(255, 200, 0, 1);
+	background-color: rgba(50,50,50, 0.9); /*background-color: rgba(50,50,50, 0.9);*/
+	border-color: rgba(50,50,50, 1);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 .filter-Aldersgrupp h2 {
-	color: rgba(255, 200, 0, 1);
+	color: rgba(50,50,50, 1);
 }
 
 .filter-Veckodag h2 {
@@ -1441,13 +1439,11 @@ footer p{
 	margin-top: 3%;
 }
 
-footer #polimhamn_logo{
-	background: url(img/Pa-Limhamn-neg.png);
-	background-position: 0 100%;
-	background-repeat: no-repeat;
-   	background-size:contain;
-   	height:50px;
-   	width:150px;
+footer .polimhamn_logo {
+	margin-top: 20px;
+	display: inline-block;
+   	height:30px;
+   	width: auto;
 }
 
 footer #hamnfestivalen_logo{

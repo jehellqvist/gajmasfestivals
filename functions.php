@@ -665,18 +665,6 @@ function get_pages_by_menu($the_menu) {
                 <?php
                     endwhile;
                 wp_reset_postdata();
-                
-
-
-
-                /*
-            if ($content) {
-
-                $content = apply_filters('the_content', $content);
-                $content_list .= "<section id='".$slug."' class='container-fluid'>";
-                $content_list .= $content;
-                $content_list .= "</section> <!--End $slug-->";
-            }*/
         }
         return $content_list;
     }

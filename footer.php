@@ -7,7 +7,12 @@
 		<div class="row">
 			<div class="col-md-6">
 
-				<a href="http://www.polimhamn.se" target="_blank"><div id="polimhamn_logo"></div></a>	
+				<a href="http://www.polimhamn.se" target="_blank">
+
+				<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/Pa-Limhamn-neg.png" class="polimhamn_logo" alt="På Limhamn logotype">
+
+
+				</a>	
 				<h3>OM ARRANGÖREN</h3>
 				<p class="justify">På Limhamn är ett samarbete mellan <em>Malmö stad</em>, <em>fastighetsägare</em>, <em>handel</em>, <em>näringsliv och ideella föreningar</em> med fokus på att 
 					vidareutveckla Limhamn som besök- och turistdestination. Samverkan är grunden i hela vår verksamhet och även den övergripande 
