@@ -23,7 +23,7 @@ if(function_exists("register_field_group"))
 				'name' => 'toaletter',
 				'type' => 'textarea',
 				'required' => 1,
-				'default_value' => 'Det finns tre toaletter på festivalområdet, en vid fiskehamnen, en vid småbåtshamnen och en mitt där emellan.',
+				'default_value' => 'Det finns toaletter på tre platser. En vid fiskehamnen, en vid småbåtshamnen och en på vägen där emellan.',
 				'placeholder' => '',
 				'maxlength' => '',
 				'rows' => 3,

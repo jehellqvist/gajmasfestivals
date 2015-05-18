@@ -62,7 +62,7 @@ get_header(); ?>
                     }
                 ?>
                 <div class="col-sm-12 col-md-6 col-md-offset-3 post-img-container">
-                    <img src="<?php echo get_field('bild')?>" class="img-responsive img-center">
+                    <img src="<?php echo get_field('bild')?>" class="img-responsive img-center" alt="Bild för prorampunkt <?php echo get_the_title() ?>">
                 </div><!--End . col-*-* -->
 
                 <div class="col-sm-12 col-md-12">
@@ -77,7 +77,7 @@ get_header(); ?>
                         <a href="#popup1" class="portfolio-link" data-toggle="modal">
                             <div class="map">
                                 <figure class="hover-map">
-                                    <img src='<?php echo esc_url( get_theme_mod( 'themeslug_map' ) ); ?>' alt="Karta över festivalområdet" class="img-center" alt="bild för programpunkt <?php echo get_the_title() ?>">                  
+                                    <img src='<?php echo esc_url( get_theme_mod( 'themeslug_map' ) ); ?>' alt="Karta över festivalområdet" class="img-center">                  
                                 </figure>
                             </div>
                         </a>

@@ -101,6 +101,7 @@ get_header(); ?>
                                 <div class="row">
                                     <div class="col-md-12">
                                             <h4>Medverkande aktörer <?php echo get_field('year')?></h4>
+                                        <figure>
                                             <img src='<?php echo esc_url( get_theme_mod( 'themeslug_map' ) ); ?>' alt="Karta över festivalområdet" class="img-center">                  
                                         </figure>
                                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Stäng</button>
