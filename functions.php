@@ -230,7 +230,6 @@ function posts_callback($atts=null, $content=null){
                         <button type="button" id="clear-btn" class="btn btn-primary" data-color="primary">
                         <i class="state-icon glyphicon glyphicon-check"></i>Visa alla</button>
                         <input type="checkbox" name="clear" id="clear" data-catid="clear" class="hidden">
-                        <!--<label for="'.$new_name.'">'.$new_name.'</label>-->
                     </li>
                 </ul>
             ';
@@ -252,8 +251,10 @@ function posts_callback($atts=null, $content=null){
                         $filter_info ="";
                     }
                     $option .= $filter_info.'
+                    <div class="filter-'.$name.'">
+                    <h2 class="screen-reader-text">'.$display_name.':</h2>
                         <ul class="filter-handlers list-unstyled list-inline filter-wrapper filter-'.$name.'">
-                            <p class="screen-reader-text">'.$display_name.':</p>';
+                            ';
                             $categories = get_categories(array('parent' => ''.$new_id.'','type' => 'post' , 'orderby' => 'slug', 'order' => 'ASC'));
                             foreach ($categories as $category) {
                                 $new_name = $category->cat_name;
@@ -267,11 +268,11 @@ function posts_callback($atts=null, $content=null){
                                 <li class="button-checkbox">
                                 <button type="button" class="btn" data-value="'.$new_id.'" data-color="primary">'.$new_name.'</button>
                                     <input type="checkbox" name="filter-'.$name.'" value="'.$new_id.'" data-catid="'.$new_id.'" id="'.$new_id.'" class="filter-checkbox hidden" >
-                                    <!--<label for="'.$new_id.'">'.$new_name.'</label>-->
                                 </li>';
                                 }
                             $option .= '
-                        </ul><!--End .filter-wrapper-->';
+                        </ul><!--End .filter-wrapper-->
+                        </div>';
                 }
                 $option .= '
                 </div><!--End .filter-toggle-->

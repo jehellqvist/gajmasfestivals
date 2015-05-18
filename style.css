@@ -899,7 +899,7 @@ header {
 	display: block !important;
 	text-transform: uppercase;
 	font-weight: 400;
-	padding-left: 5px;
+	padding-left: 0px;
 	font-size: 0.9em;
 	letter-spacing: 0.1em;
 	margin-top: 0px;
@@ -932,10 +932,6 @@ header {
 
 .filter-clear i {
 	padding-right: 7px;
-}
-
-.filter-function p:first-child {
-	text-align: center;
 }
 
 
@@ -1046,15 +1042,15 @@ header {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.filter-Aldersgrupp p {
+.filter-Aldersgrupp h2 {
 	color: rgba(255, 200, 0, 1);
 }
 
-.filter-Veckodag p {
+.filter-Veckodag h2 {
 	color: rgba(0, 128, 0, 1);
 }
 
-.filter-Plats p {
+.filter-Plats h2 {
 	color: rgba(200, 0, 0, 1);
 }
 
@@ -1160,7 +1156,9 @@ header {
 			display: inline-block !important;
 		}
 
-		.filter-wrapper p {
+		.filter-Aldersgrupp p,
+		.filter-Veckodag p,
+		.filter-Plats p {
 			font-size: 1em;
 			display: inline !important;
 		}
@@ -1181,7 +1179,7 @@ header {
 		}
 
 		.filter-Kategori {
-			padding-bottom: 15px;
+			padding-bottom: 10px;
 		}
 
 		#program .datum {
@@ -1207,7 +1205,9 @@ header {
 
 	@media (min-width: 1024px) { 
 
-		.filter-wrapper p {
+		.filter-Aldersgrupp p,
+		.filter-Veckodag p,
+		.filter-Plats p {
 			font-size: 1em;
 			display: inline !important;
 		}
