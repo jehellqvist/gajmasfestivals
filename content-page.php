@@ -5,7 +5,8 @@
  */
 ?>
 
-<section class="container-fluid" id="post-<?php the_ID(); ?>">
+
+<section class="container-fluid" id="post-<?php the_title(); ?>">
 
 	<div class="row entry-content">
 		<?php

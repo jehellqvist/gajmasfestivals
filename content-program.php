@@ -9,9 +9,11 @@ Template Name: program
 
 <section id='<?php echo $post->post_name; ?>' class='container-fluid'>
     <div class="row filter-function">
-    	<h1><?php echo get_field('rubrik')?></h1>
-    	<p class="datum"><?php echo get_field('datum')?></p>
-    	<?php the_content() ?>
+    	<div class="col-md-12 text-center">
+	    	<h1><?php echo get_field('rubrik')?></h1>
+	    	<p class="datum"><?php echo get_field('datum')?></p>
+	    	<?php the_content() ?>
+    	</div>
 		<div class="col-sm-12">
 	<?php
 		echo do_shortcode("[posts]");

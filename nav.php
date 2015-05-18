@@ -1,5 +1,5 @@
  <div class="nav-container">
-  <nav id="one-page" class="navbar navbar-inverse" role="navigation" >
+  <nav id="one-page" class="navbar navbar-inverse" role="navigation" aria-label="Primär navigation" >
    <a href="#page-top" class="nav-logo page-scroll"><?php echo get_bloginfo ( 'description' ); ?></a>
 
       <div class="container">

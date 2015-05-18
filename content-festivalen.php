@@ -27,6 +27,7 @@ Template Name: festivalen
         </div><!--.end col-md*-->
 	</div><!--end .row-->
 	<div class="row aktor festivalen">
+        <h2 class="screen-reader-text">Citat från tidigare medverkande aktörer</h2>
 
 		<article class="col-xs-12 col-sm-4">
         <div class="extra">

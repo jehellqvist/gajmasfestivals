@@ -10,7 +10,7 @@ get_header(); ?>
         <div id="content" class="site-content row" role="main">
             <div class="col-md-12 text-center center">
                     <h1 class="entry-title">404 - Man överbord!</h1>
-                    <p>Sidan du söker finns inte - simma tillbaka eller ta båten till Hamnfestivalens <a href="/">startsidan.</a></p>
+                    <p>Sidan du söker finns inte - simma tillbaka eller ta båten till Hamnfestivalens <a href="/">startsida.</a></p>
             </div><!--.col-md-12-->
  
         </div><!-- #content .site-content -->
