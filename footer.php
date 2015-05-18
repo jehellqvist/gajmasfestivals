@@ -29,8 +29,10 @@
 						</div><!--End of .col-->
 
 						<div class="col-md-4 col-sm-4 col-xs-4 center top">
-							<i class="fa fa-phone"></i>
-							<p><?php echo get_theme_mod ( 'themeslug_footer_phone' ); ?></p>
+							<a class="footer_mail" href="tel:+46760104405">
+								<i class="fa fa-phone"></i>
+								<p><?php echo get_theme_mod ( 'themeslug_footer_phone' ); ?></p>
+							</a>
 						</div><!--End of .col-->
 
 					</div><!--End of .col-->
