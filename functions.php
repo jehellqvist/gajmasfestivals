@@ -834,7 +834,6 @@ if(function_exists("register_field_group"))
                 'name' => 'plats_pa_kartan',
                 'type' => 'number',
                 'instructions' => 'Ange plats på kartan',
-                'required' => 1,
                 'default_value' => '',
                 'placeholder' => 0,
                 'prepend' => '',
