@@ -63,8 +63,7 @@
 				</div><!--End of nested .row-->
 			</div><!--End of .col-->
 
-			<div class="col-md-12 text-center">
-				<!--<p class="design-by">Web design av <a href="http://www.gajmas.se">GAJMA</a></p>-->
+			<div class="col-md-12 translator text-center">
 				<?php bing_translator(); ?>
 			</div>
 		

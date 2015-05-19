@@ -1184,7 +1184,7 @@ header {
 		}
 
 		.filter-Kategori {
-			padding-bottom: 10px;
+			padding-bottom: 5px;
 		}
 
 		#program .datum {
@@ -2147,13 +2147,15 @@ html, body {
 	.post-content .inner-content h2 {
 		font-family: 'Museo', 'Arvo', 'Georgia', serif;
 		font-weight: 500;
-		font-size: 1.4em;
+		font-size: 1.3em;
 		padding: 0;
 		margin: 0;
 	}
 
 	.post-content .inner-content .content-meta {
 		text-transform: uppercase;
+		font-size: 0.9em;
+		padding-top: 3px;
 		font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 		font-weight: 700;
 	}
@@ -2299,13 +2301,14 @@ html, body {
 		.post-content .inner-content h2 {
 			font-family: 'Museo', 'Arvo', 'Georgia', serif;
 			font-weight: 500;
-			font-size: 1.4em;
+			font-size: 1.3em;
 			padding: 0;
 			margin: 0;
 		}
 
 		.post-content .inner-content .content-meta {
 			text-transform: uppercase;
+			padding-top: 3px;
 			font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 			font-weight: 700;
 		}
@@ -2320,7 +2323,14 @@ html, body {
 		}
 		
 		.content-category {
-			padding-right: 7%;
+			font-size: 0.85em;
+		}
+	}
+
+	@media (max-width: 1190px){
+
+		.content-category {
+			font-size: 0.85em;
 		}
 	}
 
@@ -2417,13 +2427,14 @@ html, body {
 		.post-content .inner-content h2 {
 			font-family: 'Museo', 'Arvo', 'Georgia', serif;
 			font-weight: 500;
-			font-size: 1.4em;
+			font-size: 1.3em;
 			padding: 0;
 			margin: 0;
 		}
 
 		.post-content .inner-content .content-meta {
 			text-transform: uppercase;
+			padding-top: 3px;
 			font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 			font-weight: 700;
 		}
@@ -3086,6 +3097,8 @@ table{
 	background: url(img/preloader.gif) 50% 50% no-repeat rgb(255,255,255);
 }
 
+
+
 #LauncherTranslatePhrase {
 	background: url(img/translate_2.png) !important;
 	-webkit-background-size: 100% !important;
@@ -3102,10 +3115,18 @@ table{
 	display: none !important;
 }
 
+.translator {
+	max-height: 100px;
+	clear: both;
+}
+
 #WidgetLauncher,#MicrosoftTranslatorWidget {
 	height: 17px !important;
 	width: 100px !important;
+	text-align: center;
+	margin: 0 auto;
 }
+
 #TranslateSpan,
 #TranslateSpan:hover,
 #LauncherTranslatePhrase,
