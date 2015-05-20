@@ -1487,6 +1487,26 @@ footer a:visited, footer a:hover, footer a:active {
 	text-decoration: none !important;
 }
 
+footer .contact-link a{
+	text-decoration: none !important;
+	color:rgba(250,250,250,1);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 700;
+	opacity: 1;
+	font-size: 1em;
+	transition: all 1s ease;
+}
+
+footer .contact-link a:visited, .contact-link footer a:hover, footer .contact-link a:active {
+	color: rgba(250,250,250,1);
+	text-decoration: none !important;
+	opacity: 0.2;
+	font-size: 1em;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
 footer i{
 	font-size: 2em !important;
 }

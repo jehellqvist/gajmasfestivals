@@ -19,7 +19,7 @@
 					metoden för vårt arbete. Läs mer om arrangören bakom Hamnfestivalen på <a target="_blank" href='<?php echo esc_url (get_theme_mod( 'themeslug_footer_webpage' )); ?>'><?php echo get_theme_mod( 'themeslug_footer_webpage' ); ?></a></p>
 			
 				<div class="row top notranslate">
-					<div class="col-md-12 col-sm-12 col-xs-12 center border-top">
+					<div class="col-md-12 col-sm-12 col-xs-12 center border-top contact-link">
 
 						<div class="col-md-4 col-sm-4 col-xs-4 center top">							
 							<a class="footer_links" href="mailto:<?php echo get_theme_mod( 'themeslug_footer_mail' );?>?Subject=Hamnfestivalen">
