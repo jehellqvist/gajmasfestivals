@@ -110,7 +110,7 @@ get_header(); ?>
                         </div>
                     </div><!--.inner-single-->
                     <div class="col-sm-6 col-sm-offset-3">
-                        <img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/vimplat_bred.png" alt="vimplar" class="img-responsive img-center"/>
+                        <img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/vimplat_bred_2.png" alt="vimplar" class="img-responsive img-center"/>
                     </div>
                     <div class="social-sharing-buttons col-md-12 text-center">
                         <?php 
