@@ -3101,10 +3101,9 @@ table{
 	
 }
 
-@media all and (max-width: 480px)  {
+@media all and (max-width: 990px)  {
      .omradet-water {
      	clear:left;
-
     }
 }
 

@@ -66,6 +66,7 @@ get_header(); ?>
 								<p class="top-neg"><a class="left" href="<?php echo get_field('avtal_mat')?>" download="avtal_mat.pdf"><i class="fa fa-download"></i>Blankett för mat</a></p>
 								<p class="top-neg"><a class="left" href="<?php echo get_field('avtal_forsaljning')?>" download="avtal_forsaljning.pdf"><i class="fa fa-download"></i>Blankett för försäljning</a></p>
 								<p class="top-neg"><a class="left" href="<?php echo get_field('avtal_el')?>" download="avtal_el.pdf"><i class="fa fa-download"></i>Blankett för el</a></p>
+								<p class="top-neg"><a class="left" href="<?php echo get_field('avtal_sakerhet')?>" download="säkerhet_försäljare.pdf"><i class="fa fa-download"></i>Säkerhet försäljare</a></p>
 
 							</div>
 						<div class="col-md-12 col-sm-6 col-xs-12">

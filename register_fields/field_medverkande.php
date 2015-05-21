@@ -168,6 +168,15 @@ if(function_exists("register_field_group"))
 				'library' => 'all',
 			),
 			array (
+				'key' => 'field_5551a4931ce6e',
+				'label' => 'Avtal säkerhet',
+				'name' => 'avtal_sakerhet',
+				'type' => 'file',
+				'required' => 1,
+				'save_format' => 'url',
+				'library' => 'all',
+			),
+			array (
 				'key' => 'field_5551a4a71ce6b',
 				'label' => 'Arrangör',
 				'name' => 'arrangor',

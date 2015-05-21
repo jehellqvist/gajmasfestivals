@@ -6,6 +6,18 @@ if(function_exists("register_field_group"))
 		'title' => 'Omradet',
 		'fields' => array (
 			array (
+				'key' => 'field_5550cd9230jg',
+				'label' => 'Information om informations-bodar',
+				'name' => 'infobod',
+				'type' => 'textarea',
+				'required' => 1,
+				'default_value' => 'Informationsbodar finns i Fiskehamnen och Småbåtshamnen. Plats på kartan är 1 & 2.',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => 3,
+				'formatting' => 'html',
+			),
+			array (
 				'key' => 'field_5550cd6569ae7',
 				'label' => 'Information om uttagsautomat',
 				'name' => 'uttagsautomat',

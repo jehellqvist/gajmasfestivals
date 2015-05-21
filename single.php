@@ -69,7 +69,7 @@ get_header(); ?>
                     <div class="inner-single col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
                         <header role="banner">
                             <h2><?php echo get_the_title() ?></h2>
-                            <p class="content-meta"><?php echo $day_string?><?php echo $time?><p>
+                            <p class="content-meta"><?php echo $day_string?><?php echo $time?> | <?php echo get_field('plats')?><p>
                         </header>
                         <p class="description"><?php echo get_field('beskrivning')?></p>
                         <div class="content-meta">
@@ -106,7 +106,7 @@ get_header(); ?>
                                 </div><!--End .modal-content-->
                         </div><!--End .portfolio-modal modal fade-->
 
-                        <p class="single-place notranslate"><?php echo get_field('plats_pa_kartan')?><i class="fa fa-map-marker"></i><?php echo get_field('plats')?></p>
+                        <p class="single-place notranslate">Plats på kartan:<i class="fa fa-map-marker"></i><?php echo get_field('plats_pa_kartan')?></p>
                         </div>
                     </div><!--.inner-single-->
                     <div class="col-sm-6 col-sm-offset-3">

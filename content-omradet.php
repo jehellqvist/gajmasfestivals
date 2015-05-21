@@ -48,19 +48,23 @@ Template Name: omradet
 		</div><!--col-*-->
 		
 		<h2>Festivalområdet</h2>
-		<div class="col-md-3 col-xs-6">
+		<div class="col-md-2 col-md-offset-1 col-xs-12 col-sm-12">
+			<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/info-icon.png" alt="Informations ikon" class="omradet-icon">
+			<p><?php echo get_field('infobod')?></p>
+		</div><!--.col-*-->
+		<div class="col-md-2 col-xs-6">
 			<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/card.png" alt="Kort ikon" class="omradet-icon">
 			<p><?php echo get_field('uttagsautomat')?></p>
 		</div><!--.col-*-->
-		<div class="col-md-3 col-xs-6">
+		<div class="col-md-2 col-xs-6">
 			<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/toalett.png" alt="Toalett ikon" class="omradet-icon">		
 			<p><?php echo get_field('toaletter')?></p>
 		</div><!--.col-*-->
-		<div class="col-md-3 omradet-water col-xs-6">
+		<div class="col-md-2 omradet-water col-xs-6">
 			<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/water.png" alt="Vatten ikon" class="omradet-icon">
 			<p><?php echo get_field('vatten')?></p>
 		</div><!--.col-*-->
-		<div class="col-md-3 omradet-place col-xs-6">
+		<div class="col-md-2 omradet-place col-xs-6">
 			<img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/platser.png" alt="Platser ikon" class="omradet-icon">
 			<p><?php echo get_field('festivalplatser')?></p>
 		</div><!--.col-*-->
