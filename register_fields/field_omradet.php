@@ -11,7 +11,7 @@ if(function_exists("register_field_group"))
 				'name' => 'infobod',
 				'type' => 'textarea',
 				'required' => 1,
-				'default_value' => 'Informationsbodar finns i Fiskehamnen och Småbåtshamnen. Plats på kartan är 1 & 2.',
+				'default_value' => 'Informationsbodar finns i Fiskehamnen och Småbåtshamnen. Plats på kartan är 27 & 63.',
 				'placeholder' => '',
 				'maxlength' => '',
 				'rows' => 3,
