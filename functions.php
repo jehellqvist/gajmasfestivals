@@ -517,7 +517,6 @@ function posts_callback($atts=null, $content=null){
                                 <div class="inner-content">
                                     <h2>'. get_the_title(). '</h2>
                                     <p class="content-meta">'.$day_string.$time.'<p>
-
                                     <p class="description">'.$description.'</p>
                                     <div class="content-category">
                                         <p>'. $content_cat .'</p>

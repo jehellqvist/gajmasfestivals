@@ -2010,6 +2010,13 @@ html, body {
           transition-duration: 5s;
 }
 
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+            transform: translate3d(0, 0, 0) !important;
+  }
+
 /*End of fade*/
 
 
@@ -2570,6 +2577,11 @@ html, body {
 			text-transform: uppercase;
 			font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 			font-weight: 700;
+			margin: 0 0 2px;
+		}
+
+		.post-content .inner-content p {
+			margin: 0px;
 		}
 
 		.post-content .inner-content .description {
@@ -2581,7 +2593,7 @@ html, body {
 			font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 			font-weight: 700;
 			position: absolute;
-			bottom: 13px;
+			bottom: 9px;
 			padding-right: 8px;
 			font-size: 0.75em;
 			color: rgba(34,60,126, 1);
@@ -2590,6 +2602,7 @@ html, body {
 		.content-category {
 			font-size: 0.75em;
 			padding-left: 8px;
+			bottom: 9px;
 		}
 }
 
