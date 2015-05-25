@@ -2349,17 +2349,21 @@ html, body {
 			position: absolute;
 			bottom: 13px;
 			padding-right: 7%;
+			font-size: 0.8em;
 		}
 		
 		.content-category {
-			font-size: 0.85em;
+			font-size: 0.8em;
 		}
 	}
 
 	@media (max-width: 1190px){
 
 		.content-category {
-			font-size: 0.85em;
+			font-size: 0.8em;
+		}
+		.post-content .inner-content .place {
+			font-size: 0.8em;
 		}
 	}
 
@@ -2475,11 +2479,11 @@ html, body {
 			position: absolute;
 			bottom: 13px;
 			padding-right: 5%;
-			font-size: 0.85em;
+			font-size: 0.8em;
 		}
 
 		.content-category {
-			font-size: 0.85em;
+			font-size: 0.8em;
 			padding-left: 5%;
 		}
 }
