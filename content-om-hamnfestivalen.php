@@ -21,8 +21,8 @@ Template Name: om-hamnfestivalen
 		</div><!--.social_share col-lg-8 col-lg-offset-2 center-text-->
 
 		<div class="col-md-12">
-
-			<?php $shortcode = '[alpine-phototile-for-instagram id=136 user="jenniehellqvist" src="global_tag" tag="'.get_field('hash-tag').'" imgl="instagram" style="wall" row="7" size="M" num="7" highlight="1" align="center" max="100" nocredit="1"] '?>
+			<div class="sbi_follow_btn"><a href="http://instagram.com/pohamnfestivalen" style="background: #336AAB; color: #ffffff;" target="_blank"><i class="fa fa-instagram"></i>Följ Hamnfestivalen</a></div>
+			<?php $shortcode = '[instagram-feed] '?>
 			<?php echo do_shortcode($shortcode);?>
 			
 		</div>

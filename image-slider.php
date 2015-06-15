@@ -62,8 +62,7 @@
     </div><!--End .carousel-inner-->
 
    
-    <h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt="Hamnfestivalen på Limhamns logotyp"></a></h1>
-    <!--<a class="page-scroll" href="#program"><i class="fa fa-chevron-down fa_arrow"></i></a>-->
+    
     <div id="title-box" class="row">
         <div class="col-md-12">
         </div>
@@ -72,3 +71,5 @@
         <!-- Full Page slider-->
 </header>
 </div><!--End .wrapper-->
+
+<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt="Hamnfestivalen på Limhamns logotyp"></a></h1>

@@ -33,6 +33,7 @@
 								<i class="fa fa-map-marker"></i>
 								<p><?php echo get_theme_mod( 'themeslug_footer_street' ); ?><br><?php echo get_theme_mod( 'themeslug_footer_address' ); ?></p>
 							</a>
+							<!--https://www.google.se/maps/dir//J%C3%A4rnv%C3%A4gsgatan+25,+216+14+Limhamn-->
 						</div><!--End of .col-->
 
 						<div class="col-md-4 col-sm-4 col-xs-4 center top">
@@ -63,12 +64,16 @@
 				</div><!--End of nested .row-->
 			</div><!--End of .col-->
 
-			<div class="col-md-12 translator text-center">
-				<?php bing_translator(); ?>
+			<div class="col-md-12 text-center">
+				<?php echo do_shortcode('[google-translator]'); ?>
 			</div>
-		
 		</div><!--End of .row-->
 	</div>  <!--End of .container-->
+	<div class="container-fluid">
+		<div class="design-by col-md-12 text-center">
+			<p>Hemsidan är skapad av <a href="https://www.linkedin.com/in/amandaekelund" target="_blank">Amanda Ekelund</a>, <a href="https://www.linkedin.com/profile/view?id=400556352" target="_blank">Andreas Wiig</a>, <a href="https://www.linkedin.com/in/gustavsvensson" target="_blank">Gustav Svensson</a>, <a href="http://www.jenniehellqvist.com" target="_blank">Jennie Hellqvist</a> och <a href="http://www.michellepantorp.se" target="_blank">Michelle Pantorp</a> från IA-programmet på Malmö Högskola i sammarbete med <a href="http://www.polimhamn.se" target="_blank">På Limhamn</a></p>
+		</div><!--.design-by-->
+	</div><!--.container-fluid-->
 
 </footer>
  

@@ -59,7 +59,7 @@ $(function() {
         nav_logo.toggleClass('show'),
         nav_button.toggleClass('smaller')
     },
-    offset: 60
+    offset: -60
   });
 });
 

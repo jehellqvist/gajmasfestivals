@@ -1,30 +1,13 @@
 /*
-Theme Name: Gajmas festivals theme
+Theme Name: Hamnfestivalen by Gajma
 Theme URI: 
 Author: Gajmas
 Author URI: 
-Description: A wp theme for festivals
+Description: Ett skräddarsytt wordpress-tema för Hamnfestivalen på Limhamn. Skapat av GAJMA (Gustav Svensson, Amanda Ekelund, Jennie Hellqvist, Michelle Pantorp och Andreas Wiig) från IA-programmet på Malmö Högskola.
 Version: 1.0
 License: GNU General Public License
 License URI: license.txt
-Tags: festivals, harbourfestivals
-*/
-
-/*
-Headings and links: 		
-font-family: 'Museo', 'Arvo', 'Georgia', serif;
-Paragraphs and others:
-font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
-Color-palette:
-DARKER: rgba(27,82,155, 1), 
-DARK: rgba(51,106,171, 1) 
-LIGHT: rgba(123,169,222, 1);
-LIGHTER: rgba(176,206,241,1);
-
-
-POLIMHAMN BLÅ: rgba(26,32,58, 1);
-rgba(17,23,57,1);
-
+Tags: Hamnfestivalen, Hamnfestival, Limhamn, GAJMA
 */
 
 
@@ -81,11 +64,8 @@ body,html {
 #wrapper {
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
 
-}
-
-.design-by {
-	opacity: 0.3;
 }
 
 header {
@@ -161,6 +141,12 @@ header {
 	padding:0 !important;
 }
 
+.program {
+	max-width: 1800px;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
 /**NAVIGATION Media queries for devices with a width max 768x**/
 
 @media (max-width: 550px){
@@ -199,8 +185,7 @@ header {
 
 		.navbar{
 			height:80px;
-			position: absolute;
-			bottom: 0;
+			margin-top: -80px;
 		}
 
 		.navbar-inverse, .navbar-collapse{
@@ -313,9 +298,7 @@ header {
 		.navbar{
 			width:100%;
 			height:107px;
-			position: absolute;
-			bottom: 0;
-			z-index:;
+			margin-top: -107px;
 			overflow: hidden;
 		}
 
@@ -323,7 +306,7 @@ header {
 			position: absolute;
 			z-index: 10;
 			right:10px;
-			width:630px;
+			width:100%;
 			margin-top: 25px!important;
 			text-align: right!important;
 			background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
@@ -408,17 +391,15 @@ header {
 		.navbar{
 			width:100%;
 			height:107px;
-			position: absolute;
-			z-index:;
+			margin-top: -107px;
 			overflow: hidden;
-			bottom:0;
 		}
 
 		.navbar-nav {
 			position: absolute;
 			z-index: 10;
 			right:10px;
-			width:630px;
+			width:100%;
 			background: rgba(20,49,116, 1); /*rgba(34,60,126, 1);*/
 			margin-top: 25px!important;
 			text-align: right!important;
@@ -1425,7 +1406,7 @@ footer .tag {
 }
 
 footer .row{
-	padding:0 0 2% 0;
+	padding:0 0 10px 0;
 }
 
 footer h1{
@@ -1442,13 +1423,13 @@ footer h2{
 
 footer h3{
 	font-size: .95em;
-	margin-bottom: -12px;
+	margin-bottom: 5px;
 	font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
 }
 
 footer p{
 	line-height: 1.5em;
-	margin-top: 3%;
+	margin-top: 0px;
 }
 
 footer .polimhamn_logo {
@@ -1520,6 +1501,19 @@ footer .list-unstyled{
 footer .list-unstyled a{
 	margin-right: 5%;
 	text-decoration: none;
+}
+
+/*DEESIGN BY + footer .row padding*/
+
+footer .design-by {
+	margin-top: 5px;
+	border-top: 1px solid rgba(250,250,250,0.1);
+}
+footer .design-by p{
+	padding: 6px;
+	margin: 0;
+	font-size: 0.9em;
+	opacity: 0.3;
 }
 
 
@@ -1594,6 +1588,7 @@ footer .list-unstyled a{
 }
 
 .modal-content {
+	background-color: rgba(255,255,255,0.9);
 	min-height: 100%;
 	border-radius: 0px;
 	border: 0px;
@@ -1749,6 +1744,10 @@ footer .list-unstyled a{
 	border-radius: 50%;
 	overflow: hidden;
 	background-color: #fff;
+}
+
+.portfolio-link:link {
+	outline: none !important;
 }
 
 .hover-map {
@@ -2491,6 +2490,10 @@ html, body {
 
 	@media (max-width: 600px){
 
+		.load-more {
+			margin-top: 37px;
+		}
+
 		.program{
 			margin: 0 !important;
 			padding: 3% 0 !important;
@@ -2823,6 +2826,7 @@ html, body {
 .stuck{
 	position:fixed;
 	top:0;
+	margin-top: 0px;
 	height:50px;
 	-webkit-transition: height .5s ease;
 	-moz-transition: height .5s ease;
@@ -2863,7 +2867,7 @@ html, body {
 	left:20px;
 	opacity: 0;
 	display:inline;
-	color:#fff;
+	color:#fff !important;
 	text-decoration: none !important;
 }
 
@@ -3189,4 +3193,8 @@ table{
 
 #LauncherLogo.WithPhraseAfter {
 	display: none;
+}
+
+#sb_instagram {
+	margin-bottom: 50px;
 }
